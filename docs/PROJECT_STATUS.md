@@ -2,7 +2,7 @@
 
 ## Current Milestone
 
-Phase 0 — Project foundation
+Phase 0 — Project foundation (COMPLETE; next: Phase 1)
 
 ## Completed
 
@@ -18,15 +18,17 @@ Phase 0 — Project foundation
   `drizzle/migrations/`, `tests/{unit,integration,e2e,fixtures/retailers}`.
 - `typecheck` script added.
 
+- Git initialized (`main`); public GitHub remote `aaronbarke/ScentScout` created and pushed;
+  initial Graphify graph generated; Phase 0 validated (typecheck/lint/build).
+
 ## In Progress
 
-- Git init, GitHub remote (public `aaronbarke/ScentScout`), Graphify graph, initial commit + push.
+- None — Phase 0 complete.
 
 ## Next Tasks
 
-1. Complete Phase 0: initial Graphify graph, validation, commit, push, verify.
-2. Begin Phase 1 — PostgreSQL + Drizzle schema, migrations, idempotent catalog seed (~40–50
-   variants), catalog validation script, DB tests.
+1. Begin Phase 1 — PostgreSQL + Drizzle schema, env validation (Zod), migrations, idempotent
+   catalog seed (~40–50 exact variants), catalog validation script, DB tests.
 
 ## Known Issues
 
@@ -57,7 +59,8 @@ once an API key enables `graphify extract .` semantic doc indexing. Communities 
 
 ## Latest GitHub Commit
 
-- Hash: _to be recorded_
+- Hash: 8cf86c64d19f240956b17f552025a04a17cdf5bf (`8cf86c6`)
 - Message: chore(project): initialize ScentScout foundation
 - Branch: main
-- Push status: _to be recorded_
+- Push status: pushed to origin/main (verified local HEAD == remote HEAD)
+- Remote: https://github.com/aaronbarke/ScentScout (public)
