@@ -1,0 +1,31 @@
+# Paths Graphify should not extract into the knowledge graph.
+node_modules/
+.next/
+out/
+build/
+dist/
+coverage/
+test-results/
+playwright-report/
+.turbo/
+.vercel/
+.git/
+
+# Generated / binary / lock artifacts
+package-lock.json
+*.tsbuildinfo
+public/
+*.ico
+*.png
+*.jpg
+*.svg
+
+# Graphify's own output
+graphify-out/
+
+# Secrets & private data
+.env
+.env.*
+CLAUDE.local.md
+*.local.db
+scratch/

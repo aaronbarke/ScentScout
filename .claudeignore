@@ -1,0 +1,25 @@
+# Files Claude Code should not read as source context.
+node_modules/
+.next/
+out/
+build/
+coverage/
+test-results/
+playwright-report/
+.turbo/
+.vercel/
+
+# Large generated / lock files
+package-lock.json
+*.tsbuildinfo
+
+# Graphify's own output (query it via the CLI instead of reading raw)
+graphify-out/
+
+# Never surface secrets or private data
+.env
+.env.*
+!.env.example
+CLAUDE.local.md
+*.local.db
+scratch/
