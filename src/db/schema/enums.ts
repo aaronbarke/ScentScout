@@ -18,6 +18,7 @@ export const concentrationEnum = pgEnum("concentration", [
   "eau_de_toilette",
   "parfum",
   "extrait_de_parfum",
+  "absolu",
   "eau_de_cologne",
   "eau_fraiche",
   "elixir",

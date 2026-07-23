@@ -113,3 +113,35 @@ Consequences:
 Every matching decision carries an auditable reason list; uncertain cases route to
 `match_reviews`. Matching thresholds/weights are documented in `MATCHING_ENGINE.md`; changing
 them requires a new ADR.
+
+---
+
+## ADR-005: Canonical SKU scheme and testers as first-class variants
+
+Status: Accepted
+
+Date: 2026-07-22
+
+Decision:
+`canonical_sku = "<fragranceSlug>-<concentrationCode>-<sizeMl>ml-<presentation>"` (e.g.
+`le-labo-santal-33-edp-100ml-retail`). Fragrance slugs are brand-prefixed and globally unique.
+The `<concentrationCode>-<sizeMl>ml-<presentation>` tail doubles as the public exact-variant URL
+segment. Testers (and refills) are seeded as their own variant rows, never derived from or
+merged with retail. The seed catalog concentration enum gained `absolu` (for Byredo Bal
+d'Afrique Absolu), via additive migration `0001`.
+
+Reason:
+A deterministic, human-readable natural key makes the seed idempotent (upsert on `canonical_sku`)
+and gives stable, indexable URLs for free. Because presentation and concentration are baked into
+the key, retail/tester/refill and EDP/EDT can never collide — enforcing the "never combine
+presentations/concentrations" rule at the identity level. Modeling testers as real variants
+reflects how they are actually sold and keeps their price history separate.
+
+Alternatives:
+Opaque UUID/serial SKUs (rejected: not idempotent-friendly or URL-usable); deriving testers
+from retail at query time (rejected: conflates distinct products and their price histories).
+
+Consequences:
+The catalog seed (`src/db/seed/catalog.ts`) is the source of truth; `scripts/validate-catalog.ts`
+and unit tests enforce SKU uniqueness and presentation/concentration separation. Adding a new
+concentration requires an additive enum migration.

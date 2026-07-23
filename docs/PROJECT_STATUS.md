@@ -17,20 +17,26 @@ Phase 1 — Database & canonical catalog (IN PROGRESS)
   - Generated migration `drizzle/migrations/0000_far_moonstone.sql` (money = integer cents;
     all timestamps `timestamptz`; `canonical_sku` unique; append-only observations documented).
   - Package scripts: db:generate, db:migrate, db:studio, db:seed, catalog:validate, test.
+  - **Verified catalog dataset** (`src/db/seed/catalog.ts`): 13 brands, 19 fragrances,
+    **52 variants** — retail/tester/refill, flanker (Bal d'Afrique/Absolu, Gris Charnel/Extrait)
+    and concentration (L'Homme Idéal EDT/EDP) separation. Specs verified against official brand
+    sites + authorized retailers. Added `absolu` concentration (migration `0001`).
+  - Idempotent seed (`scripts/seed-catalog.ts`, upsert on canonical_sku), catalog validation
+    (`scripts/validate-catalog.ts`), slug/SKU helpers (`src/lib/catalog-slug.ts`), Vitest config
+    + 11 passing catalog tests.
 
 ## In Progress
 
-- Idempotent catalog seed (~40–50 verified exact variants) + `scripts/seed-catalog.ts`.
-- `scripts/validate-catalog.ts` and DB/schema tests (Vitest).
 - **Blocked on user:** live `db:migrate` + `db:seed` run — waiting for Supabase connection
-  strings in `.env` (`DATABASE_URL`, `DIRECT_URL`). Schema is validated by typecheck + generate.
+  strings in `.env` (`DATABASE_URL`, `DIRECT_URL`). All Phase 1 *code* is validated (typecheck,
+  lint, build, generate, catalog:validate, tests); only the live DB run remains.
 
 ## Next Tasks
 
-1. Assemble the verified catalog dataset (brands → fragrances → variants; retail + tester).
-2. Write idempotent seed (upsert on `canonical_sku`) + catalog validation + tests.
-3. Once `.env` is set: `npm run db:migrate` then `npm run db:seed`; verify idempotency.
-4. Close Phase 1; commit `feat(catalog): add canonical fragrance database`.
+1. Once `.env` is set: `npm run db:migrate` then `npm run db:seed`; re-run seed to confirm
+   idempotency (no duplicates); optionally spot-check with `npm run db:studio`.
+2. Close Phase 1; final commit `feat(catalog): add canonical fragrance database`.
+3. Begin Phase 2 — retailer adapter framework + first adapter.
 
 ## Known Issues
 
@@ -46,13 +52,15 @@ Phase 1 — Database & canonical catalog (IN PROGRESS)
 - Typecheck: PASS (exit 0)
 - Lint: PASS (0 errors, 0 warnings)
 - Build: PASS (exit 0)
-- DB generate: PASS — `drizzle-kit generate`, 13 tables
+- DB generate: PASS — `drizzle-kit generate`, 13 tables + migration 0001
+- Catalog validate: PASS — 13 brands / 19 fragrances / 52 variants / 52 unique SKUs
+- Unit tests: PASS — Vitest, 11/11 (catalog + slug helpers)
 - DB migrate/seed: PENDING — needs Supabase `.env`
-- Unit/integration/e2e tests: in progress (Vitest wiring)
+- Integration/e2e tests: not yet wired (Phase 2+/5+)
 
 ## Last Graphify Update
 
-2026-07-22 — code graph 294 nodes / 299 edges / 38 communities (AST-only; docs still pending a
+2026-07-22 — code graph 318 nodes / 346 edges / 39 communities (AST-only; docs still pending a
 semantic key).
 
 ## Latest GitHub Commit

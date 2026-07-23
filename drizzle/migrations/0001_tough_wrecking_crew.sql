@@ -1,0 +1,1 @@
+ALTER TYPE "public"."concentration" ADD VALUE 'absolu' BEFORE 'eau_de_cologne';

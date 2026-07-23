@@ -36,5 +36,6 @@
   "34": "security.md",
   "35": "testing.md",
   "36": "extraction-spec.md",
-  "37": "drizzle.config.ts"
+  "37": "drizzle.config.ts",
+  "38": "vitest.config.ts"
 }
