@@ -16,7 +16,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "retailer": "tsx scripts/run-retailer.ts",
-    "match": "tsx scripts/match-listings.ts"
+    "match": "tsx scripts/match-listings.ts",
+    "prices": "tsx scripts/show-prices.ts"
   },
   "dependencies": {
     "cheerio": "^1.2.0",

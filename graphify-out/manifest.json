@@ -15,8 +15,8 @@
     "semantic_hash": "9b77af189a21a7a64e4bd7a426f64176"
   },
   "package.json": {
-    "mtime": 1784780395.822185,
-    "ast_hash": "a2c9e8daa9ed7157cc2463670d6bafcf",
+    "mtime": 1784829029.3190265,
+    "ast_hash": "a30a2675a5fbee710266728a2845c413",
     "semantic_hash": ""
   },
   "postcss.config.mjs": {
@@ -225,8 +225,8 @@
     "semantic_hash": ""
   },
   "docs/PROJECT_STATUS.md": {
-    "mtime": 1784779933.1178706,
-    "ast_hash": "0248ebb19fb9ad8cc05be7151c7f7f3d",
+    "mtime": 1784780546.1410089,
+    "ast_hash": "c682c35441250d3ecbba872ed375d392",
     "semantic_hash": ""
   },
   "docs/RETAILER_ADAPTERS.md": {
@@ -320,8 +320,8 @@
     "semantic_hash": ""
   },
   "src/domain/retailers/ingest.ts": {
-    "mtime": 1784780373.5871375,
-    "ast_hash": "5526e49ace34f34ac72672315841449c",
+    "mtime": 1784828984.5026305,
+    "ast_hash": "b09e23e6aea183b1bf0608636877cc86",
     "semantic_hash": ""
   },
   "src/retailers/luckyscent/adapter.ts": {
@@ -427,6 +427,51 @@
   "tests/unit/matching.test.ts": {
     "mtime": 1784780295.5054512,
     "ast_hash": "dd35898686cc869a2881f2f213bf413c",
+    "semantic_hash": ""
+  },
+  "scripts/show-prices.ts": {
+    "mtime": 1784829022.1398556,
+    "ast_hash": "674a29b46f186b066f61e7ca92027caa",
+    "semantic_hash": ""
+  },
+  "src/domain/pricing/coupons.ts": {
+    "mtime": 1784828885.6212296,
+    "ast_hash": "2d4f0535ba4a402aa12d1d9ce7aa0b22",
+    "semantic_hash": ""
+  },
+  "src/domain/pricing/guidance.ts": {
+    "mtime": 1784828856.6668274,
+    "ast_hash": "ed70ebba85a870d56457f9918a8d197e",
+    "semantic_hash": ""
+  },
+  "src/domain/pricing/history.ts": {
+    "mtime": 1784828841.249821,
+    "ast_hash": "1262a3b95d7416478c236360eb8cc27a",
+    "semantic_hash": ""
+  },
+  "src/domain/pricing/index.ts": {
+    "mtime": 1784828889.442293,
+    "ast_hash": "f577575e892526285f2c49d33470fc37",
+    "semantic_hash": ""
+  },
+  "src/domain/pricing/offers.ts": {
+    "mtime": 1784829009.5711563,
+    "ast_hash": "a7b996882e5e3fcb38a1b6e2116b6e1e",
+    "semantic_hash": ""
+  },
+  "src/domain/pricing/ranking.ts": {
+    "mtime": 1784828875.8022428,
+    "ast_hash": "064de3fbf0402bbbb267347e331e7fdd",
+    "semantic_hash": ""
+  },
+  "tests/unit/pricing-history.test.ts": {
+    "mtime": 1784828922.6610954,
+    "ast_hash": "fe2ce2304ff0ab2ef3dc30d21ba82093",
+    "semantic_hash": ""
+  },
+  "tests/unit/pricing-ranking.test.ts": {
+    "mtime": 1784828943.5776463,
+    "ast_hash": "7c9a8e7088c48c1795012eaf180979fb",
     "semantic_hash": ""
   }
 }

@@ -1,16 +1,16 @@
-# Graph Report - ScentScout  (2026-07-22)
+# Graph Report - ScentScout  (2026-07-23)
 
 ## Corpus Check
-- 85 files · ~42,962 words
+- 94 files · ~46,631 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 467 nodes · 684 edges · 43 communities (31 shown, 12 thin omitted)
-- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 2 edges (avg confidence: 0.65)
+- 508 nodes · 775 edges · 44 communities (32 shown, 12 thin omitted)
+- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.57)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `b5e11249`
+- Built from commit: `a3874a23`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -52,14 +52,15 @@
 - testing.md
 - extraction-spec.md
 - drizzle.config.ts
+- offers.ts
 - adapter.ts
 - ingest.ts
 - http.ts
 - Evidence
 
 ## God Nodes (most connected - your core abstractions)
-1. `compilerOptions` - 16 edges
-2. `scripts` - 15 edges
+1. `scripts` - 16 edges
+2. `compilerOptions` - 16 edges
 3. `What You Must Do When Invoked` - 12 edges
 4. `ScentScout — Roadmap` - 11 edges
 5. `/graphify` - 10 edges
@@ -67,24 +68,24 @@
 7. `RetailerAdapter` - 9 edges
 8. `parseLuckyscentHtml()` - 9 edges
 9. `ScentScout — Decision Records (ADRs)` - 9 edges
-10. `deriveAttributes()` - 8 edges
+10. `productVariants` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `parseLuckyscentHtml()` --indirect_call--> `v()`  [INFERRED]
   src/retailers/luckyscent/adapter.ts → tests/unit/matching.test.ts
 - `main()` --calls--> `matchProduct()`  [EXTRACTED]
   scripts/match-listings.ts → src/domain/matching/match.ts
-- `main()` --calls--> `ingestUrls()`  [EXTRACTED]
-  scripts/run-retailer.ts → src/domain/retailers/ingest.ts
 - `seed()` --calls--> `canonicalSku()`  [EXTRACTED]
   scripts/seed-catalog.ts → src/lib/catalog-slug.ts
 - `validate()` --calls--> `canonicalSku()`  [EXTRACTED]
   scripts/validate-catalog.ts → src/lib/catalog-slug.ts
+- `main()` --calls--> `loadCandidates()`  [EXTRACTED]
+  scripts/match-listings.ts → src/domain/matching/candidates.ts
 
 ## Import Cycles
 - None detected.
 
-## Communities (43 total, 12 thin omitted)
+## Communities (44 total, 12 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.10
@@ -92,11 +93,11 @@ Nodes (19): compilerOptions, allowJs, esModuleInterop, incremental, isolatedModu
 
 ### Community 1 - "Community 1"
 Cohesion: 0.05
-Nodes (39): dependencies, cheerio, dotenv, drizzle-orm, next, postgres, react, react-dom (+31 more)
+Nodes (40): dependencies, cheerio, dotenv, drizzle-orm, next, postgres, react, react-dom (+32 more)
 
 ### Community 2 - "Community 2"
-Cohesion: 0.08
-Nodes (38): main(), ADAPTERS, main(), parseArgs(), Db, env, queryClient, alertEvents (+30 more)
+Cohesion: 0.09
+Nodes (35): main(), Db, env, alertEvents, alertRules, watchlists, brands, fragrances (+27 more)
 
 ### Community 3 - "Community 3"
 Cohesion: 0.29
@@ -186,13 +187,17 @@ Nodes (3): For --cluster-only, For --update (incremental re-extraction), graphif
 Cohesion: 0.36
 Nodes (6): url, DbEnv, dbEnvSchema, isUsablePostgresUrl(), loadDbEnv(), resolveMigrationUrl()
 
+### Community 39 - "offers.ts"
+Cohesion: 0.10
+Nodes (29): ADR-0009, fmt(), main(), couponDiscountCents(), CouponLike, ADR-0003, buyNowGuidance(), Guidance (+21 more)
+
 ### Community 40 - "adapter.ts"
 Cohesion: 0.09
 Nodes (31): ADR-0007, DiscoveryInput, ProductFetchInput, RetailerAdapter, centsSchema, ParsedRetailerProduct, parsedRetailerProductSchema, RawRetailerListing (+23 more)
 
 ### Community 41 - "ingest.ts"
-Cohesion: 0.27
-Nodes (8): ADR-0003, DeliveredPriceInput, estimateDeliveredPriceCents(), hasDeliveredPrice(), IngestSummary, ingestUrls(), persistParsed(), updateHealth()
+Cohesion: 0.20
+Nodes (11): ADAPTERS, main(), parseArgs(), queryClient, DeliveredPriceInput, estimateDeliveredPriceCents(), hasDeliveredPrice(), ADR-0003 (+3 more)
 
 ### Community 42 - "http.ts"
 Cohesion: 0.24
@@ -203,7 +208,7 @@ Cohesion: 0.18
 Nodes (10): Evidence, FragranceNet — gray-market discounter, FragranceX — gray-market discounter, Jomashop — gray-market discounter, Luckyscent — authorized boutique (Shopify), Nordstrom — department store, Recommendation, Retailer Access Research (Phase 2) (+2 more)
 
 ## Knowledge Gaps
-- **238 isolated node(s):** `$schema`, `allow`, `deny`, `PreToolUse`, `url` (+233 more)
+- **245 isolated node(s):** `$schema`, `allow`, `deny`, `PreToolUse`, `url` (+240 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **12 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -211,16 +216,16 @@ Nodes (10): Evidence, FragranceNet — gray-market discounter, FragranceX — gr
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `parseSizeMl()` connect `adapter.ts` to `Community 4`?**
-  _High betweenness centrality (0.009) - this node is a cross-community bridge._
-- **Why does `presentationEnum` connect `Community 2` to `adapter.ts`, `client.ts`?**
+  _High betweenness centrality (0.008) - this node is a cross-community bridge._
+- **Why does `Db` connect `Community 2` to `offers.ts`?**
   _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **Why does `RetailerAdapter` connect `adapter.ts` to `ingest.ts`, `Community 2`?**
-  _High betweenness centrality (0.006) - this node is a cross-community bridge._
+  _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **What connects `$schema`, `allow`, `deny` to the rest of the system?**
-  _238 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _245 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
-  _Cohesion score 0.05 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.04878048780487805 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
-  _Cohesion score 0.08246753246753247 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08944793850454227 - nodes in this community are weakly interconnected._

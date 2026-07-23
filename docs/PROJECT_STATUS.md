@@ -2,7 +2,7 @@
 
 ## Current Milestone
 
-Phase 3 — Exact product matching ✅ COMPLETE (next: Phase 4 — price history & ranking)
+Phase 4 — Price history & ranking ✅ COMPLETE (next: Phase 5 — public website)
 
 ## Completed
 
@@ -44,6 +44,23 @@ Phase 3 — Exact product matching ✅ COMPLETE (next: Phase 4 — price history
   - CLI: `npm run retailer -- --url <u> | --discover <n> | --health`.
   - Retailer registry seeded; only access-verified retailers are `enabled`.
 
+- **Phase 4** — price history & ranking: ✅
+  - Pure modules (`src/domain/pricing/`, no DB): `history.ts` (30/90/180-day lows, medians,
+    percentile, all-time low, stock transitions, coverage, freshness), `guidance.ts`
+    (exceptional/good/normal/expensive/insufficient-history), `ranking.ts` (delivery-aware —
+    in-stock and known-delivered beat a cheaper unknown-shipping offer), `coupons.ts` (only
+    `verified` coupons discount the total).
+  - Metric basis is listed price (ADR-009); ranking uses the delivered total when known.
+  - Duplicate prevention: re-observing an unchanged offer creates no new observation (verified
+    live — re-ingest produced 0 observations) while staying strictly append-only.
+  - DB layer `offers.ts` → `getVariantOfferBoard(sku)`: ranked offers + metrics + guidance for
+    one variant, never mixing sizes/concentrations/presentations.
+  - CLI: `npm run prices -- --variant <sku>`.
+  - 33 new calculation tests (history/guidance/ranking/coupons).
+  - **Live proof**: approved the Gris Charnel 100ml review via the admin API → offer board shows
+    listed $290, delivered "—" (shipping unknown, never fabricated), guidance
+    `insufficient_history` (only 3 observations). Exactly the intended honest behaviour.
+
 - **Phase 3** — exact product matching: ✅
   - `src/domain/matching/`: normalization (accent/apostrophe-safe), alias dictionaries
     (MFK/PDM/LeLabo/By Kilian; EDP/EDT/extrait/absolu), oz→ml conversion with a 2ml tolerance,
@@ -74,15 +91,15 @@ Phase 3 — Exact product matching ✅ COMPLETE (next: Phase 4 — price history
 
 ## In Progress
 
-- Nothing blocking. Phase 3 delivered and verified against live ingested listings.
+- Nothing blocking. Phase 4 delivered and verified end-to-end against live data.
 
 ## Next Tasks
 
-1. **Phase 4 — price history & ranking**: duplicate prevention, coupon verification,
-   shipping-aware pricing, historical metrics (30/90/180-day lows, medians, percentile),
-   buy-now guidance labels, delivery-aware ranking.
-2. Then FragranceNet adapter (adds discount pricing + tester coverage), which will also give
-   the matcher a published concentration and resolve the current manual-review case.
+1. **Phase 5 — public website**: homepage, search, fragrance pages, exact-variant pages,
+   comparison tables, price-history charts, deals, restocks, responsive layout, SEO, E2E tests.
+   The offer board (`getVariantOfferBoard`) already provides the data each variant page needs.
+2. Then FragranceNet adapter (adds discount pricing + tester coverage), which will give the
+   matcher a published concentration and multi-retailer offers to actually rank.
 
 ## Known Issues
 
@@ -100,7 +117,7 @@ Phase 3 — Exact product matching ✅ COMPLETE (next: Phase 4 — price history
 - Build: PASS (exit 0)
 - DB generate: PASS — `drizzle-kit generate`, 13 tables + migration 0001
 - Catalog validate: PASS — 13 brands / 19 fragrances / 52 variants / 52 unique SKUs
-- Unit tests: PASS — Vitest, **87/87** (catalog, slug, contracts, env, money/size/JSON-LD
+- Unit tests: PASS — Vitest, **113/113** (catalog, slug, contracts, env, money/size/JSON-LD
   helpers, Luckyscent fixture parser, delivered price)
 - Live ingest: PASS — Luckyscent, 3 variants parsed, 3 observations, run status `success`,
   health `healthy=true`; re-run proved observations append-only (3 → 6, listings stayed 3)

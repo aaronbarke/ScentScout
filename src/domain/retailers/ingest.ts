@@ -1,4 +1,4 @@
-import { eq, and } from "drizzle-orm";
+import { eq, and, desc } from "drizzle-orm";
 import { db } from "@/db/client";
 import {
   retailers,
@@ -30,7 +30,7 @@ async function persistParsed(
   retailerId: string,
   runId: string,
   p: ParsedRetailerProduct,
-): Promise<void> {
+): Promise<boolean> {
   // Prefer the retailer's own id; fall back to the URL so we still get a
   // stable natural key for the upsert.
   const externalId = p.externalId ?? p.url;
@@ -69,6 +69,30 @@ async function persistParsed(
     })
     .returning({ id: retailerProducts.id });
 
+  // Duplicate prevention: observations are append-only, but re-observing an
+  // unchanged offer adds only noise. If the latest observation for this listing
+  // is materially identical, skip the insert (the upsert above already bumped
+  // last_seen_at). Never UPDATE the prior row.
+  const [latest] = await db
+    .select({
+      listedPriceCents: priceObservations.listedPriceCents,
+      shippingPriceCents: priceObservations.shippingPriceCents,
+      inStock: priceObservations.inStock,
+      currency: priceObservations.currency,
+    })
+    .from(priceObservations)
+    .where(eq(priceObservations.retailerProductId, listing.id))
+    .orderBy(desc(priceObservations.observedAt))
+    .limit(1);
+
+  const unchanged =
+    latest !== undefined &&
+    latest.listedPriceCents === p.listedPriceCents &&
+    latest.shippingPriceCents === p.shippingPriceCents &&
+    latest.inStock === p.inStock &&
+    latest.currency === p.currency;
+  if (unchanged) return false;
+
   const estimatedDelivered = estimateDeliveredPriceCents({
     listedPriceCents: p.listedPriceCents,
     shippingPriceCents: p.shippingPriceCents,
@@ -91,6 +115,7 @@ async function persistParsed(
     observedAt: p.observedAt,
     sourceRunId: runId,
   });
+  return true;
 }
 
 async function updateHealth(
@@ -180,8 +205,8 @@ export async function ingestUrls(
       summary.productsFound += parsed.length;
 
       for (const p of parsed) {
-        await persistParsed(retailer.id, run.id, p);
-        summary.observationsCreated++;
+        const created = await persistParsed(retailer.id, run.id, p);
+        if (created) summary.observationsCreated++;
       }
     } catch (err) {
       // Do NOT write an observation here: a failure is not an out-of-stock signal.

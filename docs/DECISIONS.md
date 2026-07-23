@@ -255,3 +255,36 @@ matching engine stays a pure function of (listing attributes, candidate variants
 it is exhaustively unit-testable without a database. GTIN is stored as evidence for admin review
 and future GTIN-keyed matching; it is not yet used as a scoring signal because canonical
 variants do not carry barcodes.
+
+---
+
+## ADR-009: Price-history metrics use the listed-price basis
+
+Status: Accepted
+
+Date: 2026-07-23
+
+Decision:
+Historical metrics (lows, medians, percentile, all-time low) and the buy-now guidance are
+computed over the **listed price**, not the delivered price. Delivery-aware *ranking* of current
+offers still uses the delivered total when it is known.
+
+Reason:
+Delivered price is frequently null because shipping is unknown (e.g. every Luckyscent offer —
+they don't publish shipping on the product page). Mixing a delivered basis with a listed basis
+across a time series would corrupt percentiles and lows, and dropping unknown-shipping
+observations would throw away most of the history. The listed price is the consistently
+observable signal, so it is the honest basis for "is this historically cheap?". Ranking is a
+point-in-time comparison of concrete offers, where a known delivered total is the better basis
+and is available per offer.
+
+Alternatives:
+(a) Delivered-price basis for history — rejected; too sparse and would silently exclude
+unknown-shipping offers. (b) Fall back to listed only when delivered is null — rejected; a mixed
+basis makes percentiles meaningless.
+
+Consequences:
+`computePriceMetrics` reads `listedPriceCents`; a valid observation is one with a positive
+listed price. Guidance thresholds (20 observations, 30 days coverage, within 3% of the 180-day
+low for "exceptional") operate on that basis. The offer board shows the delivered total per
+offer when known and "shipping unknown" otherwise, independent of the history basis.
