@@ -323,3 +323,33 @@ Consequences:
 Introducing shadcn/ui later is a non-breaking addition (same Tailwind tokens). If any page needs
 static/ISR for performance, that is a per-page change. The chart component is intentionally
 minimal and will grow (axes, tooltips) as real multi-point history accrues.
+
+---
+
+## ADR-011: Alerts are recorded first, delivered second
+
+Status: Accepted
+
+Date: 2026-07-23
+
+Decision:
+`runAlerts()` only *records* alerts as `alert_events` rows with
+`delivery_status = 'pending'`. Sending email is a separate step that flips the row to `sent` or
+`failed`. With no `RESEND_API_KEY`, `sendAlertEmail` returns `skipped` and the row stays
+`pending` — we never mark an unsent alert as delivered.
+
+Reason:
+Splitting decision from delivery means a mail-provider outage or a crash mid-run can never lose
+an alert or silently double-send one. The unique `deduplication_key` is the authoritative guard:
+`onConflictDoNothing` turns a concurrent or repeated run into a no-op instead of a second
+notification. It also lets the alert engine be fully tested with no mail provider configured.
+
+Alternatives:
+(a) Send inline during evaluation — rejected; a delivery failure would either lose the alert or
+force a risky retry that can double-notify. (b) Treat a missing API key as success — rejected;
+that would lie about delivery.
+
+Consequences:
+A pending queue exists (`listPendingAlerts`) and needs a delivery worker (wired when a Resend key
+is added). Alerts fire at most once per rule per run; the cooldown
+(`RULE_COOLDOWN_HOURS = 12`) plus the price-sensitive dedup key control frequency.

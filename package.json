@@ -18,7 +18,8 @@
     "retailer": "tsx scripts/run-retailer.ts",
     "match": "tsx scripts/match-listings.ts",
     "prices": "tsx scripts/show-prices.ts",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "alerts": "tsx scripts/run-alerts.ts"
   },
   "dependencies": {
     "cheerio": "^1.2.0",

@@ -2,7 +2,7 @@
 
 ## Current Milestone
 
-Phase 5 — Public website ✅ COMPLETE (next: Phase 6 — accounts & alerts)
+Phase 6 — Alerts engine ✅ CORE COMPLETE (accounts/auth + email delivery pending keys)
 
 ## Completed
 
@@ -43,6 +43,22 @@ Phase 5 — Public website ✅ COMPLETE (next: Phase 6 — accounts & alerts)
   - `src/domain/pricing/delivered-price.ts` implements ADR-003 with 7 tests.
   - CLI: `npm run retailer -- --url <u> | --discover <n> | --health`.
   - Retailer registry seeded; only access-verified retailers are `enabled`.
+
+- **Phase 6 (core)** — alerts engine: ✅ (accounts/UI/email delivery still pending)
+  - Pure engine `src/domain/alerts/`: `evaluate.ts` (all firing guards + auditable reasons),
+    `dedup.ts` (deterministic, price-sensitive dedup key). No DB imports (barrel excludes run.ts).
+  - **Never alerts from stale/uncertain/invalid data**: blocks non-exact matches, rejected/
+    unmatched, presentation mismatches, observations >24h old or future-dated, unknown stock
+    (null ≠ in stock), unknown delivered totals against a price ceiling, unknown shipping days
+    against a speed limit, unverified coupons when verification is required, plus a 12h cooldown.
+  - `run.ts` records alerts as `pending` only; unique `deduplication_key` +
+    `onConflictDoNothing` makes repeat/concurrent runs no-ops (ADR-011).
+  - `src/email/alerts.ts`: Resend REST delivery (no new dependency); returns `skipped` without a
+    key so nothing is ever falsely marked sent. Email copy keeps the "plus unknown shipping" rule.
+  - CLI: `npm run alerts [-- --pending]`. 25 unit tests.
+  - **Live proof**: a $300-ceiling rule was blocked with `delivered_price_unknown` (Luckyscent
+    publishes no shipping); a no-ceiling rule fired 1 alert; re-running suppressed it as a
+    duplicate. Demo data cleaned up afterwards.
 
 - **Phase 5** — public website: ✅
   - Pages (Next 16 App Router, all `force-dynamic`): homepage, `/fragrances`,
@@ -104,12 +120,15 @@ Phase 5 — Public website ✅ COMPLETE (next: Phase 6 — accounts & alerts)
 
 ## In Progress
 
-- Nothing blocking. Phase 5 public site built, verified in-browser (desktop + mobile + dark).
+- Phase 6 partially delivered: the alert **engine** is done and proven live. Still to do:
+  Supabase Auth wiring, watchlist/alert-rule UI + API routes, and the email delivery worker
+  (needs `RESEND_API_KEY`). Auth config and the Resend key are user-supplied.
 
 ## Next Tasks
 
-1. **Phase 6 — accounts & alerts**: Supabase auth, watchlists, detailed alert rules, alert
-   evaluation, Resend emails, deduplication, alert history, unsubscribe, notification settings.
+1. **Finish Phase 6**: Supabase Auth (enable Email provider in the dashboard), watchlist +
+   alert-rule UI/API routes, alert history & unsubscribe, and the delivery worker that drains
+   `listPendingAlerts()` once `RESEND_API_KEY` is set.
 2. Then FragranceNet adapter (adds discount pricing + tester coverage → multi-retailer ranking).
 3. Optional polish: layer in shadcn/ui primitives (ADR-010) where interactivity warrants.
 
@@ -129,7 +148,7 @@ Phase 5 — Public website ✅ COMPLETE (next: Phase 6 — accounts & alerts)
 - Build: PASS (exit 0)
 - DB generate: PASS — `drizzle-kit generate`, 13 tables + migration 0001
 - Catalog validate: PASS — 13 brands / 19 fragrances / 52 variants / 52 unique SKUs
-- Unit tests: PASS — Vitest, **113/113**
+- Unit tests: PASS — Vitest, **138/138**
 - E2E tests: PASS — Playwright, **5/5** (public site flows) (catalog, slug, contracts, env, money/size/JSON-LD
   helpers, Luckyscent fixture parser, delivered price)
 - Live ingest: PASS — Luckyscent, 3 variants parsed, 3 observations, run status `success`,

@@ -15,8 +15,8 @@
     "semantic_hash": "9b77af189a21a7a64e4bd7a426f64176"
   },
   "package.json": {
-    "mtime": 1784829798.741802,
-    "ast_hash": "b9d5c77b905d9e0112535d2812aff7cb",
+    "mtime": 1784849224.9213107,
+    "ast_hash": "a693563e3fb9b1bf57feffae0dfff5c8",
     "semantic_hash": ""
   },
   "postcss.config.mjs": {
@@ -205,8 +205,8 @@
     "semantic_hash": ""
   },
   "docs/DECISIONS.md": {
-    "mtime": 1784829201.33362,
-    "ast_hash": "dfb65abffbebc211ffbb5b07ddd659f6",
+    "mtime": 1784849295.6802924,
+    "ast_hash": "db63585f9af79261333c1708538a3189",
     "semantic_hash": ""
   },
   "docs/MATCHING_ENGINE.md": {
@@ -225,8 +225,8 @@
     "semantic_hash": ""
   },
   "docs/PROJECT_STATUS.md": {
-    "mtime": 1784829201.3547144,
-    "ast_hash": "067997120ed3fb6c6841f4190d61e553",
+    "mtime": 1784849295.7001624,
+    "ast_hash": "b7fb89266c7b76a0ad20c416cfa8ad9d",
     "semantic_hash": ""
   },
   "docs/RETAILER_ADAPTERS.md": {
@@ -547,6 +547,41 @@
   "tests/e2e/public-site.spec.ts": {
     "mtime": 1784829839.2182834,
     "ast_hash": "d2cf8786affc93d89b7ff5d91147055f",
+    "semantic_hash": ""
+  },
+  "scripts/run-alerts.ts": {
+    "mtime": 1784849216.0242379,
+    "ast_hash": "631ac493db0279c5c093f5f52b5cd059",
+    "semantic_hash": ""
+  },
+  "src/domain/alerts/dedup.ts": {
+    "mtime": 1784849099.6003387,
+    "ast_hash": "40a106074a9fdc7676b77411f2680157",
+    "semantic_hash": ""
+  },
+  "src/domain/alerts/evaluate.ts": {
+    "mtime": 1784849078.147202,
+    "ast_hash": "448e89b47cd3d521c7d519c824592ab2",
+    "semantic_hash": ""
+  },
+  "src/domain/alerts/index.ts": {
+    "mtime": 1784849103.2425356,
+    "ast_hash": "d554b59286ec55452ad7f3946f4ad1d3",
+    "semantic_hash": ""
+  },
+  "src/domain/alerts/run.ts": {
+    "mtime": 1784849246.2939208,
+    "ast_hash": "d8deab9ae0ff4670a99e0c29317ca5a8",
+    "semantic_hash": ""
+  },
+  "src/email/alerts.ts": {
+    "mtime": 1784849207.2616153,
+    "ast_hash": "69edb4df3dacf433cafb37f0c6988f98",
+    "semantic_hash": ""
+  },
+  "tests/unit/alerts.test.ts": {
+    "mtime": 1784849136.8637717,
+    "ast_hash": "f578e7d361be27149d861692d6769eb8",
     "semantic_hash": ""
   }
 }
