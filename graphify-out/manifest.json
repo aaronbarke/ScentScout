@@ -15,8 +15,8 @@
     "semantic_hash": "9b77af189a21a7a64e4bd7a426f64176"
   },
   "package.json": {
-    "mtime": 1784829029.3190265,
-    "ast_hash": "a30a2675a5fbee710266728a2845c413",
+    "mtime": 1784829798.741802,
+    "ast_hash": "b9d5c77b905d9e0112535d2812aff7cb",
     "semantic_hash": ""
   },
   "postcss.config.mjs": {
@@ -25,14 +25,14 @@
     "semantic_hash": "239f3ebf717465dc636818a1a619398d"
   },
   "src/app/layout.tsx": {
-    "mtime": 1784762640.425288,
-    "ast_hash": "94c34ef68b3949a75807a0211ec2273c",
-    "semantic_hash": "94c34ef68b3949a75807a0211ec2273c"
+    "mtime": 1784829503.8605196,
+    "ast_hash": "cb8c286d7f8e1439ad5daf758902b6f8",
+    "semantic_hash": ""
   },
   "src/app/page.tsx": {
-    "mtime": 1784762640.4265816,
-    "ast_hash": "1e489b26bb597dc97f8d44954dd042da",
-    "semantic_hash": "1e489b26bb597dc97f8d44954dd042da"
+    "mtime": 1784829539.2325675,
+    "ast_hash": "c3df0994df0a047fc0edcbec88beced9",
+    "semantic_hash": ""
   },
   "tsconfig.json": {
     "mtime": 1784762640.426215,
@@ -205,8 +205,8 @@
     "semantic_hash": ""
   },
   "docs/DECISIONS.md": {
-    "mtime": 1784780522.593357,
-    "ast_hash": "b551679bf48c3b789c61dde596d5dd83",
+    "mtime": 1784829201.33362,
+    "ast_hash": "dfb65abffbebc211ffbb5b07ddd659f6",
     "semantic_hash": ""
   },
   "docs/MATCHING_ENGINE.md": {
@@ -225,8 +225,8 @@
     "semantic_hash": ""
   },
   "docs/PROJECT_STATUS.md": {
-    "mtime": 1784780546.1410089,
-    "ast_hash": "c682c35441250d3ecbba872ed375d392",
+    "mtime": 1784829201.3547144,
+    "ast_hash": "067997120ed3fb6c6841f4190d61e553",
     "semantic_hash": ""
   },
   "docs/RETAILER_ADAPTERS.md": {
@@ -455,8 +455,8 @@
     "semantic_hash": ""
   },
   "src/domain/pricing/offers.ts": {
-    "mtime": 1784829009.5711563,
-    "ast_hash": "a7b996882e5e3fcb38a1b6e2116b6e1e",
+    "mtime": 1784829586.2590618,
+    "ast_hash": "59352739991922d81b262a398e61668b",
     "semantic_hash": ""
   },
   "src/domain/pricing/ranking.ts": {
@@ -472,6 +472,81 @@
   "tests/unit/pricing-ranking.test.ts": {
     "mtime": 1784828943.5776463,
     "ast_hash": "7c9a8e7088c48c1795012eaf180979fb",
+    "semantic_hash": ""
+  },
+  "playwright.config.ts": {
+    "mtime": 1784829820.1130862,
+    "ast_hash": "30cf0e2fb78fd683e7ed38204d625f18",
+    "semantic_hash": ""
+  },
+  "src/app/deals/page.tsx": {
+    "mtime": 1784829625.2844868,
+    "ast_hash": "ef9ea71ce852cf60e2e803c64f0d5f37",
+    "semantic_hash": ""
+  },
+  "src/app/fragrances/[fragranceSlug]/[variantPath]/page.tsx": {
+    "mtime": 1784829599.7613978,
+    "ast_hash": "90c6a2124974959fc2a2813890573f49",
+    "semantic_hash": ""
+  },
+  "src/app/fragrances/[fragranceSlug]/page.tsx": {
+    "mtime": 1784829562.5044434,
+    "ast_hash": "cc69fcc65ce41209e9a2cbfa4e48484d",
+    "semantic_hash": ""
+  },
+  "src/app/fragrances/page.tsx": {
+    "mtime": 1784829548.3000045,
+    "ast_hash": "24bf08813f321ebeaeaf2f5bc563d047",
+    "semantic_hash": ""
+  },
+  "src/app/restocks/page.tsx": {
+    "mtime": 1784829636.785539,
+    "ast_hash": "a297b0c1ff4285499ea73b64efac30f3",
+    "semantic_hash": ""
+  },
+  "src/app/search/page.tsx": {
+    "mtime": 1784829609.9113922,
+    "ast_hash": "8027a349a8bedc565fad515bf9500443",
+    "semantic_hash": ""
+  },
+  "src/components/FragranceCard.tsx": {
+    "mtime": 1784829466.293348,
+    "ast_hash": "272bbfe6fabe4257edda82a046503ffc",
+    "semantic_hash": ""
+  },
+  "src/components/GuidanceBadge.tsx": {
+    "mtime": 1784829427.240928,
+    "ast_hash": "3cfd4d09e621e748ab11af7339439758",
+    "semantic_hash": ""
+  },
+  "src/components/OfferBoard.tsx": {
+    "mtime": 1784829484.8432844,
+    "ast_hash": "50c76c048712ca23e72f3b917374264c",
+    "semantic_hash": ""
+  },
+  "src/components/PriceHistoryChart.tsx": {
+    "mtime": 1784829443.8660073,
+    "ast_hash": "eb95fab6177ec414a7caf9b3a5cc872b",
+    "semantic_hash": ""
+  },
+  "src/components/SiteHeader.tsx": {
+    "mtime": 1784829455.3968601,
+    "ast_hash": "7f6b497fff641d5500d477194875018c",
+    "semantic_hash": ""
+  },
+  "src/domain/catalog/queries.ts": {
+    "mtime": 1784829404.5494647,
+    "ast_hash": "3b6f259b6852cdd520f61f2c00d0eb2e",
+    "semantic_hash": ""
+  },
+  "src/lib/format.ts": {
+    "mtime": 1784829417.8585944,
+    "ast_hash": "1fd847d29e977c71daea7bae9cf777bb",
+    "semantic_hash": ""
+  },
+  "tests/e2e/public-site.spec.ts": {
+    "mtime": 1784829839.2182834,
+    "ast_hash": "d2cf8786affc93d89b7ff5d91147055f",
     "semantic_hash": ""
   }
 }

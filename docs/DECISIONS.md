@@ -288,3 +288,38 @@ Consequences:
 listed price. Guidance thresholds (20 observations, 30 days coverage, within 3% of the 180-day
 low for "exceptional") operate on that basis. The offer board shows the delivered total per
 offer when known and "shipping unknown" otherwise, independent of the history basis.
+
+---
+
+## ADR-010: Web layer — hand-rolled Tailwind components, dynamic data pages, dependency-free chart
+
+Status: Accepted
+
+Date: 2026-07-23
+
+Decision:
+The Phase 5 public site is built with hand-rolled Tailwind components rather than shadcn/ui for
+now. Data-driven pages are `export const dynamic = "force-dynamic"`, and the price-history chart
+is a dependency-free inline SVG.
+
+Reason:
+- **shadcn/ui deferred**: the stack lists shadcn/ui, but its installer adds Radix dependencies
+  and a component-registry workflow that is friction on Next 16 + Tailwind 4 + React 19. The MVP
+  UI needs are simple (cards, badges, tables, a search box), and clean Tailwind delivers them
+  now with zero setup risk. shadcn primitives can be layered in later where interactivity
+  (dialogs, comboboxes) actually warrants them — the visual language already matches.
+- **force-dynamic**: every catalog/offer page reflects live DB state, so static prerender is
+  wrong and would also force a database connection at build time. Marking them dynamic keeps
+  `next build` DB-free and data fresh.
+- **Inline SVG chart**: avoids shipping a charting library for a single sparkline, keeps the
+  bundle small, and renders fine server-side.
+
+Alternatives:
+(a) Run `npx shadcn init` now — rejected as premature setup cost for little MVP benefit.
+(b) ISR/static pages with revalidation — deferred; adds cache-invalidation complexity before
+there is meaningful traffic. (c) A chart library (Recharts/visx) — rejected for one sparkline.
+
+Consequences:
+Introducing shadcn/ui later is a non-breaking addition (same Tailwind tokens). If any page needs
+static/ISR for performance, that is a per-page change. The chart component is intentionally
+minimal and will grow (axes, tooltips) as real multi-point history accrues.

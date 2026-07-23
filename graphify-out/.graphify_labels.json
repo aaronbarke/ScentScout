@@ -36,11 +36,9 @@
   "34": "security.md",
   "35": "testing.md",
   "36": "extraction-spec.md",
-  "37": "drizzle.config.ts",
   "38": "vitest.config.ts",
   "39": "offers.ts",
   "40": "adapter.ts",
   "41": "ingest.ts",
-  "42": "http.ts",
   "43": "Evidence"
 }

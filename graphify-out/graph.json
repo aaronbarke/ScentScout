@@ -80,7 +80,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "drizzle_config",
-      "community": 37,
+      "community": 41,
       "norm_label": "drizzle.config.ts"
     },
     {
@@ -90,7 +90,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "drizzle_config_url",
-      "community": 37,
+      "community": 41,
       "norm_label": "url"
     },
     {
@@ -334,10 +334,20 @@
       "norm_label": "prices"
     },
     {
+      "label": "test:e2e",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "package_scripts_test_e2e",
+      "community": 1,
+      "norm_label": "test:e2e"
+    },
+    {
       "label": "dependencies",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L22",
+      "source_location": "L23",
       "_origin": "ast",
       "id": "package_dependencies",
       "community": 1,
@@ -347,7 +357,7 @@
       "label": "cheerio",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L23",
+      "source_location": "L24",
       "_origin": "ast",
       "id": "package_dependencies_cheerio",
       "community": 1,
@@ -357,7 +367,7 @@
       "label": "dotenv",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L24",
+      "source_location": "L25",
       "_origin": "ast",
       "id": "package_dependencies_dotenv",
       "community": 1,
@@ -367,7 +377,7 @@
       "label": "drizzle-orm",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L25",
+      "source_location": "L26",
       "_origin": "ast",
       "id": "package_dependencies_drizzle_orm",
       "community": 1,
@@ -377,7 +387,7 @@
       "label": "next",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L26",
+      "source_location": "L27",
       "_origin": "ast",
       "id": "package_dependencies_next",
       "community": 1,
@@ -387,7 +397,7 @@
       "label": "postgres",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L27",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "package_dependencies_postgres",
       "community": 1,
@@ -397,7 +407,7 @@
       "label": "react",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L28",
+      "source_location": "L29",
       "_origin": "ast",
       "id": "package_dependencies_react",
       "community": 1,
@@ -407,7 +417,7 @@
       "label": "react-dom",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L29",
+      "source_location": "L30",
       "_origin": "ast",
       "id": "package_dependencies_react_dom",
       "community": 1,
@@ -417,7 +427,7 @@
       "label": "zod",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L30",
+      "source_location": "L31",
       "_origin": "ast",
       "id": "package_dependencies_zod",
       "community": 1,
@@ -427,17 +437,27 @@
       "label": "devDependencies",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L32",
+      "source_location": "L33",
       "_origin": "ast",
       "id": "package_devdependencies",
       "community": 1,
       "norm_label": "devdependencies"
     },
     {
+      "label": "@playwright/test",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "package_devdependencies_playwright_test",
+      "community": 1,
+      "norm_label": "@playwright/test"
+    },
+    {
       "label": "@tailwindcss/postcss",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L33",
+      "source_location": "L35",
       "_origin": "ast",
       "id": "package_devdependencies_tailwindcss_postcss",
       "community": 1,
@@ -447,7 +467,7 @@
       "label": "@types/node",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L34",
+      "source_location": "L36",
       "_origin": "ast",
       "id": "package_devdependencies_types_node",
       "community": 1,
@@ -457,7 +477,7 @@
       "label": "@types/react",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L35",
+      "source_location": "L37",
       "_origin": "ast",
       "id": "package_devdependencies_types_react",
       "community": 1,
@@ -467,7 +487,7 @@
       "label": "@types/react-dom",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L36",
+      "source_location": "L38",
       "_origin": "ast",
       "id": "package_devdependencies_types_react_dom",
       "community": 1,
@@ -477,7 +497,7 @@
       "label": "drizzle-kit",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L37",
+      "source_location": "L39",
       "_origin": "ast",
       "id": "package_devdependencies_drizzle_kit",
       "community": 1,
@@ -487,7 +507,7 @@
       "label": "eslint",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L38",
+      "source_location": "L40",
       "_origin": "ast",
       "id": "package_devdependencies_eslint",
       "community": 1,
@@ -497,7 +517,7 @@
       "label": "eslint-config-next",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L39",
+      "source_location": "L41",
       "_origin": "ast",
       "id": "package_devdependencies_eslint_config_next",
       "community": 1,
@@ -507,7 +527,7 @@
       "label": "tailwindcss",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L40",
+      "source_location": "L42",
       "_origin": "ast",
       "id": "package_devdependencies_tailwindcss",
       "community": 1,
@@ -517,7 +537,7 @@
       "label": "tsx",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L41",
+      "source_location": "L43",
       "_origin": "ast",
       "id": "package_devdependencies_tsx",
       "community": 1,
@@ -527,7 +547,7 @@
       "label": "typescript",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L42",
+      "source_location": "L44",
       "_origin": "ast",
       "id": "package_devdependencies_typescript",
       "community": 1,
@@ -537,11 +557,31 @@
       "label": "vitest",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L43",
+      "source_location": "L45",
       "_origin": "ast",
       "id": "package_devdependencies_vitest",
       "community": 1,
       "norm_label": "vitest"
+    },
+    {
+      "label": "playwright.config.ts",
+      "file_type": "code",
+      "source_file": "playwright.config.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "playwright_config",
+      "community": 10,
+      "norm_label": "playwright.config.ts"
+    },
+    {
+      "label": "PORT",
+      "file_type": "code",
+      "source_file": "playwright.config.ts",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "playwright_config_port",
+      "community": 10,
+      "norm_label": "port"
     },
     {
       "label": "postcss.config.mjs",
@@ -570,7 +610,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "scripts_match_listings",
-      "community": 2,
+      "community": 4,
       "norm_label": "match-listings.ts"
     },
     {
@@ -580,7 +620,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "scripts_match_listings_main",
-      "community": 2,
+      "community": 4,
       "norm_label": "main()"
     },
     {
@@ -640,7 +680,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "scripts_seed_catalog_seed",
-      "community": 19,
+      "community": 2,
       "norm_label": "seed()"
     },
     {
@@ -650,7 +690,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "scripts_show_prices",
-      "community": 39,
+      "community": 41,
       "norm_label": "show-prices.ts"
     },
     {
@@ -660,7 +700,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "scripts_show_prices_fmt",
-      "community": 39,
+      "community": 41,
       "norm_label": "fmt()"
     },
     {
@@ -670,7 +710,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "scripts_show_prices_main",
-      "community": 39,
+      "community": 41,
       "norm_label": "main()"
     },
     {
@@ -680,7 +720,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "scripts_validate_catalog",
-      "community": 19,
+      "community": 2,
       "norm_label": "validate-catalog.ts"
     },
     {
@@ -690,7 +730,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "scripts_validate_catalog_current_year",
-      "community": 19,
+      "community": 2,
       "norm_label": "current_year"
     },
     {
@@ -700,7 +740,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "scripts_validate_catalog_validate",
-      "community": 19,
+      "community": 2,
       "norm_label": "validate()"
     },
     {
@@ -710,8 +750,158 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "scripts_validate_catalog_errors",
-      "community": 19,
+      "community": 2,
       "norm_label": "errors"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "src/app/deals/page.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_app_deals_page",
+      "community": 5,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "metadata",
+      "file_type": "code",
+      "source_file": "src/app/deals/page.tsx",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "src_app_deals_page_metadata",
+      "community": 5,
+      "norm_label": "metadata"
+    },
+    {
+      "label": "DealsPage()",
+      "file_type": "code",
+      "source_file": "src/app/deals/page.tsx",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "src_app_deals_page_dealspage",
+      "community": 5,
+      "norm_label": "dealspage()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "src/app/fragrances/[fragranceSlug]/[variantPath]/page.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_app_fragrances_fragranceslug_variantpath_page",
+      "community": 5,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "Params",
+      "file_type": "code",
+      "source_file": "src/app/fragrances/[fragranceSlug]/[variantPath]/page.tsx",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "src_app_fragrances_fragranceslug_variantpath_page_params",
+      "community": 5,
+      "norm_label": "params"
+    },
+    {
+      "label": "skuOf()",
+      "file_type": "code",
+      "source_file": "src/app/fragrances/[fragranceSlug]/[variantPath]/page.tsx",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "src_app_fragrances_fragranceslug_variantpath_page_skuof",
+      "community": 5,
+      "norm_label": "skuof()"
+    },
+    {
+      "label": "generateMetadata()",
+      "file_type": "code",
+      "source_file": "src/app/fragrances/[fragranceSlug]/[variantPath]/page.tsx",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "src_app_fragrances_fragranceslug_variantpath_page_generatemetadata",
+      "community": 5,
+      "norm_label": "generatemetadata()"
+    },
+    {
+      "label": "VariantPage()",
+      "file_type": "code",
+      "source_file": "src/app/fragrances/[fragranceSlug]/[variantPath]/page.tsx",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "src_app_fragrances_fragranceslug_variantpath_page_variantpage",
+      "community": 5,
+      "norm_label": "variantpage()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "src/app/fragrances/[fragranceSlug]/page.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_app_fragrances_fragranceslug_page",
+      "community": 5,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "Params",
+      "file_type": "code",
+      "source_file": "src/app/fragrances/[fragranceSlug]/page.tsx",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "src_app_fragrances_fragranceslug_page_params",
+      "community": 5,
+      "norm_label": "params"
+    },
+    {
+      "label": "generateMetadata()",
+      "file_type": "code",
+      "source_file": "src/app/fragrances/[fragranceSlug]/page.tsx",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "src_app_fragrances_fragranceslug_page_generatemetadata",
+      "community": 5,
+      "norm_label": "generatemetadata()"
+    },
+    {
+      "label": "FragrancePage()",
+      "file_type": "code",
+      "source_file": "src/app/fragrances/[fragranceSlug]/page.tsx",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "src_app_fragrances_fragranceslug_page_fragrancepage",
+      "community": 5,
+      "norm_label": "fragrancepage()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "src/app/fragrances/page.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_app_fragrances_page",
+      "community": 5,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "metadata",
+      "file_type": "code",
+      "source_file": "src/app/fragrances/page.tsx",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "src_app_fragrances_page_metadata",
+      "community": 5,
+      "norm_label": "metadata"
+    },
+    {
+      "label": "FragrancesPage()",
+      "file_type": "code",
+      "source_file": "src/app/fragrances/page.tsx",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "src_app_fragrances_page_fragrancespage",
+      "community": 5,
+      "norm_label": "fragrancespage()"
     },
     {
       "label": "layout.tsx",
@@ -727,7 +917,7 @@
       "label": "geistSans",
       "file_type": "code",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L5",
+      "source_location": "L7",
       "_origin": "ast",
       "id": "src_app_layout_geistsans",
       "community": 5,
@@ -737,7 +927,7 @@
       "label": "geistMono",
       "file_type": "code",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L10",
+      "source_location": "L8",
       "_origin": "ast",
       "id": "src_app_layout_geistmono",
       "community": 5,
@@ -747,7 +937,7 @@
       "label": "metadata",
       "file_type": "code",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L15",
+      "source_location": "L12",
       "_origin": "ast",
       "id": "src_app_layout_metadata",
       "community": 5,
@@ -757,7 +947,7 @@
       "label": "RootLayout()",
       "file_type": "code",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L20",
+      "source_location": "L29",
       "_origin": "ast",
       "id": "src_app_layout_rootlayout",
       "community": 5,
@@ -770,18 +960,258 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_app_page",
-      "community": 10,
+      "community": 5,
       "norm_label": "page.tsx"
     },
     {
-      "label": "Home()",
+      "label": "HomePage()",
       "file_type": "code",
       "source_file": "src/app/page.tsx",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "src_app_page_homepage",
+      "community": 5,
+      "norm_label": "homepage()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "src/app/restocks/page.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_app_restocks_page",
+      "community": 5,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "metadata",
+      "file_type": "code",
+      "source_file": "src/app/restocks/page.tsx",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "src_app_restocks_page_metadata",
+      "community": 5,
+      "norm_label": "metadata"
+    },
+    {
+      "label": "RestocksPage()",
+      "file_type": "code",
+      "source_file": "src/app/restocks/page.tsx",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "src_app_restocks_page_restockspage",
+      "community": 5,
+      "norm_label": "restockspage()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "src/app/search/page.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_app_search_page",
+      "community": 5,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "metadata",
+      "file_type": "code",
+      "source_file": "src/app/search/page.tsx",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "src_app_search_page_metadata",
+      "community": 5,
+      "norm_label": "metadata"
+    },
+    {
+      "label": "Search",
+      "file_type": "code",
+      "source_file": "src/app/search/page.tsx",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "src_app_search_page_search",
+      "community": 5,
+      "norm_label": "search"
+    },
+    {
+      "label": "SearchPage()",
+      "file_type": "code",
+      "source_file": "src/app/search/page.tsx",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "src_app_search_page_searchpage",
+      "community": 5,
+      "norm_label": "searchpage()"
+    },
+    {
+      "label": "FragranceCard.tsx",
+      "file_type": "code",
+      "source_file": "src/components/FragranceCard.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_fragrancecard",
+      "community": 5,
+      "norm_label": "fragrancecard.tsx"
+    },
+    {
+      "label": "FragranceCard()",
+      "file_type": "code",
+      "source_file": "src/components/FragranceCard.tsx",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "src_components_fragrancecard_fragrancecard",
+      "community": 5,
+      "norm_label": "fragrancecard()"
+    },
+    {
+      "label": "GuidanceBadge.tsx",
+      "file_type": "code",
+      "source_file": "src/components/GuidanceBadge.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_guidancebadge",
+      "community": 5,
+      "norm_label": "guidancebadge.tsx"
+    },
+    {
+      "label": "STYLES",
+      "file_type": "code",
+      "source_file": "src/components/GuidanceBadge.tsx",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "src_app_page_home",
-      "community": 10,
-      "norm_label": "home()"
+      "id": "src_components_guidancebadge_styles",
+      "community": 5,
+      "norm_label": "styles"
+    },
+    {
+      "label": "GuidanceBadge()",
+      "file_type": "code",
+      "source_file": "src/components/GuidanceBadge.tsx",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "src_components_guidancebadge_guidancebadge",
+      "community": 5,
+      "norm_label": "guidancebadge()"
+    },
+    {
+      "label": "PRESENTATION_STYLES",
+      "file_type": "code",
+      "source_file": "src/components/GuidanceBadge.tsx",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "src_components_guidancebadge_presentation_styles",
+      "community": 5,
+      "norm_label": "presentation_styles"
+    },
+    {
+      "label": "PresentationTag()",
+      "file_type": "code",
+      "source_file": "src/components/GuidanceBadge.tsx",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "src_components_guidancebadge_presentationtag",
+      "community": 5,
+      "norm_label": "presentationtag()"
+    },
+    {
+      "label": "OfferBoard.tsx",
+      "file_type": "code",
+      "source_file": "src/components/OfferBoard.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_offerboard",
+      "community": 5,
+      "norm_label": "offerboard.tsx"
+    },
+    {
+      "label": "Stat()",
+      "file_type": "code",
+      "source_file": "src/components/OfferBoard.tsx",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "src_components_offerboard_stat",
+      "community": 5,
+      "norm_label": "stat()"
+    },
+    {
+      "label": "OfferBoard()",
+      "file_type": "code",
+      "source_file": "src/components/OfferBoard.tsx",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "src_components_offerboard_offerboard",
+      "community": 5,
+      "norm_label": "offerboard()"
+    },
+    {
+      "label": "PriceHistoryChart.tsx",
+      "file_type": "code",
+      "source_file": "src/components/PriceHistoryChart.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_pricehistorychart",
+      "community": 5,
+      "norm_label": "pricehistorychart.tsx"
+    },
+    {
+      "label": "ChartPoint",
+      "file_type": "code",
+      "source_file": "src/components/PriceHistoryChart.tsx",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "src_components_pricehistorychart_chartpoint",
+      "community": 5,
+      "norm_label": "chartpoint"
+    },
+    {
+      "label": "PriceHistoryChart()",
+      "file_type": "code",
+      "source_file": "src/components/PriceHistoryChart.tsx",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "src_components_pricehistorychart_pricehistorychart",
+      "community": 5,
+      "norm_label": "pricehistorychart()"
+    },
+    {
+      "label": "SiteHeader.tsx",
+      "file_type": "code",
+      "source_file": "src/components/SiteHeader.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_siteheader",
+      "community": 5,
+      "norm_label": "siteheader.tsx"
+    },
+    {
+      "label": "NAV",
+      "file_type": "code",
+      "source_file": "src/components/SiteHeader.tsx",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "src_components_siteheader_nav",
+      "community": 5,
+      "norm_label": "nav"
+    },
+    {
+      "label": "SiteHeader()",
+      "file_type": "code",
+      "source_file": "src/components/SiteHeader.tsx",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "src_components_siteheader_siteheader",
+      "community": 5,
+      "norm_label": "siteheader()"
+    },
+    {
+      "label": "SearchBox()",
+      "file_type": "code",
+      "source_file": "src/components/SiteHeader.tsx",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "src_components_siteheader_searchbox",
+      "community": 5,
+      "norm_label": "searchbox()"
     },
     {
       "label": "client.ts",
@@ -790,7 +1220,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_db_client",
-      "community": 2,
+      "community": 41,
       "norm_label": "client.ts"
     },
     {
@@ -800,7 +1230,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "src_db_client_env",
-      "community": 2,
+      "community": 41,
       "norm_label": "env"
     },
     {
@@ -960,7 +1390,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_db_schema_enums_concentrationenum",
-      "community": 19,
+      "community": 2,
       "norm_label": "concentrationenum"
     },
     {
@@ -1090,7 +1520,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "src_db_schema_ops_retailerhealth",
-      "community": 2,
+      "community": 41,
       "norm_label": "retailerhealth"
     },
     {
@@ -1100,7 +1530,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "src_db_schema_ops_matchreviews",
-      "community": 2,
+      "community": 4,
       "norm_label": "matchreviews"
     },
     {
@@ -1170,7 +1600,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_db_seed_catalog",
-      "community": 19,
+      "community": 2,
       "norm_label": "catalog.ts"
     },
     {
@@ -1180,7 +1610,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "src_db_seed_catalog_gender",
-      "community": 19,
+      "community": 2,
       "norm_label": "gender"
     },
     {
@@ -1200,7 +1630,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "src_db_seed_catalog_seedfragrance",
-      "community": 19,
+      "community": 2,
       "norm_label": "seedfragrance"
     },
     {
@@ -1210,7 +1640,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "src_db_seed_catalog_seedbrand",
-      "community": 19,
+      "community": 2,
       "norm_label": "seedbrand"
     },
     {
@@ -1220,7 +1650,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "src_db_seed_catalog_retail",
-      "community": 19,
+      "community": 2,
       "norm_label": "retail()"
     },
     {
@@ -1230,7 +1660,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "src_db_seed_catalog_tester",
-      "community": 19,
+      "community": 2,
       "norm_label": "tester()"
     },
     {
@@ -1240,7 +1670,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "src_db_seed_catalog_refill",
-      "community": 19,
+      "community": 2,
       "norm_label": "refill()"
     },
     {
@@ -1250,7 +1680,7 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "src_db_seed_catalog_catalog",
-      "community": 19,
+      "community": 2,
       "norm_label": "catalog"
     },
     {
@@ -1282,6 +1712,146 @@
       "id": "src_db_seed_retailers_retailerseeds",
       "community": 2,
       "norm_label": "retailerseeds"
+    },
+    {
+      "label": "queries.ts",
+      "file_type": "code",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_domain_catalog_queries",
+      "community": 5,
+      "norm_label": "queries.ts"
+    },
+    {
+      "label": "VariantSummary",
+      "file_type": "code",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "src_domain_catalog_queries_variantsummary",
+      "community": 5,
+      "norm_label": "variantsummary"
+    },
+    {
+      "label": "FragranceSummary",
+      "file_type": "code",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "src_domain_catalog_queries_fragrancesummary",
+      "community": 5,
+      "norm_label": "fragrancesummary"
+    },
+    {
+      "label": "toVariantSummary()",
+      "file_type": "code",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "src_domain_catalog_queries_tovariantsummary",
+      "community": 5,
+      "norm_label": "tovariantsummary()"
+    },
+    {
+      "label": "VARIANT_COLUMNS",
+      "file_type": "code",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "src_domain_catalog_queries_variant_columns",
+      "community": 5,
+      "norm_label": "variant_columns"
+    },
+    {
+      "label": "groupIntoFragrances()",
+      "file_type": "code",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L62",
+      "_origin": "ast",
+      "id": "src_domain_catalog_queries_groupintofragrances",
+      "community": 5,
+      "norm_label": "groupintofragrances()"
+    },
+    {
+      "label": "listCatalog()",
+      "file_type": "code",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L102",
+      "_origin": "ast",
+      "id": "src_domain_catalog_queries_listcatalog",
+      "community": 5,
+      "norm_label": "listcatalog()"
+    },
+    {
+      "label": "getFragrance()",
+      "file_type": "code",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L113",
+      "_origin": "ast",
+      "id": "src_domain_catalog_queries_getfragrance",
+      "community": 5,
+      "norm_label": "getfragrance()"
+    },
+    {
+      "label": "getVariantHeader()",
+      "file_type": "code",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L125",
+      "_origin": "ast",
+      "id": "src_domain_catalog_queries_getvariantheader",
+      "community": 5,
+      "norm_label": "getvariantheader()"
+    },
+    {
+      "label": "searchFragrances()",
+      "file_type": "code",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L148",
+      "_origin": "ast",
+      "id": "src_domain_catalog_queries_searchfragrances",
+      "community": 5,
+      "norm_label": "searchfragrances()"
+    },
+    {
+      "label": "CatalogStats",
+      "file_type": "code",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L162",
+      "_origin": "ast",
+      "id": "src_domain_catalog_queries_catalogstats",
+      "community": 5,
+      "norm_label": "catalogstats"
+    },
+    {
+      "label": "getCatalogStats()",
+      "file_type": "code",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L170",
+      "_origin": "ast",
+      "id": "src_domain_catalog_queries_getcatalogstats",
+      "community": 5,
+      "norm_label": "getcatalogstats()"
+    },
+    {
+      "label": "listVariantsWithOffers()",
+      "file_type": "code",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L179",
+      "_origin": "ast",
+      "id": "src_domain_catalog_queries_listvariantswithoffers",
+      "community": 5,
+      "norm_label": "listvariantswithoffers()"
+    },
+    {
+      "label": "listRecentRestocks()",
+      "file_type": "code",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L209",
+      "_origin": "ast",
+      "id": "src_domain_catalog_queries_listrecentrestocks",
+      "community": 5,
+      "norm_label": "listrecentrestocks()"
     },
     {
       "label": "aliases.ts",
@@ -1340,7 +1910,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "src_domain_matching_candidates_loadcandidates",
-      "community": 2,
+      "community": 4,
       "norm_label": "loadcandidates()"
     },
     {
@@ -1510,7 +2080,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_domain_matching_review",
-      "community": 2,
+      "community": 4,
       "norm_label": "review.ts"
     },
     {
@@ -1520,7 +2090,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "src_domain_matching_review_applydecision",
-      "community": 2,
+      "community": 4,
       "norm_label": "applydecision()"
     },
     {
@@ -1530,7 +2100,7 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "src_domain_matching_review_pendingreview",
-      "community": 2,
+      "community": 4,
       "norm_label": "pendingreview"
     },
     {
@@ -1540,7 +2110,7 @@
       "source_location": "L59",
       "_origin": "ast",
       "id": "src_domain_matching_review_listpendingreviews",
-      "community": 2,
+      "community": 4,
       "norm_label": "listpendingreviews()"
     },
     {
@@ -1550,7 +2120,7 @@
       "source_location": "L85",
       "_origin": "ast",
       "id": "src_domain_matching_review_approvereview",
-      "community": 2,
+      "community": 4,
       "norm_label": "approvereview()"
     },
     {
@@ -1560,7 +2130,7 @@
       "source_location": "L126",
       "_origin": "ast",
       "id": "src_domain_matching_review_rejectreview",
-      "community": 2,
+      "community": 4,
       "norm_label": "rejectreview()"
     },
     {
@@ -1570,7 +2140,7 @@
       "source_location": "L162",
       "_origin": "ast",
       "id": "src_domain_matching_review_listunmatched",
-      "community": 2,
+      "community": 4,
       "norm_label": "listunmatched()"
     },
     {
@@ -1917,10 +2487,10 @@
       "label": "getVariantOfferBoard()",
       "file_type": "code",
       "source_file": "src/domain/pricing/offers.ts",
-      "source_location": "L33",
+      "source_location": "L35",
       "_origin": "ast",
       "id": "src_domain_pricing_offers_getvariantofferboard",
-      "community": 39,
+      "community": 5,
       "norm_label": "getvariantofferboard()"
     },
     {
@@ -2100,7 +2670,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_domain_retailers_ingest",
-      "community": 2,
+      "community": 41,
       "norm_label": "ingest.ts"
     },
     {
@@ -2110,7 +2680,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_domain_retailers_ingest_ingestsummary",
-      "community": 2,
+      "community": 41,
       "norm_label": "ingestsummary"
     },
     {
@@ -2150,7 +2720,7 @@
       "source_location": "L248",
       "_origin": "ast",
       "id": "src_domain_retailers_ingest_findlisting",
-      "community": 2,
+      "community": 41,
       "norm_label": "findlisting()"
     },
     {
@@ -2260,7 +2830,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_lib_catalog_slug",
-      "community": 19,
+      "community": 2,
       "norm_label": "catalog-slug.ts"
     },
     {
@@ -2290,7 +2860,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_lib_catalog_slug_concentration_code",
-      "community": 19,
+      "community": 2,
       "norm_label": "concentration_code"
     },
     {
@@ -2300,7 +2870,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "src_lib_catalog_slug_concentrationcode",
-      "community": 19,
+      "community": 2,
       "norm_label": "concentrationcode()"
     },
     {
@@ -2310,7 +2880,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "src_lib_catalog_slug_variantpath",
-      "community": 19,
+      "community": 5,
       "norm_label": "variantpath()"
     },
     {
@@ -2320,7 +2890,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "src_lib_catalog_slug_canonicalsku",
-      "community": 19,
+      "community": 2,
       "norm_label": "canonicalsku()"
     },
     {
@@ -2330,7 +2900,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_lib_env",
-      "community": 37,
+      "community": 41,
       "norm_label": "env.ts"
     },
     {
@@ -2340,7 +2910,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_lib_env_dbenvschema",
-      "community": 37,
+      "community": 41,
       "norm_label": "dbenvschema"
     },
     {
@@ -2350,7 +2920,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "src_lib_env_dbenv",
-      "community": 37,
+      "community": 41,
       "norm_label": "dbenv"
     },
     {
@@ -2360,7 +2930,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "src_lib_env_isusablepostgresurl",
-      "community": 37,
+      "community": 41,
       "norm_label": "isusablepostgresurl()"
     },
     {
@@ -2370,7 +2940,7 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "src_lib_env_resolvemigrationurl",
-      "community": 37,
+      "community": 41,
       "norm_label": "resolvemigrationurl()"
     },
     {
@@ -2380,8 +2950,108 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "src_lib_env_loaddbenv",
-      "community": 37,
+      "community": 41,
       "norm_label": "loaddbenv()"
+    },
+    {
+      "label": "format.ts",
+      "file_type": "code",
+      "source_file": "src/lib/format.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_lib_format",
+      "community": 5,
+      "norm_label": "format.ts"
+    },
+    {
+      "label": "formatCents()",
+      "file_type": "code",
+      "source_file": "src/lib/format.ts",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "src_lib_format_formatcents",
+      "community": 5,
+      "norm_label": "formatcents()"
+    },
+    {
+      "label": "CONCENTRATION_LABELS",
+      "file_type": "code",
+      "source_file": "src/lib/format.ts",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "src_lib_format_concentration_labels",
+      "community": 5,
+      "norm_label": "concentration_labels"
+    },
+    {
+      "label": "PRESENTATION_LABELS",
+      "file_type": "code",
+      "source_file": "src/lib/format.ts",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "src_lib_format_presentation_labels",
+      "community": 5,
+      "norm_label": "presentation_labels"
+    },
+    {
+      "label": "GUIDANCE_LABELS",
+      "file_type": "code",
+      "source_file": "src/lib/format.ts",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "src_lib_format_guidance_labels",
+      "community": 5,
+      "norm_label": "guidance_labels"
+    },
+    {
+      "label": "concentrationLabel()",
+      "file_type": "code",
+      "source_file": "src/lib/format.ts",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "src_lib_format_concentrationlabel",
+      "community": 5,
+      "norm_label": "concentrationlabel()"
+    },
+    {
+      "label": "presentationLabel()",
+      "file_type": "code",
+      "source_file": "src/lib/format.ts",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "src_lib_format_presentationlabel",
+      "community": 5,
+      "norm_label": "presentationlabel()"
+    },
+    {
+      "label": "guidanceLabel()",
+      "file_type": "code",
+      "source_file": "src/lib/format.ts",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "src_lib_format_guidancelabel",
+      "community": 5,
+      "norm_label": "guidancelabel()"
+    },
+    {
+      "label": "variantDescriptor()",
+      "file_type": "code",
+      "source_file": "src/lib/format.ts",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "src_lib_format_variantdescriptor",
+      "community": 5,
+      "norm_label": "variantdescriptor()"
+    },
+    {
+      "label": "freshnessLabel()",
+      "file_type": "code",
+      "source_file": "src/lib/format.ts",
+      "source_location": "L45",
+      "_origin": "ast",
+      "id": "src_lib_format_freshnesslabel",
+      "community": 5,
+      "norm_label": "freshnesslabel()"
     },
     {
       "label": "adapter.ts",
@@ -2490,7 +3160,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_retailers_shared_http",
-      "community": 42,
+      "community": 40,
       "norm_label": "http.ts"
     },
     {
@@ -2500,7 +3170,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_retailers_shared_http_fetchoptions",
-      "community": 42,
+      "community": 40,
       "norm_label": "fetchoptions"
     },
     {
@@ -2510,7 +3180,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "src_retailers_shared_http_fetchresult",
-      "community": 42,
+      "community": 40,
       "norm_label": "fetchresult"
     },
     {
@@ -2520,7 +3190,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "src_retailers_shared_http_retrievalerror",
-      "community": 42,
+      "community": 40,
       "norm_label": "retrievalerror"
     },
     {
@@ -2530,7 +3200,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "src_retailers_shared_http_retrievalerror_constructor",
-      "community": 42,
+      "community": 40,
       "norm_label": ".constructor()"
     },
     {
@@ -2540,7 +3210,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "src_retailers_shared_http_lastrequestat",
-      "community": 42,
+      "community": 40,
       "norm_label": "lastrequestat"
     },
     {
@@ -2550,7 +3220,7 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "src_retailers_shared_http_sleep",
-      "community": 42,
+      "community": 40,
       "norm_label": "sleep()"
     },
     {
@@ -2560,7 +3230,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "src_retailers_shared_http_isretryable",
-      "community": 42,
+      "community": 40,
       "norm_label": "isretryable()"
     },
     {
@@ -2570,7 +3240,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "src_retailers_shared_http_respectratelimit",
-      "community": 42,
+      "community": 40,
       "norm_label": "respectratelimit()"
     },
     {
@@ -2580,7 +3250,7 @@
       "source_location": "L59",
       "_origin": "ast",
       "id": "src_retailers_shared_http_backoffms",
-      "community": 42,
+      "community": 40,
       "norm_label": "backoffms()"
     },
     {
@@ -2590,7 +3260,7 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "src_retailers_shared_http_fetchtext",
-      "community": 42,
+      "community": 40,
       "norm_label": "fetchtext()"
     },
     {
@@ -2600,7 +3270,7 @@
       "source_location": "L126",
       "_origin": "ast",
       "id": "src_retailers_shared_http_resetratelimiter",
-      "community": 42,
+      "community": 40,
       "norm_label": "__resetratelimiter()"
     },
     {
@@ -2724,13 +3394,23 @@
       "norm_label": "lookslikesampleortravel()"
     },
     {
+      "label": "public-site.spec.ts",
+      "file_type": "code",
+      "source_file": "tests/e2e/public-site.spec.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "tests_e2e_public_site_spec",
+      "community": 19,
+      "norm_label": "public-site.spec.ts"
+    },
+    {
       "label": "catalog.test.ts",
       "file_type": "code",
       "source_file": "tests/unit/catalog.test.ts",
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_unit_catalog_test",
-      "community": 19,
+      "community": 2,
       "norm_label": "catalog.test.ts"
     },
     {
@@ -2750,7 +3430,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_unit_env_test",
-      "community": 37,
+      "community": 41,
       "norm_label": "env.test.ts"
     },
     {
@@ -4444,6 +5124,16 @@
       "norm_label": "adr-008: persist adapter-parsed attributes; keep the matching engine i/o-free"
     },
     {
+      "label": "ADR-009: Price-history metrics use the listed-price basis",
+      "file_type": "document",
+      "source_file": "docs/DECISIONS.md",
+      "source_location": "L261",
+      "_origin": "ast",
+      "id": "docs_decisions_adr_009_price_history_metrics_use_the_listed_price_basis",
+      "community": 23,
+      "norm_label": "adr-009: price-history metrics use the listed-price basis"
+    },
+    {
       "label": "MATCHING_ENGINE.md",
       "file_type": "document",
       "source_file": "docs/MATCHING_ENGINE.md",
@@ -4707,7 +5397,7 @@
       "label": "In Progress",
       "file_type": "document",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L75",
+      "source_location": "L92",
       "_origin": "ast",
       "id": "docs_project_status_in_progress",
       "community": 13,
@@ -4717,7 +5407,7 @@
       "label": "Next Tasks",
       "file_type": "document",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L79",
+      "source_location": "L96",
       "_origin": "ast",
       "id": "docs_project_status_next_tasks",
       "community": 13,
@@ -4727,7 +5417,7 @@
       "label": "Known Issues",
       "file_type": "document",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L87",
+      "source_location": "L104",
       "_origin": "ast",
       "id": "docs_project_status_known_issues",
       "community": 13,
@@ -4737,7 +5427,7 @@
       "label": "Decisions Needed",
       "file_type": "document",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L92",
+      "source_location": "L109",
       "_origin": "ast",
       "id": "docs_project_status_decisions_needed",
       "community": 13,
@@ -4747,7 +5437,7 @@
       "label": "Latest Validation",
       "file_type": "document",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L96",
+      "source_location": "L113",
       "_origin": "ast",
       "id": "docs_project_status_latest_validation",
       "community": 13,
@@ -4757,7 +5447,7 @@
       "label": "Last Graphify Update",
       "file_type": "document",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L114",
+      "source_location": "L131",
       "_origin": "ast",
       "id": "docs_project_status_last_graphify_update",
       "community": 13,
@@ -4767,7 +5457,7 @@
       "label": "Latest GitHub Commit",
       "file_type": "document",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L118",
+      "source_location": "L135",
       "_origin": "ast",
       "id": "docs_project_status_latest_github_commit",
       "community": 13,
@@ -5201,7 +5891,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0,
       "source": "package",
       "target": "package_dependencies",
@@ -5211,7 +5901,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L32",
+      "source_location": "L33",
       "weight": 1.0,
       "source": "package",
       "target": "package_devdependencies",
@@ -5391,6 +6081,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_test_e2e",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
       "source_location": "L17",
       "weight": 1.0,
       "source": "package_scripts",
@@ -5411,7 +6111,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L23",
+      "source_location": "L24",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_cheerio",
@@ -5421,7 +6121,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L24",
+      "source_location": "L25",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_dotenv",
@@ -5431,7 +6131,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L25",
+      "source_location": "L26",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_drizzle_orm",
@@ -5441,7 +6141,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L26",
+      "source_location": "L27",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_next",
@@ -5451,7 +6151,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L27",
+      "source_location": "L28",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_postgres",
@@ -5461,7 +6161,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L28",
+      "source_location": "L29",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react",
@@ -5471,7 +6171,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L29",
+      "source_location": "L30",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_dom",
@@ -5481,7 +6181,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L30",
+      "source_location": "L31",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_zod",
@@ -5491,7 +6191,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L37",
+      "source_location": "L39",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_drizzle_kit",
@@ -5501,7 +6201,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L38",
+      "source_location": "L40",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_eslint",
@@ -5511,7 +6211,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L39",
+      "source_location": "L41",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_eslint_config_next",
@@ -5521,60 +6221,10 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L40",
-      "weight": 1.0,
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_tailwindcss",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L33",
-      "weight": 1.0,
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_tailwindcss_postcss",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L41",
-      "weight": 1.0,
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_tsx",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
       "source_location": "L34",
       "weight": 1.0,
       "source": "package_devdependencies",
-      "target": "package_devdependencies_types_node",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L35",
-      "weight": 1.0,
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_types_react",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L36",
-      "weight": 1.0,
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_types_react_dom",
+      "target": "package_devdependencies_playwright_test",
       "confidence_score": 1.0
     },
     {
@@ -5584,7 +6234,17 @@
       "source_location": "L42",
       "weight": 1.0,
       "source": "package_devdependencies",
-      "target": "package_devdependencies_typescript",
+      "target": "package_devdependencies_tailwindcss",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_tailwindcss_postcss",
       "confidence_score": 1.0
     },
     {
@@ -5594,7 +6254,67 @@
       "source_location": "L43",
       "weight": 1.0,
       "source": "package_devdependencies",
+      "target": "package_devdependencies_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_node",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_react_dom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_typescript",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "package_devdependencies",
       "target": "package_devdependencies_vitest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "playwright.config.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "playwright_config",
+      "target": "playwright_config_port",
       "confidence_score": 1.0
     },
     {
@@ -6293,8 +7013,690 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/app/layout.tsx",
+      "source_file": "src/app/deals/page.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "src_app_deals_page",
+      "target": "src_app_deals_page_dealspage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/deals/page.tsx",
       "source_location": "L10",
+      "weight": 1.0,
+      "source": "src_app_deals_page",
+      "target": "src_app_deals_page_metadata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/deals/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_app_deals_page",
+      "target": "src_components_guidancebadge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/deals/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_app_deals_page",
+      "target": "src_components_guidancebadge_guidancebadge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/deals/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_app_deals_page",
+      "target": "src_domain_catalog_queries",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/deals/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_app_deals_page",
+      "target": "src_domain_catalog_queries_listvariantswithoffers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/deals/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_app_deals_page",
+      "target": "src_domain_pricing_offers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/deals/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_app_deals_page",
+      "target": "src_domain_pricing_offers_getvariantofferboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/deals/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_app_deals_page",
+      "target": "src_lib_format",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/deals/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_app_deals_page",
+      "target": "src_lib_format_formatcents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/deals/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_app_deals_page",
+      "target": "src_lib_format_variantdescriptor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/deals/page.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "src_app_deals_page_dealspage",
+      "target": "src_domain_catalog_queries_listvariantswithoffers"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/deals/page.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "src_app_deals_page_dealspage",
+      "target": "src_domain_pricing_offers_getvariantofferboard"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/deals/page.tsx",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "src_app_deals_page_dealspage",
+      "target": "src_lib_format_formatcents"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/deals/page.tsx",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "src_app_deals_page_dealspage",
+      "target": "src_lib_format_variantdescriptor"
+    },
+    {
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/app/deals/page.tsx",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "src_app_deals_page_dealspage",
+      "target": "tests_unit_matching_test_v"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/fragrances/[fragranceSlug]/[variantPath]/page.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_variantpath_page",
+      "target": "src_app_fragrances_fragranceslug_variantpath_page_generatemetadata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/fragrances/[fragranceSlug]/[variantPath]/page.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_variantpath_page",
+      "target": "src_app_fragrances_fragranceslug_variantpath_page_params",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/fragrances/[fragranceSlug]/[variantPath]/page.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_variantpath_page",
+      "target": "src_app_fragrances_fragranceslug_variantpath_page_skuof",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/fragrances/[fragranceSlug]/[variantPath]/page.tsx",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_variantpath_page",
+      "target": "src_app_fragrances_fragranceslug_variantpath_page_variantpage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/fragrances/[fragranceSlug]/[variantPath]/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_variantpath_page",
+      "target": "src_components_guidancebadge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/fragrances/[fragranceSlug]/[variantPath]/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_variantpath_page",
+      "target": "src_components_guidancebadge_presentationtag",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/fragrances/[fragranceSlug]/[variantPath]/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_variantpath_page",
+      "target": "src_components_offerboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/fragrances/[fragranceSlug]/[variantPath]/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_variantpath_page",
+      "target": "src_components_offerboard_offerboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/fragrances/[fragranceSlug]/[variantPath]/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_variantpath_page",
+      "target": "src_domain_catalog_queries",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/fragrances/[fragranceSlug]/[variantPath]/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_variantpath_page",
+      "target": "src_domain_catalog_queries_getvariantheader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/fragrances/[fragranceSlug]/[variantPath]/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_variantpath_page",
+      "target": "src_domain_pricing_offers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/fragrances/[fragranceSlug]/[variantPath]/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_variantpath_page",
+      "target": "src_domain_pricing_offers_getvariantofferboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/fragrances/[fragranceSlug]/[variantPath]/page.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_variantpath_page",
+      "target": "src_lib_format",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/fragrances/[fragranceSlug]/[variantPath]/page.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_variantpath_page",
+      "target": "src_lib_format_presentationlabel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/fragrances/[fragranceSlug]/[variantPath]/page.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_variantpath_page",
+      "target": "src_lib_format_variantdescriptor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/fragrances/[fragranceSlug]/[variantPath]/page.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_variantpath_page_generatemetadata",
+      "target": "src_app_fragrances_fragranceslug_variantpath_page_skuof",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/fragrances/[fragranceSlug]/[variantPath]/page.tsx",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_variantpath_page_variantpage",
+      "target": "src_app_fragrances_fragranceslug_variantpath_page_skuof",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/fragrances/[fragranceSlug]/[variantPath]/page.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_variantpath_page_generatemetadata",
+      "target": "src_domain_catalog_queries_getvariantheader"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/fragrances/[fragranceSlug]/[variantPath]/page.tsx",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_variantpath_page_generatemetadata",
+      "target": "src_lib_format_presentationlabel"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/fragrances/[fragranceSlug]/[variantPath]/page.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_variantpath_page_generatemetadata",
+      "target": "src_lib_format_variantdescriptor"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/fragrances/[fragranceSlug]/[variantPath]/page.tsx",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_variantpath_page_variantpage",
+      "target": "src_domain_catalog_queries_getvariantheader"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/fragrances/[fragranceSlug]/[variantPath]/page.tsx",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_variantpath_page_variantpage",
+      "target": "src_domain_pricing_offers_getvariantofferboard"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/fragrances/[fragranceSlug]/[variantPath]/page.tsx",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_variantpath_page_variantpage",
+      "target": "src_lib_format_presentationlabel"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/fragrances/[fragranceSlug]/[variantPath]/page.tsx",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_variantpath_page_variantpage",
+      "target": "src_lib_format_variantdescriptor"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/fragrances/[fragranceSlug]/page.tsx",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_page",
+      "target": "src_app_fragrances_fragranceslug_page_fragrancepage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/fragrances/[fragranceSlug]/page.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_page",
+      "target": "src_app_fragrances_fragranceslug_page_generatemetadata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/fragrances/[fragranceSlug]/page.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_page",
+      "target": "src_app_fragrances_fragranceslug_page_params",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/fragrances/[fragranceSlug]/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_page",
+      "target": "src_components_guidancebadge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/fragrances/[fragranceSlug]/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_page",
+      "target": "src_components_guidancebadge_presentationtag",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/fragrances/[fragranceSlug]/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_page",
+      "target": "src_domain_catalog_queries",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/fragrances/[fragranceSlug]/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_page",
+      "target": "src_domain_catalog_queries_getfragrance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/fragrances/[fragranceSlug]/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_page",
+      "target": "src_lib_format",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/fragrances/[fragranceSlug]/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_page",
+      "target": "src_lib_format_concentrationlabel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/fragrances/[fragranceSlug]/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_page",
+      "target": "src_lib_format_presentationlabel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/fragrances/[fragranceSlug]/page.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_page_generatemetadata",
+      "target": "src_domain_catalog_queries_getfragrance"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/fragrances/[fragranceSlug]/page.tsx",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_page_fragrancepage",
+      "target": "src_domain_catalog_queries_getfragrance"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/fragrances/[fragranceSlug]/page.tsx",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_page_fragrancepage",
+      "target": "src_lib_format_concentrationlabel"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/fragrances/[fragranceSlug]/page.tsx",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "src_app_fragrances_fragranceslug_page_fragrancepage",
+      "target": "src_lib_format_presentationlabel"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/fragrances/page.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "src_app_fragrances_page",
+      "target": "src_app_fragrances_page_fragrancespage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/fragrances/page.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_app_fragrances_page",
+      "target": "src_app_fragrances_page_metadata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/fragrances/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_app_fragrances_page",
+      "target": "src_components_fragrancecard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/fragrances/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_app_fragrances_page",
+      "target": "src_components_fragrancecard_fragrancecard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/fragrances/page.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_app_fragrances_page",
+      "target": "src_components_siteheader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/fragrances/page.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_app_fragrances_page",
+      "target": "src_components_siteheader_searchbox",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/fragrances/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_app_fragrances_page",
+      "target": "src_domain_catalog_queries",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/fragrances/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_app_fragrances_page",
+      "target": "src_domain_catalog_queries_listcatalog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/fragrances/page.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "src_app_fragrances_page_fragrancespage",
+      "target": "src_domain_catalog_queries_listcatalog"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L8",
       "weight": 1.0,
       "source": "src_app_layout",
       "target": "src_app_layout_geistmono",
@@ -6304,7 +7706,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L5",
+      "source_location": "L7",
       "weight": 1.0,
       "source": "src_app_layout",
       "target": "src_app_layout_geistsans",
@@ -6314,7 +7716,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L15",
+      "source_location": "L12",
       "weight": 1.0,
       "source": "src_app_layout",
       "target": "src_app_layout_metadata",
@@ -6324,20 +7726,795 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L20",
+      "source_location": "L29",
       "weight": 1.0,
       "source": "src_app_layout",
       "target": "src_app_layout_rootlayout",
       "confidence_score": 1.0
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_app_layout",
+      "target": "src_components_siteheader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_app_layout",
+      "target": "src_components_siteheader_siteheader",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/page.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_app_page",
+      "target": "src_app_page_homepage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/app/page.tsx",
       "source_location": "L3",
       "weight": 1.0,
       "source": "src_app_page",
-      "target": "src_app_page_home",
+      "target": "src_components_fragrancecard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_app_page",
+      "target": "src_components_fragrancecard_fragrancecard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/page.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_app_page",
+      "target": "src_components_siteheader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/page.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_app_page",
+      "target": "src_components_siteheader_searchbox",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_app_page",
+      "target": "src_domain_catalog_queries",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_app_page",
+      "target": "src_domain_catalog_queries_getcatalogstats",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_app_page",
+      "target": "src_domain_catalog_queries_listcatalog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/page.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "src_app_page_homepage",
+      "target": "src_domain_catalog_queries_getcatalogstats"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/page.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "src_app_page_homepage",
+      "target": "src_domain_catalog_queries_listcatalog"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/restocks/page.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "src_app_restocks_page",
+      "target": "src_app_restocks_page_metadata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/restocks/page.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "src_app_restocks_page",
+      "target": "src_app_restocks_page_restockspage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/restocks/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_app_restocks_page",
+      "target": "src_domain_catalog_queries",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/restocks/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_app_restocks_page",
+      "target": "src_domain_catalog_queries_listrecentrestocks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/restocks/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_app_restocks_page",
+      "target": "src_lib_catalog_slug",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/restocks/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_app_restocks_page",
+      "target": "src_lib_catalog_slug_variantpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/restocks/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_app_restocks_page",
+      "target": "src_lib_format",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/restocks/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_app_restocks_page",
+      "target": "src_lib_format_formatcents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/restocks/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_app_restocks_page",
+      "target": "src_lib_format_freshnesslabel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/restocks/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_app_restocks_page",
+      "target": "src_lib_format_variantdescriptor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/restocks/page.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "src_app_restocks_page_restockspage",
+      "target": "src_domain_catalog_queries_listrecentrestocks"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/restocks/page.tsx",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "src_app_restocks_page_restockspage",
+      "target": "src_lib_catalog_slug_variantpath"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/restocks/page.tsx",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "src_app_restocks_page_restockspage",
+      "target": "src_lib_format_formatcents"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/restocks/page.tsx",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "src_app_restocks_page_restockspage",
+      "target": "src_lib_format_freshnesslabel"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/restocks/page.tsx",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "src_app_restocks_page_restockspage",
+      "target": "src_lib_format_variantdescriptor"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/search/page.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_app_search_page",
+      "target": "src_app_search_page_metadata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/search/page.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "src_app_search_page",
+      "target": "src_app_search_page_search",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/search/page.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "src_app_search_page",
+      "target": "src_app_search_page_searchpage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/search/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_app_search_page",
+      "target": "src_components_fragrancecard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/search/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_app_search_page",
+      "target": "src_components_fragrancecard_fragrancecard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/search/page.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_app_search_page",
+      "target": "src_components_siteheader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/search/page.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_app_search_page",
+      "target": "src_components_siteheader_searchbox",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/search/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_app_search_page",
+      "target": "src_domain_catalog_queries",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/search/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_app_search_page",
+      "target": "src_domain_catalog_queries_searchfragrances",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/search/page.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "src_app_search_page_searchpage",
+      "target": "src_domain_catalog_queries_searchfragrances"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/FragranceCard.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_components_fragrancecard",
+      "target": "src_components_fragrancecard_fragrancecard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/FragranceCard.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_components_fragrancecard",
+      "target": "src_components_guidancebadge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/FragranceCard.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_components_fragrancecard",
+      "target": "src_components_guidancebadge_presentationtag",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/FragranceCard.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_components_fragrancecard",
+      "target": "src_domain_catalog_queries",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/FragranceCard.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_components_fragrancecard",
+      "target": "src_domain_catalog_queries_fragrancesummary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/FragranceCard.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_components_fragrancecard",
+      "target": "src_lib_format",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/FragranceCard.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_components_fragrancecard",
+      "target": "src_lib_format_presentationlabel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/FragranceCard.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "src_components_fragrancecard_fragrancecard",
+      "target": "src_lib_format_presentationlabel"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/GuidanceBadge.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "src_components_guidancebadge",
+      "target": "src_components_guidancebadge_guidancebadge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/GuidanceBadge.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "src_components_guidancebadge",
+      "target": "src_components_guidancebadge_presentation_styles",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/GuidanceBadge.tsx",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "src_components_guidancebadge",
+      "target": "src_components_guidancebadge_presentationtag",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/GuidanceBadge.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_components_guidancebadge",
+      "target": "src_components_guidancebadge_styles",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/GuidanceBadge.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_components_guidancebadge",
+      "target": "src_lib_format",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/GuidanceBadge.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_components_guidancebadge",
+      "target": "src_lib_format_guidancelabel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/OfferBoard.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_components_offerboard",
+      "target": "src_components_guidancebadge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/GuidanceBadge.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "src_components_guidancebadge_guidancebadge",
+      "target": "src_lib_format_guidancelabel"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/OfferBoard.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_components_offerboard",
+      "target": "src_components_guidancebadge_guidancebadge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/OfferBoard.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "src_components_offerboard",
+      "target": "src_components_offerboard_offerboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/OfferBoard.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_components_offerboard",
+      "target": "src_components_offerboard_stat",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/OfferBoard.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_components_offerboard",
+      "target": "src_components_pricehistorychart",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/OfferBoard.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_components_offerboard",
+      "target": "src_components_pricehistorychart_pricehistorychart",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/OfferBoard.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_components_offerboard",
+      "target": "src_domain_pricing_offers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/OfferBoard.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_components_offerboard",
+      "target": "src_domain_pricing_offers_variantofferboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/OfferBoard.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_components_offerboard",
+      "target": "src_lib_format",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/OfferBoard.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_components_offerboard",
+      "target": "src_lib_format_formatcents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/OfferBoard.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_components_offerboard",
+      "target": "src_lib_format_freshnesslabel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/OfferBoard.tsx",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "src_components_offerboard_offerboard",
+      "target": "src_lib_format_formatcents"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/OfferBoard.tsx",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "src_components_offerboard_offerboard",
+      "target": "src_lib_format_freshnesslabel"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/PriceHistoryChart.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_components_pricehistorychart",
+      "target": "src_components_pricehistorychart_chartpoint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/PriceHistoryChart.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "src_components_pricehistorychart",
+      "target": "src_components_pricehistorychart_pricehistorychart",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/PriceHistoryChart.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_components_pricehistorychart",
+      "target": "src_lib_format",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/PriceHistoryChart.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_components_pricehistorychart",
+      "target": "src_lib_format_formatcents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/PriceHistoryChart.tsx",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "src_components_pricehistorychart_pricehistorychart",
+      "target": "src_lib_format_formatcents"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/SiteHeader.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_components_siteheader",
+      "target": "src_components_siteheader_nav",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/SiteHeader.tsx",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "src_components_siteheader",
+      "target": "src_components_siteheader_searchbox",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/SiteHeader.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "src_components_siteheader",
+      "target": "src_components_siteheader_siteheader",
       "confidence_score": 1.0
     },
     {
@@ -6407,6 +8584,17 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_domain_catalog_queries",
+      "target": "src_db_client",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/domain/matching/candidates.ts",
       "source_location": "L2",
       "weight": 1.0,
@@ -6445,6 +8633,17 @@
       "weight": 1.0,
       "source": "src_domain_retailers_ingest",
       "target": "src_db_client",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_domain_catalog_queries",
+      "target": "src_db_client_db",
       "confidence_score": 1.0
     },
     {
@@ -6807,6 +9006,17 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_domain_catalog_queries",
+      "target": "src_db_schema_catalog_brands",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/domain/matching/candidates.ts",
       "source_location": "L3",
       "weight": 1.0,
@@ -6823,6 +9033,17 @@
       "weight": 1.0,
       "source": "src_domain_pricing_offers",
       "target": "src_db_schema_catalog_brands",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_domain_catalog_queries",
+      "target": "src_db_schema_catalog_fragrances",
       "confidence_score": 1.0
     },
     {
@@ -6866,6 +9087,17 @@
       "source_location": "L13",
       "weight": 1.0,
       "source": "src_db_schema_retailers",
+      "target": "src_db_schema_catalog_productvariants",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_domain_catalog_queries",
       "target": "src_db_schema_catalog_productvariants",
       "confidence_score": 1.0
     },
@@ -7246,6 +9478,17 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_domain_catalog_queries",
+      "target": "src_db_schema_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/domain/matching/candidates.ts",
       "source_location": "L3",
       "weight": 1.0,
@@ -7451,6 +9694,17 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_domain_catalog_queries",
+      "target": "src_db_schema_prices_priceobservations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/domain/pricing/offers.ts",
       "source_location": "L3",
       "weight": 1.0,
@@ -7530,6 +9784,17 @@
       "weight": 1.0,
       "source": "src_domain_retailers_ingest",
       "target": "src_db_schema_retailers_retailers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_domain_catalog_queries",
+      "target": "src_db_schema_retailers_retailerproducts",
       "confidence_score": 1.0
     },
     {
@@ -7741,6 +10006,224 @@
       "source": "src_db_seed_retailers",
       "target": "src_db_seed_retailers_retailerseeds",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L162",
+      "weight": 1.0,
+      "source": "src_domain_catalog_queries",
+      "target": "src_domain_catalog_queries_catalogstats",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "src_domain_catalog_queries",
+      "target": "src_domain_catalog_queries_fragrancesummary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L170",
+      "weight": 1.0,
+      "source": "src_domain_catalog_queries",
+      "target": "src_domain_catalog_queries_getcatalogstats",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L113",
+      "weight": 1.0,
+      "source": "src_domain_catalog_queries",
+      "target": "src_domain_catalog_queries_getfragrance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L125",
+      "weight": 1.0,
+      "source": "src_domain_catalog_queries",
+      "target": "src_domain_catalog_queries_getvariantheader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "src_domain_catalog_queries",
+      "target": "src_domain_catalog_queries_groupintofragrances",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L102",
+      "weight": 1.0,
+      "source": "src_domain_catalog_queries",
+      "target": "src_domain_catalog_queries_listcatalog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L209",
+      "weight": 1.0,
+      "source": "src_domain_catalog_queries",
+      "target": "src_domain_catalog_queries_listrecentrestocks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L179",
+      "weight": 1.0,
+      "source": "src_domain_catalog_queries",
+      "target": "src_domain_catalog_queries_listvariantswithoffers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L148",
+      "weight": 1.0,
+      "source": "src_domain_catalog_queries",
+      "target": "src_domain_catalog_queries_searchfragrances",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "src_domain_catalog_queries",
+      "target": "src_domain_catalog_queries_tovariantsummary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "src_domain_catalog_queries",
+      "target": "src_domain_catalog_queries_variant_columns",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_domain_catalog_queries",
+      "target": "src_domain_catalog_queries_variantsummary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_domain_catalog_queries",
+      "target": "src_lib_catalog_slug",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_domain_catalog_queries",
+      "target": "src_lib_catalog_slug_variantpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L93",
+      "weight": 1.0,
+      "source": "src_domain_catalog_queries_groupintofragrances",
+      "target": "src_domain_catalog_queries_tovariantsummary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "src_domain_catalog_queries_tovariantsummary",
+      "target": "src_lib_catalog_slug_variantpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L120",
+      "weight": 1.0,
+      "source": "src_domain_catalog_queries_getfragrance",
+      "target": "src_domain_catalog_queries_groupintofragrances",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L109",
+      "weight": 1.0,
+      "source": "src_domain_catalog_queries_listcatalog",
+      "target": "src_domain_catalog_queries_groupintofragrances",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L159",
+      "weight": 1.0,
+      "source": "src_domain_catalog_queries_searchfragrances",
+      "target": "src_domain_catalog_queries_groupintofragrances",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/domain/catalog/queries.ts",
+      "source_location": "L200",
+      "weight": 1.0,
+      "source": "src_domain_catalog_queries_listvariantswithoffers",
+      "target": "src_lib_catalog_slug_variantpath"
     },
     {
       "relation": "contains",
@@ -9016,7 +11499,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/domain/pricing/offers.ts",
-      "source_location": "L92",
+      "source_location": "L94",
       "weight": 1.0,
       "source": "src_domain_pricing_offers_getvariantofferboard",
       "target": "src_domain_pricing_guidance_buynowguidance"
@@ -9250,7 +11733,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/domain/pricing/offers.ts",
-      "source_location": "L91",
+      "source_location": "L93",
       "weight": 1.0,
       "source": "src_domain_pricing_offers_getvariantofferboard",
       "target": "src_domain_pricing_history_computepricemetrics"
@@ -9281,7 +11764,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/domain/pricing/offers.ts",
-      "source_location": "L33",
+      "source_location": "L35",
       "weight": 1.0,
       "source": "src_domain_pricing_offers",
       "target": "src_domain_pricing_offers_getvariantofferboard",
@@ -9347,7 +11830,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/domain/pricing/offers.ts",
-      "source_location": "L100",
+      "source_location": "L109",
       "weight": 1.0,
       "source": "src_domain_pricing_offers_getvariantofferboard",
       "target": "src_domain_pricing_ranking_rankoffers"
@@ -10356,6 +12839,118 @@
       "weight": 1.0,
       "source": "tests_unit_env_test",
       "target": "src_lib_env_resolvemigrationurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/format.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_lib_format",
+      "target": "src_lib_format_concentration_labels",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/format.ts",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "src_lib_format",
+      "target": "src_lib_format_concentrationlabel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/format.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_lib_format",
+      "target": "src_lib_format_formatcents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/format.ts",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "src_lib_format",
+      "target": "src_lib_format_freshnesslabel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/format.ts",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "src_lib_format",
+      "target": "src_lib_format_guidance_labels",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/format.ts",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "src_lib_format",
+      "target": "src_lib_format_guidancelabel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/format.ts",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "src_lib_format",
+      "target": "src_lib_format_presentation_labels",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/format.ts",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "src_lib_format",
+      "target": "src_lib_format_presentationlabel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/format.ts",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "src_lib_format",
+      "target": "src_lib_format_variantdescriptor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/format.ts",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "src_lib_format_variantdescriptor",
+      "target": "src_lib_format_concentrationlabel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/format.ts",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "src_lib_format_variantdescriptor",
+      "target": "src_lib_format_presentationlabel",
       "confidence_score": 1.0
     },
     {
@@ -12622,6 +15217,16 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/DECISIONS.md",
+      "source_location": "L261",
+      "weight": 1.0,
+      "source": "docs_decisions_scentscout_decision_records_adrs",
+      "target": "docs_decisions_adr_009_price_history_metrics_use_the_listed_price_basis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "docs/MATCHING_ENGINE.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -12843,7 +15448,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L92",
+      "source_location": "L109",
       "weight": 1.0,
       "source": "docs_project_status_project_status",
       "target": "docs_project_status_decisions_needed",
@@ -12853,7 +15458,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L75",
+      "source_location": "L92",
       "weight": 1.0,
       "source": "docs_project_status_project_status",
       "target": "docs_project_status_in_progress",
@@ -12863,7 +15468,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L87",
+      "source_location": "L104",
       "weight": 1.0,
       "source": "docs_project_status_project_status",
       "target": "docs_project_status_known_issues",
@@ -12873,7 +15478,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L114",
+      "source_location": "L131",
       "weight": 1.0,
       "source": "docs_project_status_project_status",
       "target": "docs_project_status_last_graphify_update",
@@ -12883,7 +15488,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L118",
+      "source_location": "L135",
       "weight": 1.0,
       "source": "docs_project_status_project_status",
       "target": "docs_project_status_latest_github_commit",
@@ -12893,7 +15498,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L96",
+      "source_location": "L113",
       "weight": 1.0,
       "source": "docs_project_status_project_status",
       "target": "docs_project_status_latest_validation",
@@ -12903,7 +15508,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L79",
+      "source_location": "L96",
       "weight": 1.0,
       "source": "docs_project_status_project_status",
       "target": "docs_project_status_next_tasks",
@@ -13191,5 +15796,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "a3874a23ec17bbd4a8a47e66d969740843390acf"
+  "built_at_commit": "fd04f6dfcc903e892493ce1ec751b6c44fc0b712"
 }

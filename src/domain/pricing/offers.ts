@@ -20,6 +20,8 @@ export interface VariantOfferBoard {
   offers: RankedOffer[];
   metrics: PriceMetrics;
   guidance: Guidance;
+  /** Valid price points (chronological) for charting. */
+  series: Array<{ t: number; priceCents: number }>;
 }
 
 /**
@@ -91,6 +93,13 @@ export async function getVariantOfferBoard(
   const metrics = computePriceMetrics(history, now);
   const guidance = buyNowGuidance(metrics);
 
+  const series = history
+    .filter((h): h is ObservationPoint & { listedPriceCents: number } =>
+      h.listedPriceCents !== null && h.listedPriceCents > 0,
+    )
+    .map((h) => ({ t: h.observedAt.getTime(), priceCents: h.listedPriceCents }))
+    .sort((a, b) => a.t - b.t);
+
   // Current offer per listing = its newest observation.
   const latestByListing = new Map<string, (typeof allObs)[number]>();
   for (const o of allObs) {
@@ -124,5 +133,6 @@ export async function getVariantOfferBoard(
     offers,
     metrics,
     guidance,
+    series,
   };
 }

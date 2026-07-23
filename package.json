@@ -17,7 +17,8 @@
     "test:watch": "vitest",
     "retailer": "tsx scripts/run-retailer.ts",
     "match": "tsx scripts/match-listings.ts",
-    "prices": "tsx scripts/show-prices.ts"
+    "prices": "tsx scripts/show-prices.ts",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "cheerio": "^1.2.0",
@@ -30,6 +31,7 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
+    "@playwright/test": "^1.61.1",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",

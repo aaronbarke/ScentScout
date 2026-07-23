@@ -2,7 +2,7 @@
 
 ## Current Milestone
 
-Phase 4 — Price history & ranking ✅ COMPLETE (next: Phase 5 — public website)
+Phase 5 — Public website ✅ COMPLETE (next: Phase 6 — accounts & alerts)
 
 ## Completed
 
@@ -43,6 +43,19 @@ Phase 4 — Price history & ranking ✅ COMPLETE (next: Phase 5 — public websi
   - `src/domain/pricing/delivered-price.ts` implements ADR-003 with 7 tests.
   - CLI: `npm run retailer -- --url <u> | --discover <n> | --health`.
   - Retailer registry seeded; only access-verified retailers are `enabled`.
+
+- **Phase 5** — public website: ✅
+  - Pages (Next 16 App Router, all `force-dynamic`): homepage, `/fragrances`,
+    `/fragrances/[slug]` (family), `/fragrances/[slug]/[variantPath]` (exact-variant offer
+    board), `/search`, `/deals`, `/restocks`. Stable, indexable variant URLs per ADR-005.
+  - Components: SiteHeader/SearchBox, FragranceCard, GuidanceBadge/PresentationTag, OfferBoard,
+    dependency-free SVG PriceHistoryChart. Catalog query layer `src/domain/catalog/queries.ts`.
+  - SEO: title template, generateMetadata per fragrance/variant, OpenGraph, search noindex.
+  - Responsive + light/dark verified in-browser. Hand-rolled Tailwind (shadcn deferred, ADR-010).
+  - **5 Playwright E2E tests** pass, incl. "the exact-variant page never fabricates an unknown
+    delivered total" (asserts "plus unknown shipping") and 404 for a nonexistent variant.
+  - Verified live: homepage shows 52 variants; Gris Charnel EDP 100ml page shows the Luckyscent
+    offer at $290 "plus unknown shipping" and "Insufficient history" guidance.
 
 - **Phase 4** — price history & ranking: ✅
   - Pure modules (`src/domain/pricing/`, no DB): `history.ts` (30/90/180-day lows, medians,
@@ -91,15 +104,14 @@ Phase 4 — Price history & ranking ✅ COMPLETE (next: Phase 5 — public websi
 
 ## In Progress
 
-- Nothing blocking. Phase 4 delivered and verified end-to-end against live data.
+- Nothing blocking. Phase 5 public site built, verified in-browser (desktop + mobile + dark).
 
 ## Next Tasks
 
-1. **Phase 5 — public website**: homepage, search, fragrance pages, exact-variant pages,
-   comparison tables, price-history charts, deals, restocks, responsive layout, SEO, E2E tests.
-   The offer board (`getVariantOfferBoard`) already provides the data each variant page needs.
-2. Then FragranceNet adapter (adds discount pricing + tester coverage), which will give the
-   matcher a published concentration and multi-retailer offers to actually rank.
+1. **Phase 6 — accounts & alerts**: Supabase auth, watchlists, detailed alert rules, alert
+   evaluation, Resend emails, deduplication, alert history, unsubscribe, notification settings.
+2. Then FragranceNet adapter (adds discount pricing + tester coverage → multi-retailer ranking).
+3. Optional polish: layer in shadcn/ui primitives (ADR-010) where interactivity warrants.
 
 ## Known Issues
 
@@ -117,7 +129,8 @@ Phase 4 — Price history & ranking ✅ COMPLETE (next: Phase 5 — public websi
 - Build: PASS (exit 0)
 - DB generate: PASS — `drizzle-kit generate`, 13 tables + migration 0001
 - Catalog validate: PASS — 13 brands / 19 fragrances / 52 variants / 52 unique SKUs
-- Unit tests: PASS — Vitest, **113/113** (catalog, slug, contracts, env, money/size/JSON-LD
+- Unit tests: PASS — Vitest, **113/113**
+- E2E tests: PASS — Playwright, **5/5** (public site flows) (catalog, slug, contracts, env, money/size/JSON-LD
   helpers, Luckyscent fixture parser, delivered price)
 - Live ingest: PASS — Luckyscent, 3 variants parsed, 3 observations, run status `success`,
   health `healthy=true`; re-run proved observations append-only (3 → 6, listings stayed 3)
@@ -126,7 +139,7 @@ Phase 4 — Price history & ranking ✅ COMPLETE (next: Phase 5 — public websi
   intended conservative behaviour.
 - DB migrate: PASS — applied to Supabase (13 tables, 12 enums)
 - DB seed: PASS — 52 variants; re-run idempotent (0 duplicate SKUs)
-- Integration/e2e tests: not yet wired (Phase 2+/5+)
+- Integration tests: not yet wired (deferred)
 
 ## Last Graphify Update
 
