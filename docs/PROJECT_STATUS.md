@@ -45,13 +45,15 @@ Phase 1 — Database & canonical catalog ✅ COMPLETE (next: Phase 2)
 
 ## In Progress
 
-- Nothing blocking. Phase 2 is underway (adapter contract landed).
+- Nothing blocking. Phase 2 underway: adapter contract landed; retailer access research
+  complete (`docs/RETAILER_RESEARCH.md`, ADR-006) — Luckyscent selected as first adapter.
 
 ## Next Tasks
 
-1. Phase 2: confirm permitted, stable retrieval for a candidate retailer **before** writing an
-   adapter, then shared fetch helpers (rate limit/retry/timeout/jitter), JSON-LD parsing,
-   sanitized fixtures, parser tests, scrape-run logging, retailer-health tracking, single-URL CLI.
+1. Phase 2 first adapter: **Luckyscent** (JSON-LD, static retrieval) — shared fetch helpers
+   (rate limit/retry/timeout/jitter), JSON-LD parsing, sanitized fixtures, parser tests,
+   scrape-run logging, retailer-health tracking, single-URL CLI.
+2. Then FragranceNet (adds discount + tester coverage).
 
 ## Known Issues
 

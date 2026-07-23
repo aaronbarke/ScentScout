@@ -145,3 +145,39 @@ Consequences:
 The catalog seed (`src/db/seed/catalog.ts`) is the source of truth; `scripts/validate-catalog.ts`
 and unit tests enforce SKU uniqueness and presentation/concentration separation. Adding a new
 concentration requires an additive enum migration.
+
+---
+
+## ADR-006: Retailer integration order, evidence-led
+
+Status: Accepted
+
+Date: 2026-07-22
+
+Decision:
+Integrate retailers in this order: **1) Luckyscent, 2) FragranceNet, 3) FragranceX or Jomashop
+(whichever affiliate feed is approved first), 4) Nordstrom.** No adapter is written against a
+retailer until its access evidence is recorded in `docs/RETAILER_RESEARCH.md`.
+
+Reason:
+Verified against live evidence rather than assumption. Luckyscent's JSON-LD exposes a
+`ProductGroup` with cleanly separated brand, an explicit `size` field, correct `USD`, and
+**GTIN-13** per variant — the strongest possible signal for deterministic exact matching, and
+retrievable with static HTTP (no browser automation). FragranceNet follows because it adds
+discount pricing and **tester** coverage, and its quirks (brand field polluted with the
+fragrance name, `priceCurrency: "US"`, oz-only sizes) are a realistic normalization stress test.
+Nordstrom is last: the most restrictive `robots.txt` of the set and likely client-rendered,
+which would force Playwright — our explicit last resort.
+
+Alternatives:
+Starting with a discounter (more price movement, testers) — rejected as the first adapter
+because validating the matching engine against the *cleanest* data first isolates matching bugs
+from parsing bugs. Starting with an affiliate feed — deferred: feeds require approval, a
+business step not yet completed.
+
+Consequences:
+Phase 2's first adapter targets Luckyscent via JSON-LD. Tester coverage does not arrive until
+FragranceNet (authorized boutiques don't sell testers), so tester variants stay unpopulated
+until then. Luckyscent's travel/decant sizes (10ml, 1ml) are out of MVP scope and must be
+rejected by size contradiction, not silently matched. Retailer-specific quirks stay inside each
+adapter directory. `robots.txt` is re-checked before enabling any retailer.
