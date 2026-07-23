@@ -217,3 +217,41 @@ This deviates from the interface sketch in the original brief; the brief describ
 writes one append-only observation per variant. Out-of-scope sizes (10ml/1ml decants) are parsed
 faithfully and left for the matching engine to reject on size contradiction rather than being
 filtered at parse time — parsing reports what exists; matching decides what counts.
+
+---
+
+## ADR-008: Persist adapter-parsed attributes; keep the matching engine I/O-free
+
+Status: Accepted
+
+Date: 2026-07-22
+
+Decision:
+`retailer_products` gains `gtin`, `parsed_fragrance_name`, `parsed_concentration`,
+`parsed_size_ml` and `parsed_presentation` (migration `0002`). The matching engine consumes
+those columns rather than re-deriving attributes from `raw_title`. Separately,
+`src/domain/matching/index.ts` exports **only pure logic**; the DB-touching `candidates.ts` and
+`review.ts` must be imported directly.
+
+Reason:
+Adapters already extract clean attributes using retailer-specific knowledge — Luckyscent's
+JSON-LD gives `"Gris Charnel"` as the fragrance name and `"100ml"` as an explicit size field.
+Re-deriving from the raw title (`"Gris Charnel - 100ml"`) would be lossy and would push
+retailer-shaped string heuristics into shared domain code, violating the adapter boundary.
+Persisting the parsed values keeps parsing in the adapter and matching purely comparative.
+
+The barrel split was forced by a real failure: re-exporting `candidates.ts` from the matching
+index pulled `@/db/client` into every consumer, so `loadDbEnv()` ran at import time and the pure
+unit tests (and any future page importing matching) demanded a live `DATABASE_URL`.
+
+Alternatives:
+(a) Re-derive attributes from `raw_title` at match time — rejected as lossy and a layering
+violation. (b) Keep one barrel and lazily initialize the DB client — rejected; hiding I/O behind
+lazy init makes the dependency harder to see, not absent.
+
+Consequences:
+Ingestion writes the parsed attributes on every upsert, so re-ingesting refreshes them. The
+matching engine stays a pure function of (listing attributes, candidate variants), which is why
+it is exhaustively unit-testable without a database. GTIN is stored as evidence for admin review
+and future GTIN-keyed matching; it is not yet used as a scoring signal because canonical
+variants do not carry barcodes.

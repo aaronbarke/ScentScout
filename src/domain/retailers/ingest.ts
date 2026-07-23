@@ -44,7 +44,12 @@ async function persistParsed(
       rawTitle: p.rawTitle,
       rawBrand: p.brand,
       rawDescription: null,
-      matchStatus: "unmatched", // matching engine (Phase 3) decides; never guess here
+      gtin: p.gtin,
+      parsedFragranceName: p.fragranceName,
+      parsedConcentration: p.concentration,
+      parsedSizeMl: p.sizeMl,
+      parsedPresentation: p.presentation,
+      matchStatus: "unmatched", // the matching engine decides; never guess here
       lastSeenAt: p.observedAt,
     })
     .onConflictDoUpdate({
@@ -53,6 +58,11 @@ async function persistParsed(
         url: p.url,
         rawTitle: p.rawTitle,
         rawBrand: p.brand,
+        gtin: p.gtin,
+        parsedFragranceName: p.fragranceName,
+        parsedConcentration: p.concentration,
+        parsedSizeMl: p.sizeMl,
+        parsedPresentation: p.presentation,
         lastSeenAt: p.observedAt,
         updatedAt: new Date(),
       },

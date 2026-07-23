@@ -2,7 +2,7 @@
 
 ## Current Milestone
 
-Phase 2 — Retailer framework & first adapter ✅ COMPLETE (next: Phase 3 — matching)
+Phase 3 — Exact product matching ✅ COMPLETE (next: Phase 4 — price history & ranking)
 
 ## Completed
 
@@ -44,6 +44,22 @@ Phase 2 — Retailer framework & first adapter ✅ COMPLETE (next: Phase 3 — m
   - CLI: `npm run retailer -- --url <u> | --discover <n> | --health`.
   - Retailer registry seeded; only access-verified retailers are `enabled`.
 
+- **Phase 3** — exact product matching: ✅
+  - `src/domain/matching/`: normalization (accent/apostrophe-safe), alias dictionaries
+    (MFK/PDM/LeLabo/By Kilian; EDP/EDT/extrait/absolu), oz→ml conversion with a 2ml tolerance,
+    presentation classification, body-product detection.
+  - Contradiction checks reject outright: brand, fragrance, flanker, concentration, size,
+    presentation, and body-product. Contradictions are absolute — never outweighed by score.
+  - Confidence scoring per spec (brand .25 / fragrance .30 / flanker .15 / concentration .10 /
+    size .10 / presentation .10); ≥.95 exact, .80–.94 manual review, below unmatched.
+  - **Ambiguity guard**: two candidates within 0.001 force manual review — ties are never
+    broken by guessing.
+  - Every decision carries an auditable reason list; `method` is always `deterministic`.
+  - Manual-review API (`review.ts`): apply decision, list pending, approve (with override),
+    reject. Admins correct matches through these, never by editing the DB.
+  - CLI: `npm run match [-- --all|--dry-run|--reviews]`.
+  - 23 matching tests covering every "never combine" rule.
+
 - **Live database (Supabase) provisioned and verified:**
   - `db:migrate` applied — 13 tables + 12 enums live.
   - `db:seed` loaded 13 brands / 19 fragrances / **52 variants**.
@@ -58,15 +74,15 @@ Phase 2 — Retailer framework & first adapter ✅ COMPLETE (next: Phase 3 — m
 
 ## In Progress
 
-- Nothing blocking. Phase 2 delivered end-to-end against the live retailer.
+- Nothing blocking. Phase 3 delivered and verified against live ingested listings.
 
 ## Next Tasks
 
-1. **Phase 3 — exact matching**: normalization, alias dictionaries, unit conversion,
-   presentation classification, contradiction checks, confidence scoring, match audit,
-   manual-review APIs. The 3 ingested Luckyscent listings sit at `match_status=unmatched`
-   awaiting it; GTIN-13 is available as the strongest signal.
-2. Then FragranceNet adapter (adds discount pricing + tester coverage).
+1. **Phase 4 — price history & ranking**: duplicate prevention, coupon verification,
+   shipping-aware pricing, historical metrics (30/90/180-day lows, medians, percentile),
+   buy-now guidance labels, delivery-aware ranking.
+2. Then FragranceNet adapter (adds discount pricing + tester coverage), which will also give
+   the matcher a published concentration and resolve the current manual-review case.
 
 ## Known Issues
 
@@ -84,10 +100,13 @@ Phase 2 — Retailer framework & first adapter ✅ COMPLETE (next: Phase 3 — m
 - Build: PASS (exit 0)
 - DB generate: PASS — `drizzle-kit generate`, 13 tables + migration 0001
 - Catalog validate: PASS — 13 brands / 19 fragrances / 52 variants / 52 unique SKUs
-- Unit tests: PASS — Vitest, **64/64** (catalog, slug, contracts, env, money/size/JSON-LD
+- Unit tests: PASS — Vitest, **87/87** (catalog, slug, contracts, env, money/size/JSON-LD
   helpers, Luckyscent fixture parser, delivered price)
 - Live ingest: PASS — Luckyscent, 3 variants parsed, 3 observations, run status `success`,
   health `healthy=true`; re-run proved observations append-only (3 → 6, listings stayed 3)
+- Live matching: PASS — 52 candidates vs 3 listings → 1 manual_review (100ml, confidence 0.90,
+  concentration not published) + 2 rejected (10ml/1ml on size contradiction). Exactly the
+  intended conservative behaviour.
 - DB migrate: PASS — applied to Supabase (13 tables, 12 enums)
 - DB seed: PASS — 52 variants; re-run idempotent (0 duplicate SKUs)
 - Integration/e2e tests: not yet wired (Phase 2+/5+)

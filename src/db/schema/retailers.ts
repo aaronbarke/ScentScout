@@ -15,6 +15,7 @@ import {
   retailerTypeEnum,
   matchStatusEnum,
   matchMethodEnum,
+  presentationEnum,
   couponDiscountTypeEnum,
   couponVerificationStatusEnum,
 } from "./enums";
@@ -51,6 +52,14 @@ export const retailerProducts = pgTable(
     rawTitle: text("raw_title").notNull(),
     rawBrand: text("raw_brand"),
     rawDescription: text("raw_description"),
+    /** Barcode published by the retailer, kept as matching evidence. */
+    gtin: text("gtin"),
+    // Attributes the adapter parsed. Persisted so matching uses the adapter's
+    // retailer-specific knowledge instead of lossily re-deriving from the title.
+    parsedFragranceName: text("parsed_fragrance_name"),
+    parsedConcentration: text("parsed_concentration"),
+    parsedSizeMl: integer("parsed_size_ml"),
+    parsedPresentation: presentationEnum("parsed_presentation"),
     matchedVariantId: uuid("matched_variant_id").references(() => productVariants.id, {
       onDelete: "set null",
     }),

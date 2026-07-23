@@ -15,8 +15,8 @@
     "semantic_hash": "9b77af189a21a7a64e4bd7a426f64176"
   },
   "package.json": {
-    "mtime": 1784779824.2650063,
-    "ast_hash": "844fdb38778915d96e80726c913cb9e8",
+    "mtime": 1784780395.822185,
+    "ast_hash": "a2c9e8daa9ed7157cc2463670d6bafcf",
     "semantic_hash": ""
   },
   "postcss.config.mjs": {
@@ -55,8 +55,8 @@
     "semantic_hash": ""
   },
   "drizzle/migrations/meta/_journal.json": {
-    "mtime": 1784765699.9350276,
-    "ast_hash": "3249ec16db3fbaf3497f8868049ff0c6",
+    "mtime": 1784780358.4772894,
+    "ast_hash": "a906f6cd47866043bba094b652ab5d70",
     "semantic_hash": ""
   },
   "src/db/client.ts": {
@@ -100,8 +100,8 @@
     "semantic_hash": ""
   },
   "src/db/schema/retailers.ts": {
-    "mtime": 1784765103.1104991,
-    "ast_hash": "a8265d97d00622091b7af646061c79af",
+    "mtime": 1784780357.0408182,
+    "ast_hash": "d2537f72fff75ca3e9baa5137f7d64c1",
     "semantic_hash": ""
   },
   "src/lib/env.ts": {
@@ -200,13 +200,13 @@
     "semantic_hash": ""
   },
   "docs/DATA_MODEL.md": {
-    "mtime": 1784762936.7943542,
-    "ast_hash": "8cf0e98ba528b28fcd9abd4b75a0c337",
+    "mtime": 1784780522.6107423,
+    "ast_hash": "c6165986205644fc5dc64c6d3757c22e",
     "semantic_hash": ""
   },
   "docs/DECISIONS.md": {
-    "mtime": 1784779912.3676927,
-    "ast_hash": "dfb5bb7d65dad72cc6e2c1afa2aac7c1",
+    "mtime": 1784780522.593357,
+    "ast_hash": "b551679bf48c3b789c61dde596d5dd83",
     "semantic_hash": ""
   },
   "docs/MATCHING_ENGINE.md": {
@@ -225,8 +225,8 @@
     "semantic_hash": ""
   },
   "docs/PROJECT_STATUS.md": {
-    "mtime": 1784779294.5619514,
-    "ast_hash": "e92e38ea6462d340551a000cc19485a7",
+    "mtime": 1784779933.1178706,
+    "ast_hash": "0248ebb19fb9ad8cc05be7151c7f7f3d",
     "semantic_hash": ""
   },
   "docs/RETAILER_ADAPTERS.md": {
@@ -320,8 +320,8 @@
     "semantic_hash": ""
   },
   "src/domain/retailers/ingest.ts": {
-    "mtime": 1784779775.8250382,
-    "ast_hash": "0df24ce627bcd25c57b37e794a5a6e91",
+    "mtime": 1784780373.5871375,
+    "ast_hash": "5526e49ace34f34ac72672315841449c",
     "semantic_hash": ""
   },
   "src/retailers/luckyscent/adapter.ts": {
@@ -372,6 +372,61 @@
   "tests/fixtures/retailers/luckyscent/gris-charnel.html": {
     "mtime": 1784779652.2584808,
     "ast_hash": "a6e9d213918b077a2e28a24365020a61",
+    "semantic_hash": ""
+  },
+  "drizzle/migrations/0002_third_snowbird.sql": {
+    "mtime": 1784780358.477378,
+    "ast_hash": "961eb4184128c39cb699ca8d30320d20",
+    "semantic_hash": ""
+  },
+  "drizzle/migrations/meta/0002_snapshot.json": {
+    "mtime": 1784780358.4771721,
+    "ast_hash": "0d0a409a870aba59a642694253c72ffc",
+    "semantic_hash": ""
+  },
+  "scripts/match-listings.ts": {
+    "mtime": 1784780495.125406,
+    "ast_hash": "186047a50374f1c50b6d622fee6f2913",
+    "semantic_hash": ""
+  },
+  "src/domain/matching/aliases.ts": {
+    "mtime": 1784780127.2144692,
+    "ast_hash": "8b0aebcad14ad305b12e765a38e9015d",
+    "semantic_hash": ""
+  },
+  "src/domain/matching/candidates.ts": {
+    "mtime": 1784780373.5918553,
+    "ast_hash": "ae04cd8079f7b3611a9d65b342f850de",
+    "semantic_hash": ""
+  },
+  "src/domain/matching/index.ts": {
+    "mtime": 1784780473.6355457,
+    "ast_hash": "15c56fde594f724032bae6cbddb64c67",
+    "semantic_hash": ""
+  },
+  "src/domain/matching/match.ts": {
+    "mtime": 1784780443.2713754,
+    "ast_hash": "7f177b645e2fcf7c6fbd0748d20aeb47",
+    "semantic_hash": ""
+  },
+  "src/domain/matching/normalize.ts": {
+    "mtime": 1784780144.3127613,
+    "ast_hash": "bba18bd1900b062b47f674ac34fe5807",
+    "semantic_hash": ""
+  },
+  "src/domain/matching/review.ts": {
+    "mtime": 1784780324.6872058,
+    "ast_hash": "996611bd0da38bc9d83cc2b2cd55bfac",
+    "semantic_hash": ""
+  },
+  "src/domain/matching/types.ts": {
+    "mtime": 1784780154.4001992,
+    "ast_hash": "5646fac38b01b99ebfabf78032fe1c73",
+    "semantic_hash": ""
+  },
+  "tests/unit/matching.test.ts": {
+    "mtime": 1784780295.5054512,
+    "ast_hash": "dd35898686cc869a2881f2f213bf413c",
     "semantic_hash": ""
   }
 }

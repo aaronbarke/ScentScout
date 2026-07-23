@@ -29,8 +29,12 @@ Phase 1.)
 
 ### `retailer_products`
 `id` · `retailer_id` → retailers · `external_id` · `url` · `raw_title` · `raw_brand` ·
-`raw_description` · `matched_variant_id` → product_variants · `match_status` ·
-`match_confidence` · `match_method` · `last_seen_at` · `created_at` · `updated_at`
+`raw_description` · `gtin` · `parsed_fragrance_name` · `parsed_concentration` ·
+`parsed_size_ml` · `parsed_presentation` · `matched_variant_id` → product_variants ·
+`match_status` · `match_confidence` · `match_method` · `last_seen_at` · `created_at` ·
+`updated_at`
+- `parsed_*` hold what the adapter extracted (ADR-008), so matching compares clean attributes
+  instead of re-deriving them from `raw_title`.
 - **`match_status` ∈ { exact, probable, manual_review, rejected, unmatched }**
 - Retains raw evidence (`raw_*`) so matches stay auditable.
 
