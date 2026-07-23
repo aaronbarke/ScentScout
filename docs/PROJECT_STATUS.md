@@ -2,12 +2,12 @@
 
 ## Current Milestone
 
-Phase 1 — Database & canonical catalog (IN PROGRESS)
+Phase 1 — Database & canonical catalog ✅ COMPLETE (next: Phase 2)
 
 ## Completed
 
 - **Phase 0** — foundation (scaffold, docs, rules, ignore files, graphify, public repo). ✅
-- **Phase 1 so far:**
+- **Phase 1** — database & canonical catalog: ✅
   - Dependencies: drizzle-orm, postgres (postgres.js), zod, dotenv; dev: drizzle-kit, tsx, vitest.
   - Zod env validation (`src/lib/env.ts`) — lazy, fails fast, doesn't break `next build`.
   - Full Drizzle schema (`src/db/schema/*`) — **13 tables**, 12 enums: brands, fragrances,
@@ -31,20 +31,27 @@ Phase 1 — Database & canonical catalog (IN PROGRESS)
   tests enforce integer-cents money, unknown-shipping (null) vs free (0), nullable stock, and
   presentation validity.
 
+- **Live database (Supabase) provisioned and verified:**
+  - `db:migrate` applied — 13 tables + 12 enums live.
+  - `db:seed` loaded 13 brands / 19 fragrances / **52 variants**.
+  - **Idempotency proven** — re-running the seed left counts identical (52/52) with
+    0 duplicate SKUs.
+  - Separation rules verified in-database: Kilian Angels' Share 50ml exists as three distinct
+    rows (retail / tester / refill); Bal d'Afrique vs Bal d'Afrique Absolu are separate
+    fragrances. Presentation split: retail 32 / tester 19 / refill 1.
+  - Hardened env resolution (`isUsablePostgresUrl`, `resolveMigrationUrl`): placeholder
+    connection strings are ignored, and Supabase session mode (5432) is derived from the
+    transaction pooler (6543) for DDL. 9 regression tests cover it.
+
 ## In Progress
 
-- **Blocked on user:** live `db:migrate` + `db:seed` run — waiting for Supabase connection
-  strings in `.env` (`DATABASE_URL`, `DIRECT_URL`). All Phase 1 *code* is validated (typecheck,
-  lint, build, generate, catalog:validate, tests); only the live DB run remains.
-- Phase 2 next: pick the first retailer (must confirm permitted, stable retrieval first),
-  then shared fetch helpers, fixtures, parser tests, scrape-run logging, retailer health.
+- Nothing blocking. Phase 2 is underway (adapter contract landed).
 
 ## Next Tasks
 
-1. Once `.env` is set: `npm run db:migrate` then `npm run db:seed`; re-run seed to confirm
-   idempotency (no duplicates); optionally spot-check with `npm run db:studio`.
-2. Close Phase 1; final commit `feat(catalog): add canonical fragrance database`.
-3. Begin Phase 2 — retailer adapter framework + first adapter.
+1. Phase 2: confirm permitted, stable retrieval for a candidate retailer **before** writing an
+   adapter, then shared fetch helpers (rate limit/retry/timeout/jitter), JSON-LD parsing,
+   sanitized fixtures, parser tests, scrape-run logging, retailer-health tracking, single-URL CLI.
 
 ## Known Issues
 
@@ -62,19 +69,19 @@ Phase 1 — Database & canonical catalog (IN PROGRESS)
 - Build: PASS (exit 0)
 - DB generate: PASS — `drizzle-kit generate`, 13 tables + migration 0001
 - Catalog validate: PASS — 13 brands / 19 fragrances / 52 variants / 52 unique SKUs
-- Unit tests: PASS — Vitest, 20/20 (catalog, slug helpers, retailer contracts)
-- DB migrate/seed: PENDING — needs Supabase `.env`
+- Unit tests: PASS — Vitest, 29/29 (catalog, slug helpers, retailer contracts, env resolution)
+- DB migrate: PASS — applied to Supabase (13 tables, 12 enums)
+- DB seed: PASS — 52 variants; re-run idempotent (0 duplicate SKUs)
 - Integration/e2e tests: not yet wired (Phase 2+/5+)
 
 ## Last Graphify Update
 
-2026-07-22 — code graph 318 nodes / 346 edges / 39 communities (AST-only; docs still pending a
-semantic key).
+2026-07-22 — code graph refreshed after Phase 1 close (AST-only; docs still pending a semantic key).
 
 ## Latest GitHub Commit
 
-- Hash: 38f473e (pre-schema; updated on next push)
-- Message: chore(dev): run dev/start server on port 3004
+- Hash: (this commit) feat(catalog): complete Phase 1 — live migrate + idempotent seed
+- Message: feat(catalog): complete Phase 1 with live Supabase migrate and seed
 - Branch: main
 - Push status: pushed to origin/main
 - Remote: https://github.com/aaronbarke/ScentScout (public)

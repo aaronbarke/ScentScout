@@ -40,8 +40,8 @@
     "semantic_hash": "ee17fd1c97c735e9f3564e3f5251f125"
   },
   "drizzle.config.ts": {
-    "mtime": 1784765152.8631234,
-    "ast_hash": "6677b607c637e80a689196ff43901c44",
+    "mtime": 1784778806.8889003,
+    "ast_hash": "d424c0d689120c63137b36c6e997ff64",
     "semantic_hash": ""
   },
   "drizzle/migrations/0000_far_moonstone.sql": {
@@ -105,8 +105,8 @@
     "semantic_hash": ""
   },
   "src/lib/env.ts": {
-    "mtime": 1784765056.1179454,
-    "ast_hash": "154794236212aeb1201a181a90246e99",
+    "mtime": 1784778800.6050923,
+    "ast_hash": "78a8d2f286ffb0fdd1076e4f615cc152",
     "semantic_hash": ""
   },
   ".claude/CLAUDE.md": {
@@ -225,8 +225,8 @@
     "semantic_hash": ""
   },
   "docs/PROJECT_STATUS.md": {
-    "mtime": 1784765778.009666,
-    "ast_hash": "8d0fad6b02383b1eb7612e0ad2a0967c",
+    "mtime": 1784777601.4393842,
+    "ast_hash": "0affb9e752d2793ebb584da961e27d22",
     "semantic_hash": ""
   },
   "docs/RETAILER_ADAPTERS.md": {
@@ -297,6 +297,11 @@
   "tests/unit/retailer-contracts.test.ts": {
     "mtime": 1784777558.4862418,
     "ast_hash": "06cef566784d09feff705dc1370df134",
+    "semantic_hash": ""
+  },
+  "tests/unit/env.test.ts": {
+    "mtime": 1784778884.9732375,
+    "ast_hash": "3bd7ba95c42f04ce4bce5564f48d0d7e",
     "semantic_hash": ""
   }
 }

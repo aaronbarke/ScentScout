@@ -84,6 +84,16 @@
       "norm_label": "drizzle.config.ts"
     },
     {
+      "label": "url",
+      "file_type": "code",
+      "source_file": "drizzle.config.ts",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "drizzle_config_url",
+      "community": 37,
+      "norm_label": "url"
+    },
+    {
       "label": "eslint.config.mjs",
       "file_type": "code",
       "source_file": "eslint.config.mjs",
@@ -130,7 +140,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "package",
-      "community": 1,
+      "community": 4,
       "norm_label": "package.json"
     },
     {
@@ -140,7 +150,7 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "package_name",
-      "community": 1,
+      "community": 4,
       "norm_label": "name"
     },
     {
@@ -150,7 +160,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "package_version",
-      "community": 1,
+      "community": 4,
       "norm_label": "version"
     },
     {
@@ -160,7 +170,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "package_private",
-      "community": 1,
+      "community": 4,
       "norm_label": "private"
     },
     {
@@ -300,7 +310,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "package_dependencies",
-      "community": 1,
+      "community": 4,
       "norm_label": "dependencies"
     },
     {
@@ -310,7 +320,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "package_dependencies_dotenv",
-      "community": 1,
+      "community": 4,
       "norm_label": "dotenv"
     },
     {
@@ -320,7 +330,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "package_dependencies_drizzle_orm",
-      "community": 1,
+      "community": 4,
       "norm_label": "drizzle-orm"
     },
     {
@@ -330,7 +340,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "package_dependencies_next",
-      "community": 1,
+      "community": 4,
       "norm_label": "next"
     },
     {
@@ -340,7 +350,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "package_dependencies_postgres",
-      "community": 1,
+      "community": 4,
       "norm_label": "postgres"
     },
     {
@@ -350,7 +360,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "package_dependencies_react",
-      "community": 1,
+      "community": 4,
       "norm_label": "react"
     },
     {
@@ -360,7 +370,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "package_dependencies_react_dom",
-      "community": 1,
+      "community": 4,
       "norm_label": "react-dom"
     },
     {
@@ -370,7 +380,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "package_dependencies_zod",
-      "community": 1,
+      "community": 4,
       "norm_label": "zod"
     },
     {
@@ -530,7 +540,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "scripts_seed_catalog_seed",
-      "community": 2,
+      "community": 19,
       "norm_label": "seed()"
     },
     {
@@ -820,7 +830,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_db_schema_enums_concentrationenum",
-      "community": 2,
+      "community": 19,
       "norm_label": "concentrationenum"
     },
     {
@@ -1380,7 +1390,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_lib_env",
-      "community": 2,
+      "community": 37,
       "norm_label": "env.ts"
     },
     {
@@ -1390,7 +1400,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_lib_env_dbenvschema",
-      "community": 2,
+      "community": 37,
       "norm_label": "dbenvschema"
     },
     {
@@ -1400,17 +1410,37 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "src_lib_env_dbenv",
-      "community": 2,
+      "community": 37,
       "norm_label": "dbenv"
+    },
+    {
+      "label": "isUsablePostgresUrl()",
+      "file_type": "code",
+      "source_file": "src/lib/env.ts",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "src_lib_env_isusablepostgresurl",
+      "community": 37,
+      "norm_label": "isusablepostgresurl()"
+    },
+    {
+      "label": "resolveMigrationUrl()",
+      "file_type": "code",
+      "source_file": "src/lib/env.ts",
+      "source_location": "L52",
+      "_origin": "ast",
+      "id": "src_lib_env_resolvemigrationurl",
+      "community": 37,
+      "norm_label": "resolvemigrationurl()"
     },
     {
       "label": "loadDbEnv()",
       "file_type": "code",
       "source_file": "src/lib/env.ts",
-      "source_location": "L28",
+      "source_location": "L68",
       "_origin": "ast",
       "id": "src_lib_env_loaddbenv",
-      "community": 2,
+      "community": 37,
       "norm_label": "loaddbenv()"
     },
     {
@@ -1422,6 +1452,16 @@
       "id": "tests_unit_catalog_test",
       "community": 19,
       "norm_label": "catalog.test.ts"
+    },
+    {
+      "label": "env.test.ts",
+      "file_type": "code",
+      "source_file": "tests/unit/env.test.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "tests_unit_env_test",
+      "community": 37,
+      "norm_label": "env.test.ts"
     },
     {
       "label": "retailer-contracts.test.ts",
@@ -3137,7 +3177,7 @@
       "label": "In Progress",
       "file_type": "document",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L28",
+      "source_location": "L34",
       "_origin": "ast",
       "id": "docs_project_status_in_progress",
       "community": 13,
@@ -3147,7 +3187,7 @@
       "label": "Next Tasks",
       "file_type": "document",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L34",
+      "source_location": "L42",
       "_origin": "ast",
       "id": "docs_project_status_next_tasks",
       "community": 13,
@@ -3157,7 +3197,7 @@
       "label": "Known Issues",
       "file_type": "document",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L41",
+      "source_location": "L49",
       "_origin": "ast",
       "id": "docs_project_status_known_issues",
       "community": 13,
@@ -3167,7 +3207,7 @@
       "label": "Decisions Needed",
       "file_type": "document",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L46",
+      "source_location": "L54",
       "_origin": "ast",
       "id": "docs_project_status_decisions_needed",
       "community": 13,
@@ -3177,7 +3217,7 @@
       "label": "Latest Validation",
       "file_type": "document",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L50",
+      "source_location": "L58",
       "_origin": "ast",
       "id": "docs_project_status_latest_validation",
       "community": 13,
@@ -3187,7 +3227,7 @@
       "label": "Last Graphify Update",
       "file_type": "document",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L61",
+      "source_location": "L69",
       "_origin": "ast",
       "id": "docs_project_status_last_graphify_update",
       "community": 13,
@@ -3197,7 +3237,7 @@
       "label": "Latest GitHub Commit",
       "file_type": "document",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L66",
+      "source_location": "L74",
       "_origin": "ast",
       "id": "docs_project_status_latest_github_commit",
       "community": 13,
@@ -3463,6 +3503,38 @@
       "weight": 1.0,
       "source": "claude_settings_hooks",
       "target": "claude_settings_hooks_pretooluse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "drizzle.config.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "drizzle_config",
+      "target": "drizzle_config_url",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "drizzle.config.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "drizzle_config",
+      "target": "src_lib_env",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "drizzle.config.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "drizzle_config",
+      "target": "src_lib_env_resolvemigrationurl",
       "confidence_score": 1.0
     },
     {
@@ -5604,10 +5676,85 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/lib/env.ts",
-      "source_location": "L28",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "src_lib_env",
+      "target": "src_lib_env_isusablepostgresurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/env.ts",
+      "source_location": "L68",
       "weight": 1.0,
       "source": "src_lib_env",
       "target": "src_lib_env_loaddbenv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/env.ts",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "src_lib_env",
+      "target": "src_lib_env_resolvemigrationurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/env.test.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "tests_unit_env_test",
+      "target": "src_lib_env",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/env.ts",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "src_lib_env_resolvemigrationurl",
+      "target": "src_lib_env_isusablepostgresurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/env.test.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "tests_unit_env_test",
+      "target": "src_lib_env_isusablepostgresurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/env.ts",
+      "source_location": "L85",
+      "weight": 1.0,
+      "source": "src_lib_env_loaddbenv",
+      "target": "src_lib_env_resolvemigrationurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/env.test.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "tests_unit_env_test",
+      "target": "src_lib_env_resolvemigrationurl",
       "confidence_score": 1.0
     },
     {
@@ -7054,7 +7201,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L46",
+      "source_location": "L54",
       "weight": 1.0,
       "source": "docs_project_status_project_status",
       "target": "docs_project_status_decisions_needed",
@@ -7064,7 +7211,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L28",
+      "source_location": "L34",
       "weight": 1.0,
       "source": "docs_project_status_project_status",
       "target": "docs_project_status_in_progress",
@@ -7074,7 +7221,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L41",
+      "source_location": "L49",
       "weight": 1.0,
       "source": "docs_project_status_project_status",
       "target": "docs_project_status_known_issues",
@@ -7084,7 +7231,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L61",
+      "source_location": "L69",
       "weight": 1.0,
       "source": "docs_project_status_project_status",
       "target": "docs_project_status_last_graphify_update",
@@ -7094,7 +7241,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L66",
+      "source_location": "L74",
       "weight": 1.0,
       "source": "docs_project_status_project_status",
       "target": "docs_project_status_latest_github_commit",
@@ -7104,7 +7251,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L50",
+      "source_location": "L58",
       "weight": 1.0,
       "source": "docs_project_status_project_status",
       "target": "docs_project_status_latest_validation",
@@ -7114,7 +7261,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L34",
+      "source_location": "L42",
       "weight": 1.0,
       "source": "docs_project_status_project_status",
       "target": "docs_project_status_next_tasks",
@@ -7302,5 +7449,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "031a8e04973ed81f2fd4e53631f6d2878c6b28e0"
+  "built_at_commit": "66261ac9872dcb988d7bb740fd92aad4704babe0"
 }
