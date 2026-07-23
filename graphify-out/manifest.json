@@ -205,8 +205,8 @@
     "semantic_hash": ""
   },
   "docs/DECISIONS.md": {
-    "mtime": 1784763022.5779376,
-    "ast_hash": "6c5362ac64521beaba46a7c84fd75010",
+    "mtime": 1784765756.3919802,
+    "ast_hash": "6b6ac0feaa9a0d7c3f8512f40def3889",
     "semantic_hash": ""
   },
   "docs/MATCHING_ENGINE.md": {
@@ -225,8 +225,8 @@
     "semantic_hash": ""
   },
   "docs/PROJECT_STATUS.md": {
-    "mtime": 1784765282.3592992,
-    "ast_hash": "57c9f493d27b923c99e23724bf4ccaf5",
+    "mtime": 1784765778.009666,
+    "ast_hash": "8d0fad6b02383b1eb7612e0ad2a0967c",
     "semantic_hash": ""
   },
   "docs/RETAILER_ADAPTERS.md": {
@@ -277,6 +277,26 @@
   "vitest.config.ts": {
     "mtime": 1784765674.4200985,
     "ast_hash": "1f5ad1c5ed1d1e860f69f1e59f5e1b81",
+    "semantic_hash": ""
+  },
+  "src/domain/retailers/adapter.ts": {
+    "mtime": 1784777539.5798335,
+    "ast_hash": "cea91e1afbb70bf5d578937e731f4664",
+    "semantic_hash": ""
+  },
+  "src/domain/retailers/index.ts": {
+    "mtime": 1784777542.1345139,
+    "ast_hash": "3100b64b3225215f5f379f142cb9351a",
+    "semantic_hash": ""
+  },
+  "src/domain/retailers/schemas.ts": {
+    "mtime": 1784777530.1102936,
+    "ast_hash": "135263e46a029861cec8e810d44b9812",
+    "semantic_hash": ""
+  },
+  "tests/unit/retailer-contracts.test.ts": {
+    "mtime": 1784777558.4862418,
+    "ast_hash": "06cef566784d09feff705dc1370df134",
     "semantic_hash": ""
   }
 }

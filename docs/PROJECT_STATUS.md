@@ -25,11 +25,19 @@ Phase 1 — Database & canonical catalog (IN PROGRESS)
     (`scripts/validate-catalog.ts`), slug/SKU helpers (`src/lib/catalog-slug.ts`), Vitest config
     + 11 passing catalog tests.
 
+- **Phase 2 (started early, retailer-agnostic only):** adapter contract
+  (`src/domain/retailers/`) — Zod schemas for raw listing / raw page / parsed product /
+  health result, plus the `RetailerAdapter` interface and retrieval-priority doc. 9 contract
+  tests enforce integer-cents money, unknown-shipping (null) vs free (0), nullable stock, and
+  presentation validity.
+
 ## In Progress
 
 - **Blocked on user:** live `db:migrate` + `db:seed` run — waiting for Supabase connection
   strings in `.env` (`DATABASE_URL`, `DIRECT_URL`). All Phase 1 *code* is validated (typecheck,
   lint, build, generate, catalog:validate, tests); only the live DB run remains.
+- Phase 2 next: pick the first retailer (must confirm permitted, stable retrieval first),
+  then shared fetch helpers, fixtures, parser tests, scrape-run logging, retailer health.
 
 ## Next Tasks
 
@@ -54,7 +62,7 @@ Phase 1 — Database & canonical catalog (IN PROGRESS)
 - Build: PASS (exit 0)
 - DB generate: PASS — `drizzle-kit generate`, 13 tables + migration 0001
 - Catalog validate: PASS — 13 brands / 19 fragrances / 52 variants / 52 unique SKUs
-- Unit tests: PASS — Vitest, 11/11 (catalog + slug helpers)
+- Unit tests: PASS — Vitest, 20/20 (catalog, slug helpers, retailer contracts)
 - DB migrate/seed: PENDING — needs Supabase `.env`
 - Integration/e2e tests: not yet wired (Phase 2+/5+)
 

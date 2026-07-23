@@ -1,16 +1,16 @@
 # Graph Report - ScentScout  (2026-07-22)
 
 ## Corpus Check
-- 56 files · ~27,666 words
+- 60 files · ~28,687 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 318 nodes · 346 edges · 39 communities (27 shown, 12 thin omitted)
+- 340 nodes · 380 edges · 40 communities (28 shown, 12 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `457e8a50`
+- Built from commit: `031a8e04`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -51,6 +51,7 @@
 - security.md
 - testing.md
 - extraction-spec.md
+- schemas.ts
 
 ## God Nodes (most connected - your core abstractions)
 1. `compilerOptions` - 16 edges
@@ -77,27 +78,27 @@
 ## Import Cycles
 - None detected.
 
-## Communities (39 total, 12 thin omitted)
+## Communities (40 total, 12 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.10
 Nodes (19): compilerOptions, allowJs, esModuleInterop, incremental, isolatedModules, jsx, lib, module (+11 more)
 
 ### Community 1 - "Community 1"
-Cohesion: 0.17
-Nodes (12): devDependencies, drizzle-kit, eslint, eslint-config-next, tailwindcss, @tailwindcss/postcss, tsx, @types/node (+4 more)
+Cohesion: 0.08
+Nodes (23): dependencies, dotenv, drizzle-orm, next, postgres, react, react-dom, zod (+15 more)
 
 ### Community 2 - "Community 2"
-Cohesion: 0.14
-Nodes (23): alertEvents, alertRules, watchlists, alertDeliveryStatusEnum, concentrationEnum, conditionEnum, couponDiscountTypeEnum, couponVerificationStatusEnum (+15 more)
+Cohesion: 0.09
+Nodes (33): seed(), Db, env, queryClient, alertEvents, alertRules, watchlists, brands (+25 more)
 
 ### Community 3 - "Community 3"
 Cohesion: 0.29
 Nodes (6): hooks, PreToolUse, permissions, allow, deny, $schema
 
 ### Community 4 - "Community 4"
-Cohesion: 0.08
-Nodes (24): dependencies, dotenv, drizzle-orm, next, postgres, react, react-dom, zod (+16 more)
+Cohesion: 0.15
+Nodes (13): scripts, build, catalog:validate, db:generate, db:migrate, db:seed, db:studio, dev (+5 more)
 
 ### Community 5 - "Community 5"
 Cohesion: 0.40
@@ -140,8 +141,8 @@ Cohesion: 0.25
 Nodes (7): Conventions, Documentation, Getting started, ScentScout, Scripts, Stack, What makes it different
 
 ### Community 19 - "client.ts"
-Cohesion: 0.09
-Nodes (23): seed(), CURRENT_YEAR, errors, validate(), Db, env, queryClient, brands (+15 more)
+Cohesion: 0.16
+Nodes (13): CURRENT_YEAR, errors, validate(), catalog, Gender, SeedBrand, SeedFragrance, SeedVariant (+5 more)
 
 ### Community 20 - "ScentScout — Architecture"
 Cohesion: 0.29
@@ -156,8 +157,8 @@ Cohesion: 0.33
 Nodes (5): For /graphify explain, For /graphify path, graphify reference: query, path, explain, Step 0 — Constrained query expansion (REQUIRED before traversal), Step 1 — Traversal
 
 ### Community 23 - "ScentScout — Decision Records (ADRs)"
-Cohesion: 0.33
-Nodes (5): ADR-001: Next.js 16 + mandated stack, ADR-002: ScentScout is its own git repository with a public GitHub remote, ADR-003: Definition of "estimated delivered price before tax", ADR-004: Deterministic checks are the sole authority for production matches, ScentScout — Decision Records (ADRs)
+Cohesion: 0.29
+Nodes (6): ADR-001: Next.js 16 + mandated stack, ADR-002: ScentScout is its own git repository with a public GitHub remote, ADR-003: Definition of "estimated delivered price before tax", ADR-004: Deterministic checks are the sole authority for production matches, ADR-005: Canonical SKU scheme and testers as first-class variants, ScentScout — Decision Records (ADRs)
 
 ### Community 24 - "ScentScout — Matching Engine"
 Cohesion: 0.33
@@ -175,25 +176,29 @@ Nodes (3): For git commit hook, For native CLAUDE.md integration, graphify refer
 Cohesion: 0.50
 Nodes (3): For --cluster-only, For --update (incremental re-extraction), graphify reference: incremental update and cluster-only
 
+### Community 39 - "schemas.ts"
+Cohesion: 0.15
+Nodes (13): DiscoveryInput, ProductFetchInput, RetailerAdapter, centsSchema, ParsedRetailerProduct, parsedRetailerProductSchema, RawRetailerListing, rawRetailerListingSchema (+5 more)
+
 ## Knowledge Gaps
-- **197 isolated node(s):** `$schema`, `allow`, `deny`, `PreToolUse`, `eslintConfig` (+192 more)
+- **205 isolated node(s):** `$schema`, `allow`, `deny`, `PreToolUse`, `eslintConfig` (+200 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **12 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `devDependencies` connect `Community 1` to `Community 4`?**
+- **Why does `presentationEnum` connect `Community 2` to `client.ts`, `schemas.ts`?**
   _High betweenness centrality (0.007) - this node is a cross-community bridge._
+- **Why does `scripts` connect `Community 4` to `Community 1`?**
+  _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **What connects `$schema`, `allow`, `deny` to the rest of the system?**
-  _197 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _205 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._
+- **Should `Community 1` be split into smaller, more focused modules?**
+  _Cohesion score 0.08333333333333333 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
-  _Cohesion score 0.13978494623655913 - nodes in this community are weakly interconnected._
-- **Should `Community 4` be split into smaller, more focused modules?**
-  _Cohesion score 0.08 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.09302325581395349 - nodes in this community are weakly interconnected._
 - **Should `Community 6` be split into smaller, more focused modules?**
   _Cohesion score 0.08 - nodes in this community are weakly interconnected._
-- **Should `Community 11` be split into smaller, more focused modules?**
-  _Cohesion score 0.1 - nodes in this community are weakly interconnected._
