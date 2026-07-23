@@ -39,6 +39,11 @@ export interface RetailerAdapter {
 
   discoverProducts(input: DiscoveryInput): Promise<RawRetailerListing[]>;
   fetchProduct(input: ProductFetchInput): Promise<RawRetailerProductPage>;
-  parseProduct(input: RawRetailerProductPage): Promise<ParsedRetailerProduct>;
+  /**
+   * One product URL can expose several purchasable variants (sizes), so this
+   * returns 0..N parsed products — see ADR-007. Returning `[]` means "nothing
+   * parseable here", which is NOT the same as "out of stock".
+   */
+  parseProduct(input: RawRetailerProductPage): Promise<ParsedRetailerProduct[]>;
   healthCheck(): Promise<RetailerHealthResult>;
 }

@@ -5,6 +5,8 @@ const base = {
   externalId: "abc-123",
   url: "https://example.com/p/1",
   rawTitle: "Le Labo Santal 33 EDP 100ml",
+  gtin: null,
+  mpn: null,
   brand: "Le Labo",
   fragranceName: "Santal 33",
   flankerName: null,

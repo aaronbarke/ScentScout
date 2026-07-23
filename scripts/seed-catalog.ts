@@ -1,7 +1,8 @@
 import "dotenv/config";
 import { db, queryClient } from "@/db/client";
-import { brands, fragrances, productVariants } from "@/db/schema";
+import { brands, fragrances, productVariants, retailers } from "@/db/schema";
 import { catalog } from "@/db/seed/catalog";
+import { retailerSeeds } from "@/db/seed/retailers";
 import { canonicalSku } from "@/lib/catalog-slug";
 
 /**
@@ -14,8 +15,31 @@ async function seed() {
   let brandCount = 0;
   let fragranceCount = 0;
   let variantCount = 0;
+  let retailerCount = 0;
 
   await db.transaction(async (tx) => {
+    // Retailers first — only access-verified ones are enabled (see
+    // docs/RETAILER_RESEARCH.md); the rest seed disabled for admin visibility.
+    for (const r of retailerSeeds) {
+      await tx
+        .insert(retailers)
+        .values(r)
+        .onConflictDoUpdate({
+          target: retailers.slug,
+          set: {
+            name: r.name,
+            baseUrl: r.baseUrl,
+            retailerType: r.retailerType,
+            affiliateProgram: r.affiliateProgram,
+            enabled: r.enabled,
+            trustScore: r.trustScore,
+            defaultShippingPolicy: r.defaultShippingPolicy,
+            updatedAt: now,
+          },
+        });
+      retailerCount++;
+    }
+
     for (const b of catalog) {
       const [brandRow] = await tx
         .insert(brands)
@@ -91,7 +115,7 @@ async function seed() {
   });
 
   console.log(
-    `✓ Seeded ${brandCount} brands, ${fragranceCount} fragrances, ${variantCount} variants (idempotent).`,
+    `✓ Seeded ${retailerCount} retailers, ${brandCount} brands, ${fragranceCount} fragrances, ${variantCount} variants (idempotent).`,
   );
 }
 

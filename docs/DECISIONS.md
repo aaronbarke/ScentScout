@@ -181,3 +181,39 @@ FragranceNet (authorized boutiques don't sell testers), so tester variants stay 
 until then. Luckyscent's travel/decant sizes (10ml, 1ml) are out of MVP scope and must be
 rejected by size contradiction, not silently matched. Retailer-specific quirks stay inside each
 adapter directory. `robots.txt` is re-checked before enabling any retailer.
+
+---
+
+## ADR-007: parseProduct returns many variants; GTIN/MPN added to the parse contract
+
+Status: Accepted
+
+Date: 2026-07-22
+
+Decision:
+`RetailerAdapter.parseProduct()` returns `ParsedRetailerProduct[]` (0..N) rather than a single
+product, and `ParsedRetailerProduct` gains `gtin` and `mpn` (both nullable, both required keys).
+
+Reason:
+Evidence from the live Luckyscent page: one product URL exposes a schema.org `ProductGroup`
+whose `hasVariant[]` holds three separately purchasable sizes (100ml, 10ml travel, 1ml sample),
+each with its own SKU, price, availability and barcode. A one-URL-one-product signature cannot
+represent that without silently discarding variants — which would violate the rule against
+combining differently-sized products. Returning an empty array is the honest representation of
+"nothing parseable here", explicitly distinct from "out of stock".
+
+GTIN is the single strongest deterministic matching signal available (Luckyscent publishes
+GTIN-13 per variant; FragranceX's affiliate feed carries UPC and MPN), so the parse contract
+must be able to carry it through to the matching engine.
+
+Alternatives:
+(a) Keep the singular signature and emit only the "primary" variant — rejected; drops real
+purchasable products and their price history. (b) Add a separate `parseVariants()` method —
+rejected as redundant; the multi-result case is the normal case, not the exception.
+
+Consequences:
+This deviates from the interface sketch in the original brief; the brief described it as
+"similar to" the final shape, and the deviation is evidence-led. Ingestion iterates results and
+writes one append-only observation per variant. Out-of-scope sizes (10ml/1ml decants) are parsed
+faithfully and left for the matching engine to reject on size contradiction rather than being
+filtered at parse time — parsing reports what exists; matching decides what counts.

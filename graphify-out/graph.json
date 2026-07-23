@@ -140,7 +140,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "package",
-      "community": 4,
+      "community": 1,
       "norm_label": "package.json"
     },
     {
@@ -150,7 +150,7 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "package_name",
-      "community": 4,
+      "community": 1,
       "norm_label": "name"
     },
     {
@@ -160,7 +160,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "package_version",
-      "community": 4,
+      "community": 1,
       "norm_label": "version"
     },
     {
@@ -170,7 +170,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "package_private",
-      "community": 4,
+      "community": 1,
       "norm_label": "private"
     },
     {
@@ -304,90 +304,110 @@
       "norm_label": "test:watch"
     },
     {
+      "label": "retailer",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "package_scripts_retailer",
+      "community": 4,
+      "norm_label": "retailer"
+    },
+    {
       "label": "dependencies",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L19",
+      "source_location": "L20",
       "_origin": "ast",
       "id": "package_dependencies",
-      "community": 4,
+      "community": 1,
       "norm_label": "dependencies"
+    },
+    {
+      "label": "cheerio",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "package_dependencies_cheerio",
+      "community": 1,
+      "norm_label": "cheerio"
     },
     {
       "label": "dotenv",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L20",
+      "source_location": "L22",
       "_origin": "ast",
       "id": "package_dependencies_dotenv",
-      "community": 4,
+      "community": 1,
       "norm_label": "dotenv"
     },
     {
       "label": "drizzle-orm",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L21",
+      "source_location": "L23",
       "_origin": "ast",
       "id": "package_dependencies_drizzle_orm",
-      "community": 4,
+      "community": 1,
       "norm_label": "drizzle-orm"
     },
     {
       "label": "next",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L22",
+      "source_location": "L24",
       "_origin": "ast",
       "id": "package_dependencies_next",
-      "community": 4,
+      "community": 1,
       "norm_label": "next"
     },
     {
       "label": "postgres",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L23",
+      "source_location": "L25",
       "_origin": "ast",
       "id": "package_dependencies_postgres",
-      "community": 4,
+      "community": 1,
       "norm_label": "postgres"
     },
     {
       "label": "react",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L24",
+      "source_location": "L26",
       "_origin": "ast",
       "id": "package_dependencies_react",
-      "community": 4,
+      "community": 1,
       "norm_label": "react"
     },
     {
       "label": "react-dom",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L25",
+      "source_location": "L27",
       "_origin": "ast",
       "id": "package_dependencies_react_dom",
-      "community": 4,
+      "community": 1,
       "norm_label": "react-dom"
     },
     {
       "label": "zod",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L26",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "package_dependencies_zod",
-      "community": 4,
+      "community": 1,
       "norm_label": "zod"
     },
     {
       "label": "devDependencies",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L28",
+      "source_location": "L30",
       "_origin": "ast",
       "id": "package_devdependencies",
       "community": 1,
@@ -397,7 +417,7 @@
       "label": "@tailwindcss/postcss",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L29",
+      "source_location": "L31",
       "_origin": "ast",
       "id": "package_devdependencies_tailwindcss_postcss",
       "community": 1,
@@ -407,7 +427,7 @@
       "label": "@types/node",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L30",
+      "source_location": "L32",
       "_origin": "ast",
       "id": "package_devdependencies_types_node",
       "community": 1,
@@ -417,7 +437,7 @@
       "label": "@types/react",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L31",
+      "source_location": "L33",
       "_origin": "ast",
       "id": "package_devdependencies_types_react",
       "community": 1,
@@ -427,7 +447,7 @@
       "label": "@types/react-dom",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L32",
+      "source_location": "L34",
       "_origin": "ast",
       "id": "package_devdependencies_types_react_dom",
       "community": 1,
@@ -437,7 +457,7 @@
       "label": "drizzle-kit",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L33",
+      "source_location": "L35",
       "_origin": "ast",
       "id": "package_devdependencies_drizzle_kit",
       "community": 1,
@@ -447,7 +467,7 @@
       "label": "eslint",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L34",
+      "source_location": "L36",
       "_origin": "ast",
       "id": "package_devdependencies_eslint",
       "community": 1,
@@ -457,7 +477,7 @@
       "label": "eslint-config-next",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L35",
+      "source_location": "L37",
       "_origin": "ast",
       "id": "package_devdependencies_eslint_config_next",
       "community": 1,
@@ -467,7 +487,7 @@
       "label": "tailwindcss",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L36",
+      "source_location": "L38",
       "_origin": "ast",
       "id": "package_devdependencies_tailwindcss",
       "community": 1,
@@ -477,7 +497,7 @@
       "label": "tsx",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L37",
+      "source_location": "L39",
       "_origin": "ast",
       "id": "package_devdependencies_tsx",
       "community": 1,
@@ -487,7 +507,7 @@
       "label": "typescript",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L38",
+      "source_location": "L40",
       "_origin": "ast",
       "id": "package_devdependencies_typescript",
       "community": 1,
@@ -497,7 +517,7 @@
       "label": "vitest",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L39",
+      "source_location": "L41",
       "_origin": "ast",
       "id": "package_devdependencies_vitest",
       "community": 1,
@@ -524,6 +544,46 @@
       "norm_label": "config"
     },
     {
+      "label": "run-retailer.ts",
+      "file_type": "code",
+      "source_file": "scripts/run-retailer.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "scripts_run_retailer",
+      "community": 41,
+      "norm_label": "run-retailer.ts"
+    },
+    {
+      "label": "ADAPTERS",
+      "file_type": "code",
+      "source_file": "scripts/run-retailer.ts",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "scripts_run_retailer_adapters",
+      "community": 41,
+      "norm_label": "adapters"
+    },
+    {
+      "label": "parseArgs()",
+      "file_type": "code",
+      "source_file": "scripts/run-retailer.ts",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "scripts_run_retailer_parseargs",
+      "community": 41,
+      "norm_label": "parseargs()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "scripts/run-retailer.ts",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "scripts_run_retailer_main",
+      "community": 41,
+      "norm_label": "main()"
+    },
+    {
       "label": "seed-catalog.ts",
       "file_type": "code",
       "source_file": "scripts/seed-catalog.ts",
@@ -537,7 +597,7 @@
       "label": "seed()",
       "file_type": "code",
       "source_file": "scripts/seed-catalog.ts",
-      "source_location": "L12",
+      "source_location": "L13",
       "_origin": "ast",
       "id": "scripts_seed_catalog_seed",
       "community": 19,
@@ -660,7 +720,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_db_client",
-      "community": 2,
+      "community": 41,
       "norm_label": "client.ts"
     },
     {
@@ -670,7 +730,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "src_db_client_env",
-      "community": 2,
+      "community": 41,
       "norm_label": "env"
     },
     {
@@ -680,7 +740,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_db_client_queryclient",
-      "community": 2,
+      "community": 41,
       "norm_label": "queryclient"
     },
     {
@@ -690,7 +750,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "src_db_client_db",
-      "community": 2,
+      "community": 41,
       "norm_label": "db"
     },
     {
@@ -810,7 +870,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "src_db_schema_enums_presentationenum",
-      "community": 2,
+      "community": 39,
       "norm_label": "presentationenum"
     },
     {
@@ -1124,6 +1184,86 @@
       "norm_label": "catalog"
     },
     {
+      "label": "retailers.ts",
+      "file_type": "code",
+      "source_file": "src/db/seed/retailers.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_db_seed_retailers",
+      "community": 2,
+      "norm_label": "retailers.ts"
+    },
+    {
+      "label": "RetailerInsert",
+      "file_type": "code",
+      "source_file": "src/db/seed/retailers.ts",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "src_db_seed_retailers_retailerinsert",
+      "community": 2,
+      "norm_label": "retailerinsert"
+    },
+    {
+      "label": "retailerSeeds",
+      "file_type": "code",
+      "source_file": "src/db/seed/retailers.ts",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "src_db_seed_retailers_retailerseeds",
+      "community": 2,
+      "norm_label": "retailerseeds"
+    },
+    {
+      "label": "delivered-price.ts",
+      "file_type": "code",
+      "source_file": "src/domain/pricing/delivered-price.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_domain_pricing_delivered_price",
+      "community": 41,
+      "norm_label": "delivered-price.ts"
+    },
+    {
+      "label": "DeliveredPriceInput",
+      "file_type": "code",
+      "source_file": "src/domain/pricing/delivered-price.ts",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "src_domain_pricing_delivered_price_deliveredpriceinput",
+      "community": 41,
+      "norm_label": "deliveredpriceinput"
+    },
+    {
+      "label": "estimateDeliveredPriceCents()",
+      "file_type": "code",
+      "source_file": "src/domain/pricing/delivered-price.ts",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "src_domain_pricing_delivered_price_estimatedeliveredpricecents",
+      "community": 41,
+      "norm_label": "estimatedeliveredpricecents()"
+    },
+    {
+      "label": "hasDeliveredPrice()",
+      "file_type": "code",
+      "source_file": "src/domain/pricing/delivered-price.ts",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "src_domain_pricing_delivered_price_hasdeliveredprice",
+      "community": 41,
+      "norm_label": "hasdeliveredprice()"
+    },
+    {
+      "label": "ADR-0003",
+      "file_type": "concept",
+      "source_file": "src/domain/pricing/delivered-price.ts",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "docref_adr_0003",
+      "community": 41,
+      "norm_label": "adr-0003"
+    },
+    {
       "label": "adapter.ts",
       "file_type": "code",
       "source_file": "src/domain/retailers/adapter.ts",
@@ -1187,7 +1327,7 @@
       "label": ".parseProduct()",
       "file_type": "code",
       "source_file": "src/domain/retailers/adapter.ts",
-      "source_location": "L42",
+      "source_location": "L47",
       "_origin": "ast",
       "id": "src_domain_retailers_adapter_retaileradapter_parseproduct",
       "community": 39,
@@ -1197,11 +1337,21 @@
       "label": ".healthCheck()",
       "file_type": "code",
       "source_file": "src/domain/retailers/adapter.ts",
-      "source_location": "L43",
+      "source_location": "L48",
       "_origin": "ast",
       "id": "src_domain_retailers_adapter_retaileradapter_healthcheck",
       "community": 39,
       "norm_label": ".healthcheck()"
+    },
+    {
+      "label": "ADR-0007",
+      "file_type": "concept",
+      "source_file": "src/domain/retailers/adapter.ts",
+      "source_location": "L44",
+      "_origin": "ast",
+      "id": "docref_adr_0007",
+      "community": 39,
+      "norm_label": "adr-0007"
     },
     {
       "label": "index.ts",
@@ -1210,8 +1360,68 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_domain_retailers_index",
-      "community": 39,
+      "community": 40,
       "norm_label": "index.ts"
+    },
+    {
+      "label": "ingest.ts",
+      "file_type": "code",
+      "source_file": "src/domain/retailers/ingest.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_domain_retailers_ingest",
+      "community": 41,
+      "norm_label": "ingest.ts"
+    },
+    {
+      "label": "IngestSummary",
+      "file_type": "code",
+      "source_file": "src/domain/retailers/ingest.ts",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "src_domain_retailers_ingest_ingestsummary",
+      "community": 41,
+      "norm_label": "ingestsummary"
+    },
+    {
+      "label": "persistParsed()",
+      "file_type": "code",
+      "source_file": "src/domain/retailers/ingest.ts",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "src_domain_retailers_ingest_persistparsed",
+      "community": 41,
+      "norm_label": "persistparsed()"
+    },
+    {
+      "label": "updateHealth()",
+      "file_type": "code",
+      "source_file": "src/domain/retailers/ingest.ts",
+      "source_location": "L86",
+      "_origin": "ast",
+      "id": "src_domain_retailers_ingest_updatehealth",
+      "community": 41,
+      "norm_label": "updatehealth()"
+    },
+    {
+      "label": "ingestUrls()",
+      "file_type": "code",
+      "source_file": "src/domain/retailers/ingest.ts",
+      "source_location": "L130",
+      "_origin": "ast",
+      "id": "src_domain_retailers_ingest_ingesturls",
+      "community": 41,
+      "norm_label": "ingesturls()"
+    },
+    {
+      "label": "findListing()",
+      "file_type": "code",
+      "source_file": "src/domain/retailers/ingest.ts",
+      "source_location": "L213",
+      "_origin": "ast",
+      "id": "src_domain_retailers_ingest_findlisting",
+      "community": 41,
+      "norm_label": "findlisting()"
     },
     {
       "label": "schemas.ts",
@@ -1280,14 +1490,14 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "src_domain_retailers_schemas_parsedretailerproductschema",
-      "community": 39,
+      "community": 40,
       "norm_label": "parsedretailerproductschema"
     },
     {
       "label": "ParsedRetailerProduct",
       "file_type": "code",
       "source_file": "src/domain/retailers/schemas.ts",
-      "source_location": "L63",
+      "source_location": "L67",
       "_origin": "ast",
       "id": "src_domain_retailers_schemas_parsedretailerproduct",
       "community": 39,
@@ -1297,7 +1507,7 @@
       "label": "retailerHealthResultSchema",
       "file_type": "code",
       "source_file": "src/domain/retailers/schemas.ts",
-      "source_location": "L66",
+      "source_location": "L70",
       "_origin": "ast",
       "id": "src_domain_retailers_schemas_retailerhealthresultschema",
       "community": 39,
@@ -1307,7 +1517,7 @@
       "label": "RetailerHealthResult",
       "file_type": "code",
       "source_file": "src/domain/retailers/schemas.ts",
-      "source_location": "L73",
+      "source_location": "L77",
       "_origin": "ast",
       "id": "src_domain_retailers_schemas_retailerhealthresult",
       "community": 39,
@@ -1444,6 +1654,346 @@
       "norm_label": "loaddbenv()"
     },
     {
+      "label": "adapter.ts",
+      "file_type": "code",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_retailers_luckyscent_adapter",
+      "community": 40,
+      "norm_label": "adapter.ts"
+    },
+    {
+      "label": "asRecord()",
+      "file_type": "code",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "src_retailers_luckyscent_adapter_asrecord",
+      "community": 40,
+      "norm_label": "asrecord()"
+    },
+    {
+      "label": "brandName()",
+      "file_type": "code",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "src_retailers_luckyscent_adapter_brandname",
+      "community": 40,
+      "norm_label": "brandname()"
+    },
+    {
+      "label": "parseVariant()",
+      "file_type": "code",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L50",
+      "_origin": "ast",
+      "id": "src_retailers_luckyscent_adapter_parsevariant",
+      "community": 40,
+      "norm_label": "parsevariant()"
+    },
+    {
+      "label": "parseLuckyscentHtml()",
+      "file_type": "code",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L114",
+      "_origin": "ast",
+      "id": "src_retailers_luckyscent_adapter_parseluckyscenthtml",
+      "community": 40,
+      "norm_label": "parseluckyscenthtml()"
+    },
+    {
+      "label": "LuckyscentAdapter",
+      "file_type": "code",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L154",
+      "_origin": "ast",
+      "id": "src_retailers_luckyscent_adapter_luckyscentadapter",
+      "community": 39,
+      "norm_label": "luckyscentadapter"
+    },
+    {
+      "label": ".discoverProducts()",
+      "file_type": "code",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L162",
+      "_origin": "ast",
+      "id": "src_retailers_luckyscent_adapter_luckyscentadapter_discoverproducts",
+      "community": 39,
+      "norm_label": ".discoverproducts()"
+    },
+    {
+      "label": ".fetchProduct()",
+      "file_type": "code",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L182",
+      "_origin": "ast",
+      "id": "src_retailers_luckyscent_adapter_luckyscentadapter_fetchproduct",
+      "community": 39,
+      "norm_label": ".fetchproduct()"
+    },
+    {
+      "label": ".parseProduct()",
+      "file_type": "code",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L194",
+      "_origin": "ast",
+      "id": "src_retailers_luckyscent_adapter_luckyscentadapter_parseproduct",
+      "community": 39,
+      "norm_label": ".parseproduct()"
+    },
+    {
+      "label": ".healthCheck()",
+      "file_type": "code",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L198",
+      "_origin": "ast",
+      "id": "src_retailers_luckyscent_adapter_luckyscentadapter_healthcheck",
+      "community": 39,
+      "norm_label": ".healthcheck()"
+    },
+    {
+      "label": "http.ts",
+      "file_type": "code",
+      "source_file": "src/retailers/shared/http.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_retailers_shared_http",
+      "community": 42,
+      "norm_label": "http.ts"
+    },
+    {
+      "label": "FetchOptions",
+      "file_type": "code",
+      "source_file": "src/retailers/shared/http.ts",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "src_retailers_shared_http_fetchoptions",
+      "community": 42,
+      "norm_label": "fetchoptions"
+    },
+    {
+      "label": "FetchResult",
+      "file_type": "code",
+      "source_file": "src/retailers/shared/http.ts",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "src_retailers_shared_http_fetchresult",
+      "community": 42,
+      "norm_label": "fetchresult"
+    },
+    {
+      "label": "RetrievalError",
+      "file_type": "code",
+      "source_file": "src/retailers/shared/http.ts",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "src_retailers_shared_http_retrievalerror",
+      "community": 42,
+      "norm_label": "retrievalerror"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "src/retailers/shared/http.ts",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "src_retailers_shared_http_retrievalerror_constructor",
+      "community": 42,
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": "lastRequestAt",
+      "file_type": "code",
+      "source_file": "src/retailers/shared/http.ts",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "src_retailers_shared_http_lastrequestat",
+      "community": 42,
+      "norm_label": "lastrequestat"
+    },
+    {
+      "label": "sleep()",
+      "file_type": "code",
+      "source_file": "src/retailers/shared/http.ts",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "src_retailers_shared_http_sleep",
+      "community": 42,
+      "norm_label": "sleep()"
+    },
+    {
+      "label": "isRetryable()",
+      "file_type": "code",
+      "source_file": "src/retailers/shared/http.ts",
+      "source_location": "L44",
+      "_origin": "ast",
+      "id": "src_retailers_shared_http_isretryable",
+      "community": 42,
+      "norm_label": "isretryable()"
+    },
+    {
+      "label": "respectRateLimit()",
+      "file_type": "code",
+      "source_file": "src/retailers/shared/http.ts",
+      "source_location": "L48",
+      "_origin": "ast",
+      "id": "src_retailers_shared_http_respectratelimit",
+      "community": 42,
+      "norm_label": "respectratelimit()"
+    },
+    {
+      "label": "backoffMs()",
+      "file_type": "code",
+      "source_file": "src/retailers/shared/http.ts",
+      "source_location": "L59",
+      "_origin": "ast",
+      "id": "src_retailers_shared_http_backoffms",
+      "community": 42,
+      "norm_label": "backoffms()"
+    },
+    {
+      "label": "fetchText()",
+      "file_type": "code",
+      "source_file": "src/retailers/shared/http.ts",
+      "source_location": "L64",
+      "_origin": "ast",
+      "id": "src_retailers_shared_http_fetchtext",
+      "community": 42,
+      "norm_label": "fetchtext()"
+    },
+    {
+      "label": "__resetRateLimiter()",
+      "file_type": "code",
+      "source_file": "src/retailers/shared/http.ts",
+      "source_location": "L126",
+      "_origin": "ast",
+      "id": "src_retailers_shared_http_resetratelimiter",
+      "community": 42,
+      "norm_label": "__resetratelimiter()"
+    },
+    {
+      "label": "json-ld.ts",
+      "file_type": "code",
+      "source_file": "src/retailers/shared/json-ld.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_retailers_shared_json_ld",
+      "community": 40,
+      "norm_label": "json-ld.ts"
+    },
+    {
+      "label": "extractJsonLd()",
+      "file_type": "code",
+      "source_file": "src/retailers/shared/json-ld.ts",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "src_retailers_shared_json_ld_extractjsonld",
+      "community": 40,
+      "norm_label": "extractjsonld()"
+    },
+    {
+      "label": "hasType()",
+      "file_type": "code",
+      "source_file": "src/retailers/shared/json-ld.ts",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "src_retailers_shared_json_ld_hastype",
+      "community": 40,
+      "norm_label": "hastype()"
+    },
+    {
+      "label": "findByType()",
+      "file_type": "code",
+      "source_file": "src/retailers/shared/json-ld.ts",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "src_retailers_shared_json_ld_findbytype",
+      "community": 40,
+      "norm_label": "findbytype()"
+    },
+    {
+      "label": "availabilityToInStock()",
+      "file_type": "code",
+      "source_file": "src/retailers/shared/json-ld.ts",
+      "source_location": "L47",
+      "_origin": "ast",
+      "id": "src_retailers_shared_json_ld_availabilitytoinstock",
+      "community": 40,
+      "norm_label": "availabilitytoinstock()"
+    },
+    {
+      "label": "money.ts",
+      "file_type": "code",
+      "source_file": "src/retailers/shared/money.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_retailers_shared_money",
+      "community": 40,
+      "norm_label": "money.ts"
+    },
+    {
+      "label": "parsePriceToCents()",
+      "file_type": "code",
+      "source_file": "src/retailers/shared/money.ts",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "src_retailers_shared_money_parsepricetocents",
+      "community": 40,
+      "norm_label": "parsepricetocents()"
+    },
+    {
+      "label": "normalizeCurrency()",
+      "file_type": "code",
+      "source_file": "src/retailers/shared/money.ts",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "src_retailers_shared_money_normalizecurrency",
+      "community": 40,
+      "norm_label": "normalizecurrency()"
+    },
+    {
+      "label": "ozToMl()",
+      "file_type": "code",
+      "source_file": "src/retailers/shared/money.ts",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "src_retailers_shared_money_oztoml",
+      "community": 40,
+      "norm_label": "oztoml()"
+    },
+    {
+      "label": "size.ts",
+      "file_type": "code",
+      "source_file": "src/retailers/shared/size.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_retailers_shared_size",
+      "community": 40,
+      "norm_label": "size.ts"
+    },
+    {
+      "label": "parseSizeMl()",
+      "file_type": "code",
+      "source_file": "src/retailers/shared/size.ts",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "src_retailers_shared_size_parsesizeml",
+      "community": 40,
+      "norm_label": "parsesizeml()"
+    },
+    {
+      "label": "looksLikeSampleOrTravel()",
+      "file_type": "code",
+      "source_file": "src/retailers/shared/size.ts",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "src_retailers_shared_size_lookslikesampleortravel",
+      "community": 40,
+      "norm_label": "lookslikesampleortravel()"
+    },
+    {
       "label": "catalog.test.ts",
       "file_type": "code",
       "source_file": "tests/unit/catalog.test.ts",
@@ -1452,6 +2002,16 @@
       "id": "tests_unit_catalog_test",
       "community": 19,
       "norm_label": "catalog.test.ts"
+    },
+    {
+      "label": "delivered-price.test.ts",
+      "file_type": "code",
+      "source_file": "tests/unit/delivered-price.test.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "tests_unit_delivered_price_test",
+      "community": 41,
+      "norm_label": "delivered-price.test.ts"
     },
     {
       "label": "env.test.ts",
@@ -1464,13 +2024,63 @@
       "norm_label": "env.test.ts"
     },
     {
+      "label": "luckyscent-parser.test.ts",
+      "file_type": "code",
+      "source_file": "tests/unit/luckyscent-parser.test.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "tests_unit_luckyscent_parser_test",
+      "community": 40,
+      "norm_label": "luckyscent-parser.test.ts"
+    },
+    {
+      "label": "FIXTURE",
+      "file_type": "code",
+      "source_file": "tests/unit/luckyscent-parser.test.ts",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "tests_unit_luckyscent_parser_test_fixture",
+      "community": 40,
+      "norm_label": "fixture"
+    },
+    {
+      "label": "OBSERVED",
+      "file_type": "code",
+      "source_file": "tests/unit/luckyscent-parser.test.ts",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "tests_unit_luckyscent_parser_test_observed",
+      "community": 40,
+      "norm_label": "observed"
+    },
+    {
+      "label": "parsed",
+      "file_type": "code",
+      "source_file": "tests/unit/luckyscent-parser.test.ts",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "tests_unit_luckyscent_parser_test_parsed",
+      "community": 40,
+      "norm_label": "parsed"
+    },
+    {
+      "label": "bySize()",
+      "file_type": "code",
+      "source_file": "tests/unit/luckyscent-parser.test.ts",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "tests_unit_luckyscent_parser_test_bysize",
+      "community": 40,
+      "norm_label": "bysize()"
+    },
+    {
       "label": "retailer-contracts.test.ts",
       "file_type": "code",
       "source_file": "tests/unit/retailer-contracts.test.ts",
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_unit_retailer_contracts_test",
-      "community": 39,
+      "community": 40,
       "norm_label": "retailer-contracts.test.ts"
     },
     {
@@ -1480,8 +2090,18 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "tests_unit_retailer_contracts_test_base",
-      "community": 39,
+      "community": 40,
       "norm_label": "base"
+    },
+    {
+      "label": "shared-helpers.test.ts",
+      "file_type": "code",
+      "source_file": "tests/unit/shared-helpers.test.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "tests_unit_shared_helpers_test",
+      "community": 40,
+      "norm_label": "shared-helpers.test.ts"
     },
     {
       "label": "tsconfig.json",
@@ -2914,6 +3534,26 @@
       "norm_label": "adr-005: canonical sku scheme and testers as first-class variants"
     },
     {
+      "label": "ADR-006: Retailer integration order, evidence-led",
+      "file_type": "document",
+      "source_file": "docs/DECISIONS.md",
+      "source_location": "L151",
+      "_origin": "ast",
+      "id": "docs_decisions_adr_006_retailer_integration_order_evidence_led",
+      "community": 23,
+      "norm_label": "adr-006: retailer integration order, evidence-led"
+    },
+    {
+      "label": "ADR-007: parseProduct returns many variants; GTIN/MPN added to the parse contract",
+      "file_type": "document",
+      "source_file": "docs/DECISIONS.md",
+      "source_location": "L187",
+      "_origin": "ast",
+      "id": "docs_decisions_adr_007_parseproduct_returns_many_variants_gtin_mpn_added_to_the_parse_contract",
+      "community": 23,
+      "norm_label": "adr-007: parseproduct returns many variants; gtin/mpn added to the parse contract"
+    },
+    {
       "label": "MATCHING_ENGINE.md",
       "file_type": "document",
       "source_file": "docs/MATCHING_ENGINE.md",
@@ -3177,7 +3817,7 @@
       "label": "In Progress",
       "file_type": "document",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L34",
+      "source_location": "L46",
       "_origin": "ast",
       "id": "docs_project_status_in_progress",
       "community": 13,
@@ -3187,7 +3827,7 @@
       "label": "Next Tasks",
       "file_type": "document",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L42",
+      "source_location": "L51",
       "_origin": "ast",
       "id": "docs_project_status_next_tasks",
       "community": 13,
@@ -3197,7 +3837,7 @@
       "label": "Known Issues",
       "file_type": "document",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L49",
+      "source_location": "L58",
       "_origin": "ast",
       "id": "docs_project_status_known_issues",
       "community": 13,
@@ -3207,7 +3847,7 @@
       "label": "Decisions Needed",
       "file_type": "document",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L54",
+      "source_location": "L63",
       "_origin": "ast",
       "id": "docs_project_status_decisions_needed",
       "community": 13,
@@ -3217,7 +3857,7 @@
       "label": "Latest Validation",
       "file_type": "document",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L58",
+      "source_location": "L67",
       "_origin": "ast",
       "id": "docs_project_status_latest_validation",
       "community": 13,
@@ -3227,7 +3867,7 @@
       "label": "Last Graphify Update",
       "file_type": "document",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L69",
+      "source_location": "L79",
       "_origin": "ast",
       "id": "docs_project_status_last_graphify_update",
       "community": 13,
@@ -3237,7 +3877,7 @@
       "label": "Latest GitHub Commit",
       "file_type": "document",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L74",
+      "source_location": "L83",
       "_origin": "ast",
       "id": "docs_project_status_latest_github_commit",
       "community": 13,
@@ -3322,6 +3962,116 @@
       "id": "docs_retailer_adapters_mvp_retailers",
       "community": 17,
       "norm_label": "mvp retailers"
+    },
+    {
+      "label": "RETAILER_RESEARCH.md",
+      "file_type": "document",
+      "source_file": "docs/RETAILER_RESEARCH.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_retailer_research",
+      "community": 43,
+      "norm_label": "retailer_research.md"
+    },
+    {
+      "label": "Retailer Access Research (Phase 2)",
+      "file_type": "document",
+      "source_file": "docs/RETAILER_RESEARCH.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_retailer_research_retailer_access_research_phase_2",
+      "community": 43,
+      "norm_label": "retailer access research (phase 2)"
+    },
+    {
+      "label": "Summary",
+      "file_type": "document",
+      "source_file": "docs/RETAILER_RESEARCH.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "docs_retailer_research_summary",
+      "community": 43,
+      "norm_label": "summary"
+    },
+    {
+      "label": "Evidence",
+      "file_type": "document",
+      "source_file": "docs/RETAILER_RESEARCH.md",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "docs_retailer_research_evidence",
+      "community": 43,
+      "norm_label": "evidence"
+    },
+    {
+      "label": "Luckyscent \u2014 authorized boutique (Shopify)",
+      "file_type": "document",
+      "source_file": "docs/RETAILER_RESEARCH.md",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "docs_retailer_research_luckyscent_authorized_boutique_shopify",
+      "community": 43,
+      "norm_label": "luckyscent \u2014 authorized boutique (shopify)"
+    },
+    {
+      "label": "FragranceNet \u2014 gray-market discounter",
+      "file_type": "document",
+      "source_file": "docs/RETAILER_RESEARCH.md",
+      "source_location": "L49",
+      "_origin": "ast",
+      "id": "docs_retailer_research_fragrancenet_gray_market_discounter",
+      "community": 43,
+      "norm_label": "fragrancenet \u2014 gray-market discounter"
+    },
+    {
+      "label": "Jomashop \u2014 gray-market discounter",
+      "file_type": "document",
+      "source_file": "docs/RETAILER_RESEARCH.md",
+      "source_location": "L71",
+      "_origin": "ast",
+      "id": "docs_retailer_research_jomashop_gray_market_discounter",
+      "community": 43,
+      "norm_label": "jomashop \u2014 gray-market discounter"
+    },
+    {
+      "label": "FragranceX \u2014 gray-market discounter",
+      "file_type": "document",
+      "source_file": "docs/RETAILER_RESEARCH.md",
+      "source_location": "L78",
+      "_origin": "ast",
+      "id": "docs_retailer_research_fragrancex_gray_market_discounter",
+      "community": 43,
+      "norm_label": "fragrancex \u2014 gray-market discounter"
+    },
+    {
+      "label": "Nordstrom \u2014 department store",
+      "file_type": "document",
+      "source_file": "docs/RETAILER_RESEARCH.md",
+      "source_location": "L85",
+      "_origin": "ast",
+      "id": "docs_retailer_research_nordstrom_department_store",
+      "community": 43,
+      "norm_label": "nordstrom \u2014 department store"
+    },
+    {
+      "label": "Recommendation",
+      "file_type": "document",
+      "source_file": "docs/RETAILER_RESEARCH.md",
+      "source_location": "L95",
+      "_origin": "ast",
+      "id": "docs_retailer_research_recommendation",
+      "community": 43,
+      "norm_label": "recommendation"
+    },
+    {
+      "label": "Standing constraints",
+      "file_type": "document",
+      "source_file": "docs/RETAILER_RESEARCH.md",
+      "source_location": "L108",
+      "_origin": "ast",
+      "id": "docs_retailer_research_standing_constraints",
+      "community": 43,
+      "norm_label": "standing constraints"
     },
     {
       "label": "ROADMAP.md",
@@ -3561,7 +4311,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L19",
+      "source_location": "L20",
       "weight": 1.0,
       "source": "package",
       "target": "package_dependencies",
@@ -3571,7 +4321,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L28",
+      "source_location": "L30",
       "weight": 1.0,
       "source": "package",
       "target": "package_devdependencies",
@@ -3701,6 +4451,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_retailer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
       "source_location": "L8",
       "weight": 1.0,
       "source": "package_scripts",
@@ -3741,20 +4501,10 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L20",
-      "weight": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_dotenv",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
       "source_location": "L21",
       "weight": 1.0,
       "source": "package_dependencies",
-      "target": "package_dependencies_drizzle_orm",
+      "target": "package_dependencies_cheerio",
       "confidence_score": 1.0
     },
     {
@@ -3764,7 +4514,7 @@
       "source_location": "L22",
       "weight": 1.0,
       "source": "package_dependencies",
-      "target": "package_dependencies_next",
+      "target": "package_dependencies_dotenv",
       "confidence_score": 1.0
     },
     {
@@ -3774,7 +4524,7 @@
       "source_location": "L23",
       "weight": 1.0,
       "source": "package_dependencies",
-      "target": "package_dependencies_postgres",
+      "target": "package_dependencies_drizzle_orm",
       "confidence_score": 1.0
     },
     {
@@ -3784,7 +4534,7 @@
       "source_location": "L24",
       "weight": 1.0,
       "source": "package_dependencies",
-      "target": "package_dependencies_react",
+      "target": "package_dependencies_next",
       "confidence_score": 1.0
     },
     {
@@ -3794,7 +4544,7 @@
       "source_location": "L25",
       "weight": 1.0,
       "source": "package_dependencies",
-      "target": "package_dependencies_react_dom",
+      "target": "package_dependencies_postgres",
       "confidence_score": 1.0
     },
     {
@@ -3804,27 +4554,27 @@
       "source_location": "L26",
       "weight": 1.0,
       "source": "package_dependencies",
+      "target": "package_dependencies_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_react_dom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "package_dependencies",
       "target": "package_dependencies_zod",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L33",
-      "weight": 1.0,
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_drizzle_kit",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L34",
-      "weight": 1.0,
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_eslint",
       "confidence_score": 1.0
     },
     {
@@ -3834,7 +4584,7 @@
       "source_location": "L35",
       "weight": 1.0,
       "source": "package_devdependencies",
-      "target": "package_devdependencies_eslint_config_next",
+      "target": "package_devdependencies_drizzle_kit",
       "confidence_score": 1.0
     },
     {
@@ -3844,17 +4594,7 @@
       "source_location": "L36",
       "weight": 1.0,
       "source": "package_devdependencies",
-      "target": "package_devdependencies_tailwindcss",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L29",
-      "weight": 1.0,
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_tailwindcss_postcss",
+      "target": "package_devdependencies_eslint",
       "confidence_score": 1.0
     },
     {
@@ -3864,37 +4604,7 @@
       "source_location": "L37",
       "weight": 1.0,
       "source": "package_devdependencies",
-      "target": "package_devdependencies_tsx",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L30",
-      "weight": 1.0,
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_types_node",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L31",
-      "weight": 1.0,
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_types_react",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L32",
-      "weight": 1.0,
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_types_react_dom",
+      "target": "package_devdependencies_eslint_config_next",
       "confidence_score": 1.0
     },
     {
@@ -3904,7 +4614,17 @@
       "source_location": "L38",
       "weight": 1.0,
       "source": "package_devdependencies",
-      "target": "package_devdependencies_typescript",
+      "target": "package_devdependencies_tailwindcss",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_tailwindcss_postcss",
       "confidence_score": 1.0
     },
     {
@@ -3912,6 +4632,56 @@
       "confidence": "EXTRACTED",
       "source_file": "package.json",
       "source_location": "L39",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_node",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_react_dom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_typescript",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L41",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_vitest",
@@ -3930,8 +4700,148 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "scripts/run-retailer.ts",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "scripts_run_retailer",
+      "target": "scripts_run_retailer_adapters",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/run-retailer.ts",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "scripts_run_retailer",
+      "target": "scripts_run_retailer_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/run-retailer.ts",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "scripts_run_retailer",
+      "target": "scripts_run_retailer_parseargs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/run-retailer.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "scripts_run_retailer",
+      "target": "src_db_client",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/run-retailer.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "scripts_run_retailer",
+      "target": "src_db_client_queryclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/run-retailer.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "scripts_run_retailer",
+      "target": "src_domain_retailers_adapter_retaileradapter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/run-retailer.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "scripts_run_retailer",
+      "target": "src_domain_retailers_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/run-retailer.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "scripts_run_retailer",
+      "target": "src_domain_retailers_ingest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/run-retailer.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "scripts_run_retailer",
+      "target": "src_domain_retailers_ingest_ingesturls",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/run-retailer.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "scripts_run_retailer",
+      "target": "src_retailers_luckyscent_adapter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/run-retailer.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "scripts_run_retailer",
+      "target": "src_retailers_luckyscent_adapter_luckyscentadapter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/run-retailer.ts",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "scripts_run_retailer_main",
+      "target": "scripts_run_retailer_parseargs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/run-retailer.ts",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "scripts_run_retailer_main",
+      "target": "src_domain_retailers_ingest_ingesturls",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "scripts/seed-catalog.ts",
-      "source_location": "L12",
+      "source_location": "L13",
       "weight": 1.0,
       "source": "scripts_seed_catalog",
       "target": "scripts_seed_catalog_seed",
@@ -4015,6 +4925,17 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/seed-catalog.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "scripts_seed_catalog",
+      "target": "src_db_schema_retailers_retailers",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -4044,7 +4965,7 @@
       "source_location": "L5",
       "weight": 1.0,
       "source": "scripts_seed_catalog",
-      "target": "src_lib_catalog_slug",
+      "target": "src_db_seed_retailers",
       "confidence_score": 1.0
     },
     {
@@ -4055,6 +4976,28 @@
       "source_location": "L5",
       "weight": 1.0,
       "source": "scripts_seed_catalog",
+      "target": "src_db_seed_retailers_retailerseeds",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/seed-catalog.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "scripts_seed_catalog",
+      "target": "src_lib_catalog_slug",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/seed-catalog.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "scripts_seed_catalog",
       "target": "src_lib_catalog_slug_canonicalsku",
       "confidence_score": 1.0
     },
@@ -4063,7 +5006,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "scripts/seed-catalog.ts",
-      "source_location": "L64",
+      "source_location": "L88",
       "weight": 1.0,
       "source": "scripts_seed_catalog_seed",
       "target": "src_lib_catalog_slug_canonicalsku",
@@ -4265,6 +5208,28 @@
       "weight": 1.0,
       "source": "src_db_client",
       "target": "src_lib_env_loaddbenv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/retailers/ingest.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_domain_retailers_ingest",
+      "target": "src_db_client",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/retailers/ingest.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_domain_retailers_ingest",
+      "target": "src_db_client_db",
       "confidence_score": 1.0
     },
     {
@@ -4920,6 +5885,28 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/db/seed/retailers.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_db_seed_retailers",
+      "target": "src_db_schema_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/retailers/ingest.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_domain_retailers_ingest",
+      "target": "src_db_schema_index",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/db/schema/ops.ts",
@@ -5005,6 +5992,28 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/retailers/ingest.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_domain_retailers_ingest",
+      "target": "src_db_schema_ops_scraperuns",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/retailers/ingest.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_domain_retailers_ingest",
+      "target": "src_db_schema_ops_retailerhealth",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/db/schema/prices.ts",
@@ -5048,6 +6057,17 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/retailers/ingest.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_domain_retailers_ingest",
+      "target": "src_db_schema_prices_priceobservations",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/db/schema/retailers.ts",
@@ -5075,6 +6095,39 @@
       "weight": 1.0,
       "source": "src_db_schema_retailers",
       "target": "src_db_schema_retailers_retailers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/db/seed/retailers.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_db_seed_retailers",
+      "target": "src_db_schema_retailers_retailers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/retailers/ingest.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_domain_retailers_ingest",
+      "target": "src_db_schema_retailers_retailers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/retailers/ingest.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_domain_retailers_ingest",
+      "target": "src_db_schema_retailers_retailerproducts",
       "confidence_score": 1.0
     },
     {
@@ -5237,6 +6290,153 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "src/db/seed/retailers.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_db_seed_retailers",
+      "target": "src_db_seed_retailers_retailerinsert",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/db/seed/retailers.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "src_db_seed_retailers",
+      "target": "src_db_seed_retailers_retailerseeds",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/pricing/delivered-price.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_domain_pricing_delivered_price",
+      "target": "docref_adr_0003",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/pricing/delivered-price.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "src_domain_pricing_delivered_price",
+      "target": "src_domain_pricing_delivered_price_deliveredpriceinput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/pricing/delivered-price.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "src_domain_pricing_delivered_price",
+      "target": "src_domain_pricing_delivered_price_estimatedeliveredpricecents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/pricing/delivered-price.ts",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "src_domain_pricing_delivered_price",
+      "target": "src_domain_pricing_delivered_price_hasdeliveredprice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/retailers/ingest.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "src_domain_retailers_ingest",
+      "target": "src_domain_pricing_delivered_price",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/delivered-price.test.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "tests_unit_delivered_price_test",
+      "target": "src_domain_pricing_delivered_price",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/pricing/delivered-price.ts",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "src_domain_pricing_delivered_price_hasdeliveredprice",
+      "target": "src_domain_pricing_delivered_price_estimatedeliveredpricecents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/retailers/ingest.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "src_domain_retailers_ingest",
+      "target": "src_domain_pricing_delivered_price_estimatedeliveredpricecents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/retailers/ingest.ts",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "src_domain_retailers_ingest_persistparsed",
+      "target": "src_domain_pricing_delivered_price_estimatedeliveredpricecents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/delivered-price.test.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "tests_unit_delivered_price_test",
+      "target": "src_domain_pricing_delivered_price_estimatedeliveredpricecents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/delivered-price.test.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "tests_unit_delivered_price_test",
+      "target": "src_domain_pricing_delivered_price_hasdeliveredprice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/retailers/adapter.ts",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "src_domain_retailers_adapter",
+      "target": "docref_adr_0007",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "src/domain/retailers/adapter.ts",
       "source_location": "L9",
       "weight": 1.0,
@@ -5331,6 +6531,50 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter",
+      "target": "src_domain_retailers_adapter_discoveryinput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L162",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter_luckyscentadapter_discoverproducts",
+      "target": "src_domain_retailers_adapter_discoveryinput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter",
+      "target": "src_domain_retailers_adapter_productfetchinput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L182",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter_luckyscentadapter_fetchproduct",
+      "target": "src_domain_retailers_adapter_productfetchinput",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/domain/retailers/adapter.ts",
@@ -5354,7 +6598,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/domain/retailers/adapter.ts",
-      "source_location": "L43",
+      "source_location": "L48",
       "weight": 1.0,
       "source": "src_domain_retailers_adapter_retaileradapter",
       "target": "src_domain_retailers_adapter_retaileradapter_healthcheck",
@@ -5364,10 +6608,43 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/domain/retailers/adapter.ts",
-      "source_location": "L42",
+      "source_location": "L47",
       "weight": 1.0,
       "source": "src_domain_retailers_adapter_retaileradapter",
       "target": "src_domain_retailers_adapter_retaileradapter_parseproduct",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/retailers/ingest.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "src_domain_retailers_ingest",
+      "target": "src_domain_retailers_adapter_retaileradapter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter",
+      "target": "src_domain_retailers_adapter_retaileradapter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "implements",
+      "context": "type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L154",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter_luckyscentadapter",
+      "target": "src_domain_retailers_adapter_retaileradapter",
       "confidence_score": 1.0
     },
     {
@@ -5393,11 +6670,22 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/domain/retailers/ingest.ts",
+      "source_location": "L167",
+      "weight": 1.0,
+      "source": "src_domain_retailers_ingest_ingesturls",
+      "target": "src_domain_retailers_adapter_retaileradapter_fetchproduct"
+    },
+    {
       "relation": "references",
       "context": "generic_arg",
       "confidence": "EXTRACTED",
       "source_file": "src/domain/retailers/adapter.ts",
-      "source_location": "L42",
+      "source_location": "L47",
       "weight": 1.0,
       "source": "src_domain_retailers_adapter_retaileradapter_parseproduct",
       "target": "src_domain_retailers_schemas_parsedretailerproduct",
@@ -5408,18 +6696,29 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "src/domain/retailers/adapter.ts",
-      "source_location": "L42",
+      "source_location": "L47",
       "weight": 1.0,
       "source": "src_domain_retailers_adapter_retaileradapter_parseproduct",
       "target": "src_domain_retailers_schemas_rawretailerproductpage",
       "confidence_score": 1.0
     },
     {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/domain/retailers/ingest.ts",
+      "source_location": "L168",
+      "weight": 1.0,
+      "source": "src_domain_retailers_ingest_ingesturls",
+      "target": "src_domain_retailers_adapter_retaileradapter_parseproduct"
+    },
+    {
       "relation": "references",
       "context": "generic_arg",
       "confidence": "EXTRACTED",
       "source_file": "src/domain/retailers/adapter.ts",
-      "source_location": "L43",
+      "source_location": "L48",
       "weight": 1.0,
       "source": "src_domain_retailers_adapter_retaileradapter_healthcheck",
       "target": "src_domain_retailers_schemas_retailerhealthresult",
@@ -5440,11 +6739,127 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/domain/retailers/ingest.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "src_domain_retailers_ingest",
+      "target": "src_domain_retailers_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter",
+      "target": "src_domain_retailers_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/luckyscent-parser.test.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "tests_unit_luckyscent_parser_test",
+      "target": "src_domain_retailers_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "tests/unit/retailer-contracts.test.ts",
       "source_location": "L2",
       "weight": 1.0,
       "source": "tests_unit_retailer_contracts_test",
       "target": "src_domain_retailers_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/retailers/ingest.ts",
+      "source_location": "L213",
+      "weight": 1.0,
+      "source": "src_domain_retailers_ingest",
+      "target": "src_domain_retailers_ingest_findlisting",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/retailers/ingest.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "src_domain_retailers_ingest",
+      "target": "src_domain_retailers_ingest_ingestsummary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/retailers/ingest.ts",
+      "source_location": "L130",
+      "weight": 1.0,
+      "source": "src_domain_retailers_ingest",
+      "target": "src_domain_retailers_ingest_ingesturls",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/retailers/ingest.ts",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "src_domain_retailers_ingest",
+      "target": "src_domain_retailers_ingest_persistparsed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/retailers/ingest.ts",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "src_domain_retailers_ingest",
+      "target": "src_domain_retailers_ingest_updatehealth",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/retailers/ingest.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "src_domain_retailers_ingest",
+      "target": "src_domain_retailers_schemas_parsedretailerproduct",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/retailers/ingest.ts",
+      "source_location": "L173",
+      "weight": 1.0,
+      "source": "src_domain_retailers_ingest_ingesturls",
+      "target": "src_domain_retailers_ingest_persistparsed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/retailers/ingest.ts",
+      "source_location": "L202",
+      "weight": 1.0,
+      "source": "src_domain_retailers_ingest_ingesturls",
+      "target": "src_domain_retailers_ingest_updatehealth",
       "confidence_score": 1.0
     },
     {
@@ -5461,7 +6876,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/domain/retailers/schemas.ts",
-      "source_location": "L63",
+      "source_location": "L67",
       "weight": 1.0,
       "source": "src_domain_retailers_schemas",
       "target": "src_domain_retailers_schemas_parsedretailerproduct",
@@ -5521,7 +6936,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/domain/retailers/schemas.ts",
-      "source_location": "L73",
+      "source_location": "L77",
       "weight": 1.0,
       "source": "src_domain_retailers_schemas",
       "target": "src_domain_retailers_schemas_retailerhealthresult",
@@ -5531,10 +6946,87 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/domain/retailers/schemas.ts",
-      "source_location": "L66",
+      "source_location": "L70",
       "weight": 1.0,
       "source": "src_domain_retailers_schemas",
       "target": "src_domain_retailers_schemas_retailerhealthresultschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter",
+      "target": "src_domain_retailers_schemas_rawretailerlisting",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L162",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter_luckyscentadapter_discoverproducts",
+      "target": "src_domain_retailers_schemas_rawretailerlisting",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter",
+      "target": "src_domain_retailers_schemas_rawretailerproductpage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L182",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter_luckyscentadapter_fetchproduct",
+      "target": "src_domain_retailers_schemas_rawretailerproductpage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L194",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter_luckyscentadapter_parseproduct",
+      "target": "src_domain_retailers_schemas_rawretailerproductpage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter",
+      "target": "src_domain_retailers_schemas_parsedretailerproductschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/luckyscent-parser.test.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "tests_unit_luckyscent_parser_test",
+      "target": "src_domain_retailers_schemas_parsedretailerproductschema",
       "confidence_score": 1.0
     },
     {
@@ -5546,6 +7038,50 @@
       "weight": 1.0,
       "source": "tests_unit_retailer_contracts_test",
       "target": "src_domain_retailers_schemas_parsedretailerproductschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter",
+      "target": "src_domain_retailers_schemas_parsedretailerproduct",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L194",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter_luckyscentadapter_parseproduct",
+      "target": "src_domain_retailers_schemas_parsedretailerproduct",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter",
+      "target": "src_domain_retailers_schemas_retailerhealthresult",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L198",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter_luckyscentadapter_healthcheck",
+      "target": "src_domain_retailers_schemas_retailerhealthresult",
       "confidence_score": 1.0
     },
     {
@@ -5755,6 +7291,875 @@
       "weight": 1.0,
       "source": "tests_unit_env_test",
       "target": "src_lib_env_resolvemigrationurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter",
+      "target": "src_retailers_luckyscent_adapter_asrecord",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter",
+      "target": "src_retailers_luckyscent_adapter_brandname",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L154",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter",
+      "target": "src_retailers_luckyscent_adapter_luckyscentadapter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L114",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter",
+      "target": "src_retailers_luckyscent_adapter_parseluckyscenthtml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter",
+      "target": "src_retailers_luckyscent_adapter_parsevariant",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter",
+      "target": "src_retailers_shared_http",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter",
+      "target": "src_retailers_shared_http_fetchtext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter",
+      "target": "src_retailers_shared_http_retrievalerror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter",
+      "target": "src_retailers_shared_json_ld",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter",
+      "target": "src_retailers_shared_json_ld_availabilitytoinstock",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter",
+      "target": "src_retailers_shared_json_ld_extractjsonld",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter",
+      "target": "src_retailers_shared_json_ld_findbytype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter",
+      "target": "src_retailers_shared_money",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter",
+      "target": "src_retailers_shared_money_normalizecurrency",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter",
+      "target": "src_retailers_shared_money_parsepricetocents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter",
+      "target": "src_retailers_shared_size",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter",
+      "target": "src_retailers_shared_size_parsesizeml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/luckyscent-parser.test.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "tests_unit_luckyscent_parser_test",
+      "target": "src_retailers_luckyscent_adapter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter_brandname",
+      "target": "src_retailers_luckyscent_adapter_asrecord",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L131",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter_parseluckyscenthtml",
+      "target": "src_retailers_luckyscent_adapter_asrecord",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter_parsevariant",
+      "target": "src_retailers_luckyscent_adapter_asrecord",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L126",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter_parseluckyscenthtml",
+      "target": "src_retailers_luckyscent_adapter_brandname",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L133",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter_parseluckyscenthtml",
+      "target": "src_retailers_luckyscent_adapter_parsevariant",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L96",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter_parsevariant",
+      "target": "src_retailers_shared_json_ld_availabilitytoinstock",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter_parsevariant",
+      "target": "src_retailers_shared_money_normalizecurrency",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L94",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter_parsevariant",
+      "target": "src_retailers_shared_money_parsepricetocents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter_parsevariant",
+      "target": "src_retailers_shared_size_parsesizeml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L195",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter_luckyscentadapter_parseproduct",
+      "target": "src_retailers_luckyscent_adapter_parseluckyscenthtml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L119",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter_parseluckyscenthtml",
+      "target": "src_retailers_shared_json_ld_extractjsonld"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L121",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter_parseluckyscenthtml",
+      "target": "src_retailers_shared_json_ld_findbytype"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/luckyscent-parser.test.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "tests_unit_luckyscent_parser_test",
+      "target": "src_retailers_luckyscent_adapter_parseluckyscenthtml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L162",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter_luckyscentadapter",
+      "target": "src_retailers_luckyscent_adapter_luckyscentadapter_discoverproducts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L182",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter_luckyscentadapter",
+      "target": "src_retailers_luckyscent_adapter_luckyscentadapter_fetchproduct",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L198",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter_luckyscentadapter",
+      "target": "src_retailers_luckyscent_adapter_luckyscentadapter_healthcheck",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L194",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter_luckyscentadapter",
+      "target": "src_retailers_luckyscent_adapter_luckyscentadapter_parseproduct",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L164",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter_luckyscentadapter_discoverproducts",
+      "target": "src_retailers_shared_http_fetchtext"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L183",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter_luckyscentadapter_fetchproduct",
+      "target": "src_retailers_shared_http_fetchtext"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L201",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter_luckyscentadapter_healthcheck",
+      "target": "src_retailers_luckyscent_adapter_luckyscentadapter_fetchproduct",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/luckyscent/adapter.ts",
+      "source_location": "L202",
+      "weight": 1.0,
+      "source": "src_retailers_luckyscent_adapter_luckyscentadapter_healthcheck",
+      "target": "src_retailers_luckyscent_adapter_luckyscentadapter_parseproduct",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/shared/http.ts",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "src_retailers_shared_http",
+      "target": "src_retailers_shared_http_backoffms",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/shared/http.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "src_retailers_shared_http",
+      "target": "src_retailers_shared_http_fetchoptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/shared/http.ts",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "src_retailers_shared_http",
+      "target": "src_retailers_shared_http_fetchresult",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/shared/http.ts",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "src_retailers_shared_http",
+      "target": "src_retailers_shared_http_fetchtext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/shared/http.ts",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "src_retailers_shared_http",
+      "target": "src_retailers_shared_http_isretryable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/shared/http.ts",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "src_retailers_shared_http",
+      "target": "src_retailers_shared_http_lastrequestat",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/shared/http.ts",
+      "source_location": "L126",
+      "weight": 1.0,
+      "source": "src_retailers_shared_http",
+      "target": "src_retailers_shared_http_resetratelimiter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/shared/http.ts",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "src_retailers_shared_http",
+      "target": "src_retailers_shared_http_respectratelimit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/shared/http.ts",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "src_retailers_shared_http",
+      "target": "src_retailers_shared_http_retrievalerror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/shared/http.ts",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "src_retailers_shared_http",
+      "target": "src_retailers_shared_http_sleep",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/shared/http.ts",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "src_retailers_shared_http_retrievalerror",
+      "target": "src_retailers_shared_http_retrievalerror_constructor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/shared/http.ts",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "src_retailers_shared_http_fetchtext",
+      "target": "src_retailers_shared_http_sleep",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/shared/http.ts",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "src_retailers_shared_http_respectratelimit",
+      "target": "src_retailers_shared_http_sleep",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/shared/http.ts",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "src_retailers_shared_http_fetchtext",
+      "target": "src_retailers_shared_http_isretryable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/shared/http.ts",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "src_retailers_shared_http_fetchtext",
+      "target": "src_retailers_shared_http_respectratelimit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/shared/http.ts",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "src_retailers_shared_http_fetchtext",
+      "target": "src_retailers_shared_http_backoffms",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/shared/json-ld.ts",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "src_retailers_shared_json_ld",
+      "target": "src_retailers_shared_json_ld_availabilitytoinstock",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/shared/json-ld.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_retailers_shared_json_ld",
+      "target": "src_retailers_shared_json_ld_extractjsonld",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/shared/json-ld.ts",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "src_retailers_shared_json_ld",
+      "target": "src_retailers_shared_json_ld_findbytype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/shared/json-ld.ts",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "src_retailers_shared_json_ld",
+      "target": "src_retailers_shared_json_ld_hastype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/shared-helpers.test.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "tests_unit_shared_helpers_test",
+      "target": "src_retailers_shared_json_ld",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/shared-helpers.test.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "tests_unit_shared_helpers_test",
+      "target": "src_retailers_shared_json_ld_extractjsonld",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/shared/json-ld.ts",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "src_retailers_shared_json_ld_findbytype",
+      "target": "src_retailers_shared_json_ld_hastype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/shared-helpers.test.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "tests_unit_shared_helpers_test",
+      "target": "src_retailers_shared_json_ld_availabilitytoinstock",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/shared/money.ts",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "src_retailers_shared_money",
+      "target": "src_retailers_shared_money_normalizecurrency",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/shared/money.ts",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "src_retailers_shared_money",
+      "target": "src_retailers_shared_money_oztoml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/shared/money.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "src_retailers_shared_money",
+      "target": "src_retailers_shared_money_parsepricetocents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/shared/size.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_retailers_shared_size",
+      "target": "src_retailers_shared_money",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/shared-helpers.test.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "tests_unit_shared_helpers_test",
+      "target": "src_retailers_shared_money",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/shared-helpers.test.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "tests_unit_shared_helpers_test",
+      "target": "src_retailers_shared_money_parsepricetocents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/shared-helpers.test.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "tests_unit_shared_helpers_test",
+      "target": "src_retailers_shared_money_normalizecurrency",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/shared/size.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_retailers_shared_size",
+      "target": "src_retailers_shared_money_oztoml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/retailers/shared/size.ts",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "src_retailers_shared_size_parsesizeml",
+      "target": "src_retailers_shared_money_oztoml"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/shared-helpers.test.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "tests_unit_shared_helpers_test",
+      "target": "src_retailers_shared_money_oztoml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/shared/size.ts",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "src_retailers_shared_size",
+      "target": "src_retailers_shared_size_lookslikesampleortravel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/shared/size.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_retailers_shared_size",
+      "target": "src_retailers_shared_size_parsesizeml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/shared-helpers.test.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "tests_unit_shared_helpers_test",
+      "target": "src_retailers_shared_size",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/shared-helpers.test.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "tests_unit_shared_helpers_test",
+      "target": "src_retailers_shared_size_parsesizeml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/shared-helpers.test.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "tests_unit_shared_helpers_test",
+      "target": "src_retailers_shared_size_lookslikesampleortravel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/luckyscent-parser.test.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "tests_unit_luckyscent_parser_test",
+      "target": "tests_unit_luckyscent_parser_test_bysize",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/luckyscent-parser.test.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "tests_unit_luckyscent_parser_test",
+      "target": "tests_unit_luckyscent_parser_test_fixture",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/luckyscent-parser.test.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "tests_unit_luckyscent_parser_test",
+      "target": "tests_unit_luckyscent_parser_test_observed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/luckyscent-parser.test.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "tests_unit_luckyscent_parser_test",
+      "target": "tests_unit_luckyscent_parser_test_parsed",
       "confidence_score": 1.0
     },
     {
@@ -6980,6 +9385,26 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/DECISIONS.md",
+      "source_location": "L151",
+      "weight": 1.0,
+      "source": "docs_decisions_scentscout_decision_records_adrs",
+      "target": "docs_decisions_adr_006_retailer_integration_order_evidence_led",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DECISIONS.md",
+      "source_location": "L187",
+      "weight": 1.0,
+      "source": "docs_decisions_scentscout_decision_records_adrs",
+      "target": "docs_decisions_adr_007_parseproduct_returns_many_variants_gtin_mpn_added_to_the_parse_contract",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "docs/MATCHING_ENGINE.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -7201,7 +9626,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L54",
+      "source_location": "L63",
       "weight": 1.0,
       "source": "docs_project_status_project_status",
       "target": "docs_project_status_decisions_needed",
@@ -7211,7 +9636,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L34",
+      "source_location": "L46",
       "weight": 1.0,
       "source": "docs_project_status_project_status",
       "target": "docs_project_status_in_progress",
@@ -7221,7 +9646,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L49",
+      "source_location": "L58",
       "weight": 1.0,
       "source": "docs_project_status_project_status",
       "target": "docs_project_status_known_issues",
@@ -7231,7 +9656,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L69",
+      "source_location": "L79",
       "weight": 1.0,
       "source": "docs_project_status_project_status",
       "target": "docs_project_status_last_graphify_update",
@@ -7241,7 +9666,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L74",
+      "source_location": "L83",
       "weight": 1.0,
       "source": "docs_project_status_project_status",
       "target": "docs_project_status_latest_github_commit",
@@ -7251,7 +9676,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L58",
+      "source_location": "L67",
       "weight": 1.0,
       "source": "docs_project_status_project_status",
       "target": "docs_project_status_latest_validation",
@@ -7261,7 +9686,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L42",
+      "source_location": "L51",
       "weight": 1.0,
       "source": "docs_project_status_project_status",
       "target": "docs_project_status_next_tasks",
@@ -7335,6 +9760,106 @@
       "weight": 1.0,
       "source": "docs_retailer_adapters_scentscout_retailer_adapters",
       "target": "docs_retailer_adapters_testing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/RETAILER_RESEARCH.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_retailer_research",
+      "target": "docs_retailer_research_retailer_access_research_phase_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/RETAILER_RESEARCH.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "docs_retailer_research_retailer_access_research_phase_2",
+      "target": "docs_retailer_research_evidence",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/RETAILER_RESEARCH.md",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "docs_retailer_research_retailer_access_research_phase_2",
+      "target": "docs_retailer_research_recommendation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/RETAILER_RESEARCH.md",
+      "source_location": "L108",
+      "weight": 1.0,
+      "source": "docs_retailer_research_retailer_access_research_phase_2",
+      "target": "docs_retailer_research_standing_constraints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/RETAILER_RESEARCH.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "docs_retailer_research_retailer_access_research_phase_2",
+      "target": "docs_retailer_research_summary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/RETAILER_RESEARCH.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "docs_retailer_research_evidence",
+      "target": "docs_retailer_research_fragrancenet_gray_market_discounter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/RETAILER_RESEARCH.md",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "docs_retailer_research_evidence",
+      "target": "docs_retailer_research_fragrancex_gray_market_discounter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/RETAILER_RESEARCH.md",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "docs_retailer_research_evidence",
+      "target": "docs_retailer_research_jomashop_gray_market_discounter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/RETAILER_RESEARCH.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "docs_retailer_research_evidence",
+      "target": "docs_retailer_research_luckyscent_authorized_boutique_shopify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/RETAILER_RESEARCH.md",
+      "source_location": "L85",
+      "weight": 1.0,
+      "source": "docs_retailer_research_evidence",
+      "target": "docs_retailer_research_nordstrom_department_store",
       "confidence_score": 1.0
     },
     {
@@ -7449,5 +9974,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "66261ac9872dcb988d7bb740fd92aad4704babe0"
+  "built_at_commit": "a3ea65c3a5278efe1ef23b84bed871954ca128ef"
 }

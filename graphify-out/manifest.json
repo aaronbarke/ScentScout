@@ -15,8 +15,8 @@
     "semantic_hash": "9b77af189a21a7a64e4bd7a426f64176"
   },
   "package.json": {
-    "mtime": 1784765157.1242943,
-    "ast_hash": "009753e45a81b9eac7a3aa27ac2a3434",
+    "mtime": 1784779824.2650063,
+    "ast_hash": "844fdb38778915d96e80726c913cb9e8",
     "semantic_hash": ""
   },
   "postcss.config.mjs": {
@@ -205,8 +205,8 @@
     "semantic_hash": ""
   },
   "docs/DECISIONS.md": {
-    "mtime": 1784765756.3919802,
-    "ast_hash": "6b6ac0feaa9a0d7c3f8512f40def3889",
+    "mtime": 1784779912.3676927,
+    "ast_hash": "dfb5bb7d65dad72cc6e2c1afa2aac7c1",
     "semantic_hash": ""
   },
   "docs/MATCHING_ENGINE.md": {
@@ -225,8 +225,8 @@
     "semantic_hash": ""
   },
   "docs/PROJECT_STATUS.md": {
-    "mtime": 1784777601.4393842,
-    "ast_hash": "0affb9e752d2793ebb584da961e27d22",
+    "mtime": 1784779294.5619514,
+    "ast_hash": "e92e38ea6462d340551a000cc19485a7",
     "semantic_hash": ""
   },
   "docs/RETAILER_ADAPTERS.md": {
@@ -250,8 +250,8 @@
     "semantic_hash": ""
   },
   "scripts/seed-catalog.ts": {
-    "mtime": 1784765655.240356,
-    "ast_hash": "074496bc79f21c8d9eb7940afdf2d88a",
+    "mtime": 1784779807.1993062,
+    "ast_hash": "69ff52bac213ded906403ac74267770e",
     "semantic_hash": ""
   },
   "scripts/validate-catalog.ts": {
@@ -280,8 +280,8 @@
     "semantic_hash": ""
   },
   "src/domain/retailers/adapter.ts": {
-    "mtime": 1784777539.5798335,
-    "ast_hash": "cea91e1afbb70bf5d578937e731f4664",
+    "mtime": 1784779534.0526702,
+    "ast_hash": "0e311c42f047bb1ce3d369d5afa8a8dd",
     "semantic_hash": ""
   },
   "src/domain/retailers/index.ts": {
@@ -290,18 +290,88 @@
     "semantic_hash": ""
   },
   "src/domain/retailers/schemas.ts": {
-    "mtime": 1784777530.1102936,
-    "ast_hash": "135263e46a029861cec8e810d44b9812",
+    "mtime": 1784779528.2754722,
+    "ast_hash": "0518fa97c2b12e609056eddcd4849f68",
     "semantic_hash": ""
   },
   "tests/unit/retailer-contracts.test.ts": {
-    "mtime": 1784777558.4862418,
-    "ast_hash": "06cef566784d09feff705dc1370df134",
+    "mtime": 1784779703.9144802,
+    "ast_hash": "2324bacc9a9719ce658c6eddc0d0be9b",
     "semantic_hash": ""
   },
   "tests/unit/env.test.ts": {
     "mtime": 1784778884.9732375,
     "ast_hash": "3bd7ba95c42f04ce4bce5564f48d0d7e",
+    "semantic_hash": ""
+  },
+  "scripts/run-retailer.ts": {
+    "mtime": 1784779791.5265634,
+    "ast_hash": "6acdd7944ab2ca08461e25fc09fe8744",
+    "semantic_hash": ""
+  },
+  "src/db/seed/retailers.ts": {
+    "mtime": 1784779747.6585808,
+    "ast_hash": "d0caf7a37d905cc97fd6a02796d870e2",
+    "semantic_hash": ""
+  },
+  "src/domain/pricing/delivered-price.ts": {
+    "mtime": 1784779738.6678178,
+    "ast_hash": "2fff3cacb38be5956387b3d7616c9ab5",
+    "semantic_hash": ""
+  },
+  "src/domain/retailers/ingest.ts": {
+    "mtime": 1784779775.8250382,
+    "ast_hash": "0df24ce627bcd25c57b37e794a5a6e91",
+    "semantic_hash": ""
+  },
+  "src/retailers/luckyscent/adapter.ts": {
+    "mtime": 1784779628.6567333,
+    "ast_hash": "0ca6df1a80a60ac0ac7f5d042de6f680",
+    "semantic_hash": ""
+  },
+  "src/retailers/shared/http.ts": {
+    "mtime": 1784779561.6920269,
+    "ast_hash": "8d31fd7ab2cde9ad90316b363cacd742",
+    "semantic_hash": ""
+  },
+  "src/retailers/shared/json-ld.ts": {
+    "mtime": 1784779574.845313,
+    "ast_hash": "fb9c74a2842351c1035a2d511170127c",
+    "semantic_hash": ""
+  },
+  "src/retailers/shared/money.ts": {
+    "mtime": 1784779544.053211,
+    "ast_hash": "32e763b2461de3fba94dcd58f83d553c",
+    "semantic_hash": ""
+  },
+  "src/retailers/shared/size.ts": {
+    "mtime": 1784779596.187768,
+    "ast_hash": "11e1fb0654e7757f20bff67d48247451",
+    "semantic_hash": ""
+  },
+  "tests/unit/delivered-price.test.ts": {
+    "mtime": 1784779818.1794007,
+    "ast_hash": "2a672ec3c7063c29b00dc9897050362e",
+    "semantic_hash": ""
+  },
+  "tests/unit/luckyscent-parser.test.ts": {
+    "mtime": 1784779670.3248565,
+    "ast_hash": "8cb681e47bcaf89e72e0100631cfd631",
+    "semantic_hash": ""
+  },
+  "tests/unit/shared-helpers.test.ts": {
+    "mtime": 1784779688.9982374,
+    "ast_hash": "78c76a05a8476ae3e8e0d9d711f3dfce",
+    "semantic_hash": ""
+  },
+  "docs/RETAILER_RESEARCH.md": {
+    "mtime": 1784779261.4901996,
+    "ast_hash": "c98e5a971687d762fde69ab7b8db7823",
+    "semantic_hash": ""
+  },
+  "tests/fixtures/retailers/luckyscent/gris-charnel.html": {
+    "mtime": 1784779652.2584808,
+    "ast_hash": "a6e9d213918b077a2e28a24365020a61",
     "semantic_hash": ""
   }
 }

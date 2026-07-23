@@ -1,16 +1,16 @@
 # Graph Report - ScentScout  (2026-07-22)
 
 ## Corpus Check
-- 61 files · ~29,155 words
+- 74 files · ~35,317 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 344 nodes · 390 edges · 40 communities (28 shown, 12 thin omitted)
-- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
+- 419 nodes · 557 edges · 44 communities (32 shown, 12 thin omitted)
+- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.5)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `66261ac9`
+- Built from commit: `a3ea65c3`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -53,24 +53,30 @@
 - extraction-spec.md
 - drizzle.config.ts
 - schemas.ts
+- adapter.ts
+- ingest.ts
+- http.ts
+- Evidence
 
 ## God Nodes (most connected - your core abstractions)
 1. `compilerOptions` - 16 edges
-2. `scripts` - 13 edges
+2. `scripts` - 14 edges
 3. `What You Must Do When Invoked` - 12 edges
 4. `ScentScout — Roadmap` - 11 edges
 5. `/graphify` - 10 edges
 6. `Project Status` - 10 edges
-7. `graphify reference: extra exports and benchmark` - 8 edges
-8. `ScentScout — Product Spec` - 8 edges
-9. `canonicalSku()` - 7 edges
-10. `ScentScout — Claude Code Guide` - 7 edges
+7. `RetailerAdapter` - 9 edges
+8. `parseLuckyscentHtml()` - 8 edges
+9. `fetchText()` - 8 edges
+10. `graphify reference: extra exports and benchmark` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `seed()` --calls--> `canonicalSku()`  [EXTRACTED]
   scripts/seed-catalog.ts → src/lib/catalog-slug.ts
 - `validate()` --calls--> `canonicalSku()`  [EXTRACTED]
   scripts/validate-catalog.ts → src/lib/catalog-slug.ts
+- `main()` --calls--> `ingestUrls()`  [EXTRACTED]
+  scripts/run-retailer.ts → src/domain/retailers/ingest.ts
 - `SeedVariant` --references--> `Concentration`  [EXTRACTED]
   src/db/seed/catalog.ts → src/lib/catalog-slug.ts
 - `SeedVariant` --references--> `Presentation`  [EXTRACTED]
@@ -79,27 +85,27 @@
 ## Import Cycles
 - None detected.
 
-## Communities (40 total, 12 thin omitted)
+## Communities (44 total, 12 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.10
 Nodes (19): compilerOptions, allowJs, esModuleInterop, incremental, isolatedModules, jsx, lib, module (+11 more)
 
 ### Community 1 - "Community 1"
-Cohesion: 0.17
-Nodes (12): devDependencies, drizzle-kit, eslint, eslint-config-next, tailwindcss, @tailwindcss/postcss, tsx, @types/node (+4 more)
+Cohesion: 0.08
+Nodes (24): dependencies, cheerio, dotenv, drizzle-orm, next, postgres, react, react-dom (+16 more)
 
 ### Community 2 - "Community 2"
-Cohesion: 0.11
-Nodes (28): Db, env, queryClient, alertEvents, alertRules, watchlists, brands, fragrances (+20 more)
+Cohesion: 0.12
+Nodes (26): alertEvents, alertRules, watchlists, brands, fragrances, productVariants, alertDeliveryStatusEnum, conditionEnum (+18 more)
 
 ### Community 3 - "Community 3"
 Cohesion: 0.29
 Nodes (6): hooks, PreToolUse, permissions, allow, deny, $schema
 
 ### Community 4 - "Community 4"
-Cohesion: 0.08
-Nodes (24): dependencies, dotenv, drizzle-orm, next, postgres, react, react-dom, zod (+16 more)
+Cohesion: 0.14
+Nodes (14): scripts, build, catalog:validate, db:generate, db:migrate, db:seed, db:studio, dev (+6 more)
 
 ### Community 5 - "Community 5"
 Cohesion: 0.40
@@ -158,8 +164,8 @@ Cohesion: 0.33
 Nodes (5): For /graphify explain, For /graphify path, graphify reference: query, path, explain, Step 0 — Constrained query expansion (REQUIRED before traversal), Step 1 — Traversal
 
 ### Community 23 - "ScentScout — Decision Records (ADRs)"
-Cohesion: 0.29
-Nodes (6): ADR-001: Next.js 16 + mandated stack, ADR-002: ScentScout is its own git repository with a public GitHub remote, ADR-003: Definition of "estimated delivered price before tax", ADR-004: Deterministic checks are the sole authority for production matches, ADR-005: Canonical SKU scheme and testers as first-class variants, ScentScout — Decision Records (ADRs)
+Cohesion: 0.22
+Nodes (8): ADR-001: Next.js 16 + mandated stack, ADR-002: ScentScout is its own git repository with a public GitHub remote, ADR-003: Definition of "estimated delivered price before tax", ADR-004: Deterministic checks are the sole authority for production matches, ADR-005: Canonical SKU scheme and testers as first-class variants, ADR-006: Retailer integration order, evidence-led, ADR-007: parseProduct returns many variants; GTIN/MPN added to the parse contract, ScentScout — Decision Records (ADRs)
 
 ### Community 24 - "ScentScout — Matching Engine"
 Cohesion: 0.33
@@ -183,27 +189,43 @@ Nodes (6): url, DbEnv, dbEnvSchema, isUsablePostgresUrl(), loadDbEnv(), resolveM
 
 ### Community 39 - "schemas.ts"
 Cohesion: 0.15
-Nodes (13): DiscoveryInput, ProductFetchInput, RetailerAdapter, centsSchema, ParsedRetailerProduct, parsedRetailerProductSchema, RawRetailerListing, rawRetailerListingSchema (+5 more)
+Nodes (14): ADR-0007, presentationEnum, DiscoveryInput, ProductFetchInput, RetailerAdapter, centsSchema, ParsedRetailerProduct, RawRetailerListing (+6 more)
+
+### Community 40 - "adapter.ts"
+Cohesion: 0.17
+Nodes (18): parsedRetailerProductSchema, asRecord(), brandName(), parseLuckyscentHtml(), parseVariant(), availabilityToInStock(), extractJsonLd(), findByType() (+10 more)
+
+### Community 41 - "ingest.ts"
+Cohesion: 0.17
+Nodes (14): ADR-0003, ADAPTERS, main(), parseArgs(), Db, env, queryClient, DeliveredPriceInput (+6 more)
+
+### Community 42 - "http.ts"
+Cohesion: 0.24
+Nodes (9): backoffMs(), FetchOptions, FetchResult, fetchText(), isRetryable(), lastRequestAt, respectRateLimit(), RetrievalError (+1 more)
+
+### Community 43 - "Evidence"
+Cohesion: 0.18
+Nodes (10): Evidence, FragranceNet — gray-market discounter, FragranceX — gray-market discounter, Jomashop — gray-market discounter, Luckyscent — authorized boutique (Shopify), Nordstrom — department store, Recommendation, Retailer Access Research (Phase 2) (+2 more)
 
 ## Knowledge Gaps
-- **206 isolated node(s):** `$schema`, `allow`, `deny`, `PreToolUse`, `url` (+201 more)
+- **227 isolated node(s):** `$schema`, `allow`, `deny`, `PreToolUse`, `url` (+222 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **12 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `presentationEnum` connect `Community 2` to `client.ts`, `schemas.ts`?**
+- **Why does `presentationEnum` connect `schemas.ts` to `Community 2`, `client.ts`?**
   _High betweenness centrality (0.007) - this node is a cross-community bridge._
-- **Why does `devDependencies` connect `Community 1` to `Community 4`?**
+- **Why does `ParsedRetailerProduct` connect `schemas.ts` to `adapter.ts`, `ingest.ts`?**
+  _High betweenness centrality (0.007) - this node is a cross-community bridge._
+- **Why does `RetailerAdapter` connect `schemas.ts` to `adapter.ts`, `ingest.ts`?**
   _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **What connects `$schema`, `allow`, `deny` to the rest of the system?**
-  _206 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _227 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._
+- **Should `Community 1` be split into smaller, more focused modules?**
+  _Cohesion score 0.08 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
-  _Cohesion score 0.11379800853485064 - nodes in this community are weakly interconnected._
-- **Should `Community 4` be split into smaller, more focused modules?**
-  _Cohesion score 0.08 - nodes in this community are weakly interconnected._
-- **Should `Community 6` be split into smaller, more focused modules?**
-  _Cohesion score 0.08 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.12222222222222222 - nodes in this community are weakly interconnected._

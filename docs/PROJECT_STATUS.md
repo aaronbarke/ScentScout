@@ -2,7 +2,7 @@
 
 ## Current Milestone
 
-Phase 1 — Database & canonical catalog ✅ COMPLETE (next: Phase 2)
+Phase 2 — Retailer framework & first adapter ✅ COMPLETE (next: Phase 3 — matching)
 
 ## Completed
 
@@ -31,6 +31,19 @@ Phase 1 — Database & canonical catalog ✅ COMPLETE (next: Phase 2)
   tests enforce integer-cents money, unknown-shipping (null) vs free (0), nullable stock, and
   presentation validity.
 
+- **Phase 2** — retailer framework & first adapter: ✅
+  - Shared helpers: `http.ts` (bounded retries, full-jitter backoff, timeouts, per-host rate
+    limit, honest UA), `json-ld.ts` (malformed-block-tolerant extraction), `money.ts`
+    (float-safe cents, `"US"`→`USD`), `size.ts` (ml/oz parsing).
+  - **Luckyscent adapter** — static HTTP + JSON-LD `ProductGroup`; discovery via sitemap;
+    health check. Shipping is not published there, so it always reports `null` (UNKNOWN).
+  - Sanitized fixture + 14 parser tests (incl. a deliberately malformed JSON-LD block).
+  - Ingestion service: scrape-run logging, retailer-health tracking, append-only observations.
+    A fetch/parse failure never writes a fabricated out-of-stock row.
+  - `src/domain/pricing/delivered-price.ts` implements ADR-003 with 7 tests.
+  - CLI: `npm run retailer -- --url <u> | --discover <n> | --health`.
+  - Retailer registry seeded; only access-verified retailers are `enabled`.
+
 - **Live database (Supabase) provisioned and verified:**
   - `db:migrate` applied — 13 tables + 12 enums live.
   - `db:seed` loaded 13 brands / 19 fragrances / **52 variants**.
@@ -45,15 +58,15 @@ Phase 1 — Database & canonical catalog ✅ COMPLETE (next: Phase 2)
 
 ## In Progress
 
-- Nothing blocking. Phase 2 underway: adapter contract landed; retailer access research
-  complete (`docs/RETAILER_RESEARCH.md`, ADR-006) — Luckyscent selected as first adapter.
+- Nothing blocking. Phase 2 delivered end-to-end against the live retailer.
 
 ## Next Tasks
 
-1. Phase 2 first adapter: **Luckyscent** (JSON-LD, static retrieval) — shared fetch helpers
-   (rate limit/retry/timeout/jitter), JSON-LD parsing, sanitized fixtures, parser tests,
-   scrape-run logging, retailer-health tracking, single-URL CLI.
-2. Then FragranceNet (adds discount + tester coverage).
+1. **Phase 3 — exact matching**: normalization, alias dictionaries, unit conversion,
+   presentation classification, contradiction checks, confidence scoring, match audit,
+   manual-review APIs. The 3 ingested Luckyscent listings sit at `match_status=unmatched`
+   awaiting it; GTIN-13 is available as the strongest signal.
+2. Then FragranceNet adapter (adds discount pricing + tester coverage).
 
 ## Known Issues
 
@@ -71,7 +84,10 @@ Phase 1 — Database & canonical catalog ✅ COMPLETE (next: Phase 2)
 - Build: PASS (exit 0)
 - DB generate: PASS — `drizzle-kit generate`, 13 tables + migration 0001
 - Catalog validate: PASS — 13 brands / 19 fragrances / 52 variants / 52 unique SKUs
-- Unit tests: PASS — Vitest, 29/29 (catalog, slug helpers, retailer contracts, env resolution)
+- Unit tests: PASS — Vitest, **64/64** (catalog, slug, contracts, env, money/size/JSON-LD
+  helpers, Luckyscent fixture parser, delivered price)
+- Live ingest: PASS — Luckyscent, 3 variants parsed, 3 observations, run status `success`,
+  health `healthy=true`; re-run proved observations append-only (3 → 6, listings stayed 3)
 - DB migrate: PASS — applied to Supabase (13 tables, 12 enums)
 - DB seed: PASS — 52 variants; re-run idempotent (0 duplicate SKUs)
 - Integration/e2e tests: not yet wired (Phase 2+/5+)

@@ -42,6 +42,10 @@ export const parsedRetailerProductSchema = z.object({
   externalId: z.string().nullable(),
   url: z.string().url(),
   rawTitle: z.string(),
+  /** Barcode (GTIN-8/12/13/14) when the retailer publishes one. Strongest match signal. */
+  gtin: z.string().nullable(),
+  /** Manufacturer part number, when published. */
+  mpn: z.string().nullable(),
   brand: z.string().nullable(),
   fragranceName: z.string().nullable(),
   flankerName: z.string().nullable(),

@@ -14,9 +14,11 @@
     "db:seed": "tsx scripts/seed-catalog.ts",
     "catalog:validate": "tsx scripts/validate-catalog.ts",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "retailer": "tsx scripts/run-retailer.ts"
   },
   "dependencies": {
+    "cheerio": "^1.2.0",
     "dotenv": "^17.4.2",
     "drizzle-orm": "^0.45.2",
     "next": "16.2.11",
