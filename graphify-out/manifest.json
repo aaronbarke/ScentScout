@@ -15,9 +15,9 @@
     "semantic_hash": "9b77af189a21a7a64e4bd7a426f64176"
   },
   "package.json": {
-    "mtime": 1784762729.1068146,
-    "ast_hash": "f1d0be038353b0298767fbe58e7a5975",
-    "semantic_hash": "f1d0be038353b0298767fbe58e7a5975"
+    "mtime": 1784765157.1242943,
+    "ast_hash": "009753e45a81b9eac7a3aa27ac2a3434",
+    "semantic_hash": ""
   },
   "postcss.config.mjs": {
     "mtime": 1784762640.4249985,
@@ -38,5 +38,205 @@
     "mtime": 1784762640.426215,
     "ast_hash": "ee17fd1c97c735e9f3564e3f5251f125",
     "semantic_hash": "ee17fd1c97c735e9f3564e3f5251f125"
+  },
+  "drizzle.config.ts": {
+    "mtime": 1784765152.8631234,
+    "ast_hash": "6677b607c637e80a689196ff43901c44",
+    "semantic_hash": ""
+  },
+  "drizzle/migrations/0000_far_moonstone.sql": {
+    "mtime": 1784765178.650087,
+    "ast_hash": "6cc3f182f22e4e6ac7634ebbf7e693e5",
+    "semantic_hash": ""
+  },
+  "drizzle/migrations/meta/0000_snapshot.json": {
+    "mtime": 1784765178.6497993,
+    "ast_hash": "3d903ca94bc624b6b984316df0d815ea",
+    "semantic_hash": ""
+  },
+  "drizzle/migrations/meta/_journal.json": {
+    "mtime": 1784765178.6499445,
+    "ast_hash": "139217eab1ce65afa604768350b30a49",
+    "semantic_hash": ""
+  },
+  "src/db/client.ts": {
+    "mtime": 1784765147.935831,
+    "ast_hash": "37a1ba5523316eae966daa57d7465993",
+    "semantic_hash": ""
+  },
+  "src/db/schema/_shared.ts": {
+    "mtime": 1784765062.4266787,
+    "ast_hash": "45c7bf273ba42b8bb2195f02933a0ca4",
+    "semantic_hash": ""
+  },
+  "src/db/schema/alerts.ts": {
+    "mtime": 1784765140.1384737,
+    "ast_hash": "fbe4f51976abc03ad3574a4b3914a3bd",
+    "semantic_hash": ""
+  },
+  "src/db/schema/catalog.ts": {
+    "mtime": 1784765086.9402642,
+    "ast_hash": "fabe1e463e5f60b4051d9da6c8dfd825",
+    "semantic_hash": ""
+  },
+  "src/db/schema/enums.ts": {
+    "mtime": 1784765073.8434355,
+    "ast_hash": "b9ece7f8a970da0e617ae4bfdd709962",
+    "semantic_hash": ""
+  },
+  "src/db/schema/index.ts": {
+    "mtime": 1784765143.4874904,
+    "ast_hash": "54d9fbd65d21aa84dd430d6699055f3c",
+    "semantic_hash": ""
+  },
+  "src/db/schema/ops.ts": {
+    "mtime": 1784765115.786349,
+    "ast_hash": "738fae05ac394ab618f219b68fd59aae",
+    "semantic_hash": ""
+  },
+  "src/db/schema/prices.ts": {
+    "mtime": 1784765125.686174,
+    "ast_hash": "7615adb60169fbc157db3161c8211c61",
+    "semantic_hash": ""
+  },
+  "src/db/schema/retailers.ts": {
+    "mtime": 1784765103.1104991,
+    "ast_hash": "a8265d97d00622091b7af646061c79af",
+    "semantic_hash": ""
+  },
+  "src/lib/env.ts": {
+    "mtime": 1784765056.1179454,
+    "ast_hash": "154794236212aeb1201a181a90246e99",
+    "semantic_hash": ""
+  },
+  ".claude/CLAUDE.md": {
+    "mtime": 1784763139.2662604,
+    "ast_hash": "9b31786b637be3c13978bec4c2330752",
+    "semantic_hash": ""
+  },
+  ".claude/rules/database.md": {
+    "mtime": 1784762809.3650193,
+    "ast_hash": "92817f280d7cfa9f36c31cca443a7f63",
+    "semantic_hash": ""
+  },
+  ".claude/rules/retailer-adapters.md": {
+    "mtime": 1784762820.6067767,
+    "ast_hash": "bc8809e2fabe60ff00341ed1a1210acf",
+    "semantic_hash": ""
+  },
+  ".claude/rules/security.md": {
+    "mtime": 1784762842.6664834,
+    "ast_hash": "97868b75ca7b3c8a51aca18693dbb953",
+    "semantic_hash": ""
+  },
+  ".claude/rules/testing.md": {
+    "mtime": 1784762830.6630993,
+    "ast_hash": "ae2f5fcc96c5d39c93102b6e790daa08",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/SKILL.md": {
+    "mtime": 1784763139.265715,
+    "ast_hash": "e582759bfc00f68579f37c74cbb64df9",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/add-watch.md": {
+    "mtime": 1783628635.2872162,
+    "ast_hash": "d59d027fe449f06aa03905a01184e779",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/exports.md": {
+    "mtime": 1783628635.2872865,
+    "ast_hash": "9da2a2152e60a22f07f05fed5158f287",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/extraction-spec.md": {
+    "mtime": 1783628635.2873795,
+    "ast_hash": "42fef56a01698118f7fd722acdadea34",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/github-and-merge.md": {
+    "mtime": 1783628635.2874517,
+    "ast_hash": "cde13df085e4c492aeb7ba298a996d0d",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/hooks.md": {
+    "mtime": 1783628635.2875216,
+    "ast_hash": "3f545db6ce646650bb9de588f5512a27",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/query.md": {
+    "mtime": 1783628635.287618,
+    "ast_hash": "3c46f8ad006874260614ed8657d02307",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/transcribe.md": {
+    "mtime": 1783628635.2876909,
+    "ast_hash": "67b6a5fa6c0974e18f60db9f8932fbd8",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/update.md": {
+    "mtime": 1783628635.2877839,
+    "ast_hash": "c698309979460d0f02ba616417844399",
+    "semantic_hash": ""
+  },
+  "AGENTS.md": {
+    "mtime": 1784762660.7796464,
+    "ast_hash": "9e09241799026ac05be315a2f0b50055",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1784763183.6812108,
+    "ast_hash": "a8dbe4fc4aa270394d3a3744035b15a0",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1784762872.3427427,
+    "ast_hash": "86a2b5d7d73e8971a5c41fe78190712f",
+    "semantic_hash": ""
+  },
+  "docs/ARCHITECTURE.md": {
+    "mtime": 1784762915.647678,
+    "ast_hash": "811b872dfad4da9e2d991ac41a1daa61",
+    "semantic_hash": ""
+  },
+  "docs/DATA_MODEL.md": {
+    "mtime": 1784762936.7943542,
+    "ast_hash": "8cf0e98ba528b28fcd9abd4b75a0c337",
+    "semantic_hash": ""
+  },
+  "docs/DECISIONS.md": {
+    "mtime": 1784763022.5779376,
+    "ast_hash": "6c5362ac64521beaba46a7c84fd75010",
+    "semantic_hash": ""
+  },
+  "docs/MATCHING_ENGINE.md": {
+    "mtime": 1784762964.0275192,
+    "ast_hash": "8bf1035fd2fd29771d6bfcf0bd9fc23d",
+    "semantic_hash": ""
+  },
+  "docs/PRICE_ENGINE.md": {
+    "mtime": 1784762975.66065,
+    "ast_hash": "b2a34a296fdbbf79d4af4aad21ea81ac",
+    "semantic_hash": ""
+  },
+  "docs/PRODUCT_SPEC.md": {
+    "mtime": 1784762893.8881197,
+    "ast_hash": "20ce06395256817f006df1d21e1e65fc",
+    "semantic_hash": ""
+  },
+  "docs/PROJECT_STATUS.md": {
+    "mtime": 1784763402.9104917,
+    "ast_hash": "42fcd40ff42b8f24d29cb73415ac848a",
+    "semantic_hash": ""
+  },
+  "docs/RETAILER_ADAPTERS.md": {
+    "mtime": 1784762951.3516452,
+    "ast_hash": "c52e5bdd09e02667170e442a7709266f",
+    "semantic_hash": ""
+  },
+  "docs/ROADMAP.md": {
+    "mtime": 1784762992.6728091,
+    "ast_hash": "7cf5bb71916e6e5fecbe2395c98beb06",
+    "semantic_hash": ""
   }
 }

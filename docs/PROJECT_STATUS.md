@@ -2,65 +2,63 @@
 
 ## Current Milestone
 
-Phase 0 — Project foundation (COMPLETE; next: Phase 1)
+Phase 1 — Database & canonical catalog (IN PROGRESS)
 
 ## Completed
 
-- Next.js 16 + TypeScript + Tailwind scaffold (App Router, `src/` dir, `@/*` alias).
-- Root `CLAUDE.md`, `CLAUDE.local.md` (git-ignored), `README.md`, `.env.example`.
-- Ignore files: `.gitignore` (keeps `.env.example`, ignores secrets/artifacts), `.claudeignore`,
-  `.graphifyignore`.
-- `.claude/settings.json` and path rules: `database.md`, `retailer-adapters.md`, `testing.md`,
-  `security.md`.
-- Docs: `PRODUCT_SPEC`, `ARCHITECTURE`, `DATA_MODEL`, `RETAILER_ADAPTERS`, `MATCHING_ENGINE`,
-  `PRICE_ENGINE`, `ROADMAP`, `DECISIONS` (ADR-001–004), `PROJECT_STATUS`.
-- Directory skeleton for `src/{domain,retailers,db,jobs,email,lib,components}`, `scripts/`,
-  `drizzle/migrations/`, `tests/{unit,integration,e2e,fixtures/retailers}`.
-- `typecheck` script added.
-
-- Git initialized (`main`); public GitHub remote `aaronbarke/ScentScout` created and pushed;
-  initial Graphify graph generated; Phase 0 validated (typecheck/lint/build).
+- **Phase 0** — foundation (scaffold, docs, rules, ignore files, graphify, public repo). ✅
+- **Phase 1 so far:**
+  - Dependencies: drizzle-orm, postgres (postgres.js), zod, dotenv; dev: drizzle-kit, tsx, vitest.
+  - Zod env validation (`src/lib/env.ts`) — lazy, fails fast, doesn't break `next build`.
+  - Full Drizzle schema (`src/db/schema/*`) — **13 tables**, 12 enums: brands, fragrances,
+    product_variants, retailers, retailer_products, coupons, price_observations, watchlists,
+    alert_rules, alert_events, scrape_runs, retailer_health, match_reviews.
+  - Drizzle client (`src/db/client.ts`, pooler-safe: `prepare: false`) + `drizzle.config.ts`.
+  - Generated migration `drizzle/migrations/0000_far_moonstone.sql` (money = integer cents;
+    all timestamps `timestamptz`; `canonical_sku` unique; append-only observations documented).
+  - Package scripts: db:generate, db:migrate, db:studio, db:seed, catalog:validate, test.
 
 ## In Progress
 
-- None — Phase 0 complete.
+- Idempotent catalog seed (~40–50 verified exact variants) + `scripts/seed-catalog.ts`.
+- `scripts/validate-catalog.ts` and DB/schema tests (Vitest).
+- **Blocked on user:** live `db:migrate` + `db:seed` run — waiting for Supabase connection
+  strings in `.env` (`DATABASE_URL`, `DIRECT_URL`). Schema is validated by typecheck + generate.
 
 ## Next Tasks
 
-1. Begin Phase 1 — PostgreSQL + Drizzle schema, env validation (Zod), migrations, idempotent
-   catalog seed (~40–50 exact variants), catalog validation script, DB tests.
+1. Assemble the verified catalog dataset (brands → fragrances → variants; retail + tester).
+2. Write idempotent seed (upsert on `canonical_sku`) + catalog validation + tests.
+3. Once `.env` is set: `npm run db:migrate` then `npm run db:seed`; verify idempotency.
+4. Close Phase 1; commit `feat(catalog): add canonical fragrance database`.
 
 ## Known Issues
 
-- Node 23 emits a non-fatal EBADENGINE warning for a transitive ESLint dependency.
+- Node 23 EBADENGINE warning (transitive ESLint dep); 3 inherited npm-audit advisories from the
+  Next 16 scaffold — not force-fixed to avoid breaking changes.
 
 ## Decisions Needed
 
-- None outstanding. (Retailer selection for Phase 7 will require confirming permitted, stable
-  retrieval per retailer before implementation.)
+- None outstanding.
 
 ## Latest Validation
 
-- Typecheck: PASS (`npm run typecheck` → `tsc --noEmit`, exit 0)
-- Lint: PASS (`npm run lint` → `eslint`, exit 0)
-- Unit tests: not yet wired (Phase 1+)
-- Integration tests: not yet wired (Phase 2+)
-- E2E tests: not yet wired (Phase 5+)
-- Build: PASS (`npm run build` → `next build`, exit 0)
+- Typecheck: PASS (exit 0)
+- Lint: PASS (0 errors, 0 warnings)
+- Build: PASS (exit 0)
+- DB generate: PASS — `drizzle-kit generate`, 13 tables
+- DB migrate/seed: PENDING — needs Supabase `.env`
+- Unit/integration/e2e tests: in progress (Vitest wiring)
 
 ## Last Graphify Update
 
-2026-07-22 — initial **code-only (AST)** graph: 63 nodes / 55 edges / 12 communities from 8
-code files. Semantic extraction of the 26 docs is **deferred**: no LLM API key is configured in
-this environment (only `ANTHROPIC_BASE_URL`). Product concepts currently live in `docs/` and are
-referenced from `CLAUDE.md`; they will populate the graph as domain code lands (Phase 1+ AST) or
-once an API key enables `graphify extract .` semantic doc indexing. Communities are unlabeled
-(`Community N`) for the same reason.
+2026-07-22 — code graph 294 nodes / 299 edges / 38 communities (AST-only; docs still pending a
+semantic key).
 
 ## Latest GitHub Commit
 
-- Hash: 8cf86c64d19f240956b17f552025a04a17cdf5bf (`8cf86c6`)
-- Message: chore(project): initialize ScentScout foundation
+- Hash: 38f473e (pre-schema; updated on next push)
+- Message: chore(dev): run dev/start server on port 3004
 - Branch: main
-- Push status: pushed to origin/main (verified local HEAD == remote HEAD)
+- Push status: pushed to origin/main
 - Remote: https://github.com/aaronbarke/ScentScout (public)
