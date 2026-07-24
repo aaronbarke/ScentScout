@@ -68,6 +68,35 @@ structured data (JSON-LD).
   variant). These belong in the FragranceNet adapter only — never in shared domain code.
 - Value: carries **testers**, which our catalog models as first-class variants.
 
+#### Phase 7 live re-inspection (2026-07-23) — corrections to the above
+
+Fetched `robots.txt`, the gzipped `products_sitemap1.xml.gz` (13,745 URLs), and two product
+pages. Findings that **change the adapter design**:
+
+- **`manufacturer.name` is the clean brand.** On the Amouage Reflection page,
+  `brand.name` = `"Amouage Reflection"` (polluted, as expected) but
+  `manufacturer.name` = `"Amouage"` — clean. The adapter should prefer `manufacturer.name`
+  and treat `brand.name` as untrusted, rather than parsing the brand out of the title.
+- **`@type` is `ProductGroup` but there is no `hasVariant`.** The page carries exactly **one**
+  `Offer` object (not an array), so one URL exposes **one** purchasable variant — unlike
+  Luckyscent, where a ProductGroup exposed three. `parseProduct` returning 0..N (ADR-007) still
+  holds; FragranceNet simply returns 1.
+- **Other sizes are client-rendered.** No `sizeName`/`listPrice`/`salePrice` keys, no size
+  `<select>`, no embedded size JSON. Retrieval priority says Playwright is the **last resort**,
+  and rendering a page purely to enumerate sizes is not justified — so we ingest the single
+  advertised offer and simply do not claim sizes we cannot see.
+- `priceCurrency: "US"` confirmed (invalid ISO — normalize to `USD`). `gtin`/`mpn` are null, so
+  FragranceNet gives **no** strong identifier; matching leans on title normalization.
+- The default offer is often the **smallest** size — e.g. Amouage Reflection resolves to a
+  `"Spray Vial"` at $13.99, which is a sample and must not match a 100ml retail variant.
+
+**Matching traps found in the sitemap** (all real URLs, all must be handled correctly):
+`bdk-parfums/bdk-gris-charnel/extrait-de-parfum` (different flanker from the EDP),
+`creed/creed-aventus/cologne` (Aventus Cologne is a distinct flanker),
+`byredo/bal-dafrique-byredo/body-lotion` (**body product** — must be rejected),
+`bdk-parfums-variety/set-3-piece-mini-…` (**gift set**), plus `kim-kardashian-true-reflections`
+and `chris-adams-reflection` (unrelated brands that share a word with a catalog fragrance).
+
 ### Jomashop — gray-market discounter
 
 - `robots.txt`: disallows admin/customer/checkout/search paths (`/app/`, `/customer/`,
