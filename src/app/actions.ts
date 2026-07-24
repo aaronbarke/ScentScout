@@ -10,6 +10,7 @@ import {
   createAlertRule,
   deleteAlertRule,
 } from "@/domain/alerts/watchlists";
+import { ensureProfile } from "@/domain/accounts/profiles";
 
 /** All external input is validated at the boundary. */
 const credentialsSchema = z.object({
@@ -61,6 +62,8 @@ export async function toggleWatch(formData: FormData): Promise<void> {
   const user = await getCurrentUser();
   if (!user) redirect("/login");
 
+  await ensureProfile(user.id, user.email);
+
   const variantId = uuid.parse(formData.get("variantId"));
   const watching = formData.get("watching") === "true";
 
@@ -86,6 +89,9 @@ const ruleSchema = z.object({
 export async function createRule(formData: FormData): Promise<void> {
   const user = await getCurrentUser();
   if (!user) redirect("/login");
+
+  // An alert needs somewhere to be delivered; capture it as the rule is made.
+  await ensureProfile(user.id, user.email);
 
   const parsed = ruleSchema.parse({
     variantId: formData.get("variantId"),

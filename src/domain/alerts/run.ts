@@ -9,6 +9,7 @@ import {
   retailers,
   brands,
   fragrances,
+  userProfiles,
 } from "@/db/schema";
 import { evaluateAlert, type AlertCandidate, type AlertRuleInput } from "./evaluate";
 import { buildDeduplicationKey } from "./dedup";
@@ -26,6 +27,8 @@ export interface PendingAlert {
   alertEventId: string;
   alertRuleId: string;
   userId: string;
+  /** Null when we never captured an address for this user — cannot send. */
+  email: string | null;
   deduplicationKey: string;
   brandName: string;
   fragranceName: string;
@@ -179,6 +182,7 @@ export async function listPendingAlerts(limit = 50): Promise<PendingAlert[]> {
       alertEventId: alertEvents.id,
       alertRuleId: alertEvents.alertRuleId,
       userId: alertRules.userId,
+      email: userProfiles.email,
       deduplicationKey: alertEvents.deduplicationKey,
       brandName: brands.name,
       fragranceName: fragrances.name,
@@ -189,6 +193,7 @@ export async function listPendingAlerts(limit = 50): Promise<PendingAlert[]> {
     })
     .from(alertEvents)
     .innerJoin(alertRules, eq(alertRules.id, alertEvents.alertRuleId))
+    .leftJoin(userProfiles, eq(userProfiles.id, alertRules.userId))
     .innerJoin(priceObservations, eq(priceObservations.id, alertEvents.priceObservationId))
     .innerJoin(retailerProducts, eq(retailerProducts.id, priceObservations.retailerProductId))
     .innerJoin(retailers, eq(retailers.id, retailerProducts.retailerId))

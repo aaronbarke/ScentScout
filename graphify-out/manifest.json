@@ -55,8 +55,8 @@
     "semantic_hash": ""
   },
   "drizzle/migrations/meta/_journal.json": {
-    "mtime": 1784780358.4772894,
-    "ast_hash": "a906f6cd47866043bba094b652ab5d70",
+    "mtime": 1784928006.5175164,
+    "ast_hash": "3510beda62113eb3a95217683e7c852c",
     "semantic_hash": ""
   },
   "src/db/client.ts": {
@@ -85,8 +85,8 @@
     "semantic_hash": ""
   },
   "src/db/schema/index.ts": {
-    "mtime": 1784765143.4874904,
-    "ast_hash": "54d9fbd65d21aa84dd430d6699055f3c",
+    "mtime": 1784928004.6945887,
+    "ast_hash": "243db31e4fe59fc97ee8fe24700b3959",
     "semantic_hash": ""
   },
   "src/db/schema/ops.ts": {
@@ -225,8 +225,8 @@
     "semantic_hash": ""
   },
   "docs/PROJECT_STATUS.md": {
-    "mtime": 1784927976.7458103,
-    "ast_hash": "979ba385409af5586f0a365ae3316e27",
+    "mtime": 1784928165.58071,
+    "ast_hash": "3bddbd6ea70435f5eb3f9a38346b72e4",
     "semantic_hash": ""
   },
   "docs/RETAILER_ADAPTERS.md": {
@@ -550,8 +550,8 @@
     "semantic_hash": ""
   },
   "scripts/run-alerts.ts": {
-    "mtime": 1784849216.0242379,
-    "ast_hash": "631ac493db0279c5c093f5f52b5cd059",
+    "mtime": 1784928090.9701583,
+    "ast_hash": "bd7bf0c1926ba8a0434cde00b6a15dd6",
     "semantic_hash": ""
   },
   "src/domain/alerts/dedup.ts": {
@@ -570,8 +570,8 @@
     "semantic_hash": ""
   },
   "src/domain/alerts/run.ts": {
-    "mtime": 1784849246.2939208,
-    "ast_hash": "d8deab9ae0ff4670a99e0c29317ca5a8",
+    "mtime": 1784928051.688819,
+    "ast_hash": "344165306c12774593221d6bb2cc68e1",
     "semantic_hash": ""
   },
   "src/email/alerts.ts": {
@@ -590,8 +590,8 @@
     "semantic_hash": ""
   },
   "src/app/actions.ts": {
-    "mtime": 1784862596.2604501,
-    "ast_hash": "cee953e089bb430dd8ed811722d19f76",
+    "mtime": 1784928051.689542,
+    "ast_hash": "094738d90e866b0dd92458f5cbdb410f",
     "semantic_hash": ""
   },
   "src/app/login/page.tsx": {
@@ -697,6 +697,36 @@
   "src/components/VariantJsonLd.tsx": {
     "mtime": 1784927897.6704197,
     "ast_hash": "1d3a70a769eeecc8a56941e843311833",
+    "semantic_hash": ""
+  },
+  "drizzle/migrations/0003_parched_xavin.sql": {
+    "mtime": 1784928006.517628,
+    "ast_hash": "12191382b9893ee7517e9b4af175c55c",
+    "semantic_hash": ""
+  },
+  "drizzle/migrations/meta/0003_snapshot.json": {
+    "mtime": 1784928006.517301,
+    "ast_hash": "1a94e9ad224fe3aa806e30400f885c0d",
+    "semantic_hash": ""
+  },
+  "src/db/schema/accounts.ts": {
+    "mtime": 1784927996.899237,
+    "ast_hash": "3ec5db748d23c9cb70642858b34835be",
+    "semantic_hash": ""
+  },
+  "src/domain/accounts/profiles.ts": {
+    "mtime": 1784928051.6582444,
+    "ast_hash": "735cd0c0c064c3f0332f63ede9a8430d",
+    "semantic_hash": ""
+  },
+  "src/domain/alerts/deliver.ts": {
+    "mtime": 1784928079.5491905,
+    "ast_hash": "27fc57151a402ceaca54bf32f45cd56e",
+    "semantic_hash": ""
+  },
+  "tests/unit/alert-delivery.test.ts": {
+    "mtime": 1784928117.2679348,
+    "ast_hash": "b7eb3b69f31f249cec00b552d9e5e743",
     "semantic_hash": ""
   }
 }

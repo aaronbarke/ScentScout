@@ -44,6 +44,21 @@ Phase 7 in progress — FragranceNet adapter shipped, flanker equivalence (ADR-0
   - CLI: `npm run retailer -- --url <u> | --discover <n> | --health`.
   - Retailer registry seeded; only access-verified retailers are `enabled`.
 
+- **Phase 6 completed** — alert delivery worker:
+  - `user_profiles` (migration `0003`) mirrors the signed-in user's email, captured during an
+    authenticated mutation. `auth.users` needs the service-role key to read, which this app
+    deliberately never holds, so we store the one field we need instead.
+  - `deliverPendingAlerts()` drains the queue. **The queue is the source of truth**: an alert is
+    marked `sent` only on positive confirmation. A missing key, a missing address and a provider
+    error all leave the row `pending` and retryable — an unsent alert is never marked delivered.
+  - Known limitation, recorded rather than hidden: no attempt counter or backoff yet, so a
+    *permanent* failure would retry each run. The `failed` status is reserved for when we can
+    distinguish permanent from transient.
+  - CLI: `npm run alerts -- --deliver`. 8 tests covering the honesty guarantees (delivered vs
+    "plus unknown shipping" in the email body, and every not-sent path leaving the row untouched)
+    via an injected sender, so no network or DB is involved.
+  - Only `RESEND_API_KEY` + a verified sending domain remain.
+
 - **Phase 8 (started)** — launch surfaces:
   - `sitemap.xml` (dynamic, 77 URLs: static + 19 fragrances + 52 canonical variant pages) and
     `robots.txt` keeping `/admin`, `/account`, `/login` and `/search` out of the index.
@@ -218,7 +233,7 @@ Phase 7 in progress — FragranceNet adapter shipped, flanker equivalence (ADR-0
 - Build: PASS (exit 0)
 - DB generate: PASS — `drizzle-kit generate`, 13 tables + migration 0001
 - Catalog validate: PASS — 13 brands / 19 fragrances / 52 variants / 52 unique SKUs
-- Unit tests: PASS — Vitest, **171/171**
+- Unit tests: PASS — Vitest, **179/179**
 - E2E tests: PASS — Playwright, **9/9** (public site flows + launch surfaces) (catalog, slug, contracts, env, money/size/JSON-LD
   helpers, Luckyscent fixture parser, delivered price)
 - Live ingest: PASS — Luckyscent, 3 variants parsed, 3 observations, run status `success`,

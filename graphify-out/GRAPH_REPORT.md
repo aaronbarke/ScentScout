@@ -1,16 +1,16 @@
 # Graph Report - ScentScout  (2026-07-24)
 
 ## Corpus Check
-- 135 files · ~67,488 words
+- 141 files · ~72,052 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 714 nodes · 1274 edges · 49 communities (35 shown, 14 thin omitted)
-- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 8 edges (avg confidence: 0.65)
+- 726 nodes · 1313 edges · 48 communities (34 shown, 14 thin omitted)
+- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 9 edges (avg confidence: 0.67)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `bfe4d9a9`
+- Built from commit: `fe01056b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -57,7 +57,6 @@
 - watchlists.ts
 - FragranceCard.tsx
 - Evidence
-- env.ts
 - middleware.ts
 - page.tsx
 
@@ -69,26 +68,26 @@
 5. `presentationLabel()` - 13 edges
 6. `getCurrentUser()` - 12 edges
 7. `What You Must Do When Invoked` - 12 edges
-8. `productVariants` - 11 edges
-9. `formatCents()` - 11 edges
-10. `parseNode()` - 11 edges
+8. `Db` - 11 edges
+9. `productVariants` - 11 edges
+10. `formatCents()` - 11 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `DealsPage()` --indirect_call--> `v()`  [INFERRED]
   src/app/deals/page.tsx → tests/unit/matching.test.ts
+- `deliverPendingAlerts()` --indirect_call--> `alert()`  [INFERRED]
+  src/domain/alerts/deliver.ts → tests/unit/alert-delivery.test.ts
 - `parseLuckyscentHtml()` --indirect_call--> `v()`  [INFERRED]
   src/retailers/luckyscent/adapter.ts → tests/unit/matching.test.ts
-- `main()` --calls--> `matchProduct()`  [EXTRACTED]
-  scripts/match-listings.ts → src/domain/matching/match.ts
-- `main()` --calls--> `listPendingReviews()`  [EXTRACTED]
-  scripts/match-listings.ts → src/domain/matching/review.ts
 - `seed()` --calls--> `canonicalSku()`  [EXTRACTED]
   scripts/seed-catalog.ts → src/lib/catalog-slug.ts
+- `main()` --calls--> `getVariantOfferBoard()`  [EXTRACTED]
+  scripts/show-prices.ts → src/domain/pricing/offers.ts
 
 ## Import Cycles
 - None detected.
 
-## Communities (49 total, 14 thin omitted)
+## Communities (48 total, 14 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.10
@@ -99,20 +98,20 @@ Cohesion: 0.04
 Nodes (45): dependencies, cheerio, dotenv, drizzle-orm, next, postgres, react, react-dom (+37 more)
 
 ### Community 2 - "Community 2"
-Cohesion: 0.08
-Nodes (41): main(), ADAPTERS, main(), parseArgs(), Db, env, queryClient, alertEvents (+33 more)
+Cohesion: 0.11
+Nodes (29): alertEvents, alertRules, watchlists, brands, fragrances, productVariants, alertDeliveryStatusEnum, concentrationEnum (+21 more)
 
 ### Community 3 - "Community 3"
 Cohesion: 0.29
 Nodes (6): hooks, PreToolUse, permissions, allow, deny, $schema
 
 ### Community 4 - "Community 4"
-Cohesion: 0.06
-Nodes (47): seed(), CURRENT_YEAR, errors, validate(), concentrationEnum, catalog, Gender, SeedBrand (+39 more)
+Cohesion: 0.07
+Nodes (45): seed(), CURRENT_YEAR, errors, validate(), catalog, Gender, SeedBrand, SeedFragrance (+37 more)
 
 ### Community 5 - "Community 5"
 Cohesion: 0.06
-Nodes (59): ADR-0005, DealsPage(), metadata, FragrancePage(), generateMetadata(), Params, generateMetadata(), Params (+51 more)
+Nodes (60): ADR-0005, DealsPage(), metadata, FragrancePage(), generateMetadata(), Params, generateMetadata(), Params (+52 more)
 
 ### Community 6 - "Community 6"
 Cohesion: 0.08
@@ -183,32 +182,28 @@ Cohesion: 0.50
 Nodes (3): For --cluster-only, For --update (incremental re-extraction), graphify reference: incremental update and cluster-only
 
 ### Community 37 - "run.ts"
-Cohesion: 0.13
-Nodes (21): main(), buildDeduplicationKey(), dedupeKeys(), AlertCandidate, AlertDecision, AlertRuleInput, evaluateAlert(), hoursBetween() (+13 more)
+Cohesion: 0.12
+Nodes (27): main(), buildDeduplicationKey(), dedupeKeys(), deliverPendingAlerts(), DeliverySummary, note(), AlertCandidate, AlertDecision (+19 more)
 
 ### Community 39 - "offers.ts"
-Cohesion: 0.08
-Nodes (33): ADR-0009, fmt(), main(), couponDiscountCents(), CouponLike, ADR-0003, DeliveredPriceInput, estimateDeliveredPriceCents() (+25 more)
+Cohesion: 0.09
+Nodes (30): ADR-0009, couponDiscountCents(), CouponLike, ADR-0003, DeliveredPriceInput, estimateDeliveredPriceCents(), hasDeliveredPrice(), ADR-0003 (+22 more)
 
 ### Community 40 - "adapter.ts"
 Cohesion: 0.06
-Nodes (49): ADR-0007, DiscoveryInput, ProductFetchInput, RetailerAdapter, centsSchema, ParsedRetailerProduct, parsedRetailerProductSchema, RawRetailerListing (+41 more)
+Nodes (56): ADR-0007, ADAPTERS, main(), parseArgs(), DiscoveryInput, ProductFetchInput, RetailerAdapter, ingestUrls() (+48 more)
 
 ### Community 41 - "watchlists.ts"
 Cohesion: 0.11
 Nodes (30): AccountPage(), metadata, pathFor(), AuthState, createRule(), credentialsSchema, removeRule(), ruleSchema (+22 more)
 
 ### Community 42 - "FragranceCard.tsx"
-Cohesion: 0.20
-Nodes (14): approveMatch(), rejectMatch(), uuid, AdminReviewsPage(), metadata, approveReview(), hasHumanDecision(), listPendingReviews() (+6 more)
+Cohesion: 0.10
+Nodes (31): url, main(), fmt(), main(), approveMatch(), rejectMatch(), uuid, AdminReviewsPage() (+23 more)
 
 ### Community 43 - "Evidence"
 Cohesion: 0.12
 Nodes (16): Conclusion, Evidence, FragranceNet — gray-market discounter, FragranceX — gray-market discounter, FragranceX — permitted, but the page data cannot be attributed to a variant, Jomashop — gray-market discounter, Jomashop — permitted, but client-rendered, Luckyscent — authorized boutique (Shopify) (+8 more)
-
-### Community 44 - "env.ts"
-Cohesion: 0.36
-Nodes (6): url, DbEnv, dbEnvSchema, isUsablePostgresUrl(), loadDbEnv(), resolveMigrationUrl()
 
 ### Community 47 - "page.tsx"
 Cohesion: 0.32
@@ -222,10 +217,10 @@ Nodes (3): metadata, metadata, Prose()
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Db` connect `Community 2` to `Community 5`, `run.ts`, `offers.ts`, `watchlists.ts`, `FragranceCard.tsx`?**
-  _High betweenness centrality (0.014) - this node is a cross-community bridge._
-- **Why does `retailerProducts` connect `Community 2` to `Community 5`, `FragranceCard.tsx`, `run.ts`, `offers.ts`?**
-  _High betweenness centrality (0.011) - this node is a cross-community bridge._
+- **Why does `Db` connect `FragranceCard.tsx` to `Community 2`, `Community 5`, `run.ts`, `offers.ts`, `watchlists.ts`?**
+  _High betweenness centrality (0.016) - this node is a cross-community bridge._
+- **Why does `retailerProducts` connect `Community 2` to `FragranceCard.tsx`, `Community 5`, `run.ts`, `offers.ts`?**
+  _High betweenness centrality (0.012) - this node is a cross-community bridge._
 - **Why does `productVariants` connect `Community 2` to `Community 5`, `run.ts`, `offers.ts`, `watchlists.ts`, `FragranceCard.tsx`?**
   _High betweenness centrality (0.011) - this node is a cross-community bridge._
 - **What connects `$schema`, `allow`, `deny` to the rest of the system?**
@@ -235,4 +230,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.043478260869565216 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
-  _Cohesion score 0.08208020050125313 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.1091753774680604 - nodes in this community are weakly interconnected._
