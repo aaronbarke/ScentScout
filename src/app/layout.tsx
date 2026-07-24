@@ -48,12 +48,16 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               ScentScout compares exact fragrance variants. Prices are estimates before tax and may
               be out of date — always confirm at checkout.
             </p>
-            <p>
-              Some links may be affiliate links.{" "}
-              <Link href="/" className="underline hover:text-body">
-                ScentScout
-              </Link>{" "}
-              · MVP
+            <p className="flex flex-wrap gap-x-4 gap-y-1">
+              <Link href="/disclosure" className="transition-colors hover:text-body">
+                Affiliate disclosure
+              </Link>
+              <Link href="/privacy" className="transition-colors hover:text-body">
+                Privacy
+              </Link>
+              <span className="text-faint/70">
+                Commission never affects how offers are ranked.
+              </span>
             </p>
           </div>
         </footer>

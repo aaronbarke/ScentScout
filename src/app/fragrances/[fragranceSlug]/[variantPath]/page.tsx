@@ -6,6 +6,7 @@ import { getVariantOfferBoard } from "@/domain/pricing/offers";
 import { OfferBoard } from "@/components/OfferBoard";
 import { PresentationTag } from "@/components/GuidanceBadge";
 import { TrackVariant } from "@/components/TrackVariant";
+import { VariantJsonLd } from "@/components/VariantJsonLd";
 import { getCurrentUser } from "@/lib/supabase/server";
 import { isWatching } from "@/domain/alerts/watchlists";
 import { variantDescriptor, presentationLabel } from "@/lib/format";
@@ -48,6 +49,13 @@ export default async function VariantPage({ params }: Params) {
 
   return (
     <div className="space-y-6">
+      <VariantJsonLd
+        board={board}
+        url={`${process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3004"}/fragrances/${fragranceSlug}/${variantPath}`}
+        concentration={header.concentration}
+        sizeMl={header.sizeMl}
+        presentation={header.presentation}
+      />
       <nav className="text-sm text-faint">
         <Link href="/fragrances" className="hover:underline">
           Fragrances

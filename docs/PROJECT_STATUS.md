@@ -44,6 +44,21 @@ Phase 7 in progress — FragranceNet adapter shipped, flanker equivalence (ADR-0
   - CLI: `npm run retailer -- --url <u> | --discover <n> | --health`.
   - Retailer registry seeded; only access-verified retailers are `enabled`.
 
+- **Phase 8 (started)** — launch surfaces:
+  - `sitemap.xml` (dynamic, 77 URLs: static + 19 fragrances + 52 canonical variant pages) and
+    `robots.txt` keeping `/admin`, `/account`, `/login` and `/search` out of the index.
+  - **Schema.org structured data** on exact-variant pages. The UI honesty rules apply here too,
+    arguably more so since a rich result is read without the caveats beside it: `availability` is
+    emitted only when stock is genuinely known, and `shippingDetails` is **never** emitted while
+    retailers leave shipping unpublished — an E2E test asserts this.
+  - `/disclosure` and `/privacy`. The disclosure states plainly that commission is not an input to
+    ranking, and that we are still applying to programmes so links may currently earn nothing.
+    Affiliate networks check for these pages, so this also serves the pending CJ application.
+    **These are drafts written to be accurate, not legal advice — review before launch.**
+  - Fixed: `.env.example` shipped `NEXT_PUBLIC_SITE_URL` on port 3000 while dev runs on 3004, so
+    sitemap/canonical/OG URLs pointed at a dead port. **The operator must fix this in `.env` too.**
+  - 4 new E2E tests (9 total).
+
 - **Phase 7 (in progress)** — second retailer + admin review:
   - **FragranceNet adapter** (static HTTP + JSON-LD). Handles a page that alternates between two
     JSON-LD shapes across requests; trusts `manufacturer.name` over the polluted `brand.name`;
@@ -175,7 +190,9 @@ Phase 7 in progress — FragranceNet adapter shipped, flanker equivalence (ADR-0
   review queue at `/admin/reviews` can be opened and the queued matches approved. Until then no
   variant gains a second retailer's offer, so comparison pages stay single-offer.
 - **CJ affiliate application** — the third retailer is blocked on this, not on engineering
-  (ADR-015).
+  (ADR-015). `/disclosure` and `/privacy` now exist to support the application.
+- **`NEXT_PUBLIC_SITE_URL`** in `.env` still reads `http://localhost:3000`; dev runs on **3004**,
+  and at launch this must be the real origin or the sitemap will advertise wrong URLs.
 
 ## Next Tasks
 
@@ -202,7 +219,7 @@ Phase 7 in progress — FragranceNet adapter shipped, flanker equivalence (ADR-0
 - DB generate: PASS — `drizzle-kit generate`, 13 tables + migration 0001
 - Catalog validate: PASS — 13 brands / 19 fragrances / 52 variants / 52 unique SKUs
 - Unit tests: PASS — Vitest, **171/171**
-- E2E tests: PASS — Playwright, **5/5** (public site flows) (catalog, slug, contracts, env, money/size/JSON-LD
+- E2E tests: PASS — Playwright, **9/9** (public site flows + launch surfaces) (catalog, slug, contracts, env, money/size/JSON-LD
   helpers, Luckyscent fixture parser, delivered price)
 - Live ingest: PASS — Luckyscent, 3 variants parsed, 3 observations, run status `success`,
   health `healthy=true`; re-run proved observations append-only (3 → 6, listings stayed 3)

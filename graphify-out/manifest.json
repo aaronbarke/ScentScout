@@ -25,8 +25,8 @@
     "semantic_hash": "239f3ebf717465dc636818a1a619398d"
   },
   "src/app/layout.tsx": {
-    "mtime": 1784863848.9570773,
-    "ast_hash": "5c8a395ab1216f8a70994c5e07d26dc7",
+    "mtime": 1784927828.5773685,
+    "ast_hash": "43165826e8d2696e73af463674a1b953",
     "semantic_hash": ""
   },
   "src/app/page.tsx": {
@@ -225,8 +225,8 @@
     "semantic_hash": ""
   },
   "docs/PROJECT_STATUS.md": {
-    "mtime": 1784927044.3101313,
-    "ast_hash": "4b9df1ab74fb467137cf701549a35a57",
+    "mtime": 1784927976.7458103,
+    "ast_hash": "979ba385409af5586f0a365ae3316e27",
     "semantic_hash": ""
   },
   "docs/RETAILER_ADAPTERS.md": {
@@ -485,8 +485,8 @@
     "semantic_hash": ""
   },
   "src/app/fragrances/[fragranceSlug]/[variantPath]/page.tsx": {
-    "mtime": 1784863905.4766624,
-    "ast_hash": "15dc80b7b235902e045a03beed2fdac4",
+    "mtime": 1784927779.6356356,
+    "ast_hash": "61abc2c4a389982b246b978bed11be15",
     "semantic_hash": ""
   },
   "src/app/fragrances/[fragranceSlug]/page.tsx": {
@@ -545,8 +545,8 @@
     "semantic_hash": ""
   },
   "tests/e2e/public-site.spec.ts": {
-    "mtime": 1784829839.2182834,
-    "ast_hash": "d2cf8786affc93d89b7ff5d91147055f",
+    "mtime": 1784927949.5140316,
+    "ast_hash": "756157f2d1cce35c89d73cb838615387",
     "semantic_hash": ""
   },
   "scripts/run-alerts.ts": {
@@ -667,6 +667,36 @@
   "src/lib/admin.ts": {
     "mtime": 1784926606.115066,
     "ast_hash": "088630436abd5be65b15c70f6306497e",
+    "semantic_hash": ""
+  },
+  "src/app/disclosure/page.tsx": {
+    "mtime": 1784927817.5631204,
+    "ast_hash": "d4bd77b3eaac0940470fe8b21633a5ac",
+    "semantic_hash": ""
+  },
+  "src/app/privacy/page.tsx": {
+    "mtime": 1784927817.5661037,
+    "ast_hash": "a844ad5258de275f9e29bd3a77ef017a",
+    "semantic_hash": ""
+  },
+  "src/app/robots.ts": {
+    "mtime": 1784927754.2645266,
+    "ast_hash": "0fa38c746600fb8ef23e3856fdf4dab6",
+    "semantic_hash": ""
+  },
+  "src/app/sitemap.ts": {
+    "mtime": 1784927748.893782,
+    "ast_hash": "a3e50a401e89d14861e9173b8cb75b35",
+    "semantic_hash": ""
+  },
+  "src/components/Prose.tsx": {
+    "mtime": 1784927817.5593975,
+    "ast_hash": "1498920eb28b74f14852fe60768562d4",
+    "semantic_hash": ""
+  },
+  "src/components/VariantJsonLd.tsx": {
+    "mtime": 1784927897.6704197,
+    "ast_hash": "1d3a70a769eeecc8a56941e843311833",
     "semantic_hash": ""
   }
 }

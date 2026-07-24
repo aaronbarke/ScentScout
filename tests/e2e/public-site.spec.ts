@@ -38,3 +38,41 @@ test.describe("public site", () => {
     expect(res?.status()).toBe(404);
   });
 });
+
+test.describe("launch surfaces", () => {
+  test("robots.txt keeps admin and account tooling out of the index", async ({ request }) => {
+    const res = await request.get("/robots.txt");
+    expect(res.status()).toBe(200);
+    const body = await res.text();
+    expect(body).toContain("Disallow: /admin");
+    expect(body).toContain("Disallow: /account");
+    expect(body).toContain("Sitemap:");
+  });
+
+  test("sitemap lists the canonical exact-variant pages", async ({ request }) => {
+    const res = await request.get("/sitemap.xml");
+    expect(res.status()).toBe(200);
+    const body = await res.text();
+    // A variant URL, not just the fragrance family page.
+    expect(body).toMatch(/fragrances\/[a-z0-9-]+\/edp-\d+ml-retail/);
+  });
+
+  test("structured data never claims shipping we do not know", async ({ page }) => {
+    await page.goto("/fragrances/bdk-parfums-gris-charnel/edp-100ml-retail");
+    const ld = await page.locator('script[type="application/ld+json"]').first().textContent();
+    expect(ld).toBeTruthy();
+    const data = JSON.parse(ld!);
+    expect(data["@type"]).toBe("Product");
+    // Every retailer we ingest leaves shipping unpublished, so asserting it
+    // here would be a false statement to a search engine.
+    expect(JSON.stringify(data)).not.toContain("shippingDetails");
+    expect(JSON.stringify(data)).not.toContain("shippingRate");
+  });
+
+  test("the affiliate disclosure states that commission does not affect ranking", async ({ page }) => {
+    await page.goto("/disclosure");
+    await expect(page.getByRole("heading", { name: /Affiliate disclosure/i })).toBeVisible();
+    await expect(page.getByText(/Commission rate is not an input/i)).toBeVisible();
+  });
+});
+
