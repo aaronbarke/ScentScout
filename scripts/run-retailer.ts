@@ -2,6 +2,7 @@ import "dotenv/config";
 import { queryClient } from "@/db/client";
 import { ingestUrls } from "@/domain/retailers/ingest";
 import { LuckyscentAdapter } from "@/retailers/luckyscent/adapter";
+import { FragranceNetAdapter } from "@/retailers/fragrancenet/adapter";
 import type { RetailerAdapter } from "@/domain/retailers";
 
 /**
@@ -15,6 +16,7 @@ import type { RetailerAdapter } from "@/domain/retailers";
  */
 const ADAPTERS: Record<string, () => RetailerAdapter> = {
   luckyscent: () => new LuckyscentAdapter(),
+  fragrancenet: () => FragranceNetAdapter,
 };
 
 function parseArgs(argv: string[]) {

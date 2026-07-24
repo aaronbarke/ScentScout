@@ -68,6 +68,24 @@ structured data (JSON-LD).
   variant). These belong in the FragranceNet adapter only — never in shared domain code.
 - Value: carries **testers**, which our catalog models as first-class variants.
 
+#### Phase 7 adapter build (2026-07-24) — corrections to the corrections
+
+Building the adapter disproved two claims made in the 2026-07-23 note below. Recorded here
+because the earlier note is wrong and would mislead:
+
+- **The same URL alternates between two JSON-LD shapes across requests.** Repeated fetches of
+  the identical Amouage URL returned, on different attempts, a bare `Product` with a single
+  `offers` object *and* a `ProductGroup` with `hasVariant[]` holding 3 sizes. The claim that the
+  page has "no hasVariant, one offer per URL" was based on a single sample. The adapter handles
+  both shapes; fixtures were captured for each.
+- **Sizes are NOT client-rendered.** They are present in the variant *names*
+  ("… Spray 1.7 oz", "… Spray Vial"), in ounces. No browser rendering is needed, so Playwright
+  stays unused — as intended.
+- `priceCurrency` appears as both `"USD"` (group shape) and the invalid `"US"` (single shape);
+  normalize both.
+- `manufacturer.name` being the clean brand was **confirmed**: "Byredo" / "Bdk Parfums" /
+  "Amouage", versus the polluted `brand.name` ("Bal d'Afrique Byredo", "Bdk Gris Charnel").
+
 #### Phase 7 live re-inspection (2026-07-23) — corrections to the above
 
 Fetched `robots.txt`, the gzipped `products_sitemap1.xml.gz` (13,745 URLs), and two product

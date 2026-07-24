@@ -52,3 +52,15 @@ export interface CandidateEvaluation {
   contradicted: boolean;
   reasons: MatchReason[];
 }
+
+/** Review states that represent a deliberate administrator ruling. */
+export type ReviewStatus = "pending" | "approved" | "rejected";
+
+/**
+ * True when an admin has ruled on a listing. A human decision outranks the
+ * automatic matcher, so re-running matching must skip these listings rather
+ * than silently undoing the ruling. Pure so it can be tested without a database.
+ */
+export function isHumanDecision(status: ReviewStatus | string | null | undefined): boolean {
+  return status === "approved" || status === "rejected";
+}

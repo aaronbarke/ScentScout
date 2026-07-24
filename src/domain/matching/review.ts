@@ -1,18 +1,40 @@
 import { eq, inArray, desc } from "drizzle-orm";
 import { db } from "@/db/client";
 import { retailerProducts, matchReviews, productVariants } from "@/db/schema";
-import type { MatchDecision } from "./types";
+import { isHumanDecision, type MatchDecision } from "./types";
 
 /**
  * Manual review API. Admins correct matching decisions through these functions
  * — never by editing the database directly.
  */
 
-/** Persist a decision onto the listing, queueing a review when uncertain. */
+/**
+ * True when an admin has already ruled on this listing.
+ *
+ * A human decision outranks the automatic matcher: re-running matching must
+ * never silently undo an approval or a rejection an admin made deliberately.
+ */
+export async function hasHumanDecision(retailerProductId: string): Promise<boolean> {
+  const [row] = await db
+    .select({ status: matchReviews.reviewStatus })
+    .from(matchReviews)
+    .where(eq(matchReviews.retailerProductId, retailerProductId))
+    .limit(1);
+  return isHumanDecision(row?.status);
+}
+
+/**
+ * Persist a decision onto the listing, queueing a review when uncertain.
+ *
+ * Returns false without writing when an admin has already decided this listing
+ * — see `hasHumanDecision`.
+ */
 export async function applyDecision(
   retailerProductId: string,
   decision: MatchDecision,
-): Promise<void> {
+): Promise<boolean> {
+  if (await hasHumanDecision(retailerProductId)) return false;
+
   await db
     .update(retailerProducts)
     .set({
@@ -42,6 +64,8 @@ export async function applyDecision(
       });
     }
   }
+
+  return true;
 }
 
 export interface PendingReview {

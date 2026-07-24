@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { matchProduct, THRESHOLDS } from "@/domain/matching";
+import { matchProduct, THRESHOLDS, isHumanDecision } from "@/domain/matching";
 import type { CandidateVariant } from "@/domain/matching";
 
 const v = (over: Partial<CandidateVariant> & { canonicalSku: string }): CandidateVariant => ({
@@ -328,5 +328,23 @@ describe("full-confidence match", () => {
       expect(typeof r.code).toBe("string");
       expect(typeof r.detail).toBe("string");
     }
+  });
+});
+
+describe("human decisions outrank the automatic matcher", () => {
+  // Guards the regression where re-running the matcher discarded an
+  // administrator's approval, unbinding a listing that had been approved.
+  it("counts approved and rejected reviews as a human ruling", () => {
+    expect(isHumanDecision("approved")).toBe(true);
+    expect(isHumanDecision("rejected")).toBe(true);
+  });
+
+  it("leaves a pending review open to re-matching", () => {
+    expect(isHumanDecision("pending")).toBe(false);
+  });
+
+  it("treats a listing with no review as undecided", () => {
+    expect(isHumanDecision(null)).toBe(false);
+    expect(isHumanDecision(undefined)).toBe(false);
   });
 });

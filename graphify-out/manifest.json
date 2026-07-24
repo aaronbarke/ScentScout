@@ -305,13 +305,13 @@
     "semantic_hash": ""
   },
   "scripts/run-retailer.ts": {
-    "mtime": 1784779791.5265634,
-    "ast_hash": "6acdd7944ab2ca08461e25fc09fe8744",
+    "mtime": 1784907747.7926047,
+    "ast_hash": "184b7f0f9f073defe0f9a1000e09ff1a",
     "semantic_hash": ""
   },
   "src/db/seed/retailers.ts": {
-    "mtime": 1784779747.6585808,
-    "ast_hash": "d0caf7a37d905cc97fd6a02796d870e2",
+    "mtime": 1784907747.7929606,
+    "ast_hash": "464185537f935add9d436808fb5d9871",
     "semantic_hash": ""
   },
   "src/domain/pricing/delivered-price.ts": {
@@ -365,8 +365,8 @@
     "semantic_hash": ""
   },
   "docs/RETAILER_RESEARCH.md": {
-    "mtime": 1784863197.238941,
-    "ast_hash": "0ce1d77036b8d877d1bfa09a0add9f05",
+    "mtime": 1784908054.0880964,
+    "ast_hash": "b94b756fc208848a5efac3225b909264",
     "semantic_hash": ""
   },
   "tests/fixtures/retailers/luckyscent/gris-charnel.html": {
@@ -385,8 +385,8 @@
     "semantic_hash": ""
   },
   "scripts/match-listings.ts": {
-    "mtime": 1784780495.125406,
-    "ast_hash": "186047a50374f1c50b6d622fee6f2913",
+    "mtime": 1784907953.5524135,
+    "ast_hash": "226825059e3eb520b2e6f38b7d8394d1",
     "semantic_hash": ""
   },
   "src/domain/matching/aliases.ts": {
@@ -415,18 +415,18 @@
     "semantic_hash": ""
   },
   "src/domain/matching/review.ts": {
-    "mtime": 1784780324.6872058,
-    "ast_hash": "996611bd0da38bc9d83cc2b2cd55bfac",
+    "mtime": 1784908011.4162054,
+    "ast_hash": "44c4cf9730eca99fe142ab967816414b",
     "semantic_hash": ""
   },
   "src/domain/matching/types.ts": {
-    "mtime": 1784780154.4001992,
-    "ast_hash": "5646fac38b01b99ebfabf78032fe1c73",
+    "mtime": 1784908011.3948295,
+    "ast_hash": "57523520df273ab423c556a84c8330a2",
     "semantic_hash": ""
   },
   "tests/unit/matching.test.ts": {
-    "mtime": 1784780295.5054512,
-    "ast_hash": "dd35898686cc869a2881f2f213bf413c",
+    "mtime": 1784908022.730055,
+    "ast_hash": "d116061cf2d320e998acf6706e777ae4",
     "semantic_hash": ""
   },
   "scripts/show-prices.ts": {
@@ -535,8 +535,8 @@
     "semantic_hash": ""
   },
   "src/domain/catalog/queries.ts": {
-    "mtime": 1784829404.5494647,
-    "ast_hash": "3b6f259b6852cdd520f61f2c00d0eb2e",
+    "mtime": 1784864618.6888351,
+    "ast_hash": "057e0491f8c83021a0a189d62ae4783a",
     "semantic_hash": ""
   },
   "src/lib/format.ts": {
@@ -622,6 +622,36 @@
   "src/middleware.ts": {
     "mtime": 1784862555.5916698,
     "ast_hash": "f1d55b5df52893a7fae6b01d2621d2a6",
+    "semantic_hash": ""
+  },
+  "src/retailers/fragrancenet/adapter.ts": {
+    "mtime": 1784907832.2213068,
+    "ast_hash": "53d40890ebd7316770272e7198b42bbc",
+    "semantic_hash": ""
+  },
+  "tests/unit/fragrancenet-parser.test.ts": {
+    "mtime": 1784907848.5549865,
+    "ast_hash": "60d962fd18f17763cfc682bcf3def5aa",
+    "semantic_hash": ""
+  },
+  "tests/fixtures/retailers/fragrancenet/amouage-reflection-edp.html": {
+    "mtime": 1784907557.6296706,
+    "ast_hash": "b6f775ff91c8a4ea75fc6ef852da394f",
+    "semantic_hash": ""
+  },
+  "tests/fixtures/retailers/fragrancenet/amouage-reflection-productgroup.html": {
+    "mtime": 1784907578.3967245,
+    "ast_hash": "dc4c989ea8f2b51f359135b190dd5350",
+    "semantic_hash": ""
+  },
+  "tests/fixtures/retailers/fragrancenet/bdk-gris-charnel-extrait.html": {
+    "mtime": 1784907559.9467142,
+    "ast_hash": "16b23158afc72c60b0af54ec833a5844",
+    "semantic_hash": ""
+  },
+  "tests/fixtures/retailers/fragrancenet/byredo-bal-dafrique-body-lotion.html": {
+    "mtime": 1784907558.240164,
+    "ast_hash": "7f197fb731f1dc1e301a5dfdf00681b2",
     "semantic_hash": ""
   }
 }

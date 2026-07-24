@@ -60,6 +60,7 @@ async function main() {
   console.log(`Evaluating ${listings.length} listing(s)${dryRun ? " (dry run)" : ""}.\n`);
 
   const tally: Record<string, number> = {};
+  let protectedCount = 0;
 
   for (const l of listings) {
     const input: MatchInput = {
@@ -82,11 +83,20 @@ async function main() {
     );
     for (const r of key) console.log(`     · ${r.code}: ${r.detail}`);
 
-    if (!dryRun) await applyDecision(l.id, decision);
+    if (!dryRun) {
+      const written = await applyDecision(l.id, decision);
+      if (!written) {
+        protectedCount++;
+        console.log("     · skipped: an admin already decided this listing");
+      }
+    }
   }
 
   console.log("\nSummary:");
   for (const [status, n] of Object.entries(tally)) console.log(`  ${status.padEnd(14)} ${n}`);
+  if (protectedCount > 0) {
+    console.log(`  ${"protected".padEnd(14)} ${protectedCount} (human decisions left untouched)`);
+  }
   if (dryRun) console.log("\n(dry run — nothing was written)");
 }
 

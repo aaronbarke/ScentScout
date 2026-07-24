@@ -640,7 +640,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "scripts_match_listings",
-      "community": 4,
+      "community": 2,
       "norm_label": "match-listings.ts"
     },
     {
@@ -650,7 +650,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "scripts_match_listings_main",
-      "community": 4,
+      "community": 2,
       "norm_label": "main()"
     },
     {
@@ -680,37 +680,37 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "scripts_run_retailer",
-      "community": 40,
+      "community": 44,
       "norm_label": "run-retailer.ts"
     },
     {
       "label": "ADAPTERS",
       "file_type": "code",
       "source_file": "scripts/run-retailer.ts",
-      "source_location": "L16",
+      "source_location": "L17",
       "_origin": "ast",
       "id": "scripts_run_retailer_adapters",
-      "community": 40,
+      "community": 44,
       "norm_label": "adapters"
     },
     {
       "label": "parseArgs()",
       "file_type": "code",
       "source_file": "scripts/run-retailer.ts",
-      "source_location": "L20",
+      "source_location": "L22",
       "_origin": "ast",
       "id": "scripts_run_retailer_parseargs",
-      "community": 40,
+      "community": 44,
       "norm_label": "parseargs()"
     },
     {
       "label": "main()",
       "file_type": "code",
       "source_file": "scripts/run-retailer.ts",
-      "source_location": "L36",
+      "source_location": "L38",
       "_origin": "ast",
       "id": "scripts_run_retailer_main",
-      "community": 40,
+      "community": 44,
       "norm_label": "main()"
     },
     {
@@ -1560,7 +1560,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "src_db_schema_alerts_watchlists",
-      "community": 2,
+      "community": 41,
       "norm_label": "watchlists"
     },
     {
@@ -1570,7 +1570,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "src_db_schema_alerts_alertrules",
-      "community": 2,
+      "community": 41,
       "norm_label": "alertrules"
     },
     {
@@ -1580,7 +1580,7 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "src_db_schema_alerts_alertevents",
-      "community": 2,
+      "community": 41,
       "norm_label": "alertevents"
     },
     {
@@ -1660,7 +1660,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_db_schema_enums_concentrationenum",
-      "community": 4,
+      "community": 2,
       "norm_label": "concentrationenum"
     },
     {
@@ -1800,7 +1800,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "src_db_schema_ops_matchreviews",
-      "community": 4,
+      "community": 2,
       "norm_label": "matchreviews"
     },
     {
@@ -2170,7 +2170,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_domain_alerts_watchlists",
-      "community": 2,
+      "community": 41,
       "norm_label": "watchlists.ts"
     },
     {
@@ -2210,7 +2210,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "src_domain_alerts_watchlists_watchlistentry",
-      "community": 2,
+      "community": 41,
       "norm_label": "watchlistentry"
     },
     {
@@ -2230,7 +2230,7 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "src_domain_alerts_watchlists_createalertruleinput",
-      "community": 2,
+      "community": 41,
       "norm_label": "createalertruleinput"
     },
     {
@@ -2260,7 +2260,7 @@
       "source_location": "L95",
       "_origin": "ast",
       "id": "src_domain_alerts_watchlists_alertrulesummary",
-      "community": 2,
+      "community": 41,
       "norm_label": "alertrulesummary"
     },
     {
@@ -2290,7 +2290,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_domain_catalog_queries",
-      "community": 2,
+      "community": 5,
       "norm_label": "queries.ts"
     },
     {
@@ -2300,7 +2300,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_domain_catalog_queries_variantsummary",
-      "community": 2,
+      "community": 5,
       "norm_label": "variantsummary"
     },
     {
@@ -2330,7 +2330,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "src_domain_catalog_queries_variant_columns",
-      "community": 2,
+      "community": 5,
       "norm_label": "variant_columns"
     },
     {
@@ -2390,7 +2390,7 @@
       "source_location": "L162",
       "_origin": "ast",
       "id": "src_domain_catalog_queries_catalogstats",
-      "community": 2,
+      "community": 5,
       "norm_label": "catalogstats"
     },
     {
@@ -2417,7 +2417,7 @@
       "label": "listRecentRestocks()",
       "file_type": "code",
       "source_file": "src/domain/catalog/queries.ts",
-      "source_location": "L209",
+      "source_location": "L216",
       "_origin": "ast",
       "id": "src_domain_catalog_queries_listrecentrestocks",
       "community": 5,
@@ -2480,7 +2480,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "src_domain_matching_candidates_loadcandidates",
-      "community": 4,
+      "community": 2,
       "norm_label": "loadcandidates()"
     },
     {
@@ -2650,67 +2650,77 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_domain_matching_review",
-      "community": 4,
+      "community": 2,
       "norm_label": "review.ts"
+    },
+    {
+      "label": "hasHumanDecision()",
+      "file_type": "code",
+      "source_file": "src/domain/matching/review.ts",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "src_domain_matching_review_hashumandecision",
+      "community": 2,
+      "norm_label": "hashumandecision()"
     },
     {
       "label": "applyDecision()",
       "file_type": "code",
       "source_file": "src/domain/matching/review.ts",
-      "source_location": "L12",
+      "source_location": "L32",
       "_origin": "ast",
       "id": "src_domain_matching_review_applydecision",
-      "community": 4,
+      "community": 2,
       "norm_label": "applydecision()"
     },
     {
       "label": "PendingReview",
       "file_type": "code",
       "source_file": "src/domain/matching/review.ts",
-      "source_location": "L47",
+      "source_location": "L71",
       "_origin": "ast",
       "id": "src_domain_matching_review_pendingreview",
-      "community": 4,
+      "community": 2,
       "norm_label": "pendingreview"
     },
     {
       "label": "listPendingReviews()",
       "file_type": "code",
       "source_file": "src/domain/matching/review.ts",
-      "source_location": "L59",
+      "source_location": "L83",
       "_origin": "ast",
       "id": "src_domain_matching_review_listpendingreviews",
-      "community": 4,
+      "community": 2,
       "norm_label": "listpendingreviews()"
     },
     {
       "label": "approveReview()",
       "file_type": "code",
       "source_file": "src/domain/matching/review.ts",
-      "source_location": "L85",
+      "source_location": "L109",
       "_origin": "ast",
       "id": "src_domain_matching_review_approvereview",
-      "community": 4,
+      "community": 2,
       "norm_label": "approvereview()"
     },
     {
       "label": "rejectReview()",
       "file_type": "code",
       "source_file": "src/domain/matching/review.ts",
-      "source_location": "L126",
+      "source_location": "L150",
       "_origin": "ast",
       "id": "src_domain_matching_review_rejectreview",
-      "community": 4,
+      "community": 2,
       "norm_label": "rejectreview()"
     },
     {
       "label": "listUnmatched()",
       "file_type": "code",
       "source_file": "src/domain/matching/review.ts",
-      "source_location": "L162",
+      "source_location": "L186",
       "_origin": "ast",
       "id": "src_domain_matching_review_listunmatched",
-      "community": 4,
+      "community": 2,
       "norm_label": "listunmatched()"
     },
     {
@@ -2784,6 +2794,26 @@
       "norm_label": "candidateevaluation"
     },
     {
+      "label": "ReviewStatus",
+      "file_type": "code",
+      "source_file": "src/domain/matching/types.ts",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "src_domain_matching_types_reviewstatus",
+      "community": 4,
+      "norm_label": "reviewstatus"
+    },
+    {
+      "label": "isHumanDecision()",
+      "file_type": "code",
+      "source_file": "src/domain/matching/types.ts",
+      "source_location": "L64",
+      "_origin": "ast",
+      "id": "src_domain_matching_types_ishumandecision",
+      "community": 2,
+      "norm_label": "ishumandecision()"
+    },
+    {
       "label": "coupons.ts",
       "file_type": "code",
       "source_file": "src/domain/pricing/coupons.ts",
@@ -2830,7 +2860,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_domain_pricing_delivered_price",
-      "community": 39,
+      "community": 44,
       "norm_label": "delivered-price.ts"
     },
     {
@@ -2840,7 +2870,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_domain_pricing_delivered_price_deliveredpriceinput",
-      "community": 39,
+      "community": 44,
       "norm_label": "deliveredpriceinput"
     },
     {
@@ -2850,7 +2880,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "src_domain_pricing_delivered_price_estimatedeliveredpricecents",
-      "community": 39,
+      "community": 44,
       "norm_label": "estimatedeliveredpricecents()"
     },
     {
@@ -2860,7 +2890,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "src_domain_pricing_delivered_price_hasdeliveredprice",
-      "community": 39,
+      "community": 44,
       "norm_label": "hasdeliveredprice()"
     },
     {
@@ -2870,7 +2900,7 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "src_domain_pricing_delivered_price_ts_docref_adr_0003",
-      "community": 39,
+      "community": 44,
       "norm_label": "adr-0003"
     },
     {
@@ -3260,7 +3290,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "src_domain_retailers_ingest_persistparsed",
-      "community": 40,
+      "community": 44,
       "norm_label": "persistparsed()"
     },
     {
@@ -3270,7 +3300,7 @@
       "source_location": "L121",
       "_origin": "ast",
       "id": "src_domain_retailers_ingest_updatehealth",
-      "community": 40,
+      "community": 44,
       "norm_label": "updatehealth()"
     },
     {
@@ -3280,7 +3310,7 @@
       "source_location": "L165",
       "_origin": "ast",
       "id": "src_domain_retailers_ingest_ingesturls",
-      "community": 40,
+      "community": 44,
       "norm_label": "ingesturls()"
     },
     {
@@ -3756,6 +3786,126 @@
     {
       "label": "adapter.ts",
       "file_type": "code",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_retailers_fragrancenet_adapter",
+      "community": 40,
+      "norm_label": "adapter.ts"
+    },
+    {
+      "label": "asRecord()",
+      "file_type": "code",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "src_retailers_fragrancenet_adapter_asrecord",
+      "community": 40,
+      "norm_label": "asrecord()"
+    },
+    {
+      "label": "nameOf()",
+      "file_type": "code",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L47",
+      "_origin": "ast",
+      "id": "src_retailers_fragrancenet_adapter_nameof",
+      "community": 40,
+      "norm_label": "nameof()"
+    },
+    {
+      "label": "NOISE",
+      "file_type": "code",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L53",
+      "_origin": "ast",
+      "id": "src_retailers_fragrancenet_adapter_noise",
+      "community": 40,
+      "norm_label": "noise"
+    },
+    {
+      "label": "cleanFragranceName()",
+      "file_type": "code",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L73",
+      "_origin": "ast",
+      "id": "src_retailers_fragrancenet_adapter_cleanfragrancename",
+      "community": 40,
+      "norm_label": "cleanfragrancename()"
+    },
+    {
+      "label": "sizeMlFromTitle()",
+      "file_type": "code",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L99",
+      "_origin": "ast",
+      "id": "src_retailers_fragrancenet_adapter_sizemlfromtitle",
+      "community": 40,
+      "norm_label": "sizemlfromtitle()"
+    },
+    {
+      "label": "concentrationFromTitle()",
+      "file_type": "code",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L108",
+      "_origin": "ast",
+      "id": "src_retailers_fragrancenet_adapter_concentrationfromtitle",
+      "community": 40,
+      "norm_label": "concentrationfromtitle()"
+    },
+    {
+      "label": "parseNode()",
+      "file_type": "code",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L115",
+      "_origin": "ast",
+      "id": "src_retailers_fragrancenet_adapter_parsenode",
+      "community": 40,
+      "norm_label": "parsenode()"
+    },
+    {
+      "label": "parseFragranceNetHtml()",
+      "file_type": "code",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L183",
+      "_origin": "ast",
+      "id": "src_retailers_fragrancenet_adapter_parsefragrancenethtml",
+      "community": 40,
+      "norm_label": "parsefragrancenethtml()"
+    },
+    {
+      "label": "fetchMaybeGzip()",
+      "file_type": "code",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L212",
+      "_origin": "ast",
+      "id": "src_retailers_fragrancenet_adapter_fetchmaybegzip",
+      "community": 40,
+      "norm_label": "fetchmaybegzip()"
+    },
+    {
+      "label": "locsIn()",
+      "file_type": "code",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L221",
+      "_origin": "ast",
+      "id": "src_retailers_fragrancenet_adapter_locsin",
+      "community": 40,
+      "norm_label": "locsin()"
+    },
+    {
+      "label": "FragranceNetAdapter",
+      "file_type": "code",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L223",
+      "_origin": "ast",
+      "id": "src_retailers_fragrancenet_adapter_fragrancenetadapter",
+      "community": 44,
+      "norm_label": "fragrancenetadapter"
+    },
+    {
+      "label": "adapter.ts",
+      "file_type": "code",
       "source_file": "src/retailers/luckyscent/adapter.ts",
       "source_location": "L1",
       "_origin": "ast",
@@ -4170,7 +4320,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_unit_delivered_price_test",
-      "community": 39,
+      "community": 44,
       "norm_label": "delivered-price.test.ts"
     },
     {
@@ -4182,6 +4332,36 @@
       "id": "tests_unit_env_test",
       "community": 42,
       "norm_label": "env.test.ts"
+    },
+    {
+      "label": "fragrancenet-parser.test.ts",
+      "file_type": "code",
+      "source_file": "tests/unit/fragrancenet-parser.test.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "tests_unit_fragrancenet_parser_test",
+      "community": 40,
+      "norm_label": "fragrancenet-parser.test.ts"
+    },
+    {
+      "label": "FIXTURES",
+      "file_type": "code",
+      "source_file": "tests/unit/fragrancenet-parser.test.ts",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "tests_unit_fragrancenet_parser_test_fixtures",
+      "community": 40,
+      "norm_label": "fixtures"
+    },
+    {
+      "label": "load()",
+      "file_type": "code",
+      "source_file": "tests/unit/fragrancenet-parser.test.ts",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "tests_unit_fragrancenet_parser_test_load",
+      "community": 40,
+      "norm_label": "load()"
     },
     {
       "label": "luckyscent-parser.test.ts",
@@ -6384,10 +6564,20 @@
       "norm_label": "fragrancenet \u2014 gray-market discounter"
     },
     {
-      "label": "Phase 7 live re-inspection (2026-07-23) \u2014 corrections to the above",
+      "label": "Phase 7 adapter build (2026-07-24) \u2014 corrections to the corrections",
       "file_type": "document",
       "source_file": "docs/RETAILER_RESEARCH.md",
       "source_location": "L71",
+      "_origin": "ast",
+      "id": "docs_retailer_research_phase_7_adapter_build_2026_07_24_corrections_to_the_corrections",
+      "community": 43,
+      "norm_label": "phase 7 adapter build (2026-07-24) \u2014 corrections to the corrections"
+    },
+    {
+      "label": "Phase 7 live re-inspection (2026-07-23) \u2014 corrections to the above",
+      "file_type": "document",
+      "source_file": "docs/RETAILER_RESEARCH.md",
+      "source_location": "L89",
       "_origin": "ast",
       "id": "docs_retailer_research_phase_7_live_re_inspection_2026_07_23_corrections_to_the_above",
       "community": 43,
@@ -6397,7 +6587,7 @@
       "label": "Jomashop \u2014 gray-market discounter",
       "file_type": "document",
       "source_file": "docs/RETAILER_RESEARCH.md",
-      "source_location": "L100",
+      "source_location": "L118",
       "_origin": "ast",
       "id": "docs_retailer_research_jomashop_gray_market_discounter",
       "community": 43,
@@ -6407,7 +6597,7 @@
       "label": "FragranceX \u2014 gray-market discounter",
       "file_type": "document",
       "source_file": "docs/RETAILER_RESEARCH.md",
-      "source_location": "L107",
+      "source_location": "L125",
       "_origin": "ast",
       "id": "docs_retailer_research_fragrancex_gray_market_discounter",
       "community": 43,
@@ -6417,7 +6607,7 @@
       "label": "Nordstrom \u2014 department store",
       "file_type": "document",
       "source_file": "docs/RETAILER_RESEARCH.md",
-      "source_location": "L114",
+      "source_location": "L132",
       "_origin": "ast",
       "id": "docs_retailer_research_nordstrom_department_store",
       "community": 43,
@@ -6427,7 +6617,7 @@
       "label": "Recommendation",
       "file_type": "document",
       "source_file": "docs/RETAILER_RESEARCH.md",
-      "source_location": "L124",
+      "source_location": "L142",
       "_origin": "ast",
       "id": "docs_retailer_research_recommendation",
       "community": 43,
@@ -6437,7 +6627,7 @@
       "label": "Standing constraints",
       "file_type": "document",
       "source_file": "docs/RETAILER_RESEARCH.md",
-      "source_location": "L137",
+      "source_location": "L155",
       "_origin": "ast",
       "id": "docs_retailer_research_standing_constraints",
       "community": 43,
@@ -7316,7 +7506,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "scripts/match-listings.ts",
-      "source_location": "L75",
+      "source_location": "L76",
       "weight": 1.0,
       "source": "scripts_match_listings_main",
       "target": "src_domain_matching_match_matchproduct",
@@ -7327,7 +7517,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "scripts/match-listings.ts",
-      "source_location": "L85",
+      "source_location": "L87",
       "weight": 1.0,
       "source": "scripts_match_listings_main",
       "target": "src_domain_matching_review_applydecision",
@@ -7468,7 +7658,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "scripts/run-retailer.ts",
-      "source_location": "L16",
+      "source_location": "L17",
       "weight": 1.0,
       "source": "scripts_run_retailer",
       "target": "scripts_run_retailer_adapters",
@@ -7478,7 +7668,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "scripts/run-retailer.ts",
-      "source_location": "L36",
+      "source_location": "L38",
       "weight": 1.0,
       "source": "scripts_run_retailer",
       "target": "scripts_run_retailer_main",
@@ -7488,7 +7678,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "scripts/run-retailer.ts",
-      "source_location": "L20",
+      "source_location": "L22",
       "weight": 1.0,
       "source": "scripts_run_retailer",
       "target": "scripts_run_retailer_parseargs",
@@ -7521,7 +7711,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "scripts/run-retailer.ts",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0,
       "source": "scripts_run_retailer",
       "target": "src_domain_retailers_adapter_retaileradapter",
@@ -7532,7 +7722,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "scripts/run-retailer.ts",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0,
       "source": "scripts_run_retailer",
       "target": "src_domain_retailers_index",
@@ -7565,6 +7755,28 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "scripts/run-retailer.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "scripts_run_retailer",
+      "target": "src_retailers_fragrancenet_adapter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/run-retailer.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "scripts_run_retailer",
+      "target": "src_retailers_fragrancenet_adapter_fragrancenetadapter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/run-retailer.ts",
       "source_location": "L4",
       "weight": 1.0,
       "source": "scripts_run_retailer",
@@ -7587,7 +7799,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "scripts/run-retailer.ts",
-      "source_location": "L37",
+      "source_location": "L39",
       "weight": 1.0,
       "source": "scripts_run_retailer_main",
       "target": "scripts_run_retailer_parseargs",
@@ -7598,7 +7810,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "scripts/run-retailer.ts",
-      "source_location": "L70",
+      "source_location": "L72",
       "weight": 1.0,
       "source": "scripts_run_retailer_main",
       "target": "src_domain_retailers_ingest_ingesturls",
@@ -12584,7 +12796,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/domain/catalog/queries.ts",
-      "source_location": "L209",
+      "source_location": "L216",
       "weight": 1.0,
       "source": "src_domain_catalog_queries",
       "target": "src_domain_catalog_queries_listrecentrestocks",
@@ -13430,7 +13642,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/domain/matching/review.ts",
-      "source_location": "L12",
+      "source_location": "L32",
       "weight": 1.0,
       "source": "src_domain_matching_review",
       "target": "src_domain_matching_review_applydecision",
@@ -13440,7 +13652,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/domain/matching/review.ts",
-      "source_location": "L85",
+      "source_location": "L109",
       "weight": 1.0,
       "source": "src_domain_matching_review",
       "target": "src_domain_matching_review_approvereview",
@@ -13450,7 +13662,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/domain/matching/review.ts",
-      "source_location": "L59",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "src_domain_matching_review",
+      "target": "src_domain_matching_review_hashumandecision",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/matching/review.ts",
+      "source_location": "L83",
       "weight": 1.0,
       "source": "src_domain_matching_review",
       "target": "src_domain_matching_review_listpendingreviews",
@@ -13460,7 +13682,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/domain/matching/review.ts",
-      "source_location": "L162",
+      "source_location": "L186",
       "weight": 1.0,
       "source": "src_domain_matching_review",
       "target": "src_domain_matching_review_listunmatched",
@@ -13470,7 +13692,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/domain/matching/review.ts",
-      "source_location": "L47",
+      "source_location": "L71",
       "weight": 1.0,
       "source": "src_domain_matching_review",
       "target": "src_domain_matching_review_pendingreview",
@@ -13480,7 +13702,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/domain/matching/review.ts",
-      "source_location": "L126",
+      "source_location": "L150",
       "weight": 1.0,
       "source": "src_domain_matching_review",
       "target": "src_domain_matching_review_rejectreview",
@@ -13505,8 +13727,41 @@
       "source_location": "L4",
       "weight": 1.0,
       "source": "src_domain_matching_review",
+      "target": "src_domain_matching_types_ishumandecision",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/matching/review.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_domain_matching_review",
       "target": "src_domain_matching_types_matchdecision",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/matching/review.ts",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "src_domain_matching_review_applydecision",
+      "target": "src_domain_matching_review_hashumandecision",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/domain/matching/review.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "src_domain_matching_review_hashumandecision",
+      "target": "src_domain_matching_types_ishumandecision"
     },
     {
       "relation": "contains",
@@ -13526,6 +13781,16 @@
       "weight": 1.0,
       "source": "src_domain_matching_types",
       "target": "src_domain_matching_types_candidatevariant",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/matching/types.ts",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "src_domain_matching_types",
+      "target": "src_domain_matching_types_ishumandecision",
       "confidence_score": 1.0
     },
     {
@@ -13566,6 +13831,16 @@
       "weight": 1.0,
       "source": "src_domain_matching_types",
       "target": "src_domain_matching_types_matchstatus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/domain/matching/types.ts",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "src_domain_matching_types",
+      "target": "src_domain_matching_types_reviewstatus",
       "confidence_score": 1.0
     },
     {
@@ -13643,6 +13918,17 @@
       "weight": 1.0,
       "source": "tests_unit_matching_test",
       "target": "src_domain_matching_types_candidatevariant",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/matching.test.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "tests_unit_matching_test",
+      "target": "src_domain_matching_types_ishumandecision",
       "confidence_score": 1.0
     },
     {
@@ -14585,6 +14871,17 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter",
+      "target": "src_domain_retailers_adapter_discoveryinput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/retailers/luckyscent/adapter.ts",
       "source_location": "L1",
       "weight": 1.0,
@@ -14601,6 +14898,17 @@
       "weight": 1.0,
       "source": "src_retailers_luckyscent_adapter_luckyscentadapter_discoverproducts",
       "target": "src_domain_retailers_adapter_discoveryinput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter",
+      "target": "src_domain_retailers_adapter_productfetchinput",
       "confidence_score": 1.0
     },
     {
@@ -14673,6 +14981,17 @@
       "source_location": "L11",
       "weight": 1.0,
       "source": "src_domain_retailers_ingest",
+      "target": "src_domain_retailers_adapter_retaileradapter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter",
       "target": "src_domain_retailers_adapter_retaileradapter",
       "confidence_score": 1.0
     },
@@ -14794,6 +15113,17 @@
       "source_location": "L11",
       "weight": 1.0,
       "source": "src_domain_retailers_ingest",
+      "target": "src_domain_retailers_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter",
       "target": "src_domain_retailers_index",
       "confidence_score": 1.0
     },
@@ -15007,6 +15337,17 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter",
+      "target": "src_domain_retailers_schemas_rawretailerlisting",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/retailers/luckyscent/adapter.ts",
       "source_location": "L1",
       "weight": 1.0,
@@ -15023,6 +15364,17 @@
       "weight": 1.0,
       "source": "src_retailers_luckyscent_adapter_luckyscentadapter_discoverproducts",
       "target": "src_domain_retailers_schemas_rawretailerlisting",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter",
+      "target": "src_domain_retailers_schemas_rawretailerproductpage",
       "confidence_score": 1.0
     },
     {
@@ -15062,6 +15414,17 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter",
+      "target": "src_domain_retailers_schemas_parsedretailerproductschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/retailers/luckyscent/adapter.ts",
       "source_location": "L10",
       "weight": 1.0,
@@ -15095,6 +15458,17 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter",
+      "target": "src_domain_retailers_schemas_parsedretailerproduct",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/retailers/luckyscent/adapter.ts",
       "source_location": "L1",
       "weight": 1.0,
@@ -15111,6 +15485,17 @@
       "weight": 1.0,
       "source": "src_retailers_luckyscent_adapter_luckyscentadapter_parseproduct",
       "target": "src_domain_retailers_schemas_parsedretailerproduct",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter",
+      "target": "src_domain_retailers_schemas_retailerhealthresult",
       "confidence_score": 1.0
     },
     {
@@ -15577,6 +15962,424 @@
       "weight": 1.0,
       "source": "src_middleware",
       "target": "src_middleware_middleware",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter",
+      "target": "src_retailers_fragrancenet_adapter_asrecord",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter",
+      "target": "src_retailers_fragrancenet_adapter_cleanfragrancename",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L108",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter",
+      "target": "src_retailers_fragrancenet_adapter_concentrationfromtitle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L212",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter",
+      "target": "src_retailers_fragrancenet_adapter_fetchmaybegzip",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L223",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter",
+      "target": "src_retailers_fragrancenet_adapter_fragrancenetadapter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L221",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter",
+      "target": "src_retailers_fragrancenet_adapter_locsin",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter",
+      "target": "src_retailers_fragrancenet_adapter_nameof",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter",
+      "target": "src_retailers_fragrancenet_adapter_noise",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L183",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter",
+      "target": "src_retailers_fragrancenet_adapter_parsefragrancenethtml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L115",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter",
+      "target": "src_retailers_fragrancenet_adapter_parsenode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L99",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter",
+      "target": "src_retailers_fragrancenet_adapter_sizemlfromtitle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter",
+      "target": "src_retailers_shared_http",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter",
+      "target": "src_retailers_shared_http_fetchtext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter",
+      "target": "src_retailers_shared_json_ld",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter",
+      "target": "src_retailers_shared_json_ld_availabilitytoinstock",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter",
+      "target": "src_retailers_shared_json_ld_extractjsonld",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter",
+      "target": "src_retailers_shared_money",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter",
+      "target": "src_retailers_shared_money_normalizecurrency",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter",
+      "target": "src_retailers_shared_money_oztoml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter",
+      "target": "src_retailers_shared_money_parsepricetocents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter",
+      "target": "src_retailers_shared_size",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter",
+      "target": "src_retailers_shared_size_lookslikesampleortravel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/fragrancenet-parser.test.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "tests_unit_fragrancenet_parser_test",
+      "target": "src_retailers_fragrancenet_adapter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L190",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter_parsefragrancenethtml",
+      "target": "src_retailers_fragrancenet_adapter_asrecord",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L121",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter_parsenode",
+      "target": "src_retailers_fragrancenet_adapter_asrecord",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L124",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter_parsenode",
+      "target": "src_retailers_fragrancenet_adapter_nameof",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L155",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter_parsenode",
+      "target": "src_retailers_fragrancenet_adapter_cleanfragrancename",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/fragrancenet-parser.test.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "tests_unit_fragrancenet_parser_test",
+      "target": "src_retailers_fragrancenet_adapter_cleanfragrancename",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L136",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter_parsenode",
+      "target": "src_retailers_fragrancenet_adapter_sizemlfromtitle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L101",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter_sizemlfromtitle",
+      "target": "src_retailers_shared_money_oztoml"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/fragrancenet-parser.test.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "tests_unit_fragrancenet_parser_test",
+      "target": "src_retailers_fragrancenet_adapter_sizemlfromtitle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L158",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter_parsenode",
+      "target": "src_retailers_fragrancenet_adapter_concentrationfromtitle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L202",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter_parsefragrancenethtml",
+      "target": "src_retailers_fragrancenet_adapter_parsenode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L168",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter_parsenode",
+      "target": "src_retailers_shared_json_ld_availabilitytoinstock",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L165",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter_parsenode",
+      "target": "src_retailers_shared_money_normalizecurrency",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L132",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter_parsenode",
+      "target": "src_retailers_shared_money_parsepricetocents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L135",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter_parsenode",
+      "target": "src_retailers_shared_size_lookslikesampleortravel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L188",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter_parsefragrancenethtml",
+      "target": "src_retailers_shared_json_ld_extractjsonld"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/fragrancenet-parser.test.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "tests_unit_fragrancenet_parser_test",
+      "target": "src_retailers_fragrancenet_adapter_parsefragrancenethtml",
       "confidence_score": 1.0
     },
     {
@@ -16468,6 +17271,26 @@
       "weight": 1.0,
       "source": "tests_unit_alerts_test_candidate",
       "target": "tests_unit_alerts_test_hoursago",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/fragrancenet-parser.test.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "tests_unit_fragrancenet_parser_test",
+      "target": "tests_unit_fragrancenet_parser_test_fixtures",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/fragrancenet-parser.test.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "tests_unit_fragrancenet_parser_test",
+      "target": "tests_unit_fragrancenet_parser_test_load",
       "confidence_score": 1.0
     },
     {
@@ -18315,7 +19138,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/RETAILER_RESEARCH.md",
-      "source_location": "L124",
+      "source_location": "L142",
       "weight": 1.0,
       "source": "docs_retailer_research_retailer_access_research_phase_2",
       "target": "docs_retailer_research_recommendation",
@@ -18325,7 +19148,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/RETAILER_RESEARCH.md",
-      "source_location": "L137",
+      "source_location": "L155",
       "weight": 1.0,
       "source": "docs_retailer_research_retailer_access_research_phase_2",
       "target": "docs_retailer_research_standing_constraints",
@@ -18355,7 +19178,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/RETAILER_RESEARCH.md",
-      "source_location": "L107",
+      "source_location": "L125",
       "weight": 1.0,
       "source": "docs_retailer_research_evidence",
       "target": "docs_retailer_research_fragrancex_gray_market_discounter",
@@ -18365,7 +19188,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/RETAILER_RESEARCH.md",
-      "source_location": "L100",
+      "source_location": "L118",
       "weight": 1.0,
       "source": "docs_retailer_research_evidence",
       "target": "docs_retailer_research_jomashop_gray_market_discounter",
@@ -18385,7 +19208,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/RETAILER_RESEARCH.md",
-      "source_location": "L114",
+      "source_location": "L132",
       "weight": 1.0,
       "source": "docs_retailer_research_evidence",
       "target": "docs_retailer_research_nordstrom_department_store",
@@ -18396,6 +19219,16 @@
       "confidence": "EXTRACTED",
       "source_file": "docs/RETAILER_RESEARCH.md",
       "source_location": "L71",
+      "weight": 1.0,
+      "source": "docs_retailer_research_fragrancenet_gray_market_discounter",
+      "target": "docs_retailer_research_phase_7_adapter_build_2026_07_24_corrections_to_the_corrections",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/RETAILER_RESEARCH.md",
+      "source_location": "L89",
       "weight": 1.0,
       "source": "docs_retailer_research_fragrancenet_gray_market_discounter",
       "target": "docs_retailer_research_phase_7_live_re_inspection_2026_07_23_corrections_to_the_above",
@@ -18513,5 +19346,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "4eb8190881185ebadeddeb3baeaf6b6643ed7ad6"
+  "built_at_commit": "4bcf7b1819ff7001ef82af7fd0aae1b8b1eb34b8"
 }

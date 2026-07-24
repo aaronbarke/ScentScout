@@ -24,7 +24,8 @@ export const retailerSeeds: RetailerInsert[] = [
     baseUrl: "https://www.fragrancenet.com",
     retailerType: "gray_market_discounter",
     affiliateProgram: "rakuten",
-    enabled: false,
+    // Access verified and adapter shipped (Phase 7).
+    enabled: true,
     trustScore: 60,
     defaultShippingPolicy: null,
   },
