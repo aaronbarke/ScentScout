@@ -28,8 +28,12 @@ export async function signIn(_prev: AuthState, formData: FormData): Promise<Auth
   if (!parsed.success) return { error: parsed.error.issues[0].message };
 
   const supabase = await createSupabaseServerClient();
-  const { error } = await supabase.auth.signInWithPassword(parsed.data);
+  const { data, error } = await supabase.auth.signInWithPassword(parsed.data);
   if (error) return { error: error.message };
+
+  // Capture the address on sign-in too, not only when an alert is created, so
+  // an account always has somewhere alerts could be delivered.
+  if (data.user) await ensureProfile(data.user.id, data.user.email);
 
   redirect("/account");
 }
