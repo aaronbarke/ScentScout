@@ -26,6 +26,12 @@ export function SiteHeader() {
               {n.label}
             </Link>
           ))}
+          <Link
+            href="/account"
+            className="rounded-md px-3 py-1.5 font-medium text-indigo-600 hover:bg-indigo-50 dark:text-indigo-400 dark:hover:bg-slate-800"
+          >
+            Account
+          </Link>
         </nav>
       </div>
     </header>

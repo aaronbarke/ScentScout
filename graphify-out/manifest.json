@@ -15,8 +15,8 @@
     "semantic_hash": "9b77af189a21a7a64e4bd7a426f64176"
   },
   "package.json": {
-    "mtime": 1784849224.9213107,
-    "ast_hash": "a693563e3fb9b1bf57feffae0dfff5c8",
+    "mtime": 1784862535.1849375,
+    "ast_hash": "7e43932d2320a3774a7d7ac73e45669e",
     "semantic_hash": ""
   },
   "postcss.config.mjs": {
@@ -225,8 +225,8 @@
     "semantic_hash": ""
   },
   "docs/PROJECT_STATUS.md": {
-    "mtime": 1784849295.7001624,
-    "ast_hash": "b7fb89266c7b76a0ad20c416cfa8ad9d",
+    "mtime": 1784862751.7691236,
+    "ast_hash": "43f2c38d36eb990c9b7d2155b22bc688",
     "semantic_hash": ""
   },
   "docs/RETAILER_ADAPTERS.md": {
@@ -485,8 +485,8 @@
     "semantic_hash": ""
   },
   "src/app/fragrances/[fragranceSlug]/[variantPath]/page.tsx": {
-    "mtime": 1784829599.7613978,
-    "ast_hash": "90c6a2124974959fc2a2813890573f49",
+    "mtime": 1784862655.7465434,
+    "ast_hash": "0f3d21697fb9aac1d5c0a9762ade6bc6",
     "semantic_hash": ""
   },
   "src/app/fragrances/[fragranceSlug]/page.tsx": {
@@ -530,8 +530,8 @@
     "semantic_hash": ""
   },
   "src/components/SiteHeader.tsx": {
-    "mtime": 1784829455.3968601,
-    "ast_hash": "7f6b497fff641d5500d477194875018c",
+    "mtime": 1784862659.2511632,
+    "ast_hash": "77bab26cd8d1c699fd706761539ae273",
     "semantic_hash": ""
   },
   "src/domain/catalog/queries.ts": {
@@ -582,6 +582,46 @@
   "tests/unit/alerts.test.ts": {
     "mtime": 1784849136.8637717,
     "ast_hash": "f578e7d361be27149d861692d6769eb8",
+    "semantic_hash": ""
+  },
+  "src/app/account/page.tsx": {
+    "mtime": 1784862630.038824,
+    "ast_hash": "910a5b2449b0f7660ebb3db6a1dbfd42",
+    "semantic_hash": ""
+  },
+  "src/app/actions.ts": {
+    "mtime": 1784862596.2604501,
+    "ast_hash": "cee953e089bb430dd8ed811722d19f76",
+    "semantic_hash": ""
+  },
+  "src/app/login/page.tsx": {
+    "mtime": 1784862608.505435,
+    "ast_hash": "fd343ad08212e20dc0dfb2d9d4a05e73",
+    "semantic_hash": ""
+  },
+  "src/components/TrackVariant.tsx": {
+    "mtime": 1784862641.0078373,
+    "ast_hash": "6c45ee1d330beac93a9df40010b802f9",
+    "semantic_hash": ""
+  },
+  "src/domain/alerts/watchlists.ts": {
+    "mtime": 1784862577.3488905,
+    "ast_hash": "48866a6f7145b09ddc5ae8966406f6e0",
+    "semantic_hash": ""
+  },
+  "src/lib/supabase/client.ts": {
+    "mtime": 1784862546.9225273,
+    "ast_hash": "8c9a99bf57a6c3937cea4b2fa7bdf21c",
+    "semantic_hash": ""
+  },
+  "src/lib/supabase/server.ts": {
+    "mtime": 1784862543.1418016,
+    "ast_hash": "750bf27a719953eeba97505f5c1c09ba",
+    "semantic_hash": ""
+  },
+  "src/middleware.ts": {
+    "mtime": 1784862555.5916698,
+    "ast_hash": "f1d55b5df52893a7fae6b01d2621d2a6",
     "semantic_hash": ""
   }
 }

@@ -2,7 +2,7 @@
 
 ## Current Milestone
 
-Phase 6 — Alerts engine ✅ CORE COMPLETE (accounts/auth + email delivery pending keys)
+Phase 6 — Accounts & alerts ✅ (email delivery pending RESEND_API_KEY + a verified domain)
 
 ## Completed
 
@@ -44,7 +44,21 @@ Phase 6 — Alerts engine ✅ CORE COMPLETE (accounts/auth + email delivery pend
   - CLI: `npm run retailer -- --url <u> | --discover <n> | --health`.
   - Retailer registry seeded; only access-verified retailers are `enabled`.
 
-- **Phase 6 (core)** — alerts engine: ✅ (accounts/UI/email delivery still pending)
+- **Phase 6** — accounts & alerts: ✅ (delivery worker pending a Resend key)
+  - **Supabase Auth** wired and verified live (publishable key only — the secret key is never
+    used, so row-level security stays the authority). `src/lib/supabase/{server,client}.ts`,
+    `src/middleware.ts` refreshes the session per request and degrades gracefully when auth
+    env vars are absent (the site still works read-only).
+  - `/login` (sign in + create account, Zod-validated, handles the confirm-email state),
+    `/account` (alerts, watchlist, alert history, sign out) — guarded by redirect.
+  - Server actions (`src/app/actions.ts`): watch/unwatch, create alert rule (dollars → integer
+    cents at the boundary), remove rule. Every action re-derives the user server-side and all
+    persistence is scoped by `userId`, so no user can touch another's rows.
+  - `TrackVariant` control on each exact-variant page; signed-out users get a sign-in prompt
+    rather than a control that fails.
+  - `watchlists.ts`: watchlist add (idempotent)/remove/list, alert-rule CRUD, alert history.
+
+- **Phase 6 (engine)** — alerts engine: ✅
   - Pure engine `src/domain/alerts/`: `evaluate.ts` (all firing guards + auditable reasons),
     `dedup.ts` (deterministic, price-sensitive dedup key). No DB imports (barrel excludes run.ts).
   - **Never alerts from stale/uncertain/invalid data**: blocks non-exact matches, rejected/
@@ -120,9 +134,8 @@ Phase 6 — Alerts engine ✅ CORE COMPLETE (accounts/auth + email delivery pend
 
 ## In Progress
 
-- Phase 6 partially delivered: the alert **engine** is done and proven live. Still to do:
-  Supabase Auth wiring, watchlist/alert-rule UI + API routes, and the email delivery worker
-  (needs `RESEND_API_KEY`). Auth config and the Resend key are user-supplied.
+- Phase 6 is functionally complete except **email delivery**, which needs `RESEND_API_KEY` and
+  a verified sending domain (deferred to launch — alerts queue as `pending`, nothing is lost).
 
 ## Next Tasks
 

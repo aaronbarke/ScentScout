@@ -5,6 +5,9 @@ import { getVariantHeader } from "@/domain/catalog/queries";
 import { getVariantOfferBoard } from "@/domain/pricing/offers";
 import { OfferBoard } from "@/components/OfferBoard";
 import { PresentationTag } from "@/components/GuidanceBadge";
+import { TrackVariant } from "@/components/TrackVariant";
+import { getCurrentUser } from "@/lib/supabase/server";
+import { isWatching } from "@/domain/alerts/watchlists";
 import { variantDescriptor, presentationLabel } from "@/lib/format";
 
 export const dynamic = "force-dynamic";
@@ -34,11 +37,14 @@ export default async function VariantPage({ params }: Params) {
   const { fragranceSlug, variantPath } = await params;
   const sku = skuOf(fragranceSlug, variantPath);
 
-  const [header, board] = await Promise.all([
+  const [header, board, user] = await Promise.all([
     getVariantHeader(sku),
     getVariantOfferBoard(sku),
+    getCurrentUser(),
   ]);
   if (!header || !board) notFound();
+
+  const watching = user ? await isWatching(user.id, board.variantId) : false;
 
   return (
     <div className="space-y-6">
@@ -63,6 +69,13 @@ export default async function VariantPage({ params }: Params) {
           <PresentationTag presentation={header.presentation} label={presentationLabel(header.presentation)} />
         </div>
       </header>
+
+      <TrackVariant
+        variantId={board.variantId}
+        path={`/fragrances/${fragranceSlug}/${variantPath}`}
+        signedIn={user !== null}
+        watching={watching}
+      />
 
       <OfferBoard board={board} chartPoints={board.series} />
     </div>
