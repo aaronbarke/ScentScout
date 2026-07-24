@@ -18,9 +18,12 @@ export default async function SearchPage({ searchParams }: Search) {
   const results = q.trim() ? await searchFragrances(q) : [];
 
   return (
-    <div className="space-y-6">
-      <h1 className="font-display text-[2.1rem] leading-tight text-ink">Search</h1>
-      <SearchBox defaultValue={q} />
+    <div className="space-y-10">
+      <header className="space-y-4">
+        <p className="eyebrow">Catalogue search</p>
+        <h1 className="font-display text-[2.75rem] leading-tight text-ink">Search</h1>
+        <SearchBox defaultValue={q} />
+      </header>
 
       {q.trim() === "" ? (
         <p className="text-sm text-muted">

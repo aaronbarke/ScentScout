@@ -44,6 +44,11 @@ Phase 7 in progress — FragranceNet researched; UI redesigned to a warm editori
   - CLI: `npm run retailer -- --url <u> | --discover <n> | --health`.
   - Retailer registry seeded; only access-verified retailers are `enabled`.
 
+- **Layout pass complete** — every page now uses the editorial idiom: fragrance family page
+  (numbered variant rows, tester visually distinct from retail), `/deals` (ranked with numerals),
+  `/restocks`, `/account` (hairline sections, underline controls), `/login` (two-column) and
+  `/search`. No bordered-card lists remain.
+
 - **Layout rework** (follows ADR-012): replaced the single stacked column of bordered cards with
   editorial composition — asymmetric hero on a 12-column grid, a lead-item + index split for
   featured fragrances, rule-separated principle columns, and a typographic house directory.

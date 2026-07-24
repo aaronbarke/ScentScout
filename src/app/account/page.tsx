@@ -9,10 +9,7 @@ import { variantPath } from "@/lib/catalog-slug";
 
 export const dynamic = "force-dynamic";
 
-export const metadata: Metadata = {
-  title: "Your account",
-  robots: { index: false },
-};
+export const metadata: Metadata = { title: "Your account", robots: { index: false } };
 
 const pathFor = (slug: string, concentration: string, sizeMl: number, presentation: string) =>
   `/fragrances/${slug}/${variantPath(
@@ -20,6 +17,15 @@ const pathFor = (slug: string, concentration: string, sizeMl: number, presentati
     sizeMl,
     presentation as Parameters<typeof variantPath>[2],
   )}`;
+
+function SectionHeading({ label, count }: { label: string; count?: number }) {
+  return (
+    <h2 className="border-b border-line pb-3 eyebrow">
+      {label}
+      {count !== undefined ? ` · ${count}` : ""}
+    </h2>
+  );
+}
 
 export default async function AccountPage() {
   const user = await getCurrentUser();
@@ -32,81 +38,93 @@ export default async function AccountPage() {
   ]);
 
   return (
-    <div className="space-y-8">
-      <div className="flex flex-wrap items-center gap-3">
+    <div className="space-y-14">
+      <header className="flex flex-wrap items-end gap-4 border-b border-line pb-8">
         <div>
-          <h1 className="font-display text-[2.1rem] leading-tight text-ink">Your account</h1>
-          <p className="text-sm text-muted">{user.email}</p>
+          <p className="eyebrow">Signed in as</p>
+          <h1 className="mt-3 font-display text-[2.5rem] leading-tight text-ink">{user.email}</h1>
         </div>
         <form action={signOut} className="ml-auto">
-          <button className="rounded-lg border border-line-strong px-3 py-1.5 text-sm hover:bg-raised">
+          <button className="border-b border-line-strong pb-0.5 text-xs uppercase tracking-[0.12em] text-muted transition-colors hover:border-accent hover:text-accent">
             Sign out
           </button>
         </form>
-      </div>
+      </header>
 
       <section>
-        <h2 className="mb-3 font-display text-xl text-ink">Alerts ({rules.length})</h2>
+        <SectionHeading label="Alerts" count={rules.length} />
         {rules.length === 0 ? (
-          <p className="rounded-lg border border-dashed border-line-strong p-4 text-sm text-muted">
+          <p className="py-8 text-sm text-muted">
             No alerts yet. Open any exact variant and set a target delivered price.
           </p>
         ) : (
-          <ul className="divide-y divide-line overflow-hidden rounded-xl border border-line">
+          <ul>
             {rules.map((r) => (
-              <li key={r.id} className="flex flex-wrap items-center gap-3 bg-surface p-4">
+              <li key={r.id} className="flex flex-wrap items-baseline gap-x-5 gap-y-2 border-b border-line py-5">
                 <div className="min-w-0">
+                  <p className="eyebrow">{r.brandName}</p>
                   <Link
                     href={pathFor(r.fragranceSlug, r.concentration, r.sizeMl, r.presentation)}
-                    className="font-medium hover:underline"
+                    className="mt-1 block font-display text-xl text-ink transition-colors hover:text-accent"
                   >
-                    {r.brandName} — {r.fragranceName}
+                    {r.fragranceName}
                   </Link>
-                  <div className="text-xs text-muted">
+                  <p className="mt-1 text-xs text-muted">
                     {variantDescriptor(r.concentration, r.sizeMl, r.presentation)}
-                  </div>
-                  <div className="mt-1 text-xs text-muted">
-                    {r.maximumDeliveredPriceCents === null
-                      ? "Any in-stock offer (restock alert)"
-                      : `Alert at or below ${formatCents(r.maximumDeliveredPriceCents)} delivered`}
-                    {r.lastTriggeredAt && " · already triggered once"}
-                  </div>
+                  </p>
                 </div>
-                <form action={removeRule} className="ml-auto">
-                  <input type="hidden" name="ruleId" value={r.id} />
-                  <button className="rounded-lg border border-line-strong px-3 py-1.5 text-xs hover:bg-raised">
-                    Remove
-                  </button>
-                </form>
+                <div className="ml-auto flex shrink-0 items-baseline gap-6">
+                  <span className="text-right text-xs text-muted">
+                    {r.maximumDeliveredPriceCents === null ? (
+                      "any in-stock offer"
+                    ) : (
+                      <>
+                        at or below{" "}
+                        <span className="font-display text-lg tabular text-ink">
+                          {formatCents(r.maximumDeliveredPriceCents)}
+                        </span>{" "}
+                        delivered
+                      </>
+                    )}
+                    {r.lastTriggeredAt && <span className="block text-faint">already triggered</span>}
+                  </span>
+                  <form action={removeRule}>
+                    <input type="hidden" name="ruleId" value={r.id} />
+                    <button className="border-b border-line-strong pb-0.5 text-[11px] uppercase tracking-[0.12em] text-muted transition-colors hover:border-critical hover:text-critical">
+                      Remove
+                    </button>
+                  </form>
+                </div>
               </li>
             ))}
           </ul>
         )}
-        <p className="mt-2 text-xs text-faint">
-          Alerts only fire on a fresh, in-stock, exactly-matched offer. If a retailer doesn&apos;t
-          publish shipping, we can&apos;t prove a delivered-price target and won&apos;t alert on it.
+        <p className="mt-4 max-w-prose text-xs leading-relaxed text-faint">
+          Alerts fire only on a fresh, in-stock, exactly-matched offer. If a retailer doesn&apos;t
+          publish shipping we cannot prove a delivered-price target, so we won&apos;t alert on it.
         </p>
       </section>
 
       <section>
-        <h2 className="mb-3 font-display text-xl text-ink">Watchlist ({watchlist.length})</h2>
+        <SectionHeading label="Watchlist" count={watchlist.length} />
         {watchlist.length === 0 ? (
-          <p className="rounded-lg border border-dashed border-line-strong p-4 text-sm text-muted">
-            Nothing tracked yet.
-          </p>
+          <p className="py-8 text-sm text-muted">Nothing tracked yet.</p>
         ) : (
-          <ul className="divide-y divide-line overflow-hidden rounded-xl border border-line">
+          <ul>
             {watchlist.map((w) => (
-              <li key={w.productVariantId} className="bg-surface p-4">
+              <li key={w.productVariantId}>
                 <Link
                   href={pathFor(w.fragranceSlug, w.concentration, w.sizeMl, w.presentation)}
-                  className="font-medium hover:underline"
+                  className="group flex flex-wrap items-baseline gap-x-5 gap-y-2 border-b border-line py-4"
                 >
-                  {w.brandName} — {w.fragranceName}
+                  <span className="eyebrow w-36 shrink-0 truncate">{w.brandName}</span>
+                  <span className="font-display text-xl text-ink transition-colors group-hover:text-accent">
+                    {w.fragranceName}
+                  </span>
+                  <span className="ml-auto text-xs text-muted">
+                    {variantDescriptor(w.concentration, w.sizeMl, w.presentation)}
+                  </span>
                 </Link>
-                <div className="text-xs text-muted">
-                  {variantDescriptor(w.concentration, w.sizeMl, w.presentation)}
-                </div>
               </li>
             ))}
           </ul>
@@ -114,17 +132,16 @@ export default async function AccountPage() {
       </section>
 
       <section>
-        <h2 className="mb-3 font-display text-xl text-ink">Alert history</h2>
+        <SectionHeading label="Alert history" />
         {history.length === 0 ? (
-          <p className="text-sm text-muted">No alerts have fired yet.</p>
+          <p className="py-8 text-sm text-muted">No alerts have fired yet.</p>
         ) : (
-          <ul className="divide-y divide-line overflow-hidden rounded-xl border border-line">
+          <ul>
             {history.map((h) => (
-              <li key={h.id} className="flex items-center gap-3 bg-surface p-3 text-sm">
-                <span>
-                  {h.brandName} — {h.fragranceName}
-                </span>
-                <span className="ml-auto text-xs text-faint">
+              <li key={h.id} className="flex items-baseline gap-5 border-b border-line py-4 text-sm">
+                <span className="eyebrow w-36 shrink-0 truncate">{h.brandName}</span>
+                <span className="text-body">{h.fragranceName}</span>
+                <span className="ml-auto text-[11px] uppercase tracking-[0.1em] text-faint">
                   {h.deliveryStatus}
                   {h.sentAt ? ` · ${h.sentAt.toLocaleDateString()}` : ""}
                 </span>

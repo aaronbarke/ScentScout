@@ -25,52 +25,55 @@ export default async function FragrancePage({ params }: Params) {
   if (!fragrance) notFound();
 
   return (
-    <div className="space-y-6">
-      <nav className="text-sm text-faint">
-        <Link href="/fragrances" className="hover:underline">
+    <div className="space-y-12">
+      <nav className="text-xs text-faint">
+        <Link href="/fragrances" className="transition-colors hover:text-accent">
           Fragrances
-        </Link>{" "}
-        / <span className="text-body">{fragrance.name}</span>
+        </Link>
+        <span className="mx-2">/</span>
+        <span className="text-muted">{fragrance.name}</span>
       </nav>
 
-      <header>
-        <div className="eyebrow">
-          {fragrance.brandName}
+      <header className="grid gap-x-12 gap-y-4 border-b border-line pb-10 lg:grid-cols-12">
+        <div className="lg:col-span-7">
+          <p className="eyebrow">{fragrance.brandName}</p>
+          <h1 className="mt-4 font-display text-[3rem] leading-[1.05] text-ink">{fragrance.name}</h1>
         </div>
-        <h1 className="font-display text-[2.6rem] leading-tight text-ink">{fragrance.name}</h1>
-        {fragrance.releaseYear && (
-          <p className="mt-1 text-sm text-muted">Released {fragrance.releaseYear}</p>
-        )}
+        <div className="flex items-end lg:col-span-5">
+          <p className="max-w-sm text-sm leading-relaxed text-muted">
+            {fragrance.releaseYear ? `Released ${fragrance.releaseYear}. ` : ""}
+            Each variant below is compared separately — a tester is never combined with a retail
+            bottle, and different sizes or concentrations are never merged.
+          </p>
+        </div>
       </header>
 
       <section>
-        <h2 className="mb-3 eyebrow">
-          Exact variants ({fragrance.variants.length})
+        <h2 className="border-b border-line pb-3 eyebrow">
+          Exact variants · {fragrance.variants.length}
         </h2>
-        <ul className="divide-y divide-line overflow-hidden rounded-xl border border-line">
-          {fragrance.variants.map((v) => (
+        <ol>
+          {fragrance.variants.map((v, i) => (
             <li key={v.canonicalSku}>
               <Link
                 href={`/fragrances/${fragrance.slug}/${v.variantPath}`}
-                className="flex items-center gap-3 bg-surface p-4 hover:bg-raised"
+                className="group flex flex-wrap items-baseline gap-x-5 gap-y-2 border-b border-line py-5"
               >
-                <div>
-                  <div className="font-medium">
-                    {concentrationLabel(v.concentration)} · {v.sizeMl}ml
-                  </div>
-                  <div className="mt-1">
-                    <PresentationTag presentation={v.presentation} label={presentationLabel(v.presentation)} />
-                  </div>
-                </div>
-                <span className="ml-auto text-sm text-accent">Compare →</span>
+                <span className="font-display text-lg tabular text-faint">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span className="font-display text-2xl text-ink transition-colors group-hover:text-accent">
+                  {concentrationLabel(v.concentration)}
+                </span>
+                <span className="font-display text-2xl tabular text-body">{v.sizeMl}ml</span>
+                <PresentationTag presentation={v.presentation} label={presentationLabel(v.presentation)} />
+                <span className="ml-auto shrink-0 text-xs uppercase tracking-[0.12em] text-accent">
+                  Compare →
+                </span>
               </Link>
             </li>
           ))}
-        </ul>
-        <p className="mt-2 text-xs text-faint">
-          Each variant is compared separately — a tester is never combined with a retail bottle, and
-          different sizes or concentrations are never merged.
-        </p>
+        </ol>
       </section>
     </div>
   );

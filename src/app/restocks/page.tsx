@@ -8,28 +8,35 @@ export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Recent restocks",
-  description: "Fragrance variants recently seen in stock across tracked retailers.",
+  description: "Fragrance variants recently observed in stock across tracked retailers.",
 };
 
 export default async function RestocksPage() {
   const rows = await listRecentRestocks();
 
   return (
-    <div className="space-y-6">
-      <div>
-        <h1 className="font-display text-[2.1rem] leading-tight text-ink">Recent restocks</h1>
-        <p className="mt-1 text-sm text-muted">
-          Variants most recently observed in stock. A parser failure is never treated as
-          out-of-stock, so this reflects genuine availability signals.
-        </p>
-      </div>
+    <div className="space-y-12">
+      <header className="grid gap-x-12 gap-y-4 lg:grid-cols-12">
+        <div className="lg:col-span-7">
+          <p className="eyebrow">Availability</p>
+          <h1 className="mt-4 font-display text-[2.75rem] leading-tight text-ink">
+            Recent restocks
+          </h1>
+        </div>
+        <div className="flex items-end lg:col-span-5">
+          <p className="max-w-sm text-sm leading-relaxed text-muted">
+            Variants most recently observed in stock. A parser failure is never recorded as
+            out-of-stock, so everything here is a genuine availability signal.
+          </p>
+        </div>
+      </header>
 
       {rows.length === 0 ? (
-        <p className="rounded-lg border border-dashed border-line-strong p-6 text-sm text-muted">
+        <p className="border-t border-line py-10 text-sm text-muted">
           No in-stock observations yet.
         </p>
       ) : (
-        <ul className="divide-y divide-line overflow-hidden rounded-xl border border-line">
+        <ul className="border-t border-line">
           {rows.map((r, i) => {
             const path = variantPath(
               r.concentration as Parameters<typeof variantPath>[0],
@@ -40,20 +47,21 @@ export default async function RestocksPage() {
               <li key={`${r.canonicalSku}-${i}`}>
                 <Link
                   href={`/fragrances/${r.fragranceSlug}/${path}`}
-                  className="flex flex-wrap items-center gap-3 bg-surface p-4 hover:bg-raised"
+                  className="group flex flex-wrap items-baseline gap-x-5 gap-y-2 border-b border-line py-5"
                 >
-                  <div className="min-w-0">
-                    <div className="font-medium">
-                      {r.brandName} — {r.fragranceName}
-                    </div>
-                    <div className="text-xs text-muted">
-                      {variantDescriptor(r.concentration, r.sizeMl, r.presentation)}
-                    </div>
-                  </div>
-                  <div className="ml-auto text-right">
-                    <div className="font-medium tabular">{formatCents(r.listedPriceCents)}</div>
-                    <div className="text-[11px] text-faint">{freshnessLabel(r.observedAt)}</div>
-                  </div>
+                  <span className="eyebrow w-36 shrink-0 truncate">{r.brandName}</span>
+                  <span className="font-display text-xl text-ink transition-colors group-hover:text-accent">
+                    {r.fragranceName}
+                  </span>
+                  <span className="text-xs text-muted">
+                    {variantDescriptor(r.concentration, r.sizeMl, r.presentation)}
+                  </span>
+                  <span className="ml-auto flex shrink-0 items-baseline gap-6">
+                    <span className="text-[11px] text-faint">{freshnessLabel(r.observedAt)}</span>
+                    <span className="font-display text-xl tabular text-ink">
+                      {formatCents(r.listedPriceCents)}
+                    </span>
+                  </span>
                 </Link>
               </li>
             );
