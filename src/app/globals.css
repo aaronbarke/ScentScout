@@ -103,9 +103,14 @@ body {
   color: var(--muted);
 }
 
-/* Tabular figures so prices align in columns and don't jitter. */
+/**
+ * Data figures. The display serif defaults to old-style numerals, where "19"
+ * reads as "I9" and "52" looks like "5²" — charming in prose, unreadable in a
+ * price. Force lining + tabular figures wherever numbers carry meaning.
+ */
 .tabular {
-  font-variant-numeric: tabular-nums;
+  font-variant-numeric: lining-nums tabular-nums;
+  font-feature-settings: "lnum" 1, "tnum" 1;
 }
 
 ::selection {

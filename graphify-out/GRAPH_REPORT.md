@@ -1,16 +1,16 @@
 # Graph Report - ScentScout  (2026-07-23)
 
 ## Corpus Check
-- 124 files · ~57,593 words
+- 124 files · ~58,106 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 655 nodes · 1130 edges · 48 communities (34 shown, 14 thin omitted)
+- 655 nodes · 1134 edges · 46 communities (32 shown, 14 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 7 edges (avg confidence: 0.67)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `496d44a5`
+- Built from commit: `92b8a866`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -57,9 +57,7 @@
 - watchlists.ts
 - FragranceCard.tsx
 - Evidence
-- env.ts
 - middleware.ts
-- http.ts
 
 ## God Nodes (most connected - your core abstractions)
 1. `scripts` - 18 edges
@@ -69,9 +67,9 @@
 5. `What You Must Do When Invoked` - 12 edges
 6. `productVariants` - 11 edges
 7. `formatCents()` - 11 edges
-8. `ScentScout — Roadmap` - 11 edges
-9. `Db` - 10 edges
-10. `getVariantOfferBoard()` - 10 edges
+8. `presentationLabel()` - 11 edges
+9. `ScentScout — Roadmap` - 11 edges
+10. `Db` - 10 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `DealsPage()` --indirect_call--> `v()`  [INFERRED]
@@ -88,7 +86,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (48 total, 14 thin omitted)
+## Communities (46 total, 14 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.10
@@ -99,8 +97,8 @@ Cohesion: 0.04
 Nodes (45): dependencies, cheerio, dotenv, drizzle-orm, next, postgres, react, react-dom (+37 more)
 
 ### Community 2 - "Community 2"
-Cohesion: 0.07
-Nodes (43): main(), seed(), CURRENT_YEAR, errors, validate(), Db, env, alertEvents (+35 more)
+Cohesion: 0.06
+Nodes (49): url, main(), seed(), CURRENT_YEAR, errors, validate(), Db, env (+41 more)
 
 ### Community 3 - "Community 3"
 Cohesion: 0.29
@@ -111,8 +109,8 @@ Cohesion: 0.11
 Nodes (32): SeedVariant, BRAND_ALIASES, CONCENTRATION_ALIASES, PRESENTATION_KEYWORDS, deriveAttributes(), Derived, evaluateCandidate(), matchProduct() (+24 more)
 
 ### Community 5 - "Community 5"
-Cohesion: 0.07
-Nodes (52): DealsPage(), metadata, FragrancePage(), generateMetadata(), Params, generateMetadata(), Params, skuOf() (+44 more)
+Cohesion: 0.06
+Nodes (57): DealsPage(), metadata, FragrancePage(), generateMetadata(), Params, generateMetadata(), Params, skuOf() (+49 more)
 
 ### Community 6 - "Community 6"
 Cohesion: 0.08
@@ -191,28 +189,20 @@ Cohesion: 0.10
 Nodes (29): ADR-0009, fmt(), main(), couponDiscountCents(), CouponLike, ADR-0003, buyNowGuidance(), Guidance (+21 more)
 
 ### Community 40 - "adapter.ts"
-Cohesion: 0.06
-Nodes (44): ADR-0007, ADAPTERS, main(), parseArgs(), retailerHealth, priceObservations, DeliveredPriceInput, estimateDeliveredPriceCents() (+36 more)
+Cohesion: 0.07
+Nodes (40): ADR-0007, DiscoveryInput, ProductFetchInput, RetailerAdapter, centsSchema, ParsedRetailerProduct, parsedRetailerProductSchema, RawRetailerListing (+32 more)
 
 ### Community 41 - "watchlists.ts"
 Cohesion: 0.13
 Nodes (27): AccountPage(), metadata, pathFor(), AuthState, createRule(), credentialsSchema, removeRule(), ruleSchema (+19 more)
 
 ### Community 42 - "FragranceCard.tsx"
-Cohesion: 0.29
-Nodes (5): displaySerif, geistMono, geistSans, metadata, SiteHeader()
+Cohesion: 0.18
+Nodes (13): ADAPTERS, main(), parseArgs(), retailerHealth, priceObservations, DeliveredPriceInput, estimateDeliveredPriceCents(), hasDeliveredPrice() (+5 more)
 
 ### Community 43 - "Evidence"
 Cohesion: 0.17
 Nodes (11): Evidence, FragranceNet — gray-market discounter, FragranceX — gray-market discounter, Jomashop — gray-market discounter, Luckyscent — authorized boutique (Shopify), Nordstrom — department store, Phase 7 live re-inspection (2026-07-23) — corrections to the above, Recommendation (+3 more)
-
-### Community 44 - "env.ts"
-Cohesion: 0.36
-Nodes (6): url, DbEnv, dbEnvSchema, isUsablePostgresUrl(), loadDbEnv(), resolveMigrationUrl()
-
-### Community 47 - "http.ts"
-Cohesion: 0.24
-Nodes (9): backoffMs(), FetchOptions, FetchResult, fetchText(), isRetryable(), lastRequestAt, respectRateLimit(), RetrievalError (+1 more)
 
 ## Knowledge Gaps
 - **285 isolated node(s):** `$schema`, `allow`, `deny`, `PreToolUse`, `url` (+280 more)
@@ -222,12 +212,12 @@ Nodes (9): backoffMs(), FetchOptions, FetchResult, fetchText(), isRetryable(), l
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Db` connect `Community 2` to `Community 5`, `run.ts`, `offers.ts`, `adapter.ts`, `watchlists.ts`?**
+- **Why does `Db` connect `Community 2` to `Community 5`, `run.ts`, `offers.ts`, `watchlists.ts`, `FragranceCard.tsx`?**
   _High betweenness centrality (0.015) - this node is a cross-community bridge._
-- **Why does `retailerProducts` connect `Community 2` to `adapter.ts`, `Community 5`, `run.ts`, `offers.ts`?**
+- **Why does `retailerProducts` connect `Community 2` to `Community 5`, `FragranceCard.tsx`, `run.ts`, `offers.ts`?**
   _High betweenness centrality (0.012) - this node is a cross-community bridge._
 - **Why does `productVariants` connect `Community 2` to `watchlists.ts`, `Community 5`, `run.ts`, `offers.ts`?**
-  _High betweenness centrality (0.012) - this node is a cross-community bridge._
+  _High betweenness centrality (0.011) - this node is a cross-community bridge._
 - **What connects `$schema`, `allow`, `deny` to the rest of the system?**
   _285 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
@@ -235,4 +225,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.043478260869565216 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
-  _Cohesion score 0.06540825285338016 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.056049213943950786 - nodes in this community are weakly interconnected._

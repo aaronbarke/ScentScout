@@ -3,28 +3,37 @@ import type { FragranceSummary } from "@/domain/catalog/queries";
 import { PresentationTag } from "./GuidanceBadge";
 import { presentationLabel } from "@/lib/format";
 
-export function FragranceCard({ fragrance }: { fragrance: FragranceSummary }) {
+/**
+ * An index row rather than a boxed card — a hairline directory reads as a
+ * fragrance catalogue, where a grid of bordered boxes reads as a dashboard.
+ */
+export function FragranceCard({
+  fragrance,
+  showBrand = true,
+}: {
+  fragrance: FragranceSummary;
+  showBrand?: boolean;
+}) {
   const presentations = [...new Set(fragrance.variants.map((v) => v.presentation))];
   const sizes = [...new Set(fragrance.variants.map((v) => v.sizeMl))].sort((a, b) => a - b);
 
   return (
     <Link
       href={`/fragrances/${fragrance.slug}`}
-      className="group flex flex-col rounded-xl border border-line bg-surface p-4 transition hover:border-accent hover:shadow-sm"
+      className="group flex flex-wrap items-baseline gap-x-5 gap-y-2 border-b border-line py-5"
     >
-      <div className="eyebrow">{fragrance.brandName}</div>
-      <div className="mt-1 font-display text-xl text-ink transition-colors group-hover:text-accent">
+      {showBrand && <span className="eyebrow w-40 shrink-0 truncate">{fragrance.brandName}</span>}
+      <span className="font-display text-2xl text-ink transition-colors group-hover:text-accent">
         {fragrance.name}
-      </div>
-      <div className="mt-3 flex flex-wrap gap-1.5">
+      </span>
+      <span className="flex flex-wrap gap-1.5">
         {presentations.map((p) => (
           <PresentationTag key={p} presentation={p} label={presentationLabel(p)} />
         ))}
-      </div>
-      <div className="mt-2 text-xs text-muted">
-        {fragrance.variants.length} variant{fragrance.variants.length === 1 ? "" : "s"} ·{" "}
+      </span>
+      <span className="ml-auto shrink-0 text-xs tabular text-faint">
         {sizes.map((s) => `${s}ml`).join(" / ")}
-      </div>
+      </span>
     </Link>
   );
 }

@@ -70,14 +70,18 @@ export default async function VariantPage({ params }: Params) {
         </div>
       </header>
 
-      <TrackVariant
-        variantId={board.variantId}
-        path={`/fragrances/${fragranceSlug}/${variantPath}`}
-        signedIn={user !== null}
-        watching={watching}
+      <OfferBoard
+        board={board}
+        chartPoints={board.series}
+        rail={
+          <TrackVariant
+            variantId={board.variantId}
+            path={`/fragrances/${fragranceSlug}/${variantPath}`}
+            signedIn={user !== null}
+            watching={watching}
+          />
+        }
       />
-
-      <OfferBoard board={board} chartPoints={board.series} />
     </div>
   );
 }

@@ -9,7 +9,7 @@ const NAV = [
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-10 border-b border-line bg-canvas/90 backdrop-blur">
-      <div className="mx-auto flex max-w-5xl items-baseline gap-6 px-6 py-4">
+      <div className="mx-auto flex max-w-6xl items-baseline gap-6 px-6 py-5">
         <Link href="/" className="font-display text-2xl leading-none tracking-tight text-ink">
           Scent<span className="italic text-accent">Scout</span>
         </Link>

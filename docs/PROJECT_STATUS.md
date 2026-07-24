@@ -44,6 +44,14 @@ Phase 7 in progress — FragranceNet researched; UI redesigned to a warm editori
   - CLI: `npm run retailer -- --url <u> | --discover <n> | --health`.
   - Retailer registry seeded; only access-verified retailers are `enabled`.
 
+- **Layout rework** (follows ADR-012): replaced the single stacked column of bordered cards with
+  editorial composition — asymmetric hero on a 12-column grid, a lead-item + index split for
+  featured fragrances, rule-separated principle columns, and a typographic house directory.
+  `/fragrances` is now a catalogue grouped by house with hairline rows instead of a card grid.
+  The exact-variant page is two-column: ranked offers (numbered) and history on the left, a
+  **sticky rail** on the right carrying the verdict, the metric table and the track/alert control.
+  Fixed old-style numerals rendering "19" as "I9" — data figures now force lining + tabular.
+
 - **Visual identity rework** (ADR-012): replaced default indigo-on-slate with a warm bone/ink
   palette, bronze accent and Cormorant Garamond display serif. All colour moved to semantic
   tokens (`bg-surface`, `text-muted`, `border-line`) so components carry **no `dark:` variants** —
