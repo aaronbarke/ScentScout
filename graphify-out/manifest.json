@@ -205,8 +205,8 @@
     "semantic_hash": ""
   },
   "docs/DECISIONS.md": {
-    "mtime": 1784926743.2813947,
-    "ast_hash": "e9ee2d704c5d74366fb0e4f468c67145",
+    "mtime": 1784927044.3097908,
+    "ast_hash": "15bc874633baf5299cf60e5832f54e43",
     "semantic_hash": ""
   },
   "docs/MATCHING_ENGINE.md": {
@@ -225,8 +225,8 @@
     "semantic_hash": ""
   },
   "docs/PROJECT_STATUS.md": {
-    "mtime": 1784926743.297849,
-    "ast_hash": "9bb20da4020975c0a653e6ed5a6a6dfd",
+    "mtime": 1784927044.3101313,
+    "ast_hash": "4b9df1ab74fb467137cf701549a35a57",
     "semantic_hash": ""
   },
   "docs/RETAILER_ADAPTERS.md": {
@@ -365,8 +365,8 @@
     "semantic_hash": ""
   },
   "docs/RETAILER_RESEARCH.md": {
-    "mtime": 1784908054.0880964,
-    "ast_hash": "b94b756fc208848a5efac3225b909264",
+    "mtime": 1784927044.30894,
+    "ast_hash": "9b36549aa3b4c9589557a76ca8443381",
     "semantic_hash": ""
   },
   "tests/fixtures/retailers/luckyscent/gris-charnel.html": {

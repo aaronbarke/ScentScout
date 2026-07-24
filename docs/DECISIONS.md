@@ -466,3 +466,42 @@ Consequences:
 account (auth supplies the email). Replacing this with RBAC later means changing `getAdminUser`
 only. The predicate is pure and unit-tested, including the substring case
 ("me@example.com.evil.com" must not pass).
+
+
+---
+
+## ADR-015: The third retailer waits for an affiliate feed
+
+Status: Accepted
+
+Date: 2026-07-24
+
+Decision:
+No third retailer adapter is built from page scraping. FragranceX and Jomashop are both deferred
+until a CJ affiliate feed is approved, and the retailer registry keeps them `enabled: false`.
+
+Reason:
+Both were probed and both are *permitted* to crawl — the blocker is data quality. FragranceX's
+JSON-LD offers carry prices with **no size, sku or name**, so a price cannot be attributed to an
+exact variant; ingesting it would attach prices to products we cannot prove they belong to, which
+is precisely the silent corruption the matching rules exist to prevent. Jomashop renders its
+listings client-side, and using Playwright merely to enumerate a catalogue is not the "static
+retrieval is insufficient" case our retrieval priority reserves it for.
+
+The feed solves the actual problem rather than working around it: FragranceX's CJ feed carries
+UPC/MPN and explicit sizes, which is both a stronger matching signal than anything we parse today
+and the missing attribution the page lacks.
+
+Alternatives:
+(a) Ingest FragranceX offers with `sizeMl: null` — rejected; every such listing would be
+unmatchable, so it would add rows and no comparisons. (b) Infer size by pairing the offer prices
+with the sizes mentioned in prose — rejected; ordering is an assumption, and a wrong pairing shows
+a user the wrong price for a bottle. (c) Drive Jomashop with Playwright — rejected per retrieval
+priority. (d) Pick a different fourth retailer instead — Nordstrom remains last by ADR-006
+(most restrictive robots, likely client-rendered).
+
+Consequences:
+Multi-retailer coverage stays at two (Luckyscent, FragranceNet) until the CJ application is
+approved — a business step outside the codebase. Worth noting for when it lands: FragranceX
+publishes **real shipping** ($6.95, free over $49, 2–6 days), so it would be the first source
+capable of producing a genuine delivered total rather than "plus unknown shipping".

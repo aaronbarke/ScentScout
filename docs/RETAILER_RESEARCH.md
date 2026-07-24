@@ -160,3 +160,57 @@ and `chris-adams-reflection` (unrelated brands that share a word with a catalog 
 - Never bypass CAPTCHAs, auth, access controls, or anti-bot measures. Luckyscent's disabled
   `.json` endpoint is treated as "not available", not as something to route around.
 - Re-check `robots.txt` before enabling any new retailer, and record the verdict here.
+
+
+---
+
+## Third retailer — FragranceX and Jomashop probed (2026-07-24)
+
+Both were checked before any adapter work, per ADR-006. **Access is permitted for both** — neither
+has a blanket `Disallow: /`, neither publishes a bot-specific block, and neither disallows product
+paths. Nothing here required bypassing any protection. The blocker in both cases is data quality,
+not permission.
+
+### FragranceX — permitted, but the page data cannot be attributed to a variant
+
+- `robots.txt`: 7 wildcard disallow rules, all search/widget/admin paths (`/*searchSortExpression`,
+  `/widgets/`, `/blog/wp-admin/`). Product pages allowed. Sitemap index published.
+- Each product page carries **two** `Product` blocks sharing one `@id`: the first holds
+  `additionalProperty` (clean `Brand`, `Fragrance Name`, `Volume`, `Gender`), the second holds
+  `productID`, `brand.name` and `offers`.
+- **Genuinely valuable**: it is the first retailer we have found that *publishes shipping* —
+  `OfferShippingDetails` gives a **$6.95** flat rate, **free over $49**, plus handling (0–1 days)
+  and transit (2–5 days). Every retailer so far reports unknown shipping, so this would be the
+  first source able to produce a real delivered total and a real delivery-speed signal.
+- **The blocker**: the `offers` array carries **no size, no sku and no name** — just two bare
+  prices ($8.99, $19.99) with identical URLs. There is no deterministic way to attribute a price
+  to an exact variant, and exact-variant attribution is the whole product. No size/price pairing
+  exists elsewhere in the static HTML either: no `<select>`, no `data-size`, no embedded product
+  JSON.
+- Additionally suggestive: both offer prices appeared in page text inside
+  `<div class="slider-price"><span>As low as</span>…` blocks, i.e. a related-products carousel,
+  which would mean the prices may not belong to this product at all. A follow-up regex check for
+  this was **inconclusive** (it matched nothing on a later fetch, and the page varies between
+  requests), so this is recorded as a suspicion rather than a finding. It does not change the
+  conclusion: the missing size alone blocks matching.
+
+### Jomashop — permitted, but client-rendered
+
+- `robots.txt`: 28 wildcard disallow rules covering cart/account/checkout/search infrastructure.
+  Product paths allowed. Sitemap published.
+- Category pages (e.g. `creed-fragrances.html`) return ~81 KB of HTML containing **zero product
+  links** — the listing is rendered client-side. Sitemap children expose category URLs, not
+  product URLs.
+- Reaching products would require Playwright, which our retrieval priority reserves as a last
+  resort. Rendering a catalogue purely to enumerate products is not a justified use of it.
+
+### Conclusion
+
+Neither can be built responsibly from static HTTP today. This **confirms ADR-006's ordering**:
+the third retailer should come from an **affiliate feed**, not page scraping. FragranceX's CJ feed
+is documented as carrying **UPC and MPN** — the strongest matching signal available to us, and it
+would also carry sizes explicitly, solving exactly the gap found above. Jomashop also distributes
+via CJ.
+
+**This is now blocked on a business step, not an engineering one**: the CJ affiliate application
+has to be submitted and approved before the third retailer can proceed.

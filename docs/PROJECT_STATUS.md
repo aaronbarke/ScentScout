@@ -169,6 +169,14 @@ Phase 7 in progress — FragranceNet adapter shipped, flanker equivalence (ADR-0
 - Phase 6 is functionally complete except **email delivery**, which needs `RESEND_API_KEY` and
   a verified sending domain (deferred to launch — alerts queue as `pending`, nothing is lost).
 
+## Blocked on the operator
+
+- **`ADMIN_EMAILS`** must be set in `.env` (plus an account created at `/login`) before the
+  review queue at `/admin/reviews` can be opened and the queued matches approved. Until then no
+  variant gains a second retailer's offer, so comparison pages stay single-offer.
+- **CJ affiliate application** — the third retailer is blocked on this, not on engineering
+  (ADR-015).
+
 ## Next Tasks
 
 1. **Finish Phase 6**: Supabase Auth (enable Email provider in the dashboard), watchlist +

@@ -640,7 +640,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "scripts_match_listings",
-      "community": 2,
+      "community": 42,
       "norm_label": "match-listings.ts"
     },
     {
@@ -650,7 +650,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "scripts_match_listings_main",
-      "community": 2,
+      "community": 42,
       "norm_label": "main()"
     },
     {
@@ -660,7 +660,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "scripts_run_alerts",
-      "community": 37,
+      "community": 2,
       "norm_label": "run-alerts.ts"
     },
     {
@@ -670,7 +670,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "scripts_run_alerts_main",
-      "community": 37,
+      "community": 2,
       "norm_label": "main()"
     },
     {
@@ -680,7 +680,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "scripts_run_retailer",
-      "community": 40,
+      "community": 37,
       "norm_label": "run-retailer.ts"
     },
     {
@@ -690,7 +690,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "scripts_run_retailer_adapters",
-      "community": 40,
+      "community": 37,
       "norm_label": "adapters"
     },
     {
@@ -700,7 +700,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "scripts_run_retailer_parseargs",
-      "community": 40,
+      "community": 37,
       "norm_label": "parseargs()"
     },
     {
@@ -710,7 +710,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "scripts_run_retailer_main",
-      "community": 40,
+      "community": 37,
       "norm_label": "main()"
     },
     {
@@ -730,7 +730,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "scripts_seed_catalog_seed",
-      "community": 2,
+      "community": 4,
       "norm_label": "seed()"
     },
     {
@@ -740,7 +740,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "scripts_show_prices",
-      "community": 5,
+      "community": 39,
       "norm_label": "show-prices.ts"
     },
     {
@@ -750,7 +750,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "scripts_show_prices_fmt",
-      "community": 5,
+      "community": 39,
       "norm_label": "fmt()"
     },
     {
@@ -760,7 +760,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "scripts_show_prices_main",
-      "community": 5,
+      "community": 39,
       "norm_label": "main()"
     },
     {
@@ -770,7 +770,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "scripts_validate_catalog",
-      "community": 2,
+      "community": 4,
       "norm_label": "validate-catalog.ts"
     },
     {
@@ -780,7 +780,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "scripts_validate_catalog_current_year",
-      "community": 2,
+      "community": 4,
       "norm_label": "current_year"
     },
     {
@@ -790,7 +790,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "scripts_validate_catalog_validate",
-      "community": 2,
+      "community": 4,
       "norm_label": "validate()"
     },
     {
@@ -800,7 +800,7 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "scripts_validate_catalog_errors",
-      "community": 2,
+      "community": 4,
       "norm_label": "errors"
     },
     {
@@ -1560,7 +1560,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_db_client",
-      "community": 2,
+      "community": 42,
       "norm_label": "client.ts"
     },
     {
@@ -1570,7 +1570,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "src_db_client_env",
-      "community": 2,
+      "community": 42,
       "norm_label": "env"
     },
     {
@@ -1580,7 +1580,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_db_client_queryclient",
-      "community": 2,
+      "community": 42,
       "norm_label": "queryclient"
     },
     {
@@ -1590,7 +1590,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "src_db_client_db",
-      "community": 2,
+      "community": 42,
       "norm_label": "db"
     },
     {
@@ -1640,7 +1640,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "src_db_schema_alerts_alertrules",
-      "community": 37,
+      "community": 2,
       "norm_label": "alertrules"
     },
     {
@@ -1650,7 +1650,7 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "src_db_schema_alerts_alertevents",
-      "community": 37,
+      "community": 2,
       "norm_label": "alertevents"
     },
     {
@@ -1860,7 +1860,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "src_db_schema_ops_retailerhealth",
-      "community": 2,
+      "community": 37,
       "norm_label": "retailerhealth"
     },
     {
@@ -1870,7 +1870,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "src_db_schema_ops_matchreviews",
-      "community": 2,
+      "community": 42,
       "norm_label": "matchreviews"
     },
     {
@@ -2020,7 +2020,7 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "src_db_seed_catalog_catalog",
-      "community": 2,
+      "community": 4,
       "norm_label": "catalog"
     },
     {
@@ -2060,7 +2060,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_domain_alerts_dedup",
-      "community": 37,
+      "community": 2,
       "norm_label": "dedup.ts"
     },
     {
@@ -2070,7 +2070,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "src_domain_alerts_dedup_builddeduplicationkey",
-      "community": 37,
+      "community": 2,
       "norm_label": "builddeduplicationkey()"
     },
     {
@@ -2080,7 +2080,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "src_domain_alerts_dedup_dedupekeys",
-      "community": 37,
+      "community": 2,
       "norm_label": "dedupekeys()"
     },
     {
@@ -2090,7 +2090,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_domain_alerts_evaluate",
-      "community": 37,
+      "community": 2,
       "norm_label": "evaluate.ts"
     },
     {
@@ -2100,7 +2100,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_domain_alerts_evaluate_presentation",
-      "community": 37,
+      "community": 2,
       "norm_label": "presentation"
     },
     {
@@ -2110,7 +2110,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_domain_alerts_evaluate_matchstatus",
-      "community": 37,
+      "community": 2,
       "norm_label": "matchstatus"
     },
     {
@@ -2120,7 +2120,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "src_domain_alerts_evaluate_alertruleinput",
-      "community": 37,
+      "community": 2,
       "norm_label": "alertruleinput"
     },
     {
@@ -2130,7 +2130,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "src_domain_alerts_evaluate_alertcandidate",
-      "community": 37,
+      "community": 2,
       "norm_label": "alertcandidate"
     },
     {
@@ -2140,7 +2140,7 @@
       "source_location": "L53",
       "_origin": "ast",
       "id": "src_domain_alerts_evaluate_alertdecision",
-      "community": 37,
+      "community": 2,
       "norm_label": "alertdecision"
     },
     {
@@ -2150,7 +2150,7 @@
       "source_location": "L59",
       "_origin": "ast",
       "id": "src_domain_alerts_evaluate_hoursbetween",
-      "community": 37,
+      "community": 2,
       "norm_label": "hoursbetween()"
     },
     {
@@ -2160,7 +2160,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "src_domain_alerts_evaluate_evaluatealert",
-      "community": 37,
+      "community": 2,
       "norm_label": "evaluatealert()"
     },
     {
@@ -2170,7 +2170,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_domain_alerts_index",
-      "community": 37,
+      "community": 2,
       "norm_label": "index.ts"
     },
     {
@@ -2180,7 +2180,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_domain_alerts_run",
-      "community": 37,
+      "community": 2,
       "norm_label": "run.ts"
     },
     {
@@ -2190,7 +2190,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_domain_alerts_run_alertrunsummary",
-      "community": 37,
+      "community": 2,
       "norm_label": "alertrunsummary"
     },
     {
@@ -2200,7 +2200,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "src_domain_alerts_run_pendingalert",
-      "community": 37,
+      "community": 2,
       "norm_label": "pendingalert"
     },
     {
@@ -2210,7 +2210,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "src_domain_alerts_run_runalerts",
-      "community": 37,
+      "community": 2,
       "norm_label": "runalerts()"
     },
     {
@@ -2220,7 +2220,7 @@
       "source_location": "L176",
       "_origin": "ast",
       "id": "src_domain_alerts_run_listpendingalerts",
-      "community": 37,
+      "community": 2,
       "norm_label": "listpendingalerts()"
     },
     {
@@ -2230,7 +2230,7 @@
       "source_location": "L203",
       "_origin": "ast",
       "id": "src_domain_alerts_run_markalertdelivered",
-      "community": 37,
+      "community": 2,
       "norm_label": "markalertdelivered()"
     },
     {
@@ -2360,7 +2360,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_domain_catalog_queries",
-      "community": 2,
+      "community": 5,
       "norm_label": "queries.ts"
     },
     {
@@ -2370,7 +2370,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_domain_catalog_queries_variantsummary",
-      "community": 2,
+      "community": 5,
       "norm_label": "variantsummary"
     },
     {
@@ -2390,7 +2390,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "src_domain_catalog_queries_tovariantsummary",
-      "community": 2,
+      "community": 5,
       "norm_label": "tovariantsummary()"
     },
     {
@@ -2400,7 +2400,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "src_domain_catalog_queries_variant_columns",
-      "community": 2,
+      "community": 5,
       "norm_label": "variant_columns"
     },
     {
@@ -2410,7 +2410,7 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "src_domain_catalog_queries_groupintofragrances",
-      "community": 2,
+      "community": 5,
       "norm_label": "groupintofragrances()"
     },
     {
@@ -2460,7 +2460,7 @@
       "source_location": "L162",
       "_origin": "ast",
       "id": "src_domain_catalog_queries_catalogstats",
-      "community": 2,
+      "community": 5,
       "norm_label": "catalogstats"
     },
     {
@@ -2540,7 +2540,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_domain_matching_candidates",
-      "community": 2,
+      "community": 42,
       "norm_label": "candidates.ts"
     },
     {
@@ -2550,7 +2550,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "src_domain_matching_candidates_loadcandidates",
-      "community": 2,
+      "community": 42,
       "norm_label": "loadcandidates()"
     },
     {
@@ -2640,7 +2640,7 @@
       "source_location": "L252",
       "_origin": "ast",
       "id": "src_domain_matching_match_matchproduct",
-      "community": 4,
+      "community": 42,
       "norm_label": "matchproduct()"
     },
     {
@@ -2740,7 +2740,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_domain_matching_review",
-      "community": 2,
+      "community": 42,
       "norm_label": "review.ts"
     },
     {
@@ -2750,7 +2750,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "src_domain_matching_review_hashumandecision",
-      "community": 2,
+      "community": 42,
       "norm_label": "hashumandecision()"
     },
     {
@@ -2760,7 +2760,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "src_domain_matching_review_applydecision",
-      "community": 2,
+      "community": 42,
       "norm_label": "applydecision()"
     },
     {
@@ -2770,7 +2770,7 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "src_domain_matching_review_pendingreview",
-      "community": 2,
+      "community": 42,
       "norm_label": "pendingreview"
     },
     {
@@ -2810,7 +2810,7 @@
       "source_location": "L186",
       "_origin": "ast",
       "id": "src_domain_matching_review_listunmatched",
-      "community": 2,
+      "community": 42,
       "norm_label": "listunmatched()"
     },
     {
@@ -2820,7 +2820,7 @@
       "source_location": "L200",
       "_origin": "ast",
       "id": "src_domain_matching_review_siblingvariant",
-      "community": 2,
+      "community": 42,
       "norm_label": "siblingvariant"
     },
     {
@@ -2890,7 +2890,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "src_domain_matching_types_matchdecision",
-      "community": 2,
+      "community": 4,
       "norm_label": "matchdecision"
     },
     {
@@ -2920,7 +2920,7 @@
       "source_location": "L70",
       "_origin": "ast",
       "id": "src_domain_matching_types_ishumandecision",
-      "community": 2,
+      "community": 42,
       "norm_label": "ishumandecision()"
     },
     {
@@ -2980,7 +2980,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_domain_pricing_delivered_price",
-      "community": 39,
+      "community": 37,
       "norm_label": "delivered-price.ts"
     },
     {
@@ -2990,7 +2990,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_domain_pricing_delivered_price_deliveredpriceinput",
-      "community": 39,
+      "community": 37,
       "norm_label": "deliveredpriceinput"
     },
     {
@@ -3000,7 +3000,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "src_domain_pricing_delivered_price_estimatedeliveredpricecents",
-      "community": 39,
+      "community": 37,
       "norm_label": "estimatedeliveredpricecents()"
     },
     {
@@ -3010,7 +3010,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "src_domain_pricing_delivered_price_hasdeliveredprice",
-      "community": 39,
+      "community": 37,
       "norm_label": "hasdeliveredprice()"
     },
     {
@@ -3020,7 +3020,7 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "src_domain_pricing_delivered_price_ts_docref_adr_0003",
-      "community": 39,
+      "community": 37,
       "norm_label": "adr-0003"
     },
     {
@@ -3190,7 +3190,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_domain_pricing_offers",
-      "community": 2,
+      "community": 39,
       "norm_label": "offers.ts"
     },
     {
@@ -3210,7 +3210,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "src_domain_pricing_offers_getvariantofferboard",
-      "community": 5,
+      "community": 39,
       "norm_label": "getvariantofferboard()"
     },
     {
@@ -3390,7 +3390,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_domain_retailers_ingest",
-      "community": 2,
+      "community": 37,
       "norm_label": "ingest.ts"
     },
     {
@@ -3400,7 +3400,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_domain_retailers_ingest_ingestsummary",
-      "community": 2,
+      "community": 37,
       "norm_label": "ingestsummary"
     },
     {
@@ -3410,7 +3410,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "src_domain_retailers_ingest_persistparsed",
-      "community": 39,
+      "community": 37,
       "norm_label": "persistparsed()"
     },
     {
@@ -3420,7 +3420,7 @@
       "source_location": "L121",
       "_origin": "ast",
       "id": "src_domain_retailers_ingest_updatehealth",
-      "community": 40,
+      "community": 37,
       "norm_label": "updatehealth()"
     },
     {
@@ -3430,7 +3430,7 @@
       "source_location": "L165",
       "_origin": "ast",
       "id": "src_domain_retailers_ingest_ingesturls",
-      "community": 40,
+      "community": 37,
       "norm_label": "ingesturls()"
     },
     {
@@ -3440,7 +3440,7 @@
       "source_location": "L248",
       "_origin": "ast",
       "id": "src_domain_retailers_ingest_findlisting",
-      "community": 2,
+      "community": 37,
       "norm_label": "findlisting()"
     },
     {
@@ -3550,7 +3550,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_email_alerts",
-      "community": 37,
+      "community": 2,
       "norm_label": "alerts.ts"
     },
     {
@@ -3560,7 +3560,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_email_alerts_sendresult",
-      "community": 37,
+      "community": 2,
       "norm_label": "sendresult"
     },
     {
@@ -3570,7 +3570,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_email_alerts_money",
-      "community": 37,
+      "community": 2,
       "norm_label": "money()"
     },
     {
@@ -3580,7 +3580,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_email_alerts_renderalertemail",
-      "community": 37,
+      "community": 2,
       "norm_label": "renderalertemail()"
     },
     {
@@ -3590,7 +3590,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "src_email_alerts_sendalertemail",
-      "community": 37,
+      "community": 2,
       "norm_label": "sendalertemail()"
     },
     {
@@ -3640,7 +3640,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_lib_catalog_slug",
-      "community": 2,
+      "community": 4,
       "norm_label": "catalog-slug.ts"
     },
     {
@@ -3670,7 +3670,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_lib_catalog_slug_concentration_code",
-      "community": 2,
+      "community": 4,
       "norm_label": "concentration_code"
     },
     {
@@ -3680,7 +3680,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "src_lib_catalog_slug_concentrationcode",
-      "community": 2,
+      "community": 4,
       "norm_label": "concentrationcode()"
     },
     {
@@ -3690,7 +3690,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "src_lib_catalog_slug_variantpath",
-      "community": 2,
+      "community": 5,
       "norm_label": "variantpath()"
     },
     {
@@ -3700,7 +3700,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "src_lib_catalog_slug_canonicalsku",
-      "community": 2,
+      "community": 4,
       "norm_label": "canonicalsku()"
     },
     {
@@ -4060,7 +4060,7 @@
       "source_location": "L223",
       "_origin": "ast",
       "id": "src_retailers_fragrancenet_adapter_fragrancenetadapter",
-      "community": 40,
+      "community": 37,
       "norm_label": "fragrancenetadapter"
     },
     {
@@ -4420,7 +4420,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_unit_alerts_test",
-      "community": 37,
+      "community": 2,
       "norm_label": "alerts.test.ts"
     },
     {
@@ -4430,7 +4430,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "tests_unit_alerts_test_now",
-      "community": 37,
+      "community": 2,
       "norm_label": "now"
     },
     {
@@ -4440,7 +4440,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "tests_unit_alerts_test_hoursago",
-      "community": 37,
+      "community": 2,
       "norm_label": "hoursago()"
     },
     {
@@ -4450,7 +4450,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "tests_unit_alerts_test_rule",
-      "community": 37,
+      "community": 2,
       "norm_label": "rule()"
     },
     {
@@ -4460,7 +4460,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "tests_unit_alerts_test_candidate",
-      "community": 37,
+      "community": 2,
       "norm_label": "candidate()"
     },
     {
@@ -4470,7 +4470,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_unit_catalog_test",
-      "community": 2,
+      "community": 4,
       "norm_label": "catalog.test.ts"
     },
     {
@@ -4480,7 +4480,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_unit_delivered_price_test",
-      "community": 39,
+      "community": 37,
       "norm_label": "delivered-price.test.ts"
     },
     {
@@ -4590,7 +4590,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "tests_unit_matching_test_v",
-      "community": 4,
+      "community": 5,
       "norm_label": "v()"
     },
     {
@@ -6274,6 +6274,16 @@
       "norm_label": "adr-014: admin access is an allow-list that fails closed"
     },
     {
+      "label": "ADR-015: The third retailer waits for an affiliate feed",
+      "file_type": "document",
+      "source_file": "docs/DECISIONS.md",
+      "source_location": "L473",
+      "_origin": "ast",
+      "id": "docs_decisions_adr_015_the_third_retailer_waits_for_an_affiliate_feed",
+      "community": 23,
+      "norm_label": "adr-015: the third retailer waits for an affiliate feed"
+    },
+    {
       "label": "MATCHING_ENGINE.md",
       "file_type": "document",
       "source_file": "docs/MATCHING_ENGINE.md",
@@ -6544,10 +6554,20 @@
       "norm_label": "in progress"
     },
     {
-      "label": "Next Tasks",
+      "label": "Blocked on the operator",
       "file_type": "document",
       "source_file": "docs/PROJECT_STATUS.md",
       "source_location": "L172",
+      "_origin": "ast",
+      "id": "docs_project_status_blocked_on_the_operator",
+      "community": 13,
+      "norm_label": "blocked on the operator"
+    },
+    {
+      "label": "Next Tasks",
+      "file_type": "document",
+      "source_file": "docs/PROJECT_STATUS.md",
+      "source_location": "L180",
       "_origin": "ast",
       "id": "docs_project_status_next_tasks",
       "community": 13,
@@ -6557,7 +6577,7 @@
       "label": "Known Issues",
       "file_type": "document",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L180",
+      "source_location": "L188",
       "_origin": "ast",
       "id": "docs_project_status_known_issues",
       "community": 13,
@@ -6567,7 +6587,7 @@
       "label": "Decisions Needed",
       "file_type": "document",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L185",
+      "source_location": "L193",
       "_origin": "ast",
       "id": "docs_project_status_decisions_needed",
       "community": 13,
@@ -6577,7 +6597,7 @@
       "label": "Latest Validation",
       "file_type": "document",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L189",
+      "source_location": "L197",
       "_origin": "ast",
       "id": "docs_project_status_latest_validation",
       "community": 13,
@@ -6587,7 +6607,7 @@
       "label": "Last Graphify Update",
       "file_type": "document",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L208",
+      "source_location": "L216",
       "_origin": "ast",
       "id": "docs_project_status_last_graphify_update",
       "community": 13,
@@ -6597,7 +6617,7 @@
       "label": "Latest GitHub Commit",
       "file_type": "document",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L212",
+      "source_location": "L220",
       "_origin": "ast",
       "id": "docs_project_status_latest_github_commit",
       "community": 13,
@@ -6812,6 +6832,46 @@
       "id": "docs_retailer_research_standing_constraints",
       "community": 43,
       "norm_label": "standing constraints"
+    },
+    {
+      "label": "Third retailer \u2014 FragranceX and Jomashop probed (2026-07-24)",
+      "file_type": "document",
+      "source_file": "docs/RETAILER_RESEARCH.md",
+      "source_location": "L167",
+      "_origin": "ast",
+      "id": "docs_retailer_research_third_retailer_fragrancex_and_jomashop_probed_2026_07_24",
+      "community": 43,
+      "norm_label": "third retailer \u2014 fragrancex and jomashop probed (2026-07-24)"
+    },
+    {
+      "label": "FragranceX \u2014 permitted, but the page data cannot be attributed to a variant",
+      "file_type": "document",
+      "source_file": "docs/RETAILER_RESEARCH.md",
+      "source_location": "L174",
+      "_origin": "ast",
+      "id": "docs_retailer_research_fragrancex_permitted_but_the_page_data_cannot_be_attributed_to_a_variant",
+      "community": 43,
+      "norm_label": "fragrancex \u2014 permitted, but the page data cannot be attributed to a variant"
+    },
+    {
+      "label": "Jomashop \u2014 permitted, but client-rendered",
+      "file_type": "document",
+      "source_file": "docs/RETAILER_RESEARCH.md",
+      "source_location": "L197",
+      "_origin": "ast",
+      "id": "docs_retailer_research_jomashop_permitted_but_client_rendered",
+      "community": 43,
+      "norm_label": "jomashop \u2014 permitted, but client-rendered"
+    },
+    {
+      "label": "Conclusion",
+      "file_type": "document",
+      "source_file": "docs/RETAILER_RESEARCH.md",
+      "source_location": "L207",
+      "_origin": "ast",
+      "id": "docs_retailer_research_conclusion",
+      "community": 43,
+      "norm_label": "conclusion"
     },
     {
       "label": "ROADMAP.md",
@@ -19450,6 +19510,16 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/DECISIONS.md",
+      "source_location": "L473",
+      "weight": 1.0,
+      "source": "docs_decisions_scentscout_decision_records_adrs",
+      "target": "docs_decisions_adr_015_the_third_retailer_waits_for_an_affiliate_feed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "docs/MATCHING_ENGINE.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -19651,6 +19721,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PROJECT_STATUS.md",
+      "source_location": "L172",
+      "weight": 1.0,
+      "source": "docs_project_status_project_status",
+      "target": "docs_project_status_blocked_on_the_operator",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PROJECT_STATUS.md",
       "source_location": "L7",
       "weight": 1.0,
       "source": "docs_project_status_project_status",
@@ -19671,7 +19751,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L185",
+      "source_location": "L193",
       "weight": 1.0,
       "source": "docs_project_status_project_status",
       "target": "docs_project_status_decisions_needed",
@@ -19691,7 +19771,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L180",
+      "source_location": "L188",
       "weight": 1.0,
       "source": "docs_project_status_project_status",
       "target": "docs_project_status_known_issues",
@@ -19701,7 +19781,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L208",
+      "source_location": "L216",
       "weight": 1.0,
       "source": "docs_project_status_project_status",
       "target": "docs_project_status_last_graphify_update",
@@ -19711,7 +19791,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L212",
+      "source_location": "L220",
       "weight": 1.0,
       "source": "docs_project_status_project_status",
       "target": "docs_project_status_latest_github_commit",
@@ -19721,7 +19801,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L189",
+      "source_location": "L197",
       "weight": 1.0,
       "source": "docs_project_status_project_status",
       "target": "docs_project_status_latest_validation",
@@ -19731,7 +19811,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L172",
+      "source_location": "L180",
       "weight": 1.0,
       "source": "docs_project_status_project_status",
       "target": "docs_project_status_next_tasks",
@@ -19861,6 +19941,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/RETAILER_RESEARCH.md",
+      "source_location": "L167",
+      "weight": 1.0,
+      "source": "docs_retailer_research_retailer_access_research_phase_2",
+      "target": "docs_retailer_research_third_retailer_fragrancex_and_jomashop_probed_2026_07_24",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/RETAILER_RESEARCH.md",
       "source_location": "L49",
       "weight": 1.0,
       "source": "docs_retailer_research_evidence",
@@ -19925,6 +20015,36 @@
       "weight": 1.0,
       "source": "docs_retailer_research_fragrancenet_gray_market_discounter",
       "target": "docs_retailer_research_phase_7_live_re_inspection_2026_07_23_corrections_to_the_above",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/RETAILER_RESEARCH.md",
+      "source_location": "L207",
+      "weight": 1.0,
+      "source": "docs_retailer_research_third_retailer_fragrancex_and_jomashop_probed_2026_07_24",
+      "target": "docs_retailer_research_conclusion",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/RETAILER_RESEARCH.md",
+      "source_location": "L174",
+      "weight": 1.0,
+      "source": "docs_retailer_research_third_retailer_fragrancex_and_jomashop_probed_2026_07_24",
+      "target": "docs_retailer_research_fragrancex_permitted_but_the_page_data_cannot_be_attributed_to_a_variant",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/RETAILER_RESEARCH.md",
+      "source_location": "L197",
+      "weight": 1.0,
+      "source": "docs_retailer_research_third_retailer_fragrancex_and_jomashop_probed_2026_07_24",
+      "target": "docs_retailer_research_jomashop_permitted_but_client_rendered",
       "confidence_score": 1.0
     },
     {
@@ -20039,5 +20159,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "b1df2d944e9d5e984cd2e763e8f5ee7c2d431ae6"
+  "built_at_commit": "85e9f0179310998704e2832adcbd4ec09f30f4f6"
 }
