@@ -205,9 +205,16 @@ export async function listVariantsWithOffers(): Promise<
   }));
 }
 
-/** Recent in-stock observations, newest first (for /restocks). */
+/**
+ * Recently restocked variants, newest first (for /restocks).
+ *
+ * Deduplicated by variant: observations are append-only, so a variant that has
+ * been polled repeatedly has many in-stock rows. Listing them raw repeats the
+ * same fragrance down the page and reads as broken — we want the most recent
+ * sighting per variant, not every sighting.
+ */
 export async function listRecentRestocks(limit = 20) {
-  return db
+  const rows = await db
     .select({
       canonicalSku: productVariants.canonicalSku,
       fragranceName: fragrances.name,
@@ -226,5 +233,16 @@ export async function listRecentRestocks(limit = 20) {
     .innerJoin(brands, eq(brands.id, fragrances.brandId))
     .where(eq(priceObservations.inStock, true))
     .orderBy(sql`${priceObservations.observedAt} desc`)
-    .limit(limit);
+    // Over-fetch so that collapsing duplicates still fills the page.
+    .limit(limit * 5);
+
+  const seen = new Set<string>();
+  const distinct: typeof rows = [];
+  for (const r of rows) {
+    if (seen.has(r.canonicalSku)) continue;
+    seen.add(r.canonicalSku);
+    distinct.push(r);
+    if (distinct.length === limit) break;
+  }
+  return distinct;
 }
