@@ -1,5 +1,10 @@
 import { describe, it, expect } from "vitest";
-import { matchProduct, THRESHOLDS, isHumanDecision } from "@/domain/matching";
+import {
+  matchProduct,
+  THRESHOLDS,
+  isHumanDecision,
+  isConcentrationFlankerEquivalent,
+} from "@/domain/matching";
 import type { CandidateVariant } from "@/domain/matching";
 
 const v = (over: Partial<CandidateVariant> & { canonicalSku: string }): CandidateVariant => ({
@@ -346,5 +351,91 @@ describe("human decisions outrank the automatic matcher", () => {
   it("treats a listing with no review as undecided", () => {
     expect(isHumanDecision(null)).toBe(false);
     expect(isHumanDecision(undefined)).toBe(false);
+  });
+});
+
+describe("flanker vs concentration modelling (ADR-013)", () => {
+  // We model a concentration flanker as its own fragrance ("Gris Charnel
+  // Extrait"); retailers publish the same bottle as "Gris Charnel" +
+  // concentration Extrait. The bridge must be narrow, and never auto-approve.
+  const extraitVariant = v({
+    canonicalSku: "bdk-parfums-gris-charnel-extrait-100ml-retail",
+    fragranceName: "Gris Charnel Extrait",
+    concentration: "extrait_de_parfum",
+  });
+
+  it("bridges the two spellings of the same product", () => {
+    expect(
+      isConcentrationFlankerEquivalent(
+        "gris charnel",
+        "extrait_de_parfum",
+        "gris charnel extrait",
+        "extrait_de_parfum",
+      ),
+    ).toBe(true);
+  });
+
+  it("refuses to bridge when the concentrations disagree", () => {
+    // "Gris Charnel" EDP is a different bottle from "Gris Charnel Extrait".
+    expect(
+      isConcentrationFlankerEquivalent(
+        "gris charnel",
+        "eau_de_parfum",
+        "gris charnel extrait",
+        "extrait_de_parfum",
+      ),
+    ).toBe(false);
+  });
+
+  it("refuses to bridge names that differ by anything but a concentration", () => {
+    // "Bal d'Afrique" vs "Bal d'Afrique Absolu" — Absolu IS a concentration,
+    // but "Reflection" vs "Reflection Man" is a genuinely different fragrance.
+    expect(
+      isConcentrationFlankerEquivalent("reflection", "eau_de_parfum", "reflection man", "eau_de_parfum"),
+    ).toBe(false);
+  });
+
+  it("refuses to bridge when the listing publishes no concentration", () => {
+    expect(
+      isConcentrationFlankerEquivalent("gris charnel", null, "gris charnel extrait", "extrait_de_parfum"),
+    ).toBe(false);
+  });
+
+  it("routes an inferred equivalence to manual review, never to exact", () => {
+    const decision = matchProduct(
+      {
+        rawTitle: "Bdk Gris Charnel Extrait De Parfum Spray 3.4 oz",
+        brand: "BDK Parfums",
+        fragranceName: "Gris Charnel",
+        flankerName: null,
+        concentration: "Extrait de Parfum",
+        sizeMl: 100,
+        presentation: "retail",
+      },
+      [extraitVariant],
+    );
+
+    expect(decision.status).toBe("manual_review");
+    expect(decision.canonicalSku).toBe("bdk-parfums-gris-charnel-extrait-100ml-retail");
+    // The audit trail must say why it was held back.
+    const codes = decision.reasons.map((r) => r.code);
+    expect(codes).toContain("fragrance_flanker_inferred");
+    expect(codes).toContain("inferred_equivalence_capped");
+  });
+
+  it("still rejects a genuinely different fragrance outright", () => {
+    const decision = matchProduct(
+      {
+        rawTitle: "Creed Aventus Cologne Spray 3.3 oz",
+        brand: "Creed",
+        fragranceName: "Aventus",
+        flankerName: null,
+        concentration: "Cologne",
+        sizeMl: 100,
+        presentation: "retail",
+      },
+      [extraitVariant],
+    );
+    expect(decision.status).toBe("rejected");
   });
 });

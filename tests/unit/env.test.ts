@@ -1,5 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { isUsablePostgresUrl, resolveMigrationUrl } from "@/lib/env";
+import { isAdminEmail } from "@/lib/admin";
 
 const POOLER = "postgresql://postgres.abc:pw@aws-1-us-east-2.pooler.supabase.com:6543/postgres";
 
@@ -52,5 +53,36 @@ describe("resolveMigrationUrl", () => {
   it("leaves a non-Supabase DATABASE_URL untouched", () => {
     const plain = "postgresql://postgres:pw@localhost:5432/scentscout";
     expect(resolveMigrationUrl(plain, undefined)).toBe(plain);
+  });
+});
+
+describe("admin authorization fails closed", () => {
+  it("grants access to an email on the allow-list", () => {
+    expect(isAdminEmail("me@example.com", "me@example.com")).toBe(true);
+    expect(isAdminEmail("me@example.com", "other@x.com, me@example.com")).toBe(true);
+  });
+
+  it("is case- and whitespace-insensitive", () => {
+    expect(isAdminEmail("  Me@Example.COM ", "me@example.com")).toBe(true);
+  });
+
+  it("denies everyone when the allow-list is unset or empty", () => {
+    // A misconfigured deployment must not silently open the admin tools.
+    expect(isAdminEmail("me@example.com", undefined)).toBe(false);
+    expect(isAdminEmail("me@example.com", null)).toBe(false);
+    expect(isAdminEmail("me@example.com", "")).toBe(false);
+    expect(isAdminEmail("me@example.com", "   ")).toBe(false);
+    expect(isAdminEmail("me@example.com", ",, ,")).toBe(false);
+  });
+
+  it("denies a signed-out visitor", () => {
+    expect(isAdminEmail(null, "me@example.com")).toBe(false);
+    expect(isAdminEmail(undefined, "me@example.com")).toBe(false);
+  });
+
+  it("denies an email that is not on the list", () => {
+    expect(isAdminEmail("attacker@example.com", "me@example.com")).toBe(false);
+    // Substring matches must not pass.
+    expect(isAdminEmail("me@example.com.evil.com", "me@example.com")).toBe(false);
   });
 });

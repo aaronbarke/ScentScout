@@ -50,6 +50,12 @@ export interface CandidateEvaluation {
   candidate: CandidateVariant;
   confidence: number;
   contradicted: boolean;
+  /**
+   * Set when the candidate only survived via an inferred equivalence rather
+   * than a literal agreement. Such a candidate can never be auto-approved —
+   * `matchProduct` caps it at manual review however high it scores (ADR-013).
+   */
+  requiresReview?: boolean;
   reasons: MatchReason[];
 }
 

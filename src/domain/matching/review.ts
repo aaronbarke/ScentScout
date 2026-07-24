@@ -196,3 +196,39 @@ export async function listUnmatched(limit = 200) {
     .where(inArray(retailerProducts.matchStatus, ["unmatched"]))
     .limit(limit);
 }
+
+export interface SiblingVariant {
+  variantId: string;
+  canonicalSku: string;
+  concentration: string;
+  sizeMl: number;
+  presentation: string;
+}
+
+/**
+ * Variants of the same fragrance as `variantId`.
+ *
+ * The matcher routes a listing to review precisely when it cannot choose
+ * between siblings (a tester and a retail bottle of the same size tie), so the
+ * reviewer needs the alternatives in front of them to make the call.
+ */
+export async function listSiblingVariants(variantId: string): Promise<SiblingVariant[]> {
+  const [target] = await db
+    .select({ fragranceId: productVariants.fragranceId })
+    .from(productVariants)
+    .where(eq(productVariants.id, variantId))
+    .limit(1);
+  if (!target) return [];
+
+  return db
+    .select({
+      variantId: productVariants.id,
+      canonicalSku: productVariants.canonicalSku,
+      concentration: productVariants.concentration,
+      sizeMl: productVariants.sizeMl,
+      presentation: productVariants.presentation,
+    })
+    .from(productVariants)
+    .where(eq(productVariants.fragranceId, target.fragranceId))
+    .orderBy(productVariants.sizeMl, productVariants.presentation);
+}

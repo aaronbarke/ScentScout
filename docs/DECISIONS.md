@@ -391,3 +391,78 @@ a raw-palette reference is now a review smell. Guidance and presentation badges 
 muted — price guidance is advice, not a claim, so it must not read as promotional. Prices use
 `tabular` figures so columns align. A visible `:focus-visible` ring is defined globally for
 keyboard accessibility.
+
+---
+
+## ADR-013: Flanker-vs-concentration equivalence is evidence, never proof
+
+Status: Accepted
+
+Date: 2026-07-24
+
+Decision:
+When a canonical fragrance name is exactly a listing's fragrance name plus a suffix that **is**
+the concentration both sides already agree on, the matcher treats them as the same product
+instead of rejecting on `fragrance_contradiction`. Such a candidate is scored normally but is
+**capped at `manual_review`** — `matchProduct` downgrades `exact` to `manual_review` and records
+`inferred_equivalence_capped` in the audit trail.
+
+Reason:
+We model a concentration flanker as its own fragrance ("Gris Charnel Extrait", per ADR-005).
+Retailers commonly publish the same bottle as fragrance "Gris Charnel" with concentration
+"Extrait de Parfum". Neither modelling is wrong, but a literal name comparison rejects a listing
+that is genuinely the same product — this blocked every FragranceNet flanker listing from
+matching. The bridge is deterministic (no LLM, no fuzzy distance) and deliberately narrow: it
+cannot invent a concentration, requires both sides to already agree on it, and cannot join two
+names differing by anything else. Even so it is an *inference about modelling*, not observed
+evidence, so auto-approving it would violate "never silently match uncertain variants".
+
+Alternatives:
+(a) Reject as before — rejected; loses real matches and leaves comparison pages empty.
+(b) Auto-approve at `exact` — rejected; an inference is not proof, and a wrong bind would show
+users a different concentration as the same product. (c) Fuzzy string distance between names —
+rejected; non-deterministic in effect and would bridge genuinely different fragrances
+("Reflection" vs "Reflection Man"). (d) Restructure the catalogue to store flankers as
+concentrations — rejected; ADR-005's separation is what keeps EDP and Extrait price histories
+distinct, and changing it would be a far larger change than the problem warrants.
+
+Consequences:
+Flanker listings now reach the review queue rather than being rejected, which makes the admin
+review UI load-bearing for multi-retailer coverage. `CandidateEvaluation` gained
+`requiresReview`; any future inferred equivalence should set it rather than inventing a second
+capping mechanism. Observed in practice: the FragranceNet Gris Charnel Extrait listing reaches
+review and additionally trips the ambiguity guard (tied between the retail and tester variants,
+since FragranceNet does not publish a presentation) — both safeguards engaging as designed.
+
+---
+
+## ADR-014: Admin access is an allow-list that fails closed
+
+Status: Accepted
+
+Date: 2026-07-24
+
+Decision:
+`/admin/**` is gated by `isAdminEmail(email, process.env.ADMIN_EMAILS)` — a comma-separated
+allow-list. An unset, empty or whitespace-only list grants **nobody** access. Every admin server
+action calls `requireAdmin()` itself; the page-level check is not relied upon. An unauthorized
+visitor gets a deliberately vague "Not available" page, and admin routes are `robots: noindex`.
+
+Reason:
+The security rules require every admin route and mutation to be authorization-gated. Server
+actions are independently reachable over the network, so guarding only the page that renders the
+buttons would leave the mutations open — the check has to live on the mutation. Failing closed
+matters because the natural bug (treating an unset env var as "no restriction") would silently
+publish the review queue on a fresh deployment.
+
+Alternatives:
+(a) Real RBAC with a roles table — deferred; correct eventually, but the allow-list is
+sufficient for a single-operator MVP and much less to get wrong now. (b) Checking only in the
+page — rejected as insecure. (c) A 404 for non-admins — the vague page is equivalent in what it
+reveals and simpler than faking a not-found.
+
+Consequences:
+`ADMIN_EMAILS` must be set for anyone to reach the queue, and the operator must also hold an
+account (auth supplies the email). Replacing this with RBAC later means changing `getAdminUser`
+only. The predicate is pure and unit-tested, including the substring case
+("me@example.com.evil.com" must not pass).

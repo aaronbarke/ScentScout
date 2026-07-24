@@ -56,6 +56,37 @@ export function deriveAttributes(input: MatchInput) {
 type Derived = ReturnType<typeof deriveAttributes>;
 
 /**
+ * Detect the flanker-vs-concentration modelling disagreement (ADR-013).
+ *
+ * We model a concentration flanker as its own fragrance — "Gris Charnel
+ * Extrait". Retailers commonly publish the same bottle as fragrance
+ * "Gris Charnel" with concentration "Extrait de Parfum". Neither reading is
+ * wrong, so a literal name comparison rejects a listing that is genuinely the
+ * same product.
+ *
+ * This returns true only when the canonical name is exactly the listing's name
+ * followed by a suffix that IS the concentration both sides already agree on.
+ * It is deliberately narrow: it cannot invent a concentration, and it cannot
+ * bridge two names that differ by anything else. Even so, a candidate matched
+ * this way is never auto-approved — it is capped at manual review.
+ */
+export function isConcentrationFlankerEquivalent(
+  listingFragrance: string | null,
+  listingConcentration: string | null,
+  canonicalFragrance: string | null,
+  canonicalConcentration: string | null,
+): boolean {
+  if (!listingFragrance || !listingConcentration || !canonicalFragrance) return false;
+  // Both sides must already agree on the concentration itself.
+  if (listingConcentration !== canonicalConcentration) return false;
+  if (!canonicalFragrance.startsWith(`${listingFragrance} `)) return false;
+
+  const suffix = canonicalFragrance.slice(listingFragrance.length).trim();
+  if (!suffix) return false;
+  return normalizeConcentration(suffix) === canonicalConcentration;
+}
+
+/**
  * Evaluate one candidate. Any contradiction rejects outright — contradictions
  * are absolute and are never outweighed by other signals.
  */
@@ -85,12 +116,23 @@ export function evaluateCandidate(
   }
 
   const candFragrance = normalizeFragranceName(candidate.fragranceName);
+  // Set when the names differ only by a concentration suffix (ADR-013). Such a
+  // candidate survives, but can never be auto-approved.
+  let concentrationFlanker = false;
   if (derived.fragrance && candFragrance && derived.fragrance !== candFragrance) {
-    reasons.push({
-      code: "fragrance_contradiction",
-      detail: `listing fragrance '${derived.fragrance}' ≠ canonical '${candFragrance}'`,
-    });
-    return { candidate, confidence: 0, contradicted: true, reasons };
+    concentrationFlanker = isConcentrationFlankerEquivalent(
+      derived.fragrance,
+      derived.concentration,
+      candFragrance,
+      candidate.concentration,
+    );
+    if (!concentrationFlanker) {
+      reasons.push({
+        code: "fragrance_contradiction",
+        detail: `listing fragrance '${derived.fragrance}' ≠ canonical '${candFragrance}'`,
+      });
+      return { candidate, confidence: 0, contradicted: true, reasons };
+    }
   }
 
   const candFlanker = normalizeFragranceName(candidate.flankerName);
@@ -140,6 +182,13 @@ export function evaluateCandidate(
   if (derived.fragrance && derived.fragrance === candFragrance) {
     confidence += WEIGHTS.fragrance;
     reasons.push({ code: "fragrance_exact", detail: derived.fragrance, weight: WEIGHTS.fragrance });
+  } else if (concentrationFlanker) {
+    confidence += WEIGHTS.fragrance;
+    reasons.push({
+      code: "fragrance_flanker_inferred",
+      detail: `'${derived.fragrance}' + ${derived.concentration} ⇒ '${candFragrance}' — needs a human`,
+      weight: WEIGHTS.fragrance,
+    });
   } else {
     reasons.push({ code: "fragrance_unknown", detail: "listing fragrance name missing" });
   }
@@ -189,6 +238,7 @@ export function evaluateCandidate(
     candidate,
     confidence: Number(confidence.toFixed(4)),
     contradicted: false,
+    requiresReview: concentrationFlanker,
     reasons,
   };
 }
@@ -262,6 +312,16 @@ export function matchProduct(input: MatchInput, candidates: CandidateVariant[]):
   if (best.confidence >= THRESHOLDS.exact) status = "exact";
   else if (best.confidence >= THRESHOLDS.review) status = "manual_review";
   else status = "unmatched";
+
+  // An inferred equivalence is evidence, not proof — a human confirms it
+  // however high the score (ADR-013).
+  if (best.requiresReview && status === "exact") {
+    status = "manual_review";
+    reasons.push({
+      code: "inferred_equivalence_capped",
+      detail: "matched via an inferred equivalence — capped at manual review",
+    });
+  }
 
   reasons.push({
     code: "threshold",

@@ -2,7 +2,7 @@
 
 ## Current Milestone
 
-Phase 7 in progress — FragranceNet researched; UI redesigned to a warm editorial identity (ADR-012)
+Phase 7 in progress — FragranceNet adapter shipped, flanker equivalence (ADR-013), admin review queue (ADR-014)
 
 ## Completed
 
@@ -43,6 +43,18 @@ Phase 7 in progress — FragranceNet researched; UI redesigned to a warm editori
   - `src/domain/pricing/delivered-price.ts` implements ADR-003 with 7 tests.
   - CLI: `npm run retailer -- --url <u> | --discover <n> | --health`.
   - Retailer registry seeded; only access-verified retailers are `enabled`.
+
+- **Phase 7 (in progress)** — second retailer + admin review:
+  - **FragranceNet adapter** (static HTTP + JSON-LD). Handles a page that alternates between two
+    JSON-LD shapes across requests; trusts `manufacturer.name` over the polluted `brand.name`;
+    reads oz sizes from the title; reports no size for vials rather than guessing. 19 fixture
+    tests. Retailer enabled; 15 live listings ingested.
+  - **ADR-013 flanker/concentration equivalence** — bridges "Gris Charnel" + Extrait ⇄
+    "Gris Charnel Extrait", capped at manual review. Unblocked FragranceNet flanker listings.
+  - **ADR-014 admin review queue** at `/admin/reviews` — allow-list authorization that fails
+    closed, re-checked inside every mutation. Approve (with variant override) or reject.
+  - Fixed: `match --all` silently overwrote an admin's approved match; decisions are now
+    protected and reported as such.
 
 - **Layout pass complete** — every page now uses the editorial idiom: fragrance family page
   (numbered variant rows, tester visually distinct from retail), `/deals` (ranked with numerals),
@@ -181,7 +193,7 @@ Phase 7 in progress — FragranceNet researched; UI redesigned to a warm editori
 - Build: PASS (exit 0)
 - DB generate: PASS — `drizzle-kit generate`, 13 tables + migration 0001
 - Catalog validate: PASS — 13 brands / 19 fragrances / 52 variants / 52 unique SKUs
-- Unit tests: PASS — Vitest, **138/138**
+- Unit tests: PASS — Vitest, **171/171**
 - E2E tests: PASS — Playwright, **5/5** (public site flows) (catalog, slug, contracts, env, money/size/JSON-LD
   helpers, Luckyscent fixture parser, delivered price)
 - Live ingest: PASS — Luckyscent, 3 variants parsed, 3 observations, run status `success`,
