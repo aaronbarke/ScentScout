@@ -79,6 +79,11 @@ Phase 7 in progress — FragranceNet adapter shipped, flanker equivalence (ADR-0
     JSON-LD shapes across requests; trusts `manufacturer.name` over the polluted `brand.name`;
     reads oz sizes from the title; reports no size for vials rather than guessing. 19 fixture
     tests. Retailer enabled; 15 live listings ingested.
+  - **ADR-016 presentation from title convention** — FragranceNet publishes no presentation
+    field, which capped every listing at 0.90 and sent all of them to human review. Measured 63
+    titles across their 7,051-URL sitemap: testers carry a `*Tester` suffix (4.8%), 87.3% carry
+    no marker at all and follow a uniform retail shape. The adapter now reads that convention, so
+    unmarked listings score 1.00 and auto-match. Ambiguous markers still route to a human.
   - **ADR-013 flanker/concentration equivalence** — bridges "Gris Charnel" + Extrait ⇄
     "Gris Charnel Extrait", capped at manual review. Unblocked FragranceNet flanker listings.
   - **ADR-014 admin review queue** at `/admin/reviews` — allow-list authorization that fails

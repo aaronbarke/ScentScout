@@ -104,6 +104,31 @@ export function sizeMlFromTitle(rawTitle: string): number | null {
   return null;
 }
 
+/**
+ * FragranceNet marks non-retail presentations in the title, so absence of a
+ * marker is itself evidence rather than a guess (ADR-016).
+ *
+ * Measured over 63 titles sampled across their 7,051-URL fragrance sitemap:
+ * 4.8% carried an explicit `*Tester` suffix, 4.8% a sample/vial/travel word,
+ * 3.2% a set/variety word, 0% refill or unboxed. No unmarked title looked like
+ * a tester. Unmarked titles follow a uniform retail shape
+ * ("<Brand> <Fragrance> <Concentration> Spray <size> oz").
+ *
+ * Conservative on purpose: anything carrying a marker we cannot map precisely
+ * returns null (UNKNOWN) so the matcher refuses it, rather than being forced
+ * into "retail".
+ */
+const TESTER = /\btester\b/i;
+const NON_RETAIL_HINT =
+  /\brefill\b|\bgift set\b|\bvariety\b|\b\d+\s*piece\b|\bunboxed\b|\bno box\b|\bvial\b|\bmini\b|\bsample\b|\btravel\b|\bset\b|\bdecant\b/i;
+
+/** Exported for tests. */
+export function derivePresentation(rawTitle: string): "retail" | "tester" | null {
+  if (TESTER.test(rawTitle)) return "tester";
+  if (NON_RETAIL_HINT.test(rawTitle)) return null;
+  return "retail";
+}
+
 /** The concentration text the matcher normalizes; null when absent. */
 function concentrationFromTitle(rawTitle: string): string | null {
   const m = rawTitle.match(
@@ -157,9 +182,8 @@ function parseNode(
     flankerName: null,
     concentration: concentrationFromTitle(rawTitle),
     sizeMl,
-    // Presentation is not published. We do NOT assume "retail" — the matcher
-    // refuses to guess, which is the intended conservative behaviour.
-    presentation: null,
+    // Derived from FragranceNet's own title convention, not assumed (ADR-016).
+    presentation: derivePresentation(rawTitle),
     condition: "new",
     listedPriceCents,
     currency: normalizeCurrency(

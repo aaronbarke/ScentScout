@@ -505,3 +505,63 @@ Multi-retailer coverage stays at two (Luckyscent, FragranceNet) until the CJ app
 approved — a business step outside the codebase. Worth noting for when it lands: FragranceX
 publishes **real shipping** ($6.95, free over $49, 2–6 days), so it would be the first source
 capable of producing a genuine delivered total rather than "plus unknown shipping".
+
+---
+
+## ADR-016: FragranceNet's presentation is derived from its title convention
+
+Status: Accepted
+
+Date: 2026-07-24
+
+Decision:
+The FragranceNet adapter asserts `presentation` rather than reporting it unknown: `tester` when
+the title carries a tester marker, `retail` when it carries **no** presentation marker at all, and
+`null` when it carries any other marker we cannot map precisely (refill, set/variety, vial, mini,
+sample, travel, unboxed, decant). The rule lives in the adapter, not in shared domain code.
+
+Reason:
+FragranceNet never publishes a presentation field. That cost 0.10 of confidence and capped every
+listing at 0.90 — below the 0.95 exact threshold — so **every** FragranceNet listing required a
+human decision, forever. Tolerable at 19 listings, unworkable against their 7,051-URL fragrance
+sitemap.
+
+The decision rests on a measurement rather than an assumption. Sampling 60 product pages spread
+across that sitemap yielded 63 titles:
+
+| marker | count | share |
+| --- | --- | --- |
+| `*Tester` | 3 | 4.8% |
+| sample / vial / travel | 3 | 4.8% |
+| set / variety | 2 | 3.2% |
+| refill | 0 | 0% |
+| unboxed | 0 | 0% |
+| **no marker** | **55** | **87.3%** |
+
+Testers are consistently marked with a `*Tester` suffix, and no unmarked title in the sample
+looked like a tester. Unmarked titles follow a uniform retail shape ("<Brand> <Fragrance>
+<Concentration> Spray <size> oz"). So absence of a marker is a statement by the retailer, which
+the adapter is entitled to read — the same way it already reads price and size out of the title.
+This is a retailer convention, which is exactly what the adapter boundary exists to hold.
+
+Risk, stated plainly:
+The sample is 63 titles out of ~7,051 (~0.9%). If FragranceNet lists an **unmarked** tester, we
+would bind it to a retail variant and show a tester's price as a retail bottle — the precise harm
+this product exists to prevent. Mitigations: the rule refuses to assert `retail` whenever any
+other presentation word is present; brand, fragrance, concentration and size checks still have to
+pass independently; and an administrator can correct any binding through the review queue, where
+their decision is then protected from later runs. If a counter-example is ever found, add a
+fixture reproducing it before changing the rule.
+
+Alternatives:
+(a) Keep reviewing every listing by hand — rejected; does not survive contact with a real
+catalogue. (b) Lower the exact threshold — rejected; it would weaken every match, not just this
+retailer's. (c) Put the inference in shared domain code — rejected; it is true of FragranceNet,
+not of retailers in general, and belongs behind the adapter boundary.
+
+Consequences:
+Verified live: an unmarked listing now scores 1.00 and auto-matches, where the same listing
+previously scored 0.90 and queued for review. A marked `*Tester` listing was correctly rejected
+(it was an EDP tester, and the catalogue carries only an EDT tester — a concentration
+contradiction). Listings carrying an ambiguous marker still route to a human. Other adapters keep
+reporting presentation as unknown unless their own retailer's convention is measured the same way.

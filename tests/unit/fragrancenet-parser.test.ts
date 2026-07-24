@@ -5,6 +5,7 @@ import {
   parseFragranceNetHtml,
   cleanFragranceName,
   sizeMlFromTitle,
+  derivePresentation,
 } from "@/retailers/fragrancenet/adapter";
 
 const FIXTURES = join(process.cwd(), "tests/fixtures/retailers/fragrancenet");
@@ -64,8 +65,15 @@ describe("FragranceNet parser — ProductGroup shape", () => {
     expect(oz17!.sizeMl).toBeLessThan(52);
   });
 
-  it("does not assume a presentation", () => {
-    for (const p of parsed) expect(p.presentation).toBeNull();
+  it("derives presentation per variant from the title, or reports unknown", () => {
+    // Superseded the old "never assume a presentation" rule (ADR-016): the
+    // retailer marks non-retail forms, so an unmarked plain bottle is retail
+    // while a vial stays unknown rather than being forced into a category.
+    const vial = parsed.find((p) => /vial/i.test(p.rawTitle));
+    expect(vial!.presentation).toBeNull();
+
+    const plain = parsed.find((p) => /1\.7 oz/i.test(p.rawTitle));
+    expect(plain!.presentation).toBe("retail");
   });
 
   it("gives each variant a distinct external id", () => {
@@ -132,5 +140,43 @@ describe("title normalization helpers", () => {
     expect(sizeMlFromTitle("… Spray 3.4 oz")).toBeCloseTo(100.6, 0);
     expect(sizeMlFromTitle("… 50 ml")).toBe(50);
     expect(sizeMlFromTitle("… Spray Vial")).toBeNull();
+  });
+});
+
+describe("presentation derived from FragranceNet's title convention (ADR-016)", () => {
+  it("reads an explicitly marked tester as a tester", () => {
+    expect(derivePresentation("Moschino Eau De Toilette Spray 2.5 oz *Tester")).toBe("tester");
+    expect(derivePresentation("Guerlain L'Homme Ideal EDP 3.3 oz (New Packaging) *Tester")).toBe("tester");
+  });
+
+  it("reads an unmarked title as retail", () => {
+    // 87% of sampled titles look like this, and none of them were testers.
+    expect(derivePresentation("Nautica Life Energy Eau De Toilette Spray 3.4 oz")).toBe("retail");
+    expect(derivePresentation("Al Haramain Black Oud Extrait De Parfum Spray 3.4 oz")).toBe("retail");
+  });
+
+  it("refuses to assert retail when any other presentation word appears", () => {
+    // These must stay UNKNOWN so the matcher declines rather than mis-binding.
+    for (const title of [
+      "Bond No. 9 Dubai Garnet Eau De Parfum Spray 0.27 oz Travel Spray",
+      "Bdk Gris Charnel Extrait De Parfum Spray Vial",
+      "Creed 3 Piece Mens Variety Aventus And Green Irish Tweed",
+      "Some Fragrance Eau De Parfum Refill 200ml",
+      "Clarins Men Moisture Balm Set: Super Hydrating Balm 50ml",
+      "Some Fragrance Eau De Parfum 3.4 oz Unboxed",
+      "Some Fragrance Eau De Parfum Spray 0.34 oz Mini",
+    ]) {
+      expect(derivePresentation(title)).toBeNull();
+    }
+  });
+
+  it("does not trip on a fragrance name that merely contains a marker word", () => {
+    // \b guards stop "Sunset" reading as "set".
+    expect(derivePresentation("Byredo Sunset Eau De Parfum Spray 3.4 oz")).toBe("retail");
+  });
+
+  it("prefers tester over the unknown path when both could apply", () => {
+    // A marked tester in a travel size is still, definitely, a tester.
+    expect(derivePresentation("Some Fragrance EDP Travel Spray 0.27 oz *Tester")).toBe("tester");
   });
 });

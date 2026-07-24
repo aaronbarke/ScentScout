@@ -730,7 +730,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "scripts_seed_catalog_seed",
-      "community": 4,
+      "community": 2,
       "norm_label": "seed()"
     },
     {
@@ -740,7 +740,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "scripts_show_prices",
-      "community": 42,
+      "community": 39,
       "norm_label": "show-prices.ts"
     },
     {
@@ -750,7 +750,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "scripts_show_prices_fmt",
-      "community": 42,
+      "community": 39,
       "norm_label": "fmt()"
     },
     {
@@ -760,7 +760,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "scripts_show_prices_main",
-      "community": 42,
+      "community": 39,
       "norm_label": "main()"
     },
     {
@@ -770,7 +770,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "scripts_validate_catalog",
-      "community": 4,
+      "community": 2,
       "norm_label": "validate-catalog.ts"
     },
     {
@@ -780,7 +780,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "scripts_validate_catalog_current_year",
-      "community": 4,
+      "community": 2,
       "norm_label": "current_year"
     },
     {
@@ -790,7 +790,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "scripts_validate_catalog_validate",
-      "community": 4,
+      "community": 2,
       "norm_label": "validate()"
     },
     {
@@ -800,7 +800,7 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "scripts_validate_catalog_errors",
-      "community": 4,
+      "community": 2,
       "norm_label": "errors"
     },
     {
@@ -897,7 +897,7 @@
       "label": "signUp()",
       "file_type": "code",
       "source_file": "src/app/actions.ts",
-      "source_location": "L37",
+      "source_location": "L41",
       "_origin": "ast",
       "id": "src_app_actions_signup",
       "community": 41,
@@ -907,7 +907,7 @@
       "label": "signOut()",
       "file_type": "code",
       "source_file": "src/app/actions.ts",
-      "source_location": "L53",
+      "source_location": "L57",
       "_origin": "ast",
       "id": "src_app_actions_signout",
       "community": 41,
@@ -917,7 +917,7 @@
       "label": "uuid",
       "file_type": "code",
       "source_file": "src/app/actions.ts",
-      "source_location": "L59",
+      "source_location": "L63",
       "_origin": "ast",
       "id": "src_app_actions_uuid",
       "community": 41,
@@ -927,7 +927,7 @@
       "label": "toggleWatch()",
       "file_type": "code",
       "source_file": "src/app/actions.ts",
-      "source_location": "L61",
+      "source_location": "L65",
       "_origin": "ast",
       "id": "src_app_actions_togglewatch",
       "community": 41,
@@ -937,7 +937,7 @@
       "label": "ruleSchema",
       "file_type": "code",
       "source_file": "src/app/actions.ts",
-      "source_location": "L78",
+      "source_location": "L82",
       "_origin": "ast",
       "id": "src_app_actions_ruleschema",
       "community": 41,
@@ -947,7 +947,7 @@
       "label": "createRule()",
       "file_type": "code",
       "source_file": "src/app/actions.ts",
-      "source_location": "L89",
+      "source_location": "L93",
       "_origin": "ast",
       "id": "src_app_actions_createrule",
       "community": 41,
@@ -957,7 +957,7 @@
       "label": "removeRule()",
       "file_type": "code",
       "source_file": "src/app/actions.ts",
-      "source_location": "L114",
+      "source_location": "L118",
       "_origin": "ast",
       "id": "src_app_actions_removerule",
       "community": 41,
@@ -1680,7 +1680,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_components_trackvariant_trackvariant",
-      "community": 41,
+      "community": 5,
       "norm_label": "trackvariant()"
     },
     {
@@ -1710,7 +1710,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_db_client",
-      "community": 42,
+      "community": 2,
       "norm_label": "client.ts"
     },
     {
@@ -1720,7 +1720,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "src_db_client_env",
-      "community": 42,
+      "community": 2,
       "norm_label": "env"
     },
     {
@@ -1730,7 +1730,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_db_client_queryclient",
-      "community": 42,
+      "community": 39,
       "norm_label": "queryclient"
     },
     {
@@ -1740,7 +1740,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "src_db_client_db",
-      "community": 42,
+      "community": 2,
       "norm_label": "db"
     },
     {
@@ -1780,7 +1780,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "src_db_schema_accounts_userprofiles",
-      "community": 41,
+      "community": 2,
       "norm_label": "userprofiles"
     },
     {
@@ -2040,7 +2040,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "src_db_schema_ops_matchreviews",
-      "community": 2,
+      "community": 42,
       "norm_label": "matchreviews"
     },
     {
@@ -2110,7 +2110,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_db_seed_catalog",
-      "community": 4,
+      "community": 2,
       "norm_label": "catalog.ts"
     },
     {
@@ -2120,7 +2120,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "src_db_seed_catalog_gender",
-      "community": 4,
+      "community": 2,
       "norm_label": "gender"
     },
     {
@@ -2140,7 +2140,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "src_db_seed_catalog_seedfragrance",
-      "community": 4,
+      "community": 2,
       "norm_label": "seedfragrance"
     },
     {
@@ -2150,7 +2150,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "src_db_seed_catalog_seedbrand",
-      "community": 4,
+      "community": 2,
       "norm_label": "seedbrand"
     },
     {
@@ -2160,7 +2160,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "src_db_seed_catalog_retail",
-      "community": 4,
+      "community": 2,
       "norm_label": "retail()"
     },
     {
@@ -2170,7 +2170,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "src_db_seed_catalog_tester",
-      "community": 4,
+      "community": 2,
       "norm_label": "tester()"
     },
     {
@@ -2180,7 +2180,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "src_db_seed_catalog_refill",
-      "community": 4,
+      "community": 2,
       "norm_label": "refill()"
     },
     {
@@ -2190,7 +2190,7 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "src_db_seed_catalog_catalog",
-      "community": 4,
+      "community": 2,
       "norm_label": "catalog"
     },
     {
@@ -2230,7 +2230,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_domain_accounts_profiles",
-      "community": 41,
+      "community": 2,
       "norm_label": "profiles.ts"
     },
     {
@@ -2250,7 +2250,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "src_domain_accounts_profiles_getprofileemail",
-      "community": 41,
+      "community": 2,
       "norm_label": "getprofileemail()"
     },
     {
@@ -2780,7 +2780,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_domain_matching_candidates",
-      "community": 42,
+      "community": 2,
       "norm_label": "candidates.ts"
     },
     {
@@ -3220,7 +3220,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_domain_pricing_delivered_price",
-      "community": 39,
+      "community": 2,
       "norm_label": "delivered-price.ts"
     },
     {
@@ -3230,7 +3230,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_domain_pricing_delivered_price_deliveredpriceinput",
-      "community": 39,
+      "community": 2,
       "norm_label": "deliveredpriceinput"
     },
     {
@@ -3240,7 +3240,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "src_domain_pricing_delivered_price_estimatedeliveredpricecents",
-      "community": 39,
+      "community": 2,
       "norm_label": "estimatedeliveredpricecents()"
     },
     {
@@ -3250,7 +3250,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "src_domain_pricing_delivered_price_hasdeliveredprice",
-      "community": 39,
+      "community": 2,
       "norm_label": "hasdeliveredprice()"
     },
     {
@@ -3260,7 +3260,7 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "src_domain_pricing_delivered_price_ts_docref_adr_0003",
-      "community": 39,
+      "community": 2,
       "norm_label": "adr-0003"
     },
     {
@@ -3450,7 +3450,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "src_domain_pricing_offers_getvariantofferboard",
-      "community": 5,
+      "community": 39,
       "norm_label": "getvariantofferboard()"
     },
     {
@@ -3650,7 +3650,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "src_domain_retailers_ingest_persistparsed",
-      "community": 40,
+      "community": 2,
       "norm_label": "persistparsed()"
     },
     {
@@ -3660,7 +3660,7 @@
       "source_location": "L121",
       "_origin": "ast",
       "id": "src_domain_retailers_ingest_updatehealth",
-      "community": 40,
+      "community": 2,
       "norm_label": "updatehealth()"
     },
     {
@@ -3880,7 +3880,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_lib_catalog_slug",
-      "community": 4,
+      "community": 2,
       "norm_label": "catalog-slug.ts"
     },
     {
@@ -3910,7 +3910,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_lib_catalog_slug_concentration_code",
-      "community": 4,
+      "community": 2,
       "norm_label": "concentration_code"
     },
     {
@@ -3920,7 +3920,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "src_lib_catalog_slug_concentrationcode",
-      "community": 4,
+      "community": 2,
       "norm_label": "concentrationcode()"
     },
     {
@@ -3940,7 +3940,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "src_lib_catalog_slug_canonicalsku",
-      "community": 4,
+      "community": 2,
       "norm_label": "canonicalsku()"
     },
     {
@@ -4244,10 +4244,20 @@
       "norm_label": "sizemlfromtitle()"
     },
     {
+      "label": "derivePresentation()",
+      "file_type": "code",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L126",
+      "_origin": "ast",
+      "id": "src_retailers_fragrancenet_adapter_derivepresentation",
+      "community": 40,
+      "norm_label": "derivepresentation()"
+    },
+    {
       "label": "concentrationFromTitle()",
       "file_type": "code",
       "source_file": "src/retailers/fragrancenet/adapter.ts",
-      "source_location": "L108",
+      "source_location": "L133",
       "_origin": "ast",
       "id": "src_retailers_fragrancenet_adapter_concentrationfromtitle",
       "community": 40,
@@ -4257,7 +4267,7 @@
       "label": "parseNode()",
       "file_type": "code",
       "source_file": "src/retailers/fragrancenet/adapter.ts",
-      "source_location": "L115",
+      "source_location": "L140",
       "_origin": "ast",
       "id": "src_retailers_fragrancenet_adapter_parsenode",
       "community": 40,
@@ -4267,7 +4277,7 @@
       "label": "parseFragranceNetHtml()",
       "file_type": "code",
       "source_file": "src/retailers/fragrancenet/adapter.ts",
-      "source_location": "L183",
+      "source_location": "L207",
       "_origin": "ast",
       "id": "src_retailers_fragrancenet_adapter_parsefragrancenethtml",
       "community": 40,
@@ -4277,7 +4287,7 @@
       "label": "fetchMaybeGzip()",
       "file_type": "code",
       "source_file": "src/retailers/fragrancenet/adapter.ts",
-      "source_location": "L212",
+      "source_location": "L236",
       "_origin": "ast",
       "id": "src_retailers_fragrancenet_adapter_fetchmaybegzip",
       "community": 40,
@@ -4287,7 +4297,7 @@
       "label": "locsIn()",
       "file_type": "code",
       "source_file": "src/retailers/fragrancenet/adapter.ts",
-      "source_location": "L221",
+      "source_location": "L245",
       "_origin": "ast",
       "id": "src_retailers_fragrancenet_adapter_locsin",
       "community": 40,
@@ -4297,11 +4307,21 @@
       "label": "FragranceNetAdapter",
       "file_type": "code",
       "source_file": "src/retailers/fragrancenet/adapter.ts",
-      "source_location": "L223",
+      "source_location": "L247",
       "_origin": "ast",
       "id": "src_retailers_fragrancenet_adapter_fragrancenetadapter",
       "community": 40,
       "norm_label": "fragrancenetadapter"
+    },
+    {
+      "label": "ADR-0016",
+      "file_type": "concept",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L109",
+      "_origin": "ast",
+      "id": "src_retailers_fragrancenet_adapter_ts_docref_adr_0016",
+      "community": 40,
+      "norm_label": "adr-0016"
     },
     {
       "label": "adapter.ts",
@@ -4740,7 +4760,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_unit_catalog_test",
-      "community": 4,
+      "community": 2,
       "norm_label": "catalog.test.ts"
     },
     {
@@ -4750,7 +4770,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_unit_delivered_price_test",
-      "community": 39,
+      "community": 2,
       "norm_label": "delivered-price.test.ts"
     },
     {
@@ -4777,7 +4797,7 @@
       "label": "FIXTURES",
       "file_type": "code",
       "source_file": "tests/unit/fragrancenet-parser.test.ts",
-      "source_location": "L10",
+      "source_location": "L11",
       "_origin": "ast",
       "id": "tests_unit_fragrancenet_parser_test_fixtures",
       "community": 40,
@@ -4787,11 +4807,21 @@
       "label": "load()",
       "file_type": "code",
       "source_file": "tests/unit/fragrancenet-parser.test.ts",
-      "source_location": "L11",
+      "source_location": "L12",
       "_origin": "ast",
       "id": "tests_unit_fragrancenet_parser_test_load",
       "community": 40,
       "norm_label": "load()"
+    },
+    {
+      "label": "ADR-0016",
+      "file_type": "concept",
+      "source_file": "tests/unit/fragrancenet-parser.test.ts",
+      "source_location": "L69",
+      "_origin": "ast",
+      "id": "tests_unit_fragrancenet_parser_test_ts_docref_adr_0016",
+      "community": 40,
+      "norm_label": "adr-0016"
     },
     {
       "label": "luckyscent-parser.test.ts",
@@ -6554,6 +6584,16 @@
       "norm_label": "adr-015: the third retailer waits for an affiliate feed"
     },
     {
+      "label": "ADR-016: FragranceNet's presentation is derived from its title convention",
+      "file_type": "document",
+      "source_file": "docs/DECISIONS.md",
+      "source_location": "L511",
+      "_origin": "ast",
+      "id": "docs_decisions_adr_016_fragrancenet_s_presentation_is_derived_from_its_title_convention",
+      "community": 23,
+      "norm_label": "adr-016: fragrancenet's presentation is derived from its title convention"
+    },
+    {
       "label": "MATCHING_ENGINE.md",
       "file_type": "document",
       "source_file": "docs/MATCHING_ENGINE.md",
@@ -6817,7 +6857,7 @@
       "label": "In Progress",
       "file_type": "document",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L197",
+      "source_location": "L202",
       "_origin": "ast",
       "id": "docs_project_status_in_progress",
       "community": 13,
@@ -6827,7 +6867,7 @@
       "label": "Blocked on the operator",
       "file_type": "document",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L202",
+      "source_location": "L207",
       "_origin": "ast",
       "id": "docs_project_status_blocked_on_the_operator",
       "community": 13,
@@ -6837,7 +6877,7 @@
       "label": "Next Tasks",
       "file_type": "document",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L212",
+      "source_location": "L217",
       "_origin": "ast",
       "id": "docs_project_status_next_tasks",
       "community": 13,
@@ -6847,7 +6887,7 @@
       "label": "Known Issues",
       "file_type": "document",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L220",
+      "source_location": "L225",
       "_origin": "ast",
       "id": "docs_project_status_known_issues",
       "community": 13,
@@ -6857,7 +6897,7 @@
       "label": "Decisions Needed",
       "file_type": "document",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L225",
+      "source_location": "L230",
       "_origin": "ast",
       "id": "docs_project_status_decisions_needed",
       "community": 13,
@@ -6867,7 +6907,7 @@
       "label": "Latest Validation",
       "file_type": "document",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L229",
+      "source_location": "L234",
       "_origin": "ast",
       "id": "docs_project_status_latest_validation",
       "community": 13,
@@ -6877,7 +6917,7 @@
       "label": "Last Graphify Update",
       "file_type": "document",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L248",
+      "source_location": "L253",
       "_origin": "ast",
       "id": "docs_project_status_last_graphify_update",
       "community": 13,
@@ -6887,7 +6927,7 @@
       "label": "Latest GitHub Commit",
       "file_type": "document",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L252",
+      "source_location": "L257",
       "_origin": "ast",
       "id": "docs_project_status_latest_github_commit",
       "community": 13,
@@ -9001,7 +9041,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/app/actions.ts",
-      "source_location": "L89",
+      "source_location": "L93",
       "weight": 1.0,
       "source": "src_app_actions",
       "target": "src_app_actions_createrule",
@@ -9021,7 +9061,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/app/actions.ts",
-      "source_location": "L114",
+      "source_location": "L118",
       "weight": 1.0,
       "source": "src_app_actions",
       "target": "src_app_actions_removerule",
@@ -9031,7 +9071,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/app/actions.ts",
-      "source_location": "L78",
+      "source_location": "L82",
       "weight": 1.0,
       "source": "src_app_actions",
       "target": "src_app_actions_ruleschema",
@@ -9051,7 +9091,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/app/actions.ts",
-      "source_location": "L53",
+      "source_location": "L57",
       "weight": 1.0,
       "source": "src_app_actions",
       "target": "src_app_actions_signout",
@@ -9061,7 +9101,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/app/actions.ts",
-      "source_location": "L37",
+      "source_location": "L41",
       "weight": 1.0,
       "source": "src_app_actions",
       "target": "src_app_actions_signup",
@@ -9071,7 +9111,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/app/actions.ts",
-      "source_location": "L61",
+      "source_location": "L65",
       "weight": 1.0,
       "source": "src_app_actions",
       "target": "src_app_actions_togglewatch",
@@ -9081,7 +9121,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/app/actions.ts",
-      "source_location": "L59",
+      "source_location": "L63",
       "weight": 1.0,
       "source": "src_app_actions",
       "target": "src_app_actions_uuid",
@@ -9236,6 +9276,17 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/actions.ts",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "src_app_actions_signin",
+      "target": "src_domain_accounts_profiles_ensureprofile"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/actions.ts",
       "source_location": "L30",
       "weight": 1.0,
       "source": "src_app_actions_signin",
@@ -9269,7 +9320,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/actions.ts",
-      "source_location": "L44",
+      "source_location": "L48",
       "weight": 1.0,
       "source": "src_app_actions_signup",
       "target": "src_lib_supabase_server_createsupabaseserverclient"
@@ -9302,7 +9353,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/actions.ts",
-      "source_location": "L54",
+      "source_location": "L58",
       "weight": 1.0,
       "source": "src_app_actions_signout",
       "target": "src_lib_supabase_server_createsupabaseserverclient"
@@ -9313,7 +9364,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/actions.ts",
-      "source_location": "L65",
+      "source_location": "L69",
       "weight": 1.0,
       "source": "src_app_actions_togglewatch",
       "target": "src_domain_accounts_profiles_ensureprofile"
@@ -9324,7 +9375,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/actions.ts",
-      "source_location": "L71",
+      "source_location": "L75",
       "weight": 1.0,
       "source": "src_app_actions_togglewatch",
       "target": "src_domain_alerts_watchlists_addtowatchlist"
@@ -9335,7 +9386,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/actions.ts",
-      "source_location": "L70",
+      "source_location": "L74",
       "weight": 1.0,
       "source": "src_app_actions_togglewatch",
       "target": "src_domain_alerts_watchlists_removefromwatchlist"
@@ -9346,7 +9397,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/actions.ts",
-      "source_location": "L62",
+      "source_location": "L66",
       "weight": 1.0,
       "source": "src_app_actions_togglewatch",
       "target": "src_lib_supabase_server_getcurrentuser"
@@ -9368,7 +9419,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/actions.ts",
-      "source_location": "L94",
+      "source_location": "L98",
       "weight": 1.0,
       "source": "src_app_actions_createrule",
       "target": "src_domain_accounts_profiles_ensureprofile"
@@ -9379,7 +9430,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/actions.ts",
-      "source_location": "L110",
+      "source_location": "L114",
       "weight": 1.0,
       "source": "src_app_actions_createrule",
       "target": "src_domain_alerts_watchlists_addtowatchlist"
@@ -9390,7 +9441,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/actions.ts",
-      "source_location": "L101",
+      "source_location": "L105",
       "weight": 1.0,
       "source": "src_app_actions_createrule",
       "target": "src_domain_alerts_watchlists_createalertrule"
@@ -9401,7 +9452,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/actions.ts",
-      "source_location": "L90",
+      "source_location": "L94",
       "weight": 1.0,
       "source": "src_app_actions_createrule",
       "target": "src_lib_supabase_server_getcurrentuser"
@@ -9423,7 +9474,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/actions.ts",
-      "source_location": "L117",
+      "source_location": "L121",
       "weight": 1.0,
       "source": "src_app_actions_removerule",
       "target": "src_domain_alerts_watchlists_deletealertrule"
@@ -9434,7 +9485,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/actions.ts",
-      "source_location": "L115",
+      "source_location": "L119",
       "weight": 1.0,
       "source": "src_app_actions_removerule",
       "target": "src_lib_supabase_server_getcurrentuser"
@@ -17659,7 +17710,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/retailers/fragrancenet/adapter.ts",
-      "source_location": "L108",
+      "source_location": "L133",
       "weight": 1.0,
       "source": "src_retailers_fragrancenet_adapter",
       "target": "src_retailers_fragrancenet_adapter_concentrationfromtitle",
@@ -17669,7 +17720,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/retailers/fragrancenet/adapter.ts",
-      "source_location": "L212",
+      "source_location": "L126",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter",
+      "target": "src_retailers_fragrancenet_adapter_derivepresentation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L236",
       "weight": 1.0,
       "source": "src_retailers_fragrancenet_adapter",
       "target": "src_retailers_fragrancenet_adapter_fetchmaybegzip",
@@ -17679,7 +17740,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/retailers/fragrancenet/adapter.ts",
-      "source_location": "L223",
+      "source_location": "L247",
       "weight": 1.0,
       "source": "src_retailers_fragrancenet_adapter",
       "target": "src_retailers_fragrancenet_adapter_fragrancenetadapter",
@@ -17689,7 +17750,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/retailers/fragrancenet/adapter.ts",
-      "source_location": "L221",
+      "source_location": "L245",
       "weight": 1.0,
       "source": "src_retailers_fragrancenet_adapter",
       "target": "src_retailers_fragrancenet_adapter_locsin",
@@ -17719,7 +17780,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/retailers/fragrancenet/adapter.ts",
-      "source_location": "L183",
+      "source_location": "L207",
       "weight": 1.0,
       "source": "src_retailers_fragrancenet_adapter",
       "target": "src_retailers_fragrancenet_adapter_parsefragrancenethtml",
@@ -17729,7 +17790,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/retailers/fragrancenet/adapter.ts",
-      "source_location": "L115",
+      "source_location": "L140",
       "weight": 1.0,
       "source": "src_retailers_fragrancenet_adapter",
       "target": "src_retailers_fragrancenet_adapter_parsenode",
@@ -17743,6 +17804,16 @@
       "weight": 1.0,
       "source": "src_retailers_fragrancenet_adapter",
       "target": "src_retailers_fragrancenet_adapter_sizemlfromtitle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L109",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter",
+      "target": "src_retailers_fragrancenet_adapter_ts_docref_adr_0016",
       "confidence_score": 1.0
     },
     {
@@ -17882,7 +17953,7 @@
       "context": "argument",
       "confidence": "INFERRED",
       "source_file": "src/retailers/fragrancenet/adapter.ts",
-      "source_location": "L190",
+      "source_location": "L214",
       "weight": 1.0,
       "source": "src_retailers_fragrancenet_adapter_parsefragrancenethtml",
       "target": "src_retailers_fragrancenet_adapter_asrecord",
@@ -17893,7 +17964,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/retailers/fragrancenet/adapter.ts",
-      "source_location": "L121",
+      "source_location": "L146",
       "weight": 1.0,
       "source": "src_retailers_fragrancenet_adapter_parsenode",
       "target": "src_retailers_fragrancenet_adapter_asrecord",
@@ -17904,7 +17975,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/retailers/fragrancenet/adapter.ts",
-      "source_location": "L124",
+      "source_location": "L149",
       "weight": 1.0,
       "source": "src_retailers_fragrancenet_adapter_parsenode",
       "target": "src_retailers_fragrancenet_adapter_nameof",
@@ -17915,7 +17986,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/retailers/fragrancenet/adapter.ts",
-      "source_location": "L155",
+      "source_location": "L180",
       "weight": 1.0,
       "source": "src_retailers_fragrancenet_adapter_parsenode",
       "target": "src_retailers_fragrancenet_adapter_cleanfragrancename",
@@ -17937,7 +18008,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/retailers/fragrancenet/adapter.ts",
-      "source_location": "L136",
+      "source_location": "L161",
       "weight": 1.0,
       "source": "src_retailers_fragrancenet_adapter_parsenode",
       "target": "src_retailers_fragrancenet_adapter_sizemlfromtitle",
@@ -17970,7 +18041,29 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/retailers/fragrancenet/adapter.ts",
-      "source_location": "L158",
+      "source_location": "L186",
+      "weight": 1.0,
+      "source": "src_retailers_fragrancenet_adapter_parsenode",
+      "target": "src_retailers_fragrancenet_adapter_derivepresentation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/fragrancenet-parser.test.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "tests_unit_fragrancenet_parser_test",
+      "target": "src_retailers_fragrancenet_adapter_derivepresentation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/retailers/fragrancenet/adapter.ts",
+      "source_location": "L183",
       "weight": 1.0,
       "source": "src_retailers_fragrancenet_adapter_parsenode",
       "target": "src_retailers_fragrancenet_adapter_concentrationfromtitle",
@@ -17981,7 +18074,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/retailers/fragrancenet/adapter.ts",
-      "source_location": "L202",
+      "source_location": "L226",
       "weight": 1.0,
       "source": "src_retailers_fragrancenet_adapter_parsefragrancenethtml",
       "target": "src_retailers_fragrancenet_adapter_parsenode",
@@ -17992,7 +18085,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/retailers/fragrancenet/adapter.ts",
-      "source_location": "L168",
+      "source_location": "L192",
       "weight": 1.0,
       "source": "src_retailers_fragrancenet_adapter_parsenode",
       "target": "src_retailers_shared_json_ld_availabilitytoinstock",
@@ -18003,7 +18096,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/retailers/fragrancenet/adapter.ts",
-      "source_location": "L165",
+      "source_location": "L189",
       "weight": 1.0,
       "source": "src_retailers_fragrancenet_adapter_parsenode",
       "target": "src_retailers_shared_money_normalizecurrency",
@@ -18014,7 +18107,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/retailers/fragrancenet/adapter.ts",
-      "source_location": "L132",
+      "source_location": "L157",
       "weight": 1.0,
       "source": "src_retailers_fragrancenet_adapter_parsenode",
       "target": "src_retailers_shared_money_parsepricetocents",
@@ -18025,7 +18118,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/retailers/fragrancenet/adapter.ts",
-      "source_location": "L135",
+      "source_location": "L160",
       "weight": 1.0,
       "source": "src_retailers_fragrancenet_adapter_parsenode",
       "target": "src_retailers_shared_size_lookslikesampleortravel",
@@ -18037,7 +18130,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/retailers/fragrancenet/adapter.ts",
-      "source_location": "L188",
+      "source_location": "L212",
       "weight": 1.0,
       "source": "src_retailers_fragrancenet_adapter_parsefragrancenethtml",
       "target": "src_retailers_shared_json_ld_extractjsonld"
@@ -18968,7 +19061,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/unit/fragrancenet-parser.test.ts",
-      "source_location": "L10",
+      "source_location": "L11",
       "weight": 1.0,
       "source": "tests_unit_fragrancenet_parser_test",
       "target": "tests_unit_fragrancenet_parser_test_fixtures",
@@ -18978,10 +19071,20 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/unit/fragrancenet-parser.test.ts",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0,
       "source": "tests_unit_fragrancenet_parser_test",
       "target": "tests_unit_fragrancenet_parser_test_load",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/unit/fragrancenet-parser.test.ts",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "tests_unit_fragrancenet_parser_test",
+      "target": "tests_unit_fragrancenet_parser_test_ts_docref_adr_0016",
       "confidence_score": 1.0
     },
     {
@@ -20478,6 +20581,16 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/DECISIONS.md",
+      "source_location": "L511",
+      "weight": 1.0,
+      "source": "docs_decisions_scentscout_decision_records_adrs",
+      "target": "docs_decisions_adr_016_fragrancenet_s_presentation_is_derived_from_its_title_convention",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "docs/MATCHING_ENGINE.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -20679,7 +20792,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L202",
+      "source_location": "L207",
       "weight": 1.0,
       "source": "docs_project_status_project_status",
       "target": "docs_project_status_blocked_on_the_operator",
@@ -20709,7 +20822,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L225",
+      "source_location": "L230",
       "weight": 1.0,
       "source": "docs_project_status_project_status",
       "target": "docs_project_status_decisions_needed",
@@ -20719,7 +20832,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L197",
+      "source_location": "L202",
       "weight": 1.0,
       "source": "docs_project_status_project_status",
       "target": "docs_project_status_in_progress",
@@ -20729,7 +20842,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L220",
+      "source_location": "L225",
       "weight": 1.0,
       "source": "docs_project_status_project_status",
       "target": "docs_project_status_known_issues",
@@ -20739,7 +20852,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L248",
+      "source_location": "L253",
       "weight": 1.0,
       "source": "docs_project_status_project_status",
       "target": "docs_project_status_last_graphify_update",
@@ -20749,7 +20862,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L252",
+      "source_location": "L257",
       "weight": 1.0,
       "source": "docs_project_status_project_status",
       "target": "docs_project_status_latest_github_commit",
@@ -20759,7 +20872,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L229",
+      "source_location": "L234",
       "weight": 1.0,
       "source": "docs_project_status_project_status",
       "target": "docs_project_status_latest_validation",
@@ -20769,7 +20882,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PROJECT_STATUS.md",
-      "source_location": "L212",
+      "source_location": "L217",
       "weight": 1.0,
       "source": "docs_project_status_project_status",
       "target": "docs_project_status_next_tasks",
@@ -21117,5 +21230,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "fe01056b25645e04033ece94e5276f022418ac53"
+  "built_at_commit": "3fcd54f8f1b926d01f989809135e1394c979f18d"
 }
