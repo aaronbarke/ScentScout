@@ -48,7 +48,7 @@ export default async function VariantPage({ params }: Params) {
 
   return (
     <div className="space-y-6">
-      <nav className="text-sm text-slate-400">
+      <nav className="text-sm text-faint">
         <Link href="/fragrances" className="hover:underline">
           Fragrances
         </Link>{" "}
@@ -56,15 +56,15 @@ export default async function VariantPage({ params }: Params) {
         <Link href={`/fragrances/${header.fragranceSlug}`} className="hover:underline">
           {header.fragranceName}
         </Link>{" "}
-        / <span className="text-slate-600 dark:text-slate-300">{header.sizeMl}ml</span>
+        / <span className="text-body">{header.sizeMl}ml</span>
       </nav>
 
       <header>
-        <div className="text-sm font-medium uppercase tracking-wide text-slate-400">
+        <div className="eyebrow">
           {header.brandName}
         </div>
-        <h1 className="text-3xl font-bold">{header.fragranceName}</h1>
-        <div className="mt-2 flex flex-wrap items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
+        <h1 className="font-display text-[2.6rem] leading-tight text-ink">{header.fragranceName}</h1>
+        <div className="mt-2 flex flex-wrap items-center gap-2 text-sm text-body">
           <span>{variantDescriptor(header.concentration, header.sizeMl, header.presentation)}</span>
           <PresentationTag presentation={header.presentation} label={presentationLabel(header.presentation)} />
         </div>

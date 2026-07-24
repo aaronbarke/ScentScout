@@ -31,40 +31,40 @@ export default async function DealsPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-bold">Deals</h1>
-        <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
+        <h1 className="font-display text-[2.1rem] leading-tight text-ink">Deals</h1>
+        <p className="mt-1 text-sm text-muted">
           We rank by price history, not just the lowest sticker price — and we only show variants we
           can match with confidence.
         </p>
       </div>
 
       {boards.length === 0 ? (
-        <p className="rounded-lg border border-dashed border-slate-300 p-6 text-sm text-slate-500 dark:border-slate-700">
+        <p className="rounded-lg border border-dashed border-line-strong p-6 text-sm text-muted">
           No offers tracked yet. As retailers are ingested and matched, deals will appear here.
         </p>
       ) : (
-        <ul className="divide-y divide-slate-200 overflow-hidden rounded-xl border border-slate-200 dark:divide-slate-800 dark:border-slate-800">
+        <ul className="divide-y divide-line overflow-hidden rounded-xl border border-line">
           {boards.map((b) => {
             const v = meta.get(b.canonicalSku)!;
             return (
               <li key={b.canonicalSku}>
                 <Link
                   href={`/fragrances/${v.fragranceSlug}/${v.variantPath}`}
-                  className="flex flex-wrap items-center gap-3 bg-white p-4 hover:bg-slate-50 dark:bg-slate-900 dark:hover:bg-slate-800"
+                  className="flex flex-wrap items-center gap-3 bg-surface p-4 hover:bg-raised"
                 >
                   <div className="min-w-0">
                     <div className="font-medium">
                       {b.brandName} — {b.fragranceName}
                     </div>
-                    <div className="text-xs text-slate-500 dark:text-slate-400">
+                    <div className="text-xs text-muted">
                       {variantDescriptor(v.concentration, v.sizeMl, v.presentation)}
                     </div>
                   </div>
                   <div className="ml-auto flex items-center gap-4">
                     <GuidanceBadge label={b.guidance.label} />
                     <div className="text-right">
-                      <div className="font-semibold">{formatCents(b.metrics.currentPriceCents)}</div>
-                      <div className="text-[11px] text-slate-400">{b.offers.length} offer{b.offers.length === 1 ? "" : "s"}</div>
+                      <div className="font-medium tabular">{formatCents(b.metrics.currentPriceCents)}</div>
+                      <div className="text-[11px] text-faint">{b.offers.length} offer{b.offers.length === 1 ? "" : "s"}</div>
                     </div>
                   </div>
                 </Link>

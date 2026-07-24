@@ -16,8 +16,8 @@ export default async function FragrancesPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-bold">All fragrances</h1>
-        <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
+        <h1 className="font-display text-[2.1rem] leading-tight text-ink">All fragrances</h1>
+        <p className="mt-1 text-sm text-muted">
           {catalog.length} fragrances across {new Set(catalog.map((f) => f.brandName)).size} brands.
         </p>
       </div>

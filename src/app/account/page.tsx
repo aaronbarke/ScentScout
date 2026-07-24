@@ -35,26 +35,26 @@ export default async function AccountPage() {
     <div className="space-y-8">
       <div className="flex flex-wrap items-center gap-3">
         <div>
-          <h1 className="text-2xl font-bold">Your account</h1>
-          <p className="text-sm text-slate-500 dark:text-slate-400">{user.email}</p>
+          <h1 className="font-display text-[2.1rem] leading-tight text-ink">Your account</h1>
+          <p className="text-sm text-muted">{user.email}</p>
         </div>
         <form action={signOut} className="ml-auto">
-          <button className="rounded-lg border border-slate-300 px-3 py-1.5 text-sm hover:bg-slate-100 dark:border-slate-700 dark:hover:bg-slate-800">
+          <button className="rounded-lg border border-line-strong px-3 py-1.5 text-sm hover:bg-raised">
             Sign out
           </button>
         </form>
       </div>
 
       <section>
-        <h2 className="mb-2 text-lg font-semibold">Alerts ({rules.length})</h2>
+        <h2 className="mb-3 font-display text-xl text-ink">Alerts ({rules.length})</h2>
         {rules.length === 0 ? (
-          <p className="rounded-lg border border-dashed border-slate-300 p-4 text-sm text-slate-500 dark:border-slate-700">
+          <p className="rounded-lg border border-dashed border-line-strong p-4 text-sm text-muted">
             No alerts yet. Open any exact variant and set a target delivered price.
           </p>
         ) : (
-          <ul className="divide-y divide-slate-200 overflow-hidden rounded-xl border border-slate-200 dark:divide-slate-800 dark:border-slate-800">
+          <ul className="divide-y divide-line overflow-hidden rounded-xl border border-line">
             {rules.map((r) => (
-              <li key={r.id} className="flex flex-wrap items-center gap-3 bg-white p-4 dark:bg-slate-900">
+              <li key={r.id} className="flex flex-wrap items-center gap-3 bg-surface p-4">
                 <div className="min-w-0">
                   <Link
                     href={pathFor(r.fragranceSlug, r.concentration, r.sizeMl, r.presentation)}
@@ -62,10 +62,10 @@ export default async function AccountPage() {
                   >
                     {r.brandName} — {r.fragranceName}
                   </Link>
-                  <div className="text-xs text-slate-500 dark:text-slate-400">
+                  <div className="text-xs text-muted">
                     {variantDescriptor(r.concentration, r.sizeMl, r.presentation)}
                   </div>
-                  <div className="mt-1 text-xs text-slate-500 dark:text-slate-400">
+                  <div className="mt-1 text-xs text-muted">
                     {r.maximumDeliveredPriceCents === null
                       ? "Any in-stock offer (restock alert)"
                       : `Alert at or below ${formatCents(r.maximumDeliveredPriceCents)} delivered`}
@@ -74,7 +74,7 @@ export default async function AccountPage() {
                 </div>
                 <form action={removeRule} className="ml-auto">
                   <input type="hidden" name="ruleId" value={r.id} />
-                  <button className="rounded-lg border border-slate-300 px-3 py-1.5 text-xs hover:bg-slate-100 dark:border-slate-700 dark:hover:bg-slate-800">
+                  <button className="rounded-lg border border-line-strong px-3 py-1.5 text-xs hover:bg-raised">
                     Remove
                   </button>
                 </form>
@@ -82,29 +82,29 @@ export default async function AccountPage() {
             ))}
           </ul>
         )}
-        <p className="mt-2 text-xs text-slate-400">
+        <p className="mt-2 text-xs text-faint">
           Alerts only fire on a fresh, in-stock, exactly-matched offer. If a retailer doesn&apos;t
           publish shipping, we can&apos;t prove a delivered-price target and won&apos;t alert on it.
         </p>
       </section>
 
       <section>
-        <h2 className="mb-2 text-lg font-semibold">Watchlist ({watchlist.length})</h2>
+        <h2 className="mb-3 font-display text-xl text-ink">Watchlist ({watchlist.length})</h2>
         {watchlist.length === 0 ? (
-          <p className="rounded-lg border border-dashed border-slate-300 p-4 text-sm text-slate-500 dark:border-slate-700">
+          <p className="rounded-lg border border-dashed border-line-strong p-4 text-sm text-muted">
             Nothing tracked yet.
           </p>
         ) : (
-          <ul className="divide-y divide-slate-200 overflow-hidden rounded-xl border border-slate-200 dark:divide-slate-800 dark:border-slate-800">
+          <ul className="divide-y divide-line overflow-hidden rounded-xl border border-line">
             {watchlist.map((w) => (
-              <li key={w.productVariantId} className="bg-white p-4 dark:bg-slate-900">
+              <li key={w.productVariantId} className="bg-surface p-4">
                 <Link
                   href={pathFor(w.fragranceSlug, w.concentration, w.sizeMl, w.presentation)}
                   className="font-medium hover:underline"
                 >
                   {w.brandName} — {w.fragranceName}
                 </Link>
-                <div className="text-xs text-slate-500 dark:text-slate-400">
+                <div className="text-xs text-muted">
                   {variantDescriptor(w.concentration, w.sizeMl, w.presentation)}
                 </div>
               </li>
@@ -114,17 +114,17 @@ export default async function AccountPage() {
       </section>
 
       <section>
-        <h2 className="mb-2 text-lg font-semibold">Alert history</h2>
+        <h2 className="mb-3 font-display text-xl text-ink">Alert history</h2>
         {history.length === 0 ? (
-          <p className="text-sm text-slate-500 dark:text-slate-400">No alerts have fired yet.</p>
+          <p className="text-sm text-muted">No alerts have fired yet.</p>
         ) : (
-          <ul className="divide-y divide-slate-200 overflow-hidden rounded-xl border border-slate-200 dark:divide-slate-800 dark:border-slate-800">
+          <ul className="divide-y divide-line overflow-hidden rounded-xl border border-line">
             {history.map((h) => (
-              <li key={h.id} className="flex items-center gap-3 bg-white p-3 text-sm dark:bg-slate-900">
+              <li key={h.id} className="flex items-center gap-3 bg-surface p-3 text-sm">
                 <span>
                   {h.brandName} — {h.fragranceName}
                 </span>
-                <span className="ml-auto text-xs text-slate-400">
+                <span className="ml-auto text-xs text-faint">
                   {h.deliveryStatus}
                   {h.sentAt ? ` · ${h.sentAt.toLocaleDateString()}` : ""}
                 </span>

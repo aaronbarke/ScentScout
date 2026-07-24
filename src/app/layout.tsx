@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Cormorant_Garamond } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
 import { SiteHeader } from "@/components/SiteHeader";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
+/** Editorial display serif — the visual signature of fragrance retail. */
+const displaySerif = Cormorant_Garamond({
+  variable: "--font-display",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
+});
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3004";
 
@@ -28,19 +35,22 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
-      <body className="flex min-h-full flex-col bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100">
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} ${displaySerif.variable} h-full antialiased`}
+    >
+      <body className="flex min-h-full flex-col bg-canvas text-body">
         <SiteHeader />
         <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-8">{children}</main>
-        <footer className="border-t border-slate-200 dark:border-slate-800">
-          <div className="mx-auto flex max-w-5xl flex-col gap-1 px-4 py-6 text-xs text-slate-400">
+        <footer className="border-t border-line">
+          <div className="mx-auto flex max-w-5xl flex-col gap-1 px-4 py-6 text-xs text-faint">
             <p>
               ScentScout compares exact fragrance variants. Prices are estimates before tax and may
               be out of date — always confirm at checkout.
             </p>
             <p>
               Some links may be affiliate links.{" "}
-              <Link href="/" className="underline hover:text-slate-600">
+              <Link href="/" className="underline hover:text-body">
                 ScentScout
               </Link>{" "}
               · MVP

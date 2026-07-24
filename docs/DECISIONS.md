@@ -353,3 +353,41 @@ Consequences:
 A pending queue exists (`listPendingAlerts`) and needs a delivery worker (wired when a Resend key
 is added). Alerts fire at most once per rule per run; the cooldown
 (`RULE_COOLDOWN_HOURS = 12`) plus the price-sensitive dedup key control frequency.
+
+---
+
+## ADR-012: Visual identity — warm editorial palette on semantic tokens
+
+Status: Accepted
+
+Date: 2026-07-23
+
+Decision:
+The UI uses a warm bone/ink palette with a single bronze accent and an editorial display serif
+(Cormorant Garamond) for headings, wordmark and prices. All colour is expressed as **semantic
+CSS variables** (`--canvas`, `--surface`, `--raised`, `--ink`, `--body`, `--muted`, `--faint`,
+`--line`, `--accent`, plus `positive`/`caution`/`critical`) registered with Tailwind via
+`@theme inline`. Components use tokens (`bg-surface`, `text-muted`, `border-line`) and carry
+**no `dark:` variants**.
+
+Reason:
+The first pass was default Tailwind indigo-on-slate, which reads as a SaaS dashboard rather than
+fragrance retail — a category whose visual language is warm neutrals, generous whitespace,
+restraint and editorial serifs. Semantic tokens fix the deeper problem: with `dark:` variants
+every colour decision had to be made and maintained twice, and dark mode had drifted to a cold
+blue-black. One token set that flips at the `:root` level guarantees the two themes stay in sync
+and halves the markup.
+
+Alternatives:
+(a) Keep per-utility `dark:` variants — rejected; duplicated intent and already drifting.
+(b) A photographic/luxury-brand treatment — rejected for now; we have no product imagery rights,
+and a type-and-space-led design degrades gracefully without images.
+(c) Adopt shadcn/ui's default theme — rejected; the same generic look this ADR is correcting
+(shadcn remains available for primitives, per ADR-010).
+
+Consequences:
+New components must use semantic tokens, never raw palette utilities (`slate-*`, `indigo-*`);
+a raw-palette reference is now a review smell. Guidance and presentation badges are deliberately
+muted — price guidance is advice, not a claim, so it must not read as promotional. Prices use
+`tabular` figures so columns align. A visible `:focus-visible` ring is defined globally for
+keyboard accessibility.

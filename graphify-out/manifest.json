@@ -25,13 +25,13 @@
     "semantic_hash": "239f3ebf717465dc636818a1a619398d"
   },
   "src/app/layout.tsx": {
-    "mtime": 1784829503.8605196,
-    "ast_hash": "cb8c286d7f8e1439ad5daf758902b6f8",
+    "mtime": 1784863473.801564,
+    "ast_hash": "dc56efa7d75bebc687ef5560a47b02ca",
     "semantic_hash": ""
   },
   "src/app/page.tsx": {
-    "mtime": 1784829539.2325675,
-    "ast_hash": "c3df0994df0a047fc0edcbec88beced9",
+    "mtime": 1784863494.8494773,
+    "ast_hash": "aa1262286ec7501dc2b62f48e45b333c",
     "semantic_hash": ""
   },
   "tsconfig.json": {
@@ -205,8 +205,8 @@
     "semantic_hash": ""
   },
   "docs/DECISIONS.md": {
-    "mtime": 1784849295.6802924,
-    "ast_hash": "db63585f9af79261333c1708538a3189",
+    "mtime": 1784863615.3537326,
+    "ast_hash": "51139c01e285041e258313e656e61e12",
     "semantic_hash": ""
   },
   "docs/MATCHING_ENGINE.md": {
@@ -225,8 +225,8 @@
     "semantic_hash": ""
   },
   "docs/PROJECT_STATUS.md": {
-    "mtime": 1784862751.7691236,
-    "ast_hash": "43f2c38d36eb990c9b7d2155b22bc688",
+    "mtime": 1784863615.3730109,
+    "ast_hash": "0a97cb2eafb39c978c59cb606e80232b",
     "semantic_hash": ""
   },
   "docs/RETAILER_ADAPTERS.md": {
@@ -365,8 +365,8 @@
     "semantic_hash": ""
   },
   "docs/RETAILER_RESEARCH.md": {
-    "mtime": 1784779261.4901996,
-    "ast_hash": "c98e5a971687d762fde69ab7b8db7823",
+    "mtime": 1784863197.238941,
+    "ast_hash": "0ce1d77036b8d877d1bfa09a0add9f05",
     "semantic_hash": ""
   },
   "tests/fixtures/retailers/luckyscent/gris-charnel.html": {
@@ -480,58 +480,58 @@
     "semantic_hash": ""
   },
   "src/app/deals/page.tsx": {
-    "mtime": 1784829625.2844868,
-    "ast_hash": "ef9ea71ce852cf60e2e803c64f0d5f37",
+    "mtime": 1784863494.8512454,
+    "ast_hash": "0c9b8677ab39642b7add437590f0667c",
     "semantic_hash": ""
   },
   "src/app/fragrances/[fragranceSlug]/[variantPath]/page.tsx": {
-    "mtime": 1784862655.7465434,
-    "ast_hash": "0f3d21697fb9aac1d5c0a9762ade6bc6",
+    "mtime": 1784863494.8529654,
+    "ast_hash": "568494ade2d54a832535f7190c65e671",
     "semantic_hash": ""
   },
   "src/app/fragrances/[fragranceSlug]/page.tsx": {
-    "mtime": 1784829562.5044434,
-    "ast_hash": "cc69fcc65ce41209e9a2cbfa4e48484d",
+    "mtime": 1784863494.852667,
+    "ast_hash": "ab59d108a0f4165f4e2834ac66233678",
     "semantic_hash": ""
   },
   "src/app/fragrances/page.tsx": {
-    "mtime": 1784829548.3000045,
-    "ast_hash": "24bf08813f321ebeaeaf2f5bc563d047",
+    "mtime": 1784863494.852089,
+    "ast_hash": "f238842f6751d7a8df92c009366b1294",
     "semantic_hash": ""
   },
   "src/app/restocks/page.tsx": {
-    "mtime": 1784829636.785539,
-    "ast_hash": "a297b0c1ff4285499ea73b64efac30f3",
+    "mtime": 1784863494.852496,
+    "ast_hash": "2217d13cf12241e5774bb83598308a72",
     "semantic_hash": ""
   },
   "src/app/search/page.tsx": {
-    "mtime": 1784829609.9113922,
-    "ast_hash": "8027a349a8bedc565fad515bf9500443",
+    "mtime": 1784863494.8514333,
+    "ast_hash": "7fde25791c98e1c846c36d82aad601d4",
     "semantic_hash": ""
   },
   "src/components/FragranceCard.tsx": {
-    "mtime": 1784829466.293348,
-    "ast_hash": "272bbfe6fabe4257edda82a046503ffc",
+    "mtime": 1784863494.8504941,
+    "ast_hash": "7dd31af4b9d0e6cbe9c18332163ea679",
     "semantic_hash": ""
   },
   "src/components/GuidanceBadge.tsx": {
-    "mtime": 1784829427.240928,
-    "ast_hash": "3cfd4d09e621e748ab11af7339439758",
+    "mtime": 1784863457.9988809,
+    "ast_hash": "9e29d46ce4614d11d4beebb071bc34a6",
     "semantic_hash": ""
   },
   "src/components/OfferBoard.tsx": {
-    "mtime": 1784829484.8432844,
-    "ast_hash": "50c76c048712ca23e72f3b917374264c",
+    "mtime": 1784863494.851013,
+    "ast_hash": "71aa32d13a1c137b99380030122a265c",
     "semantic_hash": ""
   },
   "src/components/PriceHistoryChart.tsx": {
-    "mtime": 1784829443.8660073,
-    "ast_hash": "eb95fab6177ec414a7caf9b3a5cc872b",
+    "mtime": 1784863575.4060218,
+    "ast_hash": "5a966cd55d0fc27d1844c14dda7b5f33",
     "semantic_hash": ""
   },
   "src/components/SiteHeader.tsx": {
-    "mtime": 1784862659.2511632,
-    "ast_hash": "77bab26cd8d1c699fd706761539ae273",
+    "mtime": 1784863520.383999,
+    "ast_hash": "3f70a1a0c427967ccbbe5f5b86540fbc",
     "semantic_hash": ""
   },
   "src/domain/catalog/queries.ts": {
@@ -585,8 +585,8 @@
     "semantic_hash": ""
   },
   "src/app/account/page.tsx": {
-    "mtime": 1784862630.038824,
-    "ast_hash": "910a5b2449b0f7660ebb3db6a1dbfd42",
+    "mtime": 1784863494.8518908,
+    "ast_hash": "3d0466efd002de79ab03ed9f2865d0b6",
     "semantic_hash": ""
   },
   "src/app/actions.ts": {
@@ -595,13 +595,13 @@
     "semantic_hash": ""
   },
   "src/app/login/page.tsx": {
-    "mtime": 1784862608.505435,
-    "ast_hash": "fd343ad08212e20dc0dfb2d9d4a05e73",
+    "mtime": 1784863494.8522952,
+    "ast_hash": "173b21cb0b7fd29b8873b3e2812b37b1",
     "semantic_hash": ""
   },
   "src/components/TrackVariant.tsx": {
-    "mtime": 1784862641.0078373,
-    "ast_hash": "6c45ee1d330beac93a9df40010b802f9",
+    "mtime": 1784863430.7616806,
+    "ast_hash": "4db72e63fe320b42fff71d771e39897b",
     "semantic_hash": ""
   },
   "src/domain/alerts/watchlists.ts": {

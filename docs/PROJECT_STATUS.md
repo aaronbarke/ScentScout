@@ -2,7 +2,7 @@
 
 ## Current Milestone
 
-Phase 6 — Accounts & alerts ✅ (email delivery pending RESEND_API_KEY + a verified domain)
+Phase 7 in progress — FragranceNet researched; UI redesigned to a warm editorial identity (ADR-012)
 
 ## Completed
 
@@ -43,6 +43,13 @@ Phase 6 — Accounts & alerts ✅ (email delivery pending RESEND_API_KEY + a ver
   - `src/domain/pricing/delivered-price.ts` implements ADR-003 with 7 tests.
   - CLI: `npm run retailer -- --url <u> | --discover <n> | --health`.
   - Retailer registry seeded; only access-verified retailers are `enabled`.
+
+- **Visual identity rework** (ADR-012): replaced default indigo-on-slate with a warm bone/ink
+  palette, bronze accent and Cormorant Garamond display serif. All colour moved to semantic
+  tokens (`bg-surface`, `text-muted`, `border-line`) so components carry **no `dark:` variants** —
+  light and dark can no longer drift apart. Muted guidance/presentation badges, eyebrow labels,
+  tabular price figures, global focus-visible ring. Fixed a chart bug where a flat price series
+  pinned to the baseline (reading as "price collapsed") instead of centring.
 
 - **Phase 6** — accounts & alerts: ✅ (delivery worker pending a Resend key)
   - **Supabase Auth** wired and verified live (publishable key only — the secret key is never

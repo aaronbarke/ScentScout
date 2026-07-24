@@ -17,19 +17,19 @@ export default async function RestocksPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-bold">Recent restocks</h1>
-        <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
+        <h1 className="font-display text-[2.1rem] leading-tight text-ink">Recent restocks</h1>
+        <p className="mt-1 text-sm text-muted">
           Variants most recently observed in stock. A parser failure is never treated as
           out-of-stock, so this reflects genuine availability signals.
         </p>
       </div>
 
       {rows.length === 0 ? (
-        <p className="rounded-lg border border-dashed border-slate-300 p-6 text-sm text-slate-500 dark:border-slate-700">
+        <p className="rounded-lg border border-dashed border-line-strong p-6 text-sm text-muted">
           No in-stock observations yet.
         </p>
       ) : (
-        <ul className="divide-y divide-slate-200 overflow-hidden rounded-xl border border-slate-200 dark:divide-slate-800 dark:border-slate-800">
+        <ul className="divide-y divide-line overflow-hidden rounded-xl border border-line">
           {rows.map((r, i) => {
             const path = variantPath(
               r.concentration as Parameters<typeof variantPath>[0],
@@ -40,19 +40,19 @@ export default async function RestocksPage() {
               <li key={`${r.canonicalSku}-${i}`}>
                 <Link
                   href={`/fragrances/${r.fragranceSlug}/${path}`}
-                  className="flex flex-wrap items-center gap-3 bg-white p-4 hover:bg-slate-50 dark:bg-slate-900 dark:hover:bg-slate-800"
+                  className="flex flex-wrap items-center gap-3 bg-surface p-4 hover:bg-raised"
                 >
                   <div className="min-w-0">
                     <div className="font-medium">
                       {r.brandName} — {r.fragranceName}
                     </div>
-                    <div className="text-xs text-slate-500 dark:text-slate-400">
+                    <div className="text-xs text-muted">
                       {variantDescriptor(r.concentration, r.sizeMl, r.presentation)}
                     </div>
                   </div>
                   <div className="ml-auto text-right">
-                    <div className="font-semibold">{formatCents(r.listedPriceCents)}</div>
-                    <div className="text-[11px] text-slate-400">{freshnessLabel(r.observedAt)}</div>
+                    <div className="font-medium tabular">{formatCents(r.listedPriceCents)}</div>
+                    <div className="text-[11px] text-faint">{freshnessLabel(r.observedAt)}</div>
                   </div>
                 </Link>
               </li>

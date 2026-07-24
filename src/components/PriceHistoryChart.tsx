@@ -12,7 +12,7 @@ export interface ChartPoint {
 export function PriceHistoryChart({ points }: { points: ChartPoint[] }) {
   if (points.length === 0) {
     return (
-      <div className="flex h-40 items-center justify-center rounded-lg border border-dashed border-slate-300 text-sm text-slate-400 dark:border-slate-700">
+      <div className="flex h-40 items-center justify-center rounded-lg border border-dashed border-line-strong text-sm text-faint">
         No price history yet
       </div>
     );
@@ -32,7 +32,10 @@ export function PriceHistoryChart({ points }: { points: ChartPoint[] }) {
   const spanT = maxT - minT || 1;
 
   const x = (t: number) => PAD + ((t - minT) / spanT) * (W - 2 * PAD);
-  const y = (p: number) => H - PAD - ((p - minP) / spanP) * (H - 2 * PAD);
+  // A flat series has no range to scale against — centre it rather than pinning
+  // it to the baseline, which would read as "the price collapsed to zero".
+  const flat = maxP === minP;
+  const y = (p: number) => (flat ? H / 2 : H - PAD - ((p - minP) / spanP) * (H - 2 * PAD));
 
   const coords = sorted.map((p) => [x(p.t), y(p.priceCents)] as const);
   const line = coords.map(([cx, cy], i) => `${i === 0 ? "M" : "L"}${cx.toFixed(1)},${cy.toFixed(1)}`).join(" ");
@@ -47,15 +50,24 @@ export function PriceHistoryChart({ points }: { points: ChartPoint[] }) {
             <stop offset="100%" stopColor="currentColor" stopOpacity="0" />
           </linearGradient>
         </defs>
-        <g className="text-indigo-500">
-          {coords.length > 1 && <path d={area} fill="url(#ph-fill)" />}
+        <g className="text-accent">
+          {coords.length > 1 && !flat && <path d={area} fill="url(#ph-fill)" />}
           {coords.length > 1 && <path d={line} fill="none" stroke="currentColor" strokeWidth={2} />}
           {coords.map(([cx, cy], i) => (
             <circle key={i} cx={cx} cy={cy} r={3} fill="currentColor" />
           ))}
         </g>
-        <text x={PAD} y={14} className="fill-slate-400 text-[10px]">{formatCents(maxP)}</text>
-        <text x={PAD} y={H - 6} className="fill-slate-400 text-[10px]">{formatCents(minP)}</text>
+        {/* With a flat series a high/low pair is noise — label it once. */}
+        {flat ? (
+          <text x={PAD} y={H / 2 - 12} className="fill-current text-[11px] opacity-60">
+            {formatCents(minP)}
+          </text>
+        ) : (
+          <>
+            <text x={PAD} y={14} className="fill-current text-[10px] opacity-50">{formatCents(maxP)}</text>
+            <text x={PAD} y={H - 6} className="fill-current text-[10px] opacity-50">{formatCents(minP)}</text>
+          </>
+        )}
       </svg>
     </figure>
   );

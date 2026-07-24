@@ -5,9 +5,9 @@ import { formatCents, freshnessLabel } from "@/lib/format";
 
 function Stat({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-lg border border-slate-200 bg-white p-3 dark:border-slate-800 dark:bg-slate-900">
-      <div className="text-[11px] uppercase tracking-wide text-slate-400">{label}</div>
-      <div className="mt-0.5 font-semibold text-slate-900 dark:text-white">{value}</div>
+    <div className="rounded-lg border border-line bg-surface p-3">
+      <div className="eyebrow">{label}</div>
+      <div className="mt-1 font-display text-xl text-ink tabular">{value}</div>
     </div>
   );
 }
@@ -20,9 +20,9 @@ export function OfferBoard({ board, chartPoints }: { board: VariantOfferBoard; c
       {/* Guidance + current price */}
       <div className="flex flex-wrap items-center gap-3">
         <GuidanceBadge label={board.guidance.label} />
-        <span className="text-sm text-slate-500 dark:text-slate-400">{board.guidance.summary}</span>
+        <span className="text-sm text-muted">{board.guidance.summary}</span>
         {m.latestObservedAt && (
-          <span className="ml-auto text-xs text-slate-400">{freshnessLabel(m.latestObservedAt)}</span>
+          <span className="ml-auto text-xs text-faint">{freshnessLabel(m.latestObservedAt)}</span>
         )}
       </div>
 
@@ -35,9 +35,9 @@ export function OfferBoard({ board, chartPoints }: { board: VariantOfferBoard; c
       </div>
 
       {/* Chart */}
-      <div className="text-slate-700 dark:text-slate-200">
+      <div className="text-body">
         <PriceHistoryChart points={chartPoints} />
-        <div className="mt-1 text-xs text-slate-400">
+        <div className="mt-1 text-xs text-faint">
           {m.observationCount} observation{m.observationCount === 1 ? "" : "s"} over {m.coverageDays} day
           {m.coverageDays === 1 ? "" : "s"}
         </div>
@@ -45,31 +45,31 @@ export function OfferBoard({ board, chartPoints }: { board: VariantOfferBoard; c
 
       {/* Offers */}
       <div>
-        <h2 className="mb-2 text-sm font-semibold text-slate-900 dark:text-white">
+        <h2 className="mb-3 eyebrow">
           Where to buy ({board.offers.length})
         </h2>
         {board.offers.length === 0 ? (
-          <p className="rounded-lg border border-dashed border-slate-300 p-4 text-sm text-slate-500 dark:border-slate-700">
+          <p className="rounded-lg border border-dashed border-line-strong p-4 text-sm text-muted">
             No matched offers yet for this exact variant. We only show offers we can match with
             confidence — never a different size, concentration, or presentation.
           </p>
         ) : (
-          <ul className="divide-y divide-slate-200 overflow-hidden rounded-xl border border-slate-200 dark:divide-slate-800 dark:border-slate-800">
+          <ul className="divide-y divide-line overflow-hidden rounded-xl border border-line">
             {board.offers.map((o) => (
-              <li key={o.offerId} className="flex flex-wrap items-center gap-3 bg-white p-4 dark:bg-slate-900">
+              <li key={o.offerId} className="flex flex-wrap items-center gap-3 bg-surface p-4">
                 <div className="min-w-0">
-                  <div className="font-medium text-slate-900 dark:text-white">{o.retailerName}</div>
-                  <div className="mt-0.5 flex flex-wrap gap-x-3 text-xs text-slate-500 dark:text-slate-400">
+                  <div className="font-medium text-ink">{o.retailerName}</div>
+                  <div className="mt-0.5 flex flex-wrap gap-x-3 text-xs text-muted">
                     {o.notes.map((n, i) => (
                       <span key={i}>{n}</span>
                     ))}
                   </div>
                 </div>
                 <div className="ml-auto text-right">
-                  <div className="text-lg font-semibold text-slate-900 dark:text-white">
+                  <div className="font-display text-2xl text-ink tabular">
                     {o.deliveredPriceCents !== null ? formatCents(o.deliveredPriceCents) : formatCents(o.listedPriceCents)}
                   </div>
-                  <div className="text-xs text-slate-400">
+                  <div className="text-xs text-faint">
                     {o.deliveredPriceCents !== null
                       ? "delivered before tax"
                       : "plus unknown shipping"}
@@ -79,7 +79,7 @@ export function OfferBoard({ board, chartPoints }: { board: VariantOfferBoard; c
             ))}
           </ul>
         )}
-        <p className="mt-2 text-xs text-slate-400">
+        <p className="mt-2 text-xs text-faint">
           Estimated delivered prices are before tax and include verified discounts and required
           shipping. The cheapest advertised price isn&apos;t always the best deal.
         </p>

@@ -11,12 +11,12 @@ export default async function HomePage() {
 
   return (
     <div className="space-y-10">
-      <section className="rounded-2xl border border-slate-200 bg-white p-8 dark:border-slate-800 dark:bg-slate-900">
-        <h1 className="max-w-2xl text-3xl font-bold tracking-tight sm:text-4xl">
-          Buy the <span className="text-indigo-600 dark:text-indigo-400">exact</span> fragrance —
+      <section className="rounded-2xl border border-line bg-surface p-8">
+        <h1 className="max-w-3xl font-display text-[2.6rem] leading-[1.08] text-ink sm:text-6xl">
+          Buy the <span className="text-accent">exact</span> fragrance —
           at the best delivered price.
         </h1>
-        <p className="mt-3 max-w-2xl text-slate-600 dark:text-slate-300">
+        <p className="mt-3 max-w-2xl text-body">
           ScentScout compares exact variants — brand, fragrance, size, concentration, and
           presentation — and never mixes testers with retail bottles. We estimate the delivered
           price before tax and tell you honestly whether to buy now or wait.
@@ -24,17 +24,17 @@ export default async function HomePage() {
         <div className="mt-6">
           <SearchBox />
         </div>
-        <dl className="mt-6 flex flex-wrap gap-x-8 gap-y-2 text-sm text-slate-500 dark:text-slate-400">
+        <dl className="mt-6 flex flex-wrap gap-x-8 gap-y-2 text-sm text-muted">
           <div>
-            <dt className="inline font-semibold text-slate-900 dark:text-white">{stats.variants}</dt>{" "}
+            <dt className="inline font-semibold text-ink">{stats.variants}</dt>{" "}
             exact variants
           </div>
           <div>
-            <dt className="inline font-semibold text-slate-900 dark:text-white">{stats.fragrances}</dt>{" "}
+            <dt className="inline font-semibold text-ink">{stats.fragrances}</dt>{" "}
             fragrances
           </div>
           <div>
-            <dt className="inline font-semibold text-slate-900 dark:text-white">{stats.brands}</dt>{" "}
+            <dt className="inline font-semibold text-ink">{stats.brands}</dt>{" "}
             brands
           </div>
         </dl>
@@ -42,8 +42,8 @@ export default async function HomePage() {
 
       <section>
         <div className="mb-4 flex items-baseline justify-between">
-          <h2 className="text-xl font-semibold">Browse fragrances</h2>
-          <Link href="/fragrances" className="text-sm font-medium text-indigo-600 hover:underline dark:text-indigo-400">
+          <h2 className="font-display text-2xl text-ink">Browse fragrances</h2>
+          <Link href="/fragrances" className="text-sm font-medium text-accent hover:underline">
             View all →
           </Link>
         </div>
@@ -60,9 +60,9 @@ export default async function HomePage() {
           { title: "Honest delivered price", body: "Verified discounts plus required shipping — or we say shipping is unknown." },
           { title: "Buy-now guidance", body: "Grounded in real price history, shown as guidance — never as certainty." },
         ].map((c) => (
-          <div key={c.title} className="rounded-xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900">
-            <h3 className="font-semibold">{c.title}</h3>
-            <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{c.body}</p>
+          <div key={c.title} className="rounded-xl border border-line bg-surface p-5">
+            <h3 className="font-medium tabular">{c.title}</h3>
+            <p className="mt-1 text-sm text-muted">{c.body}</p>
           </div>
         ))}
       </section>

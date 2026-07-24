@@ -8,27 +8,20 @@ const NAV = [
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-10 border-b border-slate-200 bg-white/80 backdrop-blur dark:border-slate-800 dark:bg-slate-950/80">
-      <div className="mx-auto flex max-w-5xl items-center gap-4 px-4 py-3">
-        <Link href="/" className="flex items-center gap-2 font-semibold tracking-tight">
-          <span aria-hidden className="text-lg">🔎</span>
-          <span>
-            Scent<span className="text-indigo-600 dark:text-indigo-400">Scout</span>
-          </span>
+    <header className="sticky top-0 z-10 border-b border-line bg-canvas/90 backdrop-blur">
+      <div className="mx-auto flex max-w-5xl items-baseline gap-6 px-6 py-4">
+        <Link href="/" className="font-display text-2xl leading-none tracking-tight text-ink">
+          Scent<span className="italic text-accent">Scout</span>
         </Link>
-        <nav className="ml-auto flex items-center gap-1 text-sm">
+        <nav className="ml-auto flex items-baseline gap-6 text-[13px]">
           {NAV.map((n) => (
-            <Link
-              key={n.href}
-              href={n.href}
-              className="rounded-md px-3 py-1.5 text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white"
-            >
+            <Link key={n.href} href={n.href} className="text-muted transition-colors hover:text-ink">
               {n.label}
             </Link>
           ))}
           <Link
             href="/account"
-            className="rounded-md px-3 py-1.5 font-medium text-indigo-600 hover:bg-indigo-50 dark:text-indigo-400 dark:hover:bg-slate-800"
+            className="border-b border-accent/40 pb-0.5 text-accent transition-colors hover:border-accent"
           >
             Account
           </Link>
@@ -40,18 +33,18 @@ export function SiteHeader() {
 
 export function SearchBox({ defaultValue = "" }: { defaultValue?: string }) {
   return (
-    <form action="/search" method="get" className="flex w-full max-w-xl gap-2">
+    <form action="/search" method="get" className="flex w-full max-w-xl items-stretch">
       <input
         type="search"
         name="q"
         defaultValue={defaultValue}
-        placeholder="Search a fragrance or brand — e.g. Santal 33, Creed…"
+        placeholder="Search a fragrance or house — Santal 33, Creed…"
         aria-label="Search fragrances"
-        className="w-full rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm shadow-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 dark:border-slate-700 dark:bg-slate-900 dark:focus:ring-indigo-900"
+        className="w-full border-b border-line-strong bg-transparent px-1 py-3 text-[15px] text-ink outline-none transition-colors placeholder:text-faint focus:border-accent"
       />
       <button
         type="submit"
-        className="rounded-lg bg-indigo-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-indigo-700"
+        className="ml-4 shrink-0 border-b border-accent px-2 py-3 text-[13px] uppercase tracking-[0.12em] text-accent transition-colors hover:text-accent-strong"
       >
         Search
       </button>
